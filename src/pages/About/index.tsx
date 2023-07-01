@@ -19,20 +19,10 @@ export default function About({}: Props): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-start bg-stone-950">
-        {/* <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mx-16 mt-8 flex h-fit"
-        >
-          <h1 className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-4xl font-extrabold text-transparent sm:text-5xl">
-            About me
-          </h1>
-        </motion.div> */}
         <motion.div
           className="mb-2 mt-8 flex flex-col"
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ x: 0, opacity: 1, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 100 }}
         >
           {/* IMAGES */}
@@ -46,7 +36,7 @@ export default function About({}: Props): React.ReactElement {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ x: 0, opacity: 1, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 50 }}
           className="mt-2 w-full rounded-lg px-6 pb-4 pt-0  sm:mt-4 sm:w-1/2"
         >
