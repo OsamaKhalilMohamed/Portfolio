@@ -18,12 +18,12 @@ export default function About({}: Props): React.ReactElement {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-start bg-stone-950">
+      <main className="flex min-h-screen flex-col items-center justify-start overflow-x-hidden bg-stone-950">
         <motion.div
           className="mb-2 mt-8 flex flex-col"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 100 }}
+          transition={{ type: "spring", stiffness: 50 }}
         >
           {/* IMAGES */}
           <Image
