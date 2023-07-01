@@ -32,6 +32,7 @@ export default function About({}: Props): React.ReactElement {
             className="h-50 w-50 rounded-xl object-cover shadow-md"
             width="200"
             height="200"
+            placeholder="blur"
           />
         </motion.div>
         <motion.div
