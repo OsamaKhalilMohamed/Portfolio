@@ -2,6 +2,8 @@ import Head from "next/head";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import me from "../../../public/me.jpg";
 
 type Props = {};
 
@@ -17,21 +19,36 @@ export default function About({}: Props): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-start bg-stone-950">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="mx-16 mt-8 flex h-fit"
         >
-          <h1 className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl">
+          <h1 className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-4xl font-extrabold text-transparent sm:text-5xl">
             About me
           </h1>
+        </motion.div> */}
+        <motion.div
+          className="mb-2 mt-8 flex flex-col"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ x: 0, opacity: 1, scale: 1 }}
+          transition={{ type: "spring", stiffness: 100 }}
+        >
+          {/* IMAGES */}
+          <Image
+            src={me}
+            alt="A picture of myself :)"
+            className="h-50 w-50 rounded-xl object-cover shadow-md"
+            width="200"
+            height="200"
+          />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ x: 0, opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="mt-2 w-full rounded-lg p-6  sm:mt-8 sm:w-1/2"
+          className="mt-2 w-full rounded-lg px-6 pb-4 pt-0  sm:mt-4 sm:w-1/2"
         >
           <div>
             <span className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg font-bold text-transparent">
@@ -71,7 +88,7 @@ export default function About({}: Props): React.ReactElement {
           </p>
         </motion.div>
         <Link href={"/"}>
-          <p className="mt-8 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
+          <p className="my-4 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
             Home {"->"}
           </p>
         </Link>
