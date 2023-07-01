@@ -19,7 +19,7 @@ export default function Home(): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`flex min-h-screen flex-col items-center justify-center bg-stone-950`}
+        className={`flex min-h-screen flex-col items-center justify-center`}
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -50,17 +50,20 @@ export default function Home(): React.ReactElement {
               Projects
             </p>
           </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="mb-4 cursor-pointer rounded-lg bg-stone-800 p-5 text-center shadow-md hover:bg-stone-700 md:mb-0"
-          >
-            <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
-              Skills
-            </p>
-          </motion.div>
+          <Link href="/Skills">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="mb-4 cursor-pointer rounded-lg bg-stone-800 p-5 text-center shadow-md hover:bg-stone-700 md:mb-0"
+            >
+              <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
+                Skills + Tools
+              </p>
+            </motion.div>
+          </Link>
+
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

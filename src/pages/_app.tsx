@@ -10,7 +10,7 @@ const inter = Inter({
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <main className={inter.className}>
+    <main className={`${inter.className}  min-h-screen bg-stone-950`}>
       <Component {...pageProps} />
     </main>
   );

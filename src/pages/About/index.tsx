@@ -5,9 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import me from "../../../public/me.jpg";
 
-type Props = {};
-
-export default function About({}: Props): React.ReactElement {
+export default function About(): React.ReactElement {
   return (
     <>
       <Head>
@@ -44,11 +42,10 @@ export default function About({}: Props): React.ReactElement {
           <div>
             <span className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg font-bold text-transparent">
               Hello Hello, glad that you clicked on this About button, even if
-              it was by mistake (most likely, but still appreciate it), anyway
-              I'm Osama Khalil, I'm a mid-level front-end engineer, born and
-              raised in Cairo - Egypt{" "}
+              it was by mistake, anyway I'm Osama Khalil, I'm a mid-level
+              front-end engineer, born and raised in Cairo - Egypt{" "}
             </span>{" "}
-            <span className="bg-none text-inherit">🇪🇬</span>.
+            <span className="bg-none text-inherit">🇪🇬</span>
             <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg font-bold text-transparent">
               {" "}
               <br /> I'm very Interested in building interactive UIs. I have a
