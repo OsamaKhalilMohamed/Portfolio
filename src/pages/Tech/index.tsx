@@ -29,7 +29,7 @@ export default function TechAndTools(): React.ReactElement {
     },
     {
       name: "other tools",
-      title: "Other Tech?",
+      title: "other tech?",
       description:
         "This is a list of other tech i usually use and familiar with: REST API, GraphQL, MongoDB, Redux toolkit, NodeJs, ExpressJs, React-Router, React-Query, TailwindCSS, and MUI.",
       logo: toolsLogo,
@@ -72,7 +72,7 @@ export default function TechAndTools(): React.ReactElement {
       name: "other tools",
       title: "other tools?",
       description:
-        "This is a list of other tech i usually use and familiar with: Git, Github, Gitlab, Storybook, YouTrack, Jira, Grammarly, and Authy for managing passwords and 2FAs.",
+        "This is a list of other tools i usually use and familiar with: Git, Github, Gitlab, Storybook, YouTrack, Jira, Grammarly, and Authy for managing passwords and 2FAs.",
       logo: toolsLogo,
     },
   ];
@@ -130,11 +130,13 @@ export default function TechAndTools(): React.ReactElement {
             </motion.div>
           ))}
         </motion.div>
-        <Link href={"/"}>
-          <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
-            Home {"->"}
-          </p>
-        </Link>
+        <motion.div className="mb-2 flex w-full justify-center">
+          <Link href={"/"}>
+            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
+              Home {"->"}
+            </p>
+          </Link>
+        </motion.div>
       </main>
     </>
   );
