@@ -4,7 +4,7 @@ import Image from "next/image";
 
 type Props = {
   title: string;
-  description: string;
+  description: string | React.ReactElement;
   logo: any;
   logoHeight?: number;
 };
@@ -20,7 +20,6 @@ export default function Card({
       initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.5 }}
-      whileHover={{ scale: 1.1 }}
       className="flex h-full w-full flex-grow flex-col items-center rounded-lg bg-stone-800 p-4 shadow-xl hover:bg-stone-700"
     >
       <motion.div
@@ -39,7 +38,7 @@ export default function Card({
         />
       </motion.div>
 
-      <h1 className="mb-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
+      <h1 className="mb-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl font-bold text-transparent">
         {title}
       </h1>
       <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">

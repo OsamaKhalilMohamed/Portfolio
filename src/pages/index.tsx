@@ -50,7 +50,7 @@ export default function Home(): React.ReactElement {
               Projects
             </p>
           </motion.div>
-          <Link href="/Skills">
+          <Link href="/Tech">
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -59,7 +59,7 @@ export default function Home(): React.ReactElement {
               className="mb-4 cursor-pointer rounded-lg bg-stone-800 p-5 text-center shadow-md hover:bg-stone-700 md:mb-0"
             >
               <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
-                Skills + Tools
+                Tech + Tools
               </p>
             </motion.div>
           </Link>
