@@ -42,8 +42,8 @@ export default function About(): React.ReactElement {
           <div>
             <span className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg font-bold text-transparent">
               Hello Hello, glad that you clicked on this About button, even if
-              it was by mistake, anyway I'm Osama Khalil, I'm a mid-level
-              front-end engineer, born and raised in Cairo - Egypt{" "}
+              it was by mistake, anyway I'm Osama Khalil, I'm a front-end
+              engineer, born and raised in Cairo - Egypt{" "}
             </span>{" "}
             <span className="bg-none text-inherit">🇪🇬</span>
             <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg font-bold text-transparent">
