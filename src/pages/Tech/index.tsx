@@ -87,8 +87,9 @@ export default function TechAndTools(): React.ReactElement {
           This is a list of other tools i usually use and familiar with when
           building apps or in personal use:{" "}
           <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
-            Git, Github, Gitlab, Storybook, npm, yarn, YouTrack, Jira,
-            Grammarly, and Authy for managing passwords and 2FAs.
+            Git, Github, Gitlab, Storybook, npm, yarn, YouTrack, Jira, figma,
+            framer, framer motion, Grammarly, and Authy for managing passwords
+            and 2FAs.
           </p>
         </div>
       ),

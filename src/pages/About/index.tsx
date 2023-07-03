@@ -75,11 +75,13 @@ export default function About(): React.ReactElement {
             engineer.
           </p>
         </motion.div>
-        <Link href={"/"}>
-          <p className="my-4 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
-            Home {"->"}
-          </p>
-        </Link>
+        <motion.div className="mb-2 flex w-full justify-center">
+          <Link href={"/"}>
+            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
+              Home {"->"}
+            </p>
+          </Link>
+        </motion.div>
       </main>
     </>
   );
