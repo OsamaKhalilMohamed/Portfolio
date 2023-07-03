@@ -41,9 +41,13 @@ export default function Card({
       <h1 className="mb-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl font-bold text-transparent">
         {title}
       </h1>
-      <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
-        {description}
-      </p>
+      {typeof description === "string" ? (
+        <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
+          {description}
+        </p>
+      ) : (
+        description
+      )}
     </motion.div>
   );
 }
