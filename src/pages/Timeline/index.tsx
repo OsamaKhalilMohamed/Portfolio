@@ -37,10 +37,10 @@ export default function TimeLine({}: Props) {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative mt-8 border-l border-gray-200  dark:border-gray-700"
+            className="relative mt-8 border-l border-gray-700"
           >
             <motion.li className="mb-10 ml-6">
-              <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
+              <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full  bg-blue-900  ring-8 ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
                   placeholder="blur"
@@ -50,14 +50,14 @@ export default function TimeLine({}: Props) {
               </span>
               <h3 className="ml-2 w-full bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Synapse Analytics{" "}
-                <span className="ml-1 rounded bg-blue-100 px-2.5 py-0.5 text-sm font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+                <span className="ml-1 rounded  bg-blue-900 px-2.5 py-0.5 text-sm font-medium  text-blue-200">
                   Current
                 </span>
               </h3>
-              <time className="mb-2 ml-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              <time className="mb-2 ml-2 block text-sm font-normal leading-none  text-gray-500">
                 July 2022 - Present
               </time>
-              <p className="mb-4 ml-2 flex-wrap  text-base font-normal text-gray-500 dark:text-gray-400">
+              <p className="mb-4 ml-2 flex-wrap  text-base font-normal  text-gray-500">
                 Started as an intern in summer of 2022 and then got hired as a
                 full-time Front-end engineer at Synapse analytics. Already
                 learned a lot. worked on large features, that went live and used
@@ -96,7 +96,7 @@ export default function TimeLine({}: Props) {
             </motion.li>
 
             <motion.li className="mb-10 ml-6">
-              <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
+              <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full  bg-blue-900  ring-8 ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
                   placeholder="blur"
@@ -107,10 +107,10 @@ export default function TimeLine({}: Props) {
               <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Digitopia Studio{" "}
               </h3>
-              <time className="mb-2 ml-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              <time className="mb-2 ml-2 block text-sm font-normal leading-none text-gray-400 text-gray-500">
                 March 2022 - July 2022
               </time>
-              <p className="mb-4 ml-2 flex-wrap  text-base font-normal text-gray-500 dark:text-gray-400">
+              <p className="mb-4 ml-2 flex-wrap  text-base font-normal text-gray-400 text-gray-500">
                 My first full-time job after finishing military service, worked
                 on maintaining and developing new features to Moroccan platform
                 called Aly, this was my first experience to work with a large
@@ -118,7 +118,7 @@ export default function TimeLine({}: Props) {
               </p>
             </motion.li>
             <motion.li className=" mb-10 ml-6">
-              <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
+              <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full  bg-blue-900  ring-8 ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
                   placeholder="blur"
@@ -129,10 +129,10 @@ export default function TimeLine({}: Props) {
               <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Majal Tech{" "}
               </h3>
-              <time className="mb-2 ml-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              <time className="mb-2 ml-2 block text-sm font-normal leading-none text-gray-400 text-gray-500">
                 November 2020 - February 2021
               </time>
-              <p className="mb-4 ml-2 flex-wrap  text-base font-normal text-gray-500 dark:text-gray-400">
+              <p className="mb-4 ml-2 flex-wrap  text-base font-normal text-gray-400 text-gray-500">
                 My first ever full-time job, was really a good start for me,
                 learned how to work with tools like Redux, different
                 React-hooks, i18n localization and more. unfortunately, it got
