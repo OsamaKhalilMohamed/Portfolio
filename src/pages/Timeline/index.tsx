@@ -1,6 +1,5 @@
 import React from "react";
 import synapse from "../../../public/synapse.jpeg";
-import voo from "../../../public/voo.png";
 import majal from "../../../public/majal.png";
 import digitopia from "../../../public/digitopia.jpeg";
 import { motion } from "framer-motion";
@@ -95,28 +94,7 @@ export default function TimeLine({}: Props) {
                 </span>
               </p>
             </motion.li>
-            <motion.li className="mb-10 ml-6">
-              <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
-                <Image
-                  className="h-50 w-50 rounded-xl object-cover shadow-md"
-                  placeholder="blur"
-                  src={voo}
-                  alt={"VOO logo"}
-                />
-              </span>
-              <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
-                VOO{" "}
-              </h3>
-              <time className="mb-2 ml-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                July 2022 - August 2022
-              </time>
-              <p className="mb-4 ml-2 flex-wrap  text-base font-normal text-gray-500 dark:text-gray-400">
-                Currently known as Rise up (VOO), my time there was short,
-                worked on bootstrapping design and initial version of their
-                newly frontend app that integrates with different couriers APIs.
-                friendly people, and the business has a very good potential.
-              </p>
-            </motion.li>
+
             <motion.li className="mb-10 ml-6">
               <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
                 <Image
