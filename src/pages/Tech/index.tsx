@@ -31,13 +31,17 @@ export default function TechAndTools(): React.ReactElement {
       name: "other tools",
       title: "other tech?",
       description: (
-        <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
-          This is a list of other tech i usually use and familiar with: <br />
-          <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
-            NextJS, REST API, GraphQL, MongoDB, Docker, Redux toolkit, NodeJS,
-            ExpressJS, Cypress, React-Router, React-Query, TailwindCSS, and MUI.
-          </p>
-        </p>
+        <>
+          {" "}
+          <div className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent">
+            This is a list of other tech i usually use and familiar with: <br />
+            <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent">
+              NextJS, REST API, GraphQL, MongoDB, Docker, Redux toolkit, NodeJS,
+              ExpressJS, Cypress, React-Router, React-Query, TailwindCSS, and
+              MUI.
+            </p>
+          </div>
+        </>
       ),
       logo: toolsLogo,
       logoHeight: 40,
@@ -49,11 +53,11 @@ export default function TechAndTools(): React.ReactElement {
       name: "VSC",
       title: "Visual studio code",
       description: (
-        <div className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
+        <div className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent">
           {" "}
           VSC is my favorite IDE, the extension ecosystem provides great DX,
           these are my top 5 extensions i use (other than prettier)
-          <p className="text-small mb-2 mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
+          <p className="text-small mb-2 mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent">
             {" "}
             1-pretty-typescript-errors <br /> 2-import cost <br /> 3-Gitlens{" "}
             <br />
@@ -70,7 +74,7 @@ export default function TechAndTools(): React.ReactElement {
       name: "Vercel",
       title: "Vercel",
       description: (
-        <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
+        <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent">
           Vercel is one of the best in the field from providing robust way to
           create react apps with Next.js framework to deploying your app and
           using serverless functions to ease your infra process. i mainly use
@@ -83,10 +87,10 @@ export default function TechAndTools(): React.ReactElement {
       name: "other tools",
       title: "other tools?",
       description: (
-        <div className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
+        <div className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent">
           This is a list of other tools i usually use and familiar with when
           building apps or in personal use:{" "}
-          <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
+          <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent">
             Git, Github, Gitlab, Storybook, npm, yarn, YouTrack, Jira, figma,
             framer, framer motion, Grammarly, and Authy for managing passwords
             and 2FAs.

@@ -20,6 +20,12 @@ export default function Card({
       initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.5 }}
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0 },
+      }}
       className="flex h-full w-full flex-grow flex-col items-center rounded-lg bg-stone-800 p-4 shadow-xl hover:bg-stone-700"
     >
       <motion.div
@@ -42,11 +48,11 @@ export default function Card({
         {title}
       </h1>
       {typeof description === "string" ? (
-        <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-medium text-transparent">
+        <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent">
           {description}
         </p>
       ) : (
-        description
+        <>{description}</>
       )}
     </motion.div>
   );

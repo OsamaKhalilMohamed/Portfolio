@@ -64,17 +64,19 @@ export default function Home(): React.ReactElement {
             </motion.div>
           </Link>
 
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="mb-4 cursor-pointer rounded-lg bg-stone-800 p-5 text-center shadow-md hover:bg-stone-700 md:mb-0"
-          >
-            <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
-              Experiences
-            </p>
-          </motion.div>
+          <Link href="/Timeline">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="mb-4 cursor-pointer rounded-lg bg-stone-800 p-5 text-center shadow-md hover:bg-stone-700 md:mb-0"
+            >
+              <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
+                Timeline
+              </p>
+            </motion.div>
+          </Link>
           <Link href={"/About"}>
             {" "}
             <motion.div
