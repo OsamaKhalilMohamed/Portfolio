@@ -40,17 +40,7 @@ export default function TimeLine({}: Props) {
             transition={{ duration: 1 }}
             className="relative mt-8 border-l border-gray-200  dark:border-gray-700"
           >
-            <motion.li
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              variants={{
-                visible: { opacity: 1, scale: 1 },
-                hidden: { opacity: 0, scale: 0 },
-              }}
-              className="mb-10 ml-6"
-            >
+            <motion.li className="mb-10 ml-6">
               <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
@@ -59,9 +49,9 @@ export default function TimeLine({}: Props) {
                   alt={"Synapse-analytics logo"}
                 />
               </span>
-              <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl text-transparent">
+              <h3 className="ml-2 w-full bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Synapse Analytics{" "}
-                <span className="ml-1 mr-2 rounded bg-blue-100 px-2.5 py-0.5 text-sm font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+                <span className="ml-1 rounded bg-blue-100 px-2.5 py-0.5 text-sm font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
                   Current
                 </span>
               </h3>
@@ -105,17 +95,7 @@ export default function TimeLine({}: Props) {
                 </span>
               </p>
             </motion.li>
-            <motion.li
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              variants={{
-                visible: { opacity: 1, scale: 1 },
-                hidden: { opacity: 0, scale: 0 },
-              }}
-              className="mb-10 ml-6"
-            >
+            <motion.li className="mb-10 ml-6">
               <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
@@ -124,7 +104,7 @@ export default function TimeLine({}: Props) {
                   alt={"VOO logo"}
                 />
               </span>
-              <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl text-transparent">
+              <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 VOO{" "}
               </h3>
               <time className="mb-2 ml-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -137,17 +117,7 @@ export default function TimeLine({}: Props) {
                 friendly people, and the business has a very good potential.
               </p>
             </motion.li>
-            <motion.li
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              variants={{
-                visible: { opacity: 1, scale: 1 },
-                hidden: { opacity: 0, scale: 0 },
-              }}
-              className="mb-10 ml-6"
-            >
+            <motion.li className="mb-10 ml-6">
               <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
@@ -156,7 +126,7 @@ export default function TimeLine({}: Props) {
                   alt={"digitopia logo"}
                 />
               </span>
-              <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl text-transparent">
+              <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Digitopia Studio{" "}
               </h3>
               <time className="mb-2 ml-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -169,17 +139,7 @@ export default function TimeLine({}: Props) {
                 codebase with a good amount of users.
               </p>
             </motion.li>
-            <motion.li
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              variants={{
-                visible: { opacity: 1, scale: 1 },
-                hidden: { opacity: 0, scale: 0 },
-              }}
-              className=" mb-10 ml-6"
-            >
+            <motion.li className=" mb-10 ml-6">
               <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
@@ -188,7 +148,7 @@ export default function TimeLine({}: Props) {
                   alt={"majal logo"}
                 />
               </span>
-              <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl text-transparent">
+              <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Majal Tech{" "}
               </h3>
               <time className="mb-2 ml-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
