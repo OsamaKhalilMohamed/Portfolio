@@ -65,7 +65,7 @@ export default function Home(): React.ReactElement {
               scale: 0.5,
             }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-stone-900 relative max-w-md overflow-hidden rounded-xl border border-gray-500 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8  transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[500ms] mx-auto mb-4 cursor-pointer rounded-lg  p-5 text-center shadow-md  md:mx-0 md:mb-0"
+            className="bg-stone-900   rounded-xl p-5 text-center shadow-md  md:mx-0 md:mb-0"
           >
             <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
               Projects
@@ -80,7 +80,7 @@ export default function Home(): React.ReactElement {
               scale: 0.5,
             }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-stone-900 relative max-w-md overflow-hidden rounded-xl border border-gray-500 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8  transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[500ms] mx-auto mb-4 cursor-pointer rounded-lg  p-5 text-center shadow-md  md:mx-0 md:mb-0"
+            className="bg-stone-900   rounded-xl p-5 text-center shadow-md  md:mx-0 md:mb-0"
           >
             <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
               Tech + Tools
@@ -94,7 +94,7 @@ export default function Home(): React.ReactElement {
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
-            className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-stone-900 relative max-w-md overflow-hidden rounded-xl border border-gray-500 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8  transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[500ms] mx-auto mb-4 cursor-pointer rounded-lg  p-5 text-center shadow-md  md:mx-0 md:mb-0"
+            className="bg-stone-900   rounded-xl p-5 text-center shadow-md  md:mx-0 md:mb-0"
             >
               <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Timeline
@@ -108,7 +108,7 @@ export default function Home(): React.ReactElement {
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
-            className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-stone-900 relative max-w-md overflow-hidden rounded-xl border border-gray-500 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8  transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[500ms] mx-auto mb-4 cursor-pointer rounded-lg  p-5 text-center shadow-md  md:mx-0 md:mb-0"
+            className="bg-stone-900   rounded-xl p-5 text-center shadow-md  md:mx-0 md:mb-0"
             >
               <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 About
