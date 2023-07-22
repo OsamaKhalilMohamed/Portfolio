@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+import synapse from "../../public/synapse.jpeg";
 import { motion } from "framer-motion";
 import {
   EmailSVGIcon,
   GithubSVGIcon,
   LinkedinSVGIcon,
 } from "~/assets/SvgIcons";
+import Image from "next/image";
 
 export default function Home(): React.ReactElement {
   return (
@@ -19,7 +21,7 @@ export default function Home(): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`flex min-h-screen flex-col items-center justify-center`}
+        className={`flex h-full min-h-screen flex-col items-center justify-center pb-8  pt-8`}
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -27,15 +29,34 @@ export default function Home(): React.ReactElement {
           transition={{ duration: 0.5 }}
           className="mx-auto bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl text-transparent"
         >
-          <p className="flex text-center text-sm text-cyan-100 md:justify-start">
-            Hi <span className="animate-waving-hand text-center">👋🏻</span>,
-          </p>{" "}
-          <h1 className="text-4xl font-extrabold sm:text-6xl">
+          <div className="mx-auto flex w-5/6 flex-col justify-start px-4 sm:w-3/4">
+            <div className=" flex flex-col mx-auto">
+              <p className="flex text-sm text-cyan-100 text-start">
+                Hi <span className="animate-waving-hand">👋🏻</span>,
+              </p>{" "}
+              <h1 className="text-3xl font-extrabold md:text-6xl text-start">
+                {" "}
+                I'm Osama Khalil
+              </h1>
+            </div>
+          </div>
+
+          <p className="mx-auto mt-2 flex w-5/6  sm:w-3/4  md:justify-start">
             {" "}
-            I'm Osama Khalil
-          </h1>
+            <span className="text-lg font-extrabold"> Software engineer, Obsessed with building interactive UIs, currently
+            working at{" "} <Link
+              href={"https://www.synapse-analytics.io/"}
+              target="_blank"
+            >
+              {" "}
+              <span className="text-cyan-50 underline underline-offset-1">
+                Synapse Analytics{" "}
+              </span>
+            </Link></span>
+          </p>
         </motion.div>
-        <div className="mt-8 w-5/6 grid-flow-col grid-cols-2 grid-rows-2 gap-8 md:grid md:w-2/3 lg:w-2/4">
+
+        <div className="mx-auto mt-8 w-5/6 grid-flow-col grid-cols-2 grid-rows-2 gap-8 md:grid md:w-2/3 lg:w-2/4">
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -44,7 +65,7 @@ export default function Home(): React.ReactElement {
               scale: 0.5,
             }}
             animate={{ opacity: 1, scale: 1 }}
-            className="mb-4 cursor-pointer rounded-lg bg-stone-800 p-5 text-center shadow-md hover:bg-stone-700 md:mb-0"
+            className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-stone-900 relative max-w-md overflow-hidden rounded-xl border border-gray-500 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8  transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[500ms] mx-auto mb-4 cursor-pointer rounded-lg  p-5 text-center shadow-md  md:mx-0 md:mb-0"
           >
             <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
               Projects
@@ -52,16 +73,19 @@ export default function Home(): React.ReactElement {
           </motion.div>
           <Link href="/Tech">
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="mb-4 cursor-pointer rounded-lg bg-stone-800 p-5 text-center shadow-md hover:bg-stone-700 md:mb-0"
-            >
-              <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
-                Tech + Tools
-              </p>
-            </motion.div>
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-stone-900 relative max-w-md overflow-hidden rounded-xl border border-gray-500 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8  transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[500ms] mx-auto mb-4 cursor-pointer rounded-lg  p-5 text-center shadow-md  md:mx-0 md:mb-0"
+          >
+            <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
+              Tech + Tools
+            </p>
+          </motion.div>
           </Link>
 
           <Link href="/Timeline">
@@ -70,7 +94,7 @@ export default function Home(): React.ReactElement {
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="mb-4 cursor-pointer rounded-lg bg-stone-800 p-5 text-center shadow-md hover:bg-stone-700 md:mb-0"
+            className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-stone-900 relative max-w-md overflow-hidden rounded-xl border border-gray-500 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8  transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[500ms] mx-auto mb-4 cursor-pointer rounded-lg  p-5 text-center shadow-md  md:mx-0 md:mb-0"
             >
               <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Timeline
@@ -84,7 +108,7 @@ export default function Home(): React.ReactElement {
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="mb-4 cursor-pointer rounded-lg bg-stone-800 p-5 text-center shadow-md hover:bg-stone-700 md:mb-0"
+            className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-stone-900 relative max-w-md overflow-hidden rounded-xl border border-gray-500 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8  transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[500ms] mx-auto mb-4 cursor-pointer rounded-lg  p-5 text-center shadow-md  md:mx-0 md:mb-0"
             >
               <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 About

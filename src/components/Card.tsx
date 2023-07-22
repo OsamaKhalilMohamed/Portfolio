@@ -26,7 +26,7 @@ export default function Card({
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0 },
       }}
-      className="flex h-full w-full flex-grow flex-col items-center rounded-lg bg-stone-800 p-4 shadow-xl hover:bg-stone-700"
+      className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-zinc-950 relative max-w-md overflow-hidden rounded-xl border border-slate-900 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8 py-16 transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[1500ms] flex h-full w-full flex-grow flex-col items-center rounded-lg bg-stone-800 p-4 shadow-md"
     >
       <motion.div
         initial={{ x: -100, opacity: 0 }}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import me from "../../../public/me.jpg";
+import synapse from "../../../public/synapse.jpeg";
 
 export default function About(): React.ReactElement {
   return (
@@ -16,7 +17,7 @@ export default function About(): React.ReactElement {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-start overflow-x-hidden bg-stone-950">
+      <main className="flex min-h-screen h-full mx-auto flex-col items-center justify-center overflow-x-hidden bg-stone-950">
         <motion.div
           className="mb-2 mt-8 flex flex-col"
           initial={{ opacity: 0, scale: 0.5 }}
@@ -46,7 +47,7 @@ export default function About(): React.ReactElement {
               engineer, born and raised in Cairo - Egypt{" "}
             </span>{" "}
             <span className="bg-none text-inherit">🇪🇬</span>
-            <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg font-bold text-transparent">
+            <div className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg font-bold text-transparent">
               {" "}
               <br /> I'm very Interested in building interactive UIs. I have a
               bachelor's degree in computer science, Class of 2020. I have +2
@@ -56,17 +57,14 @@ export default function About(): React.ReactElement {
               <Link
                 href={"https://www.synapse-analytics.io/"}
                 target="_blank"
-                className="h-fit"
+                className="h-fit w-fit "
               >
                 {" "}
-                <span
-                  className="italic text-cyan-50 underline underline-offset-1
-            "
-                >
-                  Synapse Analytics
+                <span className="text-cyan-50 underline underline-offset-1">
+                  Synapse Analytics{" "}
                 </span>
               </Link>
-            </p>
+            </div>
           </div>
           <br />
           <p className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg font-bold text-transparent">
