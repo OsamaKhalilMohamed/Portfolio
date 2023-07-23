@@ -18,6 +18,8 @@ export default function About(): React.ReactElement {
     { name: "think", logo: "🧠" },
     { name: "tweet", logo: "🐥" },
     { name: "kiss", logo: "💋" },
+    { name: "music", logo: "🎧" },
+    { name: "sunflower", logo: "🌻" },
   ];
 
 
