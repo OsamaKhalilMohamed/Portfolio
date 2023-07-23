@@ -48,7 +48,7 @@ export default function Card({
         {title}
       </h1>
       {typeof description === "string" ? (
-        <p className="text-small mt-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent">
+        <p className="text-small mt-2 text-zinc-300 font-bold">
           {description}
         </p>
       ) : (
