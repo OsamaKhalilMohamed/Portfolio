@@ -38,7 +38,7 @@ export default function Projects(): React.ReactElement {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke="currentColor"
+                stroke="white"
                 className="h-4 w-4 cursor-pointer"
                 style={{ display: "inline", verticalAlign: "middle" }}
               >
@@ -81,7 +81,7 @@ export default function Projects(): React.ReactElement {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke="currentColor"
+                stroke="white"
                 className="h-4 w-4 cursor-pointer"
                 style={{ display: "inline", verticalAlign: "middle" }}
               >
@@ -150,7 +150,7 @@ export default function Projects(): React.ReactElement {
           transition={{ duration: 0.5 }}
           className="mx-auto mt-8 flex h-fit items-center  bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent"
         >
-          <h1 className="mr-4 cursor-pointer break-all text-2xl font-bold  md:text-6xl">
+          <h1 className="mr-2 cursor-pointer break-all text-2xl font-bold md:mr-4  md:text-6xl">
             {tab.active}
           </h1>
           <h1
@@ -193,7 +193,7 @@ export default function Projects(): React.ReactElement {
                 </div>
               ))}
         </div>
-        <motion.div className="mb-2 mt-20 flex w-full justify-center">
+        <motion.div className="mb-2 mt-10 flex w-full justify-center">
           <Link href={"/"}>
             <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
               Home {"->"}
