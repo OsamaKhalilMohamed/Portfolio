@@ -154,7 +154,7 @@ export default function Projects(): React.ReactElement {
             {tab.active}
           </h1>
           <h1
-            className="mr-4 cursor-pointer break-all text-md font-bold text-zinc-300  md:text-2xl underline  decoration-violet-500 underline-offset-1"
+            className="text-md mr-4 cursor-pointer break-all font-bold text-zinc-300  md:text-2xl "
             onClick={() => setTab({ hidden: tab.active, active: tab.hidden })}
           >
             {tab.hidden}
