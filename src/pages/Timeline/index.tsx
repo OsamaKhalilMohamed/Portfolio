@@ -50,7 +50,6 @@ export default function TimeLine({}: Props) {
               </span>
               <h3 className="ml-2 w-full bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Synapse Analytics{" "}
-                
               </h3>
               <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-zinc-300">
                 July 2022 - Present
@@ -60,9 +59,9 @@ export default function TimeLine({}: Props) {
                 full-time Front-end engineer at Synapse analytics. Already
                 learned a lot. worked on large features, that went live and used
                 by large number of clients. psst: if you or your company needs
-                MLOPs product solution to manage and deploy all of your AI
+                MLOps product solution to manage and deploy all of your AI
                 models, i have a very cool product, you can use:{" "}
-                <span className="decoration-violet-500 underline-offset-1  italic underline">
+                <span className="italic underline  decoration-violet-500 underline-offset-1">
                   <span className="mr-1">
                     <Link
                       href={"https://www.synapse-analytics.io/konan"}

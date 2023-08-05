@@ -1,9 +1,206 @@
-import React from 'react'
+import Head from "next/head";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Card from "~/components/Card";
+import innerNote from "../../../public/innerNote.png";
+import blonded from "../../../public/endless.webp";
+import Link from "next/link";
 
-type Props = {}
+export default function Projects(): React.ReactElement {
+  const [tab, setTab] = useState<{ active: string; hidden: string }>({
+    active: "Personal",
+    hidden: "Professional",
+  });
 
-export default function Projects({}: Props) {
+  const personalProjects = [
+    {
+      title: "Inner Note",
+      logo: innerNote,
+      logoSize: 800,
+      description: (
+        <>
+          <p className="text-small mt-2 font-bold text-zinc-300">
+            Inner note is a web app that let you share your
+            confessions/dreams/thoughts/ideas publicly or privately as well as
+            see other notes and interact with them.
+          </p>
+          <br />
+          <span className="italic underline  decoration-violet-500 underline-offset-1">
+            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
+              <Link href={"https://inner-note.vercel.app/"} target="_blank">
+                Live{" "}
+              </Link>
+            </span>
+
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="h-4 w-4 cursor-pointer"
+                style={{ display: "inline", verticalAlign: "middle" }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </span>
+          </span>
+        </>
+      ),
+    },
+    {
+      title: "Blonded",
+      logo: blonded,
+      logoSize: 250,
+      description: (
+        <>
+          <p className="text-small mt-2 font-bold text-zinc-300">
+            Blonded is a simple frank ocean lyrics app, each 5 seconds the
+            lyrics change or you can control the current lyric with the left and
+            right keys, more features are coming soon.
+          </p>
+          <br />
+          <span className="italic underline  decoration-violet-500 underline-offset-1">
+            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
+              <Link
+                href={"https://osamakhalil98.github.io/blonded/"}
+                target="_blank"
+              >
+                Live{" "}
+              </Link>
+            </span>
+
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="h-4 w-4 cursor-pointer"
+                style={{ display: "inline", verticalAlign: "middle" }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </span>
+          </span>
+        </>
+      ),
+    },
+  ];
+
+  const professionalProjects = [
+    {
+      title: "Konan",
+      logo: innerNote,
+      logoSize: 800,
+      description: (
+        <>
+          <p>
+            Inner note is a web app that let you share your
+            confessions/dreams/thoughts/ideas publicly or privately as well as
+            see other notes and interact with them.
+          </p>
+          <br />
+          <Link href={"https://inner-note.vercel.app/"}>Live</Link>
+        </>
+      ),
+    },
+    {
+      title: "Sadaqhati",
+      logo: blonded,
+      logoSize: 250,
+      description:
+        "Blonded is a simple frank ocean lyrics app, each 5 seconds the lyrics change or you can control the current lyric with the left and right keys, more features are coming soon.",
+    },
+    {
+      title: "Aly",
+      logo: blonded,
+      logoSize: 250,
+      description:
+        "Blonded is a simple frank ocean lyrics app, each 5 seconds the lyrics change or you can control the current lyric with the left and right keys, more features are coming soon.",
+    },
+  ];
+
   return (
-    <div>Projects</div>
-  )
+    <>
+      <Head>
+        <title>Osama Khalil</title>
+        <meta
+          name="description"
+          content="Osama Khalil - Software engineer - Projects"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main
+        className={`min flex-wrap-h-screen flex flex-col items-center justify-center`}
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto mt-8 flex h-fit items-center  bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent"
+        >
+          <h1 className="mr-4 cursor-pointer break-all text-2xl font-bold  md:text-6xl">
+            {tab.active}
+          </h1>
+          <h1
+            className="mr-4 cursor-pointer break-all text-xl font-bold text-zinc-300  md:text-2xl"
+            onClick={() => setTab({ hidden: tab.active, active: tab.hidden })}
+          >
+            {tab.hidden}
+          </h1>
+        </motion.div>
+        <div className="mt-8 flex min-h-full w-5/6  flex-col  md:flex-row">
+          {tab.active === "Personal"
+            ? personalProjects.map((project) => (
+                <div
+                  className="mb-6 w-full md:mr-8 md:w-1/2"
+                  key={project.title}
+                >
+                  <Card
+                    key={"l"}
+                    title={project.title}
+                    description={project.description}
+                    logo={project.logo}
+                    logoSize={project.logoSize}
+                    animate={false}
+                  />
+                </div>
+              ))
+            : professionalProjects.map((project) => (
+                <div
+                  className="mb-6 w-full md:mr-8 md:w-1/2"
+                  key={project.title}
+                >
+                  <Card
+                    key={"l"}
+                    title={project.title}
+                    description={project.description}
+                    logo={project.logo}
+                    logoSize={project.logoSize}
+                    animate={false}
+                  />
+                </div>
+              ))}
+        </div>
+        <motion.div className="mb-2 mt-20 flex w-full justify-center">
+          <Link href={"/"}>
+            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
+              Home {"->"}
+            </p>
+          </Link>
+        </motion.div>
+      </main>
+    </>
+  );
 }

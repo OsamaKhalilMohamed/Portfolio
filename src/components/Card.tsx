@@ -6,6 +6,8 @@ type Props = {
   title: string;
   description: string | React.ReactElement;
   logo: any;
+  logoSize?: number;
+  animate?: boolean;
   logoHeight?: number;
 };
 
@@ -14,6 +16,8 @@ export default function Card({
   description,
   logo,
   logoHeight,
+  logoSize,
+  animate = true,
 }: Props): React.ReactElement {
   return (
     <motion.div
@@ -26,21 +30,24 @@ export default function Card({
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0 },
       }}
-      className="bg-stone-900 flex h-full w-full flex-grow flex-col items-center rounded-lg p-4 shadow-md"
+      className="flex h-full w-full flex-grow flex-col items-center rounded-lg bg-stone-900 p-4 shadow-md"
     >
       <motion.div
         initial={{ x: -100, opacity: 0 }}
-        whileHover={{ rotate: 360 }}
+        whileHover={{ rotate: animate ? 360 : 0 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className={`h-${logoHeight ?? 30} ${logoHeight ? "mb-2" : "mb-8"}`}
+        className={`h-${logoHeight ?? 30} ${
+          logoHeight ? "mb-2" : "mb-8"
+        } mx-auto flex w-full justify-center`}
       >
         <Image
           src={logo}
           alt="logo"
-          width={150}
-          className="object-cover"
-          height={150}
+          width={logoSize ?? 150}
+          style={{ objectFit: "contain" }}
+          height={logoSize ?? 150}
+          quality={100}
         />
       </motion.div>
 
@@ -48,9 +55,7 @@ export default function Card({
         {title}
       </h1>
       {typeof description === "string" ? (
-        <p className="text-small mt-2 text-zinc-300 font-bold">
-          {description}
-        </p>
+        <p className="text-small mt-2 font-bold text-zinc-300">{description}</p>
       ) : (
         <>{description}</>
       )}

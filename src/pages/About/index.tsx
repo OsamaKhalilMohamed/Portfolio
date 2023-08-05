@@ -22,9 +22,6 @@ export default function About(): React.ReactElement {
     { name: "sunflower", logo: "🌻" },
   ];
 
-
-
-
   useEffect(() => {
    
     setTimeout(() => {
