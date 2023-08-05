@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import Card from "~/components/Card";
 import innerNote from "../../../public/innerNote.png";
 import blonded from "../../../public/endless.webp";
+import sadaqati from "../../../public/sadaqati.png";
+import aly from "../../../public/aly.png";
+import Konan from "../../../public/Vector.png";
 import Link from "next/link";
 
 export default function Projects(): React.ReactElement {
@@ -100,34 +103,125 @@ export default function Projects(): React.ReactElement {
 
   const professionalProjects = [
     {
-      title: "Konan",
-      logo: innerNote,
+      title: "KONAN",
+      logo: Konan,
       logoSize: 800,
       description: (
         <>
-          <p>
-            Inner note is a web app that let you share your
-            confessions/dreams/thoughts/ideas publicly or privately as well as
-            see other notes and interact with them.
+          <p className="text-small mt-2 font-bold text-zinc-300">
+            The AI decisioning platform that enables financial institutions to
+            fully automate their credit risk policy workflows, give out
+            instantaneous decisions and lower non-performing loans.
           </p>
           <br />
-          <Link href={"https://inner-note.vercel.app/"}>Live</Link>
+          <span className="italic underline  decoration-violet-500 underline-offset-1">
+            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
+              <Link href={"https://app.konan.ai/login"} target="_blank">
+                Live{" "}
+              </Link>
+            </span>
+
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="white"
+                className="h-4 w-4 cursor-pointer"
+                style={{ display: "inline", verticalAlign: "middle" }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </span>
+          </span>
+        </>
+      ),
+    },
+
+    {
+      title: "Aly",
+      logo: aly,
+      logoSize: 100,
+      description: (
+        <>
+          <p className="text-small mt-2 font-bold text-zinc-300">
+            Aly allows Moroccans to help each other and share their opinions and
+            experiences Connect with the community and find the best Businesses
+            in your area
+          </p>
+          <br />
+          <span className="italic underline  decoration-violet-500 underline-offset-1">
+            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
+              <Link href={"https://www.aly.ma/"} target="_blank">
+                Live{" "}
+              </Link>
+            </span>
+
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="white"
+                className="h-4 w-4 cursor-pointer"
+                style={{ display: "inline", verticalAlign: "middle" }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </span>
+          </span>
         </>
       ),
     },
     {
       title: "Sadaqhati",
-      logo: blonded,
-      logoSize: 250,
-      description:
-        "Blonded is a simple frank ocean lyrics app, each 5 seconds the lyrics change or you can control the current lyric with the left and right keys, more features are coming soon.",
-    },
-    {
-      title: "Aly",
-      logo: blonded,
-      logoSize: 250,
-      description:
-        "Blonded is a simple frank ocean lyrics app, each 5 seconds the lyrics change or you can control the current lyric with the left and right keys, more features are coming soon.",
+      logo: sadaqati,
+      logoSize: 100,
+      description: (
+        <>
+          <p className="text-small mt-2 font-bold text-zinc-300">
+            (Sadaqati Africa) is a charitable organization that works to improve
+            the lives of individuals and communities most in need of Muslims and
+            others in African countries.
+          </p>
+          <br />
+          <span className="italic underline  decoration-violet-500 underline-offset-1">
+            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
+              <Link href={"https://sadaqahti.com/en/"} target="_blank">
+                Live{" "}
+              </Link>
+            </span>
+
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="white"
+                className="h-4 w-4 cursor-pointer"
+                style={{ display: "inline", verticalAlign: "middle" }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </span>
+          </span>
+        </>
+      ),
     },
   ];
 
