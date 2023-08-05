@@ -150,11 +150,11 @@ export default function Projects(): React.ReactElement {
           transition={{ duration: 0.5 }}
           className="mx-auto mt-8 flex h-fit items-center  bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent"
         >
-          <h1 className="mr-2 cursor-pointer break-all text-2xl font-bold md:mr-4  md:text-6xl">
+          <h1 className="mr-2 cursor-pointer break-all text-3xl font-bold md:mr-4  md:text-6xl">
             {tab.active}
           </h1>
           <h1
-            className="mr-4 cursor-pointer break-all text-xl font-bold text-zinc-300  md:text-2xl"
+            className="mr-4 cursor-pointer break-all text-md font-bold text-zinc-300  md:text-2xl underline  decoration-violet-500 underline-offset-1"
             onClick={() => setTab({ hidden: tab.active, active: tab.hidden })}
           >
             {tab.hidden}
