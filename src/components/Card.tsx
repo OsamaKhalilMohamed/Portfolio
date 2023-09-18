@@ -33,13 +33,7 @@ export default function Card({
       className="flex h-full w-full flex-grow flex-col items-center rounded-xl bg-stone-900/90 p-4 shadow-md hover:bg-stone-800"
     >
       <div>
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileHover={{ rotate: animate ? 360 : 0 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className={className ?? ""}
-        >
+        <motion.div className={className ?? ""}>
           <Image
             src={logo}
             alt="logo"
