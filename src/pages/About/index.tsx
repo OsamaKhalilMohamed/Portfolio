@@ -61,7 +61,7 @@ export default function About(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="mx-8 mt-2 rounded-xl  bg-stone-900 px-4 pb-4 pt-4 text-center sm:mt-4 sm:w-1/2 sm:px-2"
+          className="mx-8 mt-2 rounded-xl  bg-stone-900 px-2 sm:px-4 pb-4 pt-4 text-center sm:mt-4 sm:w-1/2 sm:px-2"
         >
           <div>
             <span className="text-lg font-bold text-zinc-300 sm:text-xl">
