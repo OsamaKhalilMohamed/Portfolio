@@ -21,14 +21,14 @@ export default function Projects(): React.ReactElement {
       logo: innerNote,
       logoSize: 800,
       description: (
-        <>
+        <div className="flex flex-col justify-center">
           <p className="text-small mt-2 font-bold text-zinc-300">
             Inner note is a web app that let you share your
             confessions/dreams/thoughts/ideas publicly or privately as well as
             see other notes and interact with them.
           </p>
           <br />
-          <span className="italic underline  decoration-violet-500 underline-offset-1">
+          <span className="mx-auto w-full  self-center text-center italic underline  decoration-violet-500  underline-offset-1">
             <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
               <Link href={"https://inner-note.vercel.app/"} target="_blank">
                 Live{" "}
@@ -53,7 +53,7 @@ export default function Projects(): React.ReactElement {
               </svg>
             </span>
           </span>
-        </>
+        </div>
       ),
     },
     {
@@ -61,14 +61,14 @@ export default function Projects(): React.ReactElement {
       logo: blonded,
       logoSize: 250,
       description: (
-        <>
+        <div className="flex flex-col justify-center">
           <p className="text-small mt-2 font-bold text-zinc-300">
             Blonded is a simple frank ocean lyrics app, each 5 seconds the
             lyrics change or you can control the current lyric with the left and
             right keys, more features are coming soon.
           </p>
           <br />
-          <span className="italic underline  decoration-violet-500 underline-offset-1">
+          <span className="mx-auto w-full justify-end self-center text-center italic underline  decoration-violet-500  underline-offset-1">
             <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
               <Link
                 href={"https://osamakhalil98.github.io/blonded/"}
@@ -96,7 +96,7 @@ export default function Projects(): React.ReactElement {
               </svg>
             </span>
           </span>
-        </>
+        </div>
       ),
     },
   ];
@@ -107,14 +107,14 @@ export default function Projects(): React.ReactElement {
       logo: Konan,
       logoSize: 800,
       description: (
-        <>
+        <div className="flex flex-col justify-center">
           <p className="text-small mt-2 font-bold text-zinc-300">
             The AI decisioning platform that enables financial institutions to
             fully automate their credit risk policy workflows, give out
             instantaneous decisions and lower non-performing loans.
           </p>
           <br />
-          <span className="italic underline  decoration-violet-500 underline-offset-1">
+          <span className="mx-auto w-full  self-center  text-center italic underline decoration-violet-500 underline-offset-1">
             <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
               <Link href={"https://app.konan.ai/login"} target="_blank">
                 Live{" "}
@@ -139,7 +139,7 @@ export default function Projects(): React.ReactElement {
               </svg>
             </span>
           </span>
-        </>
+        </div>
       ),
     },
 
@@ -148,14 +148,14 @@ export default function Projects(): React.ReactElement {
       logo: aly,
       logoSize: 100,
       description: (
-        <>
+        <div className="flex flex-col justify-center">
           <p className="text-small mt-2 font-bold text-zinc-300">
             Aly allows Moroccans to help each other and share their opinions and
             experiences Connect with the community and find the best Businesses
             in your area
           </p>
           <br />
-          <span className="italic underline  decoration-violet-500 underline-offset-1">
+          <span className="mx-auto w-full self-center  text-center italic underline  decoration-violet-500 underline-offset-1">
             <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
               <Link href={"https://www.aly.ma/"} target="_blank">
                 Live{" "}
@@ -180,7 +180,7 @@ export default function Projects(): React.ReactElement {
               </svg>
             </span>
           </span>
-        </>
+        </div>
       ),
     },
     {
@@ -188,14 +188,14 @@ export default function Projects(): React.ReactElement {
       logo: sadaqati,
       logoSize: 100,
       description: (
-        <>
+        <div className="flex flex-col justify-center">
           <p className="text-small mt-2 font-bold text-zinc-300">
             (Sadaqati Africa) is a charitable organization that works to improve
             the lives of individuals and communities most in need of Muslims and
             others in African countries.
           </p>
           <br />
-          <span className="italic underline  decoration-violet-500 underline-offset-1">
+          <span className="mx-auto  w-full self-center text-center italic underline decoration-violet-500 underline-offset-1">
             <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
               <Link href={"https://sadaqahti.com/en/"} target="_blank">
                 Live{" "}
@@ -220,7 +220,7 @@ export default function Projects(): React.ReactElement {
               </svg>
             </span>
           </span>
-        </>
+        </div>
       ),
     },
   ];
@@ -262,7 +262,7 @@ export default function Projects(): React.ReactElement {
                   key={project.title}
                 >
                   <Card
-                    key={"l"}
+                    key={project.title}
                     title={project.title}
                     description={project.description}
                     logo={project.logo}
@@ -277,12 +277,15 @@ export default function Projects(): React.ReactElement {
                   key={project.title}
                 >
                   <Card
-                    key={"l"}
+                    key={project.title}
                     title={project.title}
                     description={project.description}
                     logo={project.logo}
                     logoSize={project.logoSize}
                     animate={false}
+                    className={
+                      project.title === "KONAN" ? "brightness-0 invert" : ""
+                    }
                   />
                 </div>
               ))}

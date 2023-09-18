@@ -14,37 +14,49 @@ export default function TechAndTools(): React.ReactElement {
     {
       name: "Typescript",
       title: "Typescript",
-      description:
-        "Once you go typescript, you can't go back! (just use :any), but really using typescript will enrich your app and make your codebase much more reliable, safe and production ready.",
+      description: (
+        <div className="text-small mt-2 font-bold text-zinc-300">
+          <p>
+            Once you go typescript, you can't go back! (just use :any), but
+            really using typescript will enrich your app and make your codebase
+            much more reliable, safe and production ready.
+          </p>
+        </div>
+      ),
       logo: typescript,
-      logoHeight: 40,
+      
     },
 
     {
       name: "React",
       title: "React",
-      description:
-        "Well, really i love using React especially with Next.js but overall it deserves to be #1, it's scalable and easy to start with, and you have ton of resources to guide you, as well as large community and very good team behind it!",
+      description: (
+        <div className="text-small mt-2 font-bold text-zinc-300">
+          <p>
+            Well, really i love using React especially with Next.js, it's
+            scalable and easy to start with, and you have ton of resources to
+            guide you, as well as large community and support behind it!
+          </p>
+        </div>
+      ),
+      
       logo: react,
     },
     {
       name: "other tech",
       title: "other tech?",
       description: (
-        <>
-          {" "}
-          <div className="text-small mt-2 text-zinc-300 font-bold">
+          <div className="text-small mt-2 font-bold text-zinc-300">
             This is a list of other tech i usually use and familiar with: <br />
-            <p className="text-small mt-2 text-zinc-300 font-bold">
+            <p className="text-small mt-2 font-bold text-zinc-300">
               NextJS, REST API, GraphQL, MongoDB, Docker, Redux toolkit, NodeJS,
               ExpressJS, Cypress, React-Router, React-Query, TailwindCSS, and
               MUI.
             </p>
           </div>
-        </>
       ),
       logo: toolsLogo,
-      logoHeight: 40,
+      
     },
   ];
 
@@ -63,8 +75,7 @@ export default function TechAndTools(): React.ReactElement {
             <br />
             4-Auto import (ES6, TS, JSX, TSX) <br /> 5-code spell checker.{" "}
           </p>
-          <br />{" "}
-          font family: monospace. <br />
+          <br /> font family: monospace. <br />
           theme: Gitlab dark
         </div>
       ),
@@ -92,8 +103,8 @@ export default function TechAndTools(): React.ReactElement {
           building apps or in personal use:{" "}
           <p className="text-small mt-2 font-bold text-zinc-300">
             Git, Github, Gitlab, Storybook, npm, yarn, YouTrack, Jira, T3-stack
-            to bootstrap my side-projects, figma, framer, framer motion,
-            Grammarly, and Authy for managing passwords / 2FAs.
+            to bootstrap my side-projects, figma, metabase, sentry, framer,
+            framer motion, Grammarly, and Authy for managing passwords / 2FAs.
           </p>
         </div>
       ),
@@ -131,7 +142,6 @@ export default function TechAndTools(): React.ReactElement {
                 title={tech.title}
                 description={tech.description}
                 logo={tech.logo}
-                logoHeight={tech?.logoHeight}
               />
             </motion.div>
           ))}

@@ -23,11 +23,12 @@ export default function About(): React.ReactElement {
   ];
 
   useEffect(() => {
-   
     setTimeout(() => {
-          setCurrentIndex((prev: number) => prev === hobbies.length - 1 ?  0  : prev + 1);
+      setCurrentIndex((prev: number) =>
+        prev === hobbies.length - 1 ? 0 : prev + 1
+      );
     }, 1000);
-  }, [currentIndex])
+  }, [currentIndex]);
 
   return (
     <>
@@ -60,7 +61,7 @@ export default function About(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="mt-2 w-full rounded-lg px-4 pb-4 pt-0 sm:mt-4  sm:w-1/2 sm:px-2"
+          className="mx-8 mt-2 rounded-xl  bg-stone-900 px-4 pb-4 pt-4 text-center sm:mt-4 sm:w-1/2 sm:px-2"
         >
           <div>
             <span className="text-lg font-bold text-zinc-300 sm:text-xl">
@@ -92,13 +93,9 @@ export default function About(): React.ReactElement {
           <p className="text-lg font-bold text-zinc-300 sm:text-xl">
             My Top hobbies include : listening to music, watching movies,
             gaming, and avoid writing regex. A wannabe Javascript ninja
-            engineer.  <span
-        >
-          {hobbies[currentIndex]?.logo}
-        </span>
+            engineer. <span>{hobbies[currentIndex]?.logo}</span>
           </p>
         </motion.div>
-       
 
         <motion.div className="mb-2 flex w-full justify-center">
           <Link href={"/"}>

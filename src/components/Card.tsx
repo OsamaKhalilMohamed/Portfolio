@@ -8,16 +8,16 @@ type Props = {
   logo: any;
   logoSize?: number;
   animate?: boolean;
-  logoHeight?: number;
+  className?: string;
 };
 
 export default function Card({
   title,
   description,
   logo,
-  logoHeight,
   logoSize,
   animate = true,
+  className,
 }: Props): React.ReactElement {
   return (
     <motion.div
@@ -30,35 +30,31 @@ export default function Card({
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0 },
       }}
-      className="flex h-full w-full flex-grow flex-col items-center rounded-lg bg-stone-900 p-4 shadow-md"
+      className="flex h-full w-full flex-grow flex-col items-center rounded-xl bg-stone-900/90 p-4 shadow-md hover:bg-stone-800"
     >
-      <motion.div
-        initial={{ x: -100, opacity: 0 }}
-        whileHover={{ rotate: animate ? 360 : 0 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        className={`h-${logoHeight ?? 30} ${
-          logoHeight ? "mb-2" : "mb-8"
-        } mx-auto flex w-full justify-center`}
-      >
-        <Image
-          src={logo}
-          alt="logo"
-          width={logoSize ?? 150}
-          style={{ objectFit: "contain" }}
-          height={logoSize ?? 150}
-          quality={100}
-        />
-      </motion.div>
+      <div>
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileHover={{ rotate: animate ? 360 : 0 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className={className ?? ""}
+        >
+          <Image
+            src={logo}
+            alt="logo"
+            width={logoSize ?? 150}
+            style={{ objectFit: "contain" }}
+            height={logoSize ?? 150}
+            quality={100}
+          />
+        </motion.div>
+        <h1 className="my-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl font-bold text-transparent">
+          {title}
+        </h1>
+      </div>
 
-      <h1 className="mb-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl font-bold text-transparent">
-        {title}
-      </h1>
-      {typeof description === "string" ? (
-        <p className="text-small mt-2 font-bold text-zinc-300">{description}</p>
-      ) : (
-        <>{description}</>
-      )}
+      <div className="min-h-max">{<>{description}</>}</div>
     </motion.div>
   );
 }
