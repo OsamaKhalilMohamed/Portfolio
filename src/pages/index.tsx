@@ -50,11 +50,11 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex-col flex w-3/4 md:w-2/4 max-w-[675px] md:justify-between bg-gradient-to-r  from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl text-transparent md:flex-row"
+          className="flex w-3/4 max-w-[675px] flex-col bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl text-transparent md:w-2/4 md:flex-row md:justify-between"
         >
-          <div className="flex w-full md:w-2/4 flex-col">
+          <div className="flex w-full flex-col md:w-3/6">
             <div className="w-full">
-              <div className="flex w-full flex-col justify-start md:px-2 md:w-full">
+              <div className="flex w-full flex-col justify-start md:w-full md:px-2">
                 <div className=" flex flex-grow flex-col flex-nowrap">
                   <p className="flex text-start text-sm text-cyan-100">
                     Hi <span className="animate-waving-hand">👋🏻</span>,
@@ -67,7 +67,7 @@ export default function Home(): React.ReactElement {
               </div>
             </div>
 
-            <div className="w-full md:px-2 text-start leading-3 text-zinc-300">
+            <div className="md:w-3/4 w-full text-start leading-3 text-zinc-300 md:pl-2">
               <span className="w-full text-sm font-extrabold">
                 Software engineer, Obsessed with building interactive UIs,
                 currently working at{" "}
@@ -76,7 +76,7 @@ export default function Home(): React.ReactElement {
                   target="_blank"
                 >
                   {" "}
-                  <span className="border-b-2 border-dotted border-violet-500 text-zinc-300">
+                  <span className="border-b-2 w-full border-dotted border-violet-500 text-zinc-300">
                     Synapse Analytics{" "}
                   </span>
                 </Link>
@@ -85,7 +85,7 @@ export default function Home(): React.ReactElement {
           </div>
 
           <motion.div
-            className="mt-4 flex flex-col sm:mt-0 mx-auto sm:mx-none"
+            className="md:mx-0 mx-auto mt-4 flex flex-col sm:mt-0 justify-end"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 50 }}
@@ -102,7 +102,7 @@ export default function Home(): React.ReactElement {
           </motion.div>
         </motion.div>
         <motion.div
-          className="mx-auto w-5/6 mt-4 flex-wrap flex max-w-[675px] px-1 md:px-2 pt-4 font-bold sm:w-2/4 md:justify-between"
+          className="mx-auto mt-4 flex w-5/6 max-w-[675px] flex-wrap px-1 pt-4 font-bold sm:w-2/4 md:justify-between md:px-2"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -111,32 +111,37 @@ export default function Home(): React.ReactElement {
             href={"https://www.linkedin.com/in/osama-khalil98/"}
             target="_blank"
           >
-            <span className="border-b-2 border-dotted border-lime-400 text-zinc-300 mr-3 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-lime-400 text-zinc-300 md:mr-0">
               Linkedin{" "}
             </span>
           </Link>
           <Link href={"mailto:osadx35@gmail.com"}>
-            <span className="border-b-2 border-dotted border-fuchsia-700 text-zinc-300 mr-3 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-fuchsia-700 text-zinc-300 md:mr-0">
               Email{" "}
             </span>
           </Link>
           <Link href={"https://github.com/osamakhalil98/"} target="_blank">
-            <span className="border-b-2 border-dotted border-red-400 text-zinc-300 mr-3 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-red-400 text-zinc-300 md:mr-0">
               Github{" "}
             </span>
           </Link>
           <Link href={"https://codepen.io/osadxen/"} target="_blank">
-            <span className="border-b-2 border-dotted border-rose-800 text-zinc-300 mr-3 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-rose-800 text-zinc-300 md:mr-0">
               Codepen{" "}
             </span>
           </Link>
-          <Link href={"https://codepen.io/osadxen/"} target="_blank">
-            <span className="border-b-2 border-dotted border-amber-500 text-zinc-300 mr-3 md:mr-0">
+          <Link
+            href={
+              "https://drive.google.com/file/d/1NL1xID4YAZxaIZHtwyiRzyfSRb_QhI_Y/view?usp=sharing"
+            }
+            target="_blank"
+          >
+            <span className="mr-3 border-b-2 border-dotted border-amber-500 text-zinc-300 md:mr-0">
               Resume{" "}
             </span>
           </Link>
           <Link href={"Timeline"} target="_blank">
-            <span className="border-b-2 border-dotted border-blue-500 text-zinc-300 mr-3 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-blue-500 text-zinc-300 md:mr-0">
               Timeline{" "}
             </span>
           </Link>
@@ -145,7 +150,7 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="mx-auto mt-4 flex w-5/6 max-w-[675px] px-1 md:px-2 pb-4 pt-4 text-zinc-300 sm:w-2/4 md:justify-start"
+          className="mx-auto mt-4 flex w-5/6 max-w-[675px] px-1 pb-4 pt-4 text-zinc-300 sm:w-2/4 md:justify-start md:px-2"
         >
           <div className="leading-6">
             <span className="text-sm font-bold text-zinc-300 sm:text-lg">
@@ -175,7 +180,7 @@ export default function Home(): React.ReactElement {
             </p>
           </div>
         </motion.div>
-        <div className="mx-auto flex w-5/6 max-w-[675px] flex-col px-1 pb-4 pt-4 text-zinc-300 md:w-2/4 md:px-2 md:justify-start">
+        <div className="mx-auto flex w-5/6 max-w-[675px] flex-col px-1 pb-4 pt-4 text-zinc-300 md:w-2/4 md:justify-start md:px-2">
           <p className="mb-2 flex-grow text-center text-2xl font-extrabold md:text-4xl">
             <span className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent">
               Wanna check out projects i've worked on{" "}
