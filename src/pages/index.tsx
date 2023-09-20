@@ -50,11 +50,11 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex w-3/4 max-w-[675px] flex-col bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl text-transparent md:w-2/4 md:flex-row md:justify-between"
+          className="flex w-5/6 max-w-[675px] flex-col bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl text-transparent md:w-2/4 md:flex-row md:justify-between"
         >
           <div className="flex w-full flex-col md:w-3/6">
             <div className="w-full">
-              <div className="flex w-full flex-col justify-start px-1 md:w-full md:px-2">
+              <div className="flex w-full flex-col justify-start md:w-full md:px-2">
                 <div className=" flex flex-grow flex-col flex-nowrap">
                   <p className="flex text-start text-sm text-cyan-100">
                     Hi <span className="animate-waving-hand">👋🏻</span>,
