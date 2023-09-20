@@ -54,7 +54,7 @@ export default function Home(): React.ReactElement {
         >
           <div className="flex w-full flex-col md:w-3/6">
             <div className="w-full">
-              <div className="flex w-full flex-col justify-start md:w-full md:px-2">
+              <div className="flex w-full flex-col justify-start px-1 md:w-full md:px-2">
                 <div className=" flex flex-grow flex-col flex-nowrap">
                   <p className="flex text-start text-sm text-cyan-100">
                     Hi <span className="animate-waving-hand">👋🏻</span>,
@@ -67,7 +67,7 @@ export default function Home(): React.ReactElement {
               </div>
             </div>
 
-            <div className="md:w-3/4 w-full text-start leading-3 text-zinc-300 md:pl-2">
+            <div className="w-full text-start leading-3 text-zinc-300 md:w-3/4 md:pl-2">
               <span className="w-full text-sm font-extrabold">
                 Software engineer, Obsessed with building interactive UIs,
                 currently working at{" "}
@@ -76,7 +76,7 @@ export default function Home(): React.ReactElement {
                   target="_blank"
                 >
                   {" "}
-                  <span className="border-b-2 w-full border-dotted border-violet-500 text-zinc-300">
+                  <span className="w-full border-b-2 border-dotted border-violet-500 text-zinc-300">
                     Synapse Analytics{" "}
                   </span>
                 </Link>
@@ -85,7 +85,7 @@ export default function Home(): React.ReactElement {
           </div>
 
           <motion.div
-            className="md:mx-0 mx-auto mt-4 flex flex-col sm:mt-0 justify-end"
+            className="mx-auto mt-4 flex flex-col justify-end sm:mt-0 md:mx-0"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 50 }}
