@@ -56,49 +56,6 @@ export default function Projects(): React.ReactElement {
         </div>
       ),
     },
-    {
-      title: "Blonded",
-      logo: blonded,
-      logoSize: 250,
-      description: (
-        <div className="flex flex-col justify-center">
-          <p className="text-small mt-2 font-bold text-zinc-300">
-            Blonded is a simple frank ocean lyrics app, each 5 seconds the
-            lyrics change or you can control the current lyric with the left and
-            right keys, more features are coming soon.
-          </p>
-          <br />
-          <span className="mx-auto w-full justify-end self-center text-center italic underline  decoration-violet-500  underline-offset-1">
-            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
-              <Link
-                href={"https://osamakhalil98.github.io/blonded/"}
-                target="_blank"
-              >
-                Live{" "}
-              </Link>
-            </span>
-
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="white"
-                className="h-4 w-4 cursor-pointer"
-                style={{ display: "inline", verticalAlign: "middle" }}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </span>
-          </span>
-        </div>
-      ),
-    },
   ];
 
   const professionalProjects = [
@@ -257,10 +214,7 @@ export default function Projects(): React.ReactElement {
         <div className="mt-8 flex min-h-full w-5/6  flex-col  md:flex-row">
           {tab.active === "Personal"
             ? personalProjects.map((project) => (
-                <div
-                  className="mb-6 w-full md:mr-8 md:w-1/2"
-                  key={project.title}
-                >
+                <div className="mb-6 w-full md:w-1/2 mx-auto" key={project.title}>
                   <Card
                     key={project.title}
                     title={project.title}
