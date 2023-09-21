@@ -153,19 +153,19 @@ export default function Home(): React.ReactElement {
           className="mx-auto mt-4 flex w-5/6 max-w-[675px] px-1 pb-4 pt-4 text-zinc-300 sm:w-2/4 md:justify-start md:px-2"
         >
           <div className="leading-6">
-            <span className="text-sm font-bold text-zinc-300 sm:text-lg">
+            <span className="text-md font-bold text-zinc-300 sm:text-lg">
               I'm a front-end engineer, born and raised in Cairo - Egypt{" "}
             </span>{" "}
             <span className="bg-none text-inherit">🇪🇬</span>
-            <div className="text-sm font-bold leading-6 text-zinc-300 sm:text-lg">
+            <div className="text-md font-bold leading-6 text-zinc-300 sm:text-lg">
               I'm very Interested in building interactive UIs. I have a
               bachelor's degree in computer science, Class of 2020. I have +2
               years of professional experience in Front-end development and the
               cycle of software (web) development in general. always looking for
-              trying out and playing with new tech, ask my team members for
-              their main stack just to avoid any FOMO. currently on a mission to
-              learn Vue.js, if you're interested you can see my Tech and Tools
-              i'm usually using in my work in more details:{" "}
+              trying out new tech and asking my team members for their main
+              stack just to avoid any FOMO. currently on a mission to learn
+              Vue.js, if you're interested you can see my Tech and Tools i'm
+              usually using in my work:{" "}
               <Link href={"/Tech"} target="_blank" className="h-fit w-fit ">
                 {" "}
                 <span className="border-b-2 border-dotted border-pink-700 text-zinc-300">
@@ -173,7 +173,7 @@ export default function Home(): React.ReactElement {
                 </span>
               </Link>
             </div>
-            <p className="text-sm font-bold leading-6 text-zinc-300 sm:text-lg">
+            <p className="text-md font-bold leading-6 text-zinc-300 sm:text-lg">
               My Top hobbies include : listening to music, watching movies,
               gaming, and avoid writing regex. A wannabe Javascript ninja
               engineer. <span>{hobbies[currentIndex]?.logo}</span>
