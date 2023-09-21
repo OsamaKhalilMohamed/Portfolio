@@ -140,7 +140,7 @@ export default function Home(): React.ReactElement {
               Resume{" "}
             </span>
           </Link>
-          <Link href={"Timeline"} target="_blank">
+          <Link href={"Timeline"}>
             <span className="mr-3 border-b-2 border-dotted border-blue-500 text-zinc-300 md:mr-0">
               Timeline{" "}
             </span>
@@ -166,7 +166,7 @@ export default function Home(): React.ReactElement {
               stack just to avoid any FOMO. currently on a mission to learn
               Vue.js, if you're interested you can see my Tech and Tools i'm
               usually using in my work:{" "}
-              <Link href={"/Tech"} target="_blank" className="h-fit w-fit ">
+              <Link href={"/Tech"} className="h-fit w-fit ">
                 {" "}
                 <span className="border-b-2 border-dotted border-pink-700 text-zinc-300">
                   Tech + Tools{" "}
