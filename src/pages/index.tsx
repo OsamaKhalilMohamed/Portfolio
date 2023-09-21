@@ -94,9 +94,9 @@ export default function Home(): React.ReactElement {
             <Image
               src={me}
               alt="A picture of myself :)"
-              className="h-50 w-50 rounded-xl object-cover shadow-md"
+              className="w-50 h-40 rounded-xl object-cover shadow-md"
               width="150"
-              height="150"
+              height="100"
               placeholder="blur"
             />
           </motion.div>
