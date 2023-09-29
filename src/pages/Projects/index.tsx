@@ -17,18 +17,18 @@ export default function Projects(): React.ReactElement {
 
   const personalProjects = [
     {
-      title: "Inner Note",
+      title: "InnerNote",
       logo: innerNote,
       logoSize: 800,
       description: (
         <div className="flex flex-col justify-center">
           <p className="text-small mt-2 font-bold text-yellow-50">
-            Inner note is a web app that let you share your
-            confessions/dreams/thoughts/ideas publicly or privately as well as
-            see other notes and interact with them.
+            InnerNote is a web app that let you share your confessions/ dreams/
+            thoughts/ ideas publicly or privately as well as see other notes and
+            interact with them (under developing).
           </p>
           <br />
-          <span className="mx-auto w-full  self-center text-center italic underline  decoration-violet-500  underline-offset-1">
+          <span className="mx-auto self-center border-b-2 border-dotted border-violet-500 text-center">
             <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
               <Link href={"https://inner-note.vercel.app/"} target="_blank">
                 Live{" "}
@@ -71,7 +71,7 @@ export default function Projects(): React.ReactElement {
             instantaneous decisions and lower non-performing loans.
           </p>
           <br />
-          <span className="mx-auto w-full  self-center  text-center italic underline decoration-violet-500 underline-offset-1">
+          <span className="mx-auto self-center  border-b-2 border-dotted border-violet-500 text-center">
             <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
               <Link href={"https://app.konan.ai/login"} target="_blank">
                 Live{" "}
@@ -112,7 +112,7 @@ export default function Projects(): React.ReactElement {
             in your area
           </p>
           <br />
-          <span className="mx-auto w-full self-center  text-center italic underline  decoration-violet-500 underline-offset-1">
+          <span className="mx-auto self-center  border-b-2 border-dotted border-violet-500 text-center text-center">
             <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
               <Link href={"https://www.aly.ma/"} target="_blank">
                 Live{" "}
@@ -152,7 +152,7 @@ export default function Projects(): React.ReactElement {
             others in African countries.
           </p>
           <br />
-          <span className="mx-auto  w-full self-center text-center italic underline decoration-violet-500 underline-offset-1">
+          <span className="mx-auto self-center border-b-2 border-dotted border-violet-500 text-center">
             <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
               <Link href={"https://sadaqahti.com/en/"} target="_blank">
                 Live{" "}

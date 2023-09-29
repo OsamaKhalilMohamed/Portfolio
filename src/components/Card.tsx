@@ -30,7 +30,7 @@ export default function Card({
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0 },
       }}
-      className="flex h-full w-full flex-grow flex-col items-center rounded-xl bg-zinc-900/90 p-4 shadow-md hover:bg-zinc-800"
+      className="mx-auto flex h-full w-full max-w-[600px] flex-grow flex-col items-center rounded-xl bg-zinc-900/90 p-4 shadow-md hover:bg-zinc-800"
     >
       <div>
         <motion.div className={className ?? ""}>
@@ -48,7 +48,7 @@ export default function Card({
         </h1>
       </div>
 
-      <div className="min-h-max">{<>{description}</>}</div>
+      <div className="min-h-max max-w-[600px] px-2">{<>{description}</>}</div>
     </motion.div>
   );
 }
