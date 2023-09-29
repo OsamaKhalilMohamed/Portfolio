@@ -211,7 +211,7 @@ export default function Projects(): React.ReactElement {
             {tab.hidden}
           </h1>
         </motion.div>
-        <div className="mt-8 flex min-h-full w-full max-w-[1100px] flex-col  md:flex-row">
+        <div className="mt-8 flex min-h-full w-5/6 max-w-[1100px] flex-col  md:flex-row">
           {tab.active === "Personal"
             ? personalProjects.map((project) => (
                 <div
