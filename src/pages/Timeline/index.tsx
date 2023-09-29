@@ -30,7 +30,7 @@ export default function TimeLine() {
           {" "}
           <h1 className="break-all text-3xl font-bold md:text-6xl">Timeline</h1>
         </motion.div>
-        <div className="w-5/6 sm:ml-12 sm:w-1/2">
+        <div className="w-5/6 sm:ml-12 sm:w-1/2 max-w-[700px]">
           <motion.ol
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -52,7 +52,7 @@ export default function TimeLine() {
               <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-yellow-50">
                 July 2022 - Present
               </time>
-              <p className="text-md mb-4 ml-2  flex-wrap font-bold  text-yellow-50">
+              <p className="md:text-md mb-4 ml-2 flex-wrap text-sm  font-semibold text-yellow-50  md:font-bold">
                 Started as an intern in summer of 2022 and then got hired as a
                 full-time Front-end engineer at Synapse analytics. Already
                 learned a lot. worked on large features, that went live and used
@@ -105,7 +105,7 @@ export default function TimeLine() {
               <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-yellow-50">
                 March 2022 - July 2022
               </time>
-              <p className="text-md mb-4 ml-2  flex-wrap font-bold  text-yellow-50">
+              <p className="md:text-md mb-4 ml-2 flex-wrap text-sm  font-semibold text-yellow-50  md:font-bold">
                 My first full-time job after finishing military service, worked
                 on maintaining and developing new features to Moroccan platform
                 called Aly, this was my first experience to work with a large
@@ -127,7 +127,7 @@ export default function TimeLine() {
               <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-yellow-50">
                 November 2020 - February 2021
               </time>
-              <p className="text-md mb-4 ml-2  flex-wrap font-bold  text-yellow-50">
+              <p className="md:text-md mb-4 ml-2 flex-wrap text-sm  font-semibold text-yellow-50  md:font-bold">
                 My first ever full-time job, was really a good start for me,
                 learned how to work with tools like Redux, different
                 React-hooks, i18n localization and more. unfortunately, it got

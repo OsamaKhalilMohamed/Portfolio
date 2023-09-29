@@ -14,8 +14,9 @@ export default function TechAndTools(): React.ReactElement {
     {
       name: "Typescript",
       title: "Typescript",
+      logoSize: 180,
       description: (
-        <div className="text-small mt-2 font-bold text-yellow-50">
+        <div className="text-small mt-2 flex grow flex-col justify-between font-bold text-yellow-50">
           <p>
             Once you go typescript, you can't go back! (just use :any), but
             really using typescript will enrich your app and make your codebase
@@ -29,8 +30,9 @@ export default function TechAndTools(): React.ReactElement {
     {
       name: "React",
       title: "React",
+      logoSize: 200,
       description: (
-        <div className="text-small mt-2 font-bold text-yellow-50">
+        <div className="text-small mt-2 flex grow flex-col justify-between font-bold text-yellow-50">
           <p>
             Well, really i love using React especially with Next.js, it's
             scalable and easy to start with, and you have ton of resources to
@@ -44,8 +46,9 @@ export default function TechAndTools(): React.ReactElement {
     {
       name: "other tech",
       title: "other tech?",
+      logoSize: 180,
       description: (
-        <div className="text-small mt-2 font-bold text-yellow-50">
+        <div className="text-small mt-2 flex grow flex-col justify-between font-bold text-yellow-50">
           This is a list of other tech i usually use and familiar with: <br />
           <p className="text-small mt-2 font-bold text-yellow-50">
             NextJS, REST API, GraphQL, MongoDB, Docker, Redux toolkit, NodeJS,
@@ -139,6 +142,8 @@ export default function TechAndTools(): React.ReactElement {
                 title={tech.title}
                 description={tech.description}
                 logo={tech.logo}
+                className={"min-h-[150px]"}
+                logoSize={tech.logoSize}
               />
             </motion.div>
           ))}
@@ -162,7 +167,7 @@ export default function TechAndTools(): React.ReactElement {
                 title={tool.title}
                 description={tool.description}
                 logo={tool.logo}
-                //logoHeight={tool?.logoHeight}
+                className="mx-auto"
               />
             </motion.div>
           ))}

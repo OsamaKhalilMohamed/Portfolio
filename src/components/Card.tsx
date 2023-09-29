@@ -33,7 +33,7 @@ export default function Card({
       className="mx-auto flex h-full w-full max-w-[600px] flex-grow flex-col items-center rounded-xl bg-zinc-900/90 p-4 shadow-md hover:bg-zinc-800"
     >
       <div>
-        <motion.div className={className ?? ""}>
+        <motion.div className={`${className} min-h-[100px] mx-auto flex justify-center`}>
           <Image
             src={logo}
             alt="logo"
@@ -48,7 +48,9 @@ export default function Card({
         </h1>
       </div>
 
-      <div className="min-h-max max-w-[600px] px-2">{<>{description}</>}</div>
+      <div className="flex h-full min-h-max max-w-[600px] flex-col px-2">
+        {<>{description}</>}
+      </div>
     </motion.div>
   );
 }
