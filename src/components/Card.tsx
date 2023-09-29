@@ -30,7 +30,7 @@ export default function Card({
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0 },
       }}
-      className="flex h-full w-full flex-grow flex-col items-center rounded-xl bg-stone-900/90 p-4 shadow-md hover:bg-stone-800"
+      className="flex h-full w-full flex-grow flex-col items-center rounded-xl bg-zinc-900/90 p-4 shadow-md hover:bg-zinc-800"
     >
       <div>
         <motion.div className={className ?? ""}>

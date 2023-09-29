@@ -50,7 +50,7 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex w-5/6 max-w-[675px] flex-col bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl text-transparent md:w-2/4 md:flex-row md:justify-between"
+          className="flex w-5/6 max-w-[680px] flex-col bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl text-transparent md:w-2/4 md:flex-row md:justify-between"
         >
           <div className="flex w-full flex-col md:w-3/6">
             <div className="w-full">
@@ -102,7 +102,7 @@ export default function Home(): React.ReactElement {
           </motion.div>
         </motion.div>
         <motion.div
-          className="mx-auto mt-4 flex w-5/6 max-w-[675px] flex-wrap px-1 pt-4 font-bold sm:w-2/4 md:justify-between md:px-2"
+          className="mx-auto mt-4 flex w-5/6 max-w-[680px] flex-wrap px-1 pt-4 font-bold sm:w-2/4 md:justify-between md:px-2"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -150,35 +150,30 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="mx-auto mt-4 flex w-5/6 max-w-[675px] px-1 pb-4 pt-4 text-yellow-50 sm:w-2/4 md:justify-start md:px-2"
+          className="mx-auto mt-4 flex w-5/6 max-w-[680px] px-1 pb-4 pt-4 text-yellow-50 sm:w-2/4 md:justify-start md:px-2"
         >
-          <div className="leading-6">
-            <span className="text-md font-bold text-yellow-50 sm:text-lg">
-              I'm a front-end engineer, born and raised in Cairo - Egypt{" "}
-            </span>{" "}
-            <span className="bg-none text-inherit">🇪🇬</span>
-            <div className="text-md font-bold leading-6 text-yellow-50 sm:text-lg">
-              I'm very Interested in building interactive UIs. I have a
-              bachelor's degree in computer science, Class of 2020. I have +2
-              years of professional experience in Front-end development and the
-              cycle of software (web) development in general. always looking for
-              trying out new tech and asking my team members for their main
-              stack just to avoid any FOMO. currently on a mission to learn
-              Vue.js, if you're interested you can see my Tech and Tools i'm
-              usually using in my work:{" "}
-              <Link href={"/Tech"} className="h-fit w-fit ">
-                {" "}
-                <span className="border-b-2 border-dotted border-pink-700 text-yellow-50">
-                  Tech + Tools{" "}
-                </span>
-              </Link>{" "}
-              . My Top hobbies include: listening to music, watching movies,
-              gaming, and avoid writing regex. A wannabe Javascript ninja
-              engineer. <span>{hobbies[currentIndex]?.logo}</span>
-            </div>
+          <div className="text-md text-start font-bold leading-6 text-yellow-50 sm:text-lg">
+            I'm a front-end engineer, born and raised in Cairo - Egypt{" "}
+            <span className="bg-none text-inherit">🇪🇬</span>. Very Interested in
+            building interactive UIs. I have a bachelor's degree in computer
+            science, Class of 2020. I have +2 years of professional experience
+            in Front-end development and the cycle of software (web) development
+            in general. constantly trying out new tech in the very rapid
+            javascript world we're living in. currently on a mission to learn
+            Vue.js, if you're interested you can see my Tech and Tools i'm
+            usually using in my work:{" "}
+            <Link href={"/Tech"} className="h-fit w-fit ">
+              {" "}
+              <span className="border-b-2 border-dotted border-pink-700 text-yellow-50">
+                Tech + Tools{" "}
+              </span>
+            </Link>{" "}
+            . My Top hobbies include: listening to music, watching movies,
+            gaming, and avoid writing regex. A wannabe Javascript ninja
+            engineer. <span>{hobbies[currentIndex]?.logo}</span>
           </div>
         </motion.div>
-        <div className="mx-auto flex w-5/6 max-w-[675px] flex-col px-1 pb-4 pt-4 text-yellow-50 md:w-2/4 md:justify-start md:px-2">
+        <div className="mx-auto flex w-5/6 max-w-[680px] flex-col px-1 pb-4 pt-4 text-yellow-50 md:w-2/4 md:justify-start md:px-2">
           <p className="mb-2 flex-grow text-center text-2xl font-extrabold md:text-4xl">
             <span className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent">
               Wanna check out projects i've worked on{" "}

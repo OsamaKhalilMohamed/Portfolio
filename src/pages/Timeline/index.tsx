@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import synapse from "../../../public/synapse.jpeg";
 import majal from "../../../public/majal.png";
 import digitopia from "../../../public/digitopia.jpeg";
@@ -7,16 +7,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 
-type Props = {};
-
-export default function TimeLine({}: Props) {
+export default function TimeLine() {
   return (
-    <>
+    <Fragment>
       <Head>
         <title>Osama Khalil</title>
         <meta
           name="description"
-          content="Osama Khalil - Software engineer - Home"
+          content="Osama Khalil - Software engineer - Timeline"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -61,7 +59,7 @@ export default function TimeLine({}: Props) {
                 by large number of clients. psst: if you or your company needs
                 MLOps product solution to manage and deploy all of your AI
                 models, i have a very cool product, you can use:{" "}
-                <span className="italic underline  decoration-violet-500 underline-offset-1">
+                <span className="border-b-2 border-dotted border-violet-500">
                   <span className="mr-1">
                     <Link
                       href={"https://www.synapse-analytics.io/konan"}
@@ -146,6 +144,6 @@ export default function TimeLine({}: Props) {
           </motion.div>
         </div>
       </main>
-    </>
+    </Fragment>
   );
 }
