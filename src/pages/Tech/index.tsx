@@ -64,6 +64,7 @@ export default function TechAndTools(): React.ReactElement {
     {
       name: "VSC",
       title: "Visual studio code",
+      logoSize: 180,
       description: (
         <div className="text-small mt-2 font-bold text-yellow-50">
           {" "}
@@ -84,6 +85,7 @@ export default function TechAndTools(): React.ReactElement {
     {
       name: "Vercel",
       title: "Vercel",
+      logoSize: 180,
       description: (
         <p className="text-small mt-2 font-bold text-yellow-50">
           Vercel is one of the best in the field from providing robust way to
@@ -97,6 +99,7 @@ export default function TechAndTools(): React.ReactElement {
     {
       name: "other tools",
       title: "other tools?",
+      logoSize: 180,
       description: (
         <div className="text-small mt-2 font-bold text-yellow-50">
           This is a list of other tools i usually use and familiar with when
@@ -168,6 +171,7 @@ export default function TechAndTools(): React.ReactElement {
                 description={tool.description}
                 logo={tool.logo}
                 className="mx-auto"
+                logoSize={tool.logoSize}
               />
             </motion.div>
           ))}

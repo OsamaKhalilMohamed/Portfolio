@@ -103,7 +103,7 @@ export default function Projects(): React.ReactElement {
     {
       title: "Aly",
       logo: aly,
-      logoSize: 150,
+      logoSize: 130,
       description: (
         <div className="flex grow flex-col justify-between">
           <p className="text-small mt-2 font-bold text-yellow-50">
