@@ -22,14 +22,14 @@ export default function Projects(): React.ReactElement {
       logoSize: 800,
       description: (
         <div className="flex flex-col justify-center">
-          <p className="text-small mt-2 font-bold text-zinc-300">
+          <p className="text-small mt-2 font-bold text-yellow-50">
             Inner note is a web app that let you share your
             confessions/dreams/thoughts/ideas publicly or privately as well as
             see other notes and interact with them.
           </p>
           <br />
           <span className="mx-auto w-full  self-center text-center italic underline  decoration-violet-500  underline-offset-1">
-            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
+            <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
               <Link href={"https://inner-note.vercel.app/"} target="_blank">
                 Live{" "}
               </Link>
@@ -65,14 +65,14 @@ export default function Projects(): React.ReactElement {
       logoSize: 800,
       description: (
         <div className="flex flex-col justify-center">
-          <p className="text-small mt-2 font-bold text-zinc-300">
+          <p className="text-small mt-2 font-bold text-yellow-50">
             The AI decisioning platform that enables financial institutions to
             fully automate their credit risk policy workflows, give out
             instantaneous decisions and lower non-performing loans.
           </p>
           <br />
           <span className="mx-auto w-full  self-center  text-center italic underline decoration-violet-500 underline-offset-1">
-            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
+            <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
               <Link href={"https://app.konan.ai/login"} target="_blank">
                 Live{" "}
               </Link>
@@ -106,14 +106,14 @@ export default function Projects(): React.ReactElement {
       logoSize: 100,
       description: (
         <div className="flex flex-col justify-center">
-          <p className="text-small mt-2 font-bold text-zinc-300">
+          <p className="text-small mt-2 font-bold text-yellow-50">
             Aly allows Moroccans to help each other and share their opinions and
             experiences Connect with the community and find the best Businesses
             in your area
           </p>
           <br />
           <span className="mx-auto w-full self-center  text-center italic underline  decoration-violet-500 underline-offset-1">
-            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
+            <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
               <Link href={"https://www.aly.ma/"} target="_blank">
                 Live{" "}
               </Link>
@@ -146,14 +146,14 @@ export default function Projects(): React.ReactElement {
       logoSize: 100,
       description: (
         <div className="flex flex-col justify-center">
-          <p className="text-small mt-2 font-bold text-zinc-300">
+          <p className="text-small mt-2 font-bold text-yellow-50">
             (Sadaqati Africa) is a charitable organization that works to improve
             the lives of individuals and communities most in need of Muslims and
             others in African countries.
           </p>
           <br />
           <span className="mx-auto  w-full self-center text-center italic underline decoration-violet-500 underline-offset-1">
-            <span className="text-small mr-1 mt-2 font-bold text-zinc-300">
+            <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
               <Link href={"https://sadaqahti.com/en/"} target="_blank">
                 Live{" "}
               </Link>
@@ -205,7 +205,7 @@ export default function Projects(): React.ReactElement {
             {tab.active}
           </h1>
           <h1
-            className="text-md mr-4 cursor-pointer break-all font-bold text-zinc-300  md:text-2xl "
+            className="text-md mr-4 cursor-pointer break-all font-bold text-yellow-50  md:text-2xl "
             onClick={() => setTab({ hidden: tab.active, active: tab.hidden })}
           >
             {tab.hidden}
@@ -214,7 +214,10 @@ export default function Projects(): React.ReactElement {
         <div className="mt-8 flex min-h-full w-5/6  flex-col  md:flex-row">
           {tab.active === "Personal"
             ? personalProjects.map((project) => (
-                <div className="mb-6 w-full md:w-1/2 mx-auto" key={project.title}>
+                <div
+                  className="mx-auto mb-6 w-full md:w-1/2"
+                  key={project.title}
+                >
                   <Card
                     key={project.title}
                     title={project.title}

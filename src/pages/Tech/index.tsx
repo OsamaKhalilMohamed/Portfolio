@@ -15,7 +15,7 @@ export default function TechAndTools(): React.ReactElement {
       name: "Typescript",
       title: "Typescript",
       description: (
-        <div className="text-small mt-2 font-bold text-zinc-300">
+        <div className="text-small mt-2 font-bold text-yellow-50">
           <p>
             Once you go typescript, you can't go back! (just use :any), but
             really using typescript will enrich your app and make your codebase
@@ -24,14 +24,13 @@ export default function TechAndTools(): React.ReactElement {
         </div>
       ),
       logo: typescript,
-      
     },
 
     {
       name: "React",
       title: "React",
       description: (
-        <div className="text-small mt-2 font-bold text-zinc-300">
+        <div className="text-small mt-2 font-bold text-yellow-50">
           <p>
             Well, really i love using React especially with Next.js, it's
             scalable and easy to start with, and you have ton of resources to
@@ -39,24 +38,22 @@ export default function TechAndTools(): React.ReactElement {
           </p>
         </div>
       ),
-      
+
       logo: react,
     },
     {
       name: "other tech",
       title: "other tech?",
       description: (
-          <div className="text-small mt-2 font-bold text-zinc-300">
-            This is a list of other tech i usually use and familiar with: <br />
-            <p className="text-small mt-2 font-bold text-zinc-300">
-              NextJS, REST API, GraphQL, MongoDB, Docker, Redux toolkit, NodeJS,
-              ExpressJS, Cypress, React-Router, React-Query, TailwindCSS, and
-              MUI.
-            </p>
-          </div>
+        <div className="text-small mt-2 font-bold text-yellow-50">
+          This is a list of other tech i usually use and familiar with: <br />
+          <p className="text-small mt-2 font-bold text-yellow-50">
+            NextJS, REST API, GraphQL, MongoDB, Docker, Redux toolkit, NodeJS,
+            ExpressJS, Cypress, React-Router, React-Query, TailwindCSS, and MUI.
+          </p>
+        </div>
       ),
       logo: toolsLogo,
-      
     },
   ];
 
@@ -65,11 +62,11 @@ export default function TechAndTools(): React.ReactElement {
       name: "VSC",
       title: "Visual studio code",
       description: (
-        <div className="text-small mt-2 font-bold text-zinc-300">
+        <div className="text-small mt-2 font-bold text-yellow-50">
           {" "}
           VSC is my favorite IDE, the extension ecosystem provides great DX,
           these are my top 5 extensions i use (other than prettier)
-          <p className="text-small mt-2 font-bold text-zinc-300">
+          <p className="text-small mt-2 font-bold text-yellow-50">
             {" "}
             1-pretty-typescript-errors <br /> 2-import cost <br /> 3-Gitlens{" "}
             <br />
@@ -85,7 +82,7 @@ export default function TechAndTools(): React.ReactElement {
       name: "Vercel",
       title: "Vercel",
       description: (
-        <p className="text-small mt-2 font-bold text-zinc-300">
+        <p className="text-small mt-2 font-bold text-yellow-50">
           Vercel is one of the best in the field from providing robust way to
           create react apps with Next.js framework to deploying your app and
           using serverless functions to ease your infra process. i mainly use
@@ -98,10 +95,10 @@ export default function TechAndTools(): React.ReactElement {
       name: "other tools",
       title: "other tools?",
       description: (
-        <div className="text-small mt-2 font-bold text-zinc-300">
+        <div className="text-small mt-2 font-bold text-yellow-50">
           This is a list of other tools i usually use and familiar with when
           building apps or in personal use:{" "}
-          <p className="text-small mt-2 font-bold text-zinc-300">
+          <p className="text-small mt-2 font-bold text-yellow-50">
             Git, Github, Gitlab, Storybook, npm, yarn, YouTrack, Jira, T3-stack
             to bootstrap my side-projects, figma, metabase, sentry, framer,
             framer motion, Grammarly, and Authy for managing passwords / 2FAs.
@@ -122,7 +119,7 @@ export default function TechAndTools(): React.ReactElement {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-start justify-start overflow-x-hidden bg-stone-950 px-10 md:px-20">
+      <main className="flex min-h-screen flex-col items-start justify-start overflow-x-hidden px-10 md:px-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}

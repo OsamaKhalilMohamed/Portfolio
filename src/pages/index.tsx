@@ -67,8 +67,8 @@ export default function Home(): React.ReactElement {
               </div>
             </div>
 
-            <div className="w-full text-start leading-3 text-zinc-300 md:w-3/4 md:pl-2">
-              <span className="w-full text-sm font-extrabold">
+            <div className="w-full text-start leading-3 text-yellow-50 md:w-3/4 md:pl-2">
+              <span className="text-sm font-semibold text-yellow-50">
                 Software engineer, Obsessed with building interactive UIs,
                 currently working at{" "}
                 <Link
@@ -76,7 +76,7 @@ export default function Home(): React.ReactElement {
                   target="_blank"
                 >
                   {" "}
-                  <span className="w-full border-b-2 border-dotted border-violet-500 text-zinc-300">
+                  <span className="w-full border-b-2 border-dotted border-violet-500 text-yellow-50">
                     Synapse Analytics{" "}
                   </span>
                 </Link>
@@ -111,22 +111,22 @@ export default function Home(): React.ReactElement {
             href={"https://www.linkedin.com/in/osama-khalil98/"}
             target="_blank"
           >
-            <span className="mr-3 border-b-2 border-dotted border-lime-400 text-zinc-300 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-lime-400 text-yellow-50 md:mr-0">
               Linkedin{" "}
             </span>
           </Link>
           <Link href={"mailto:osadx35@gmail.com"}>
-            <span className="mr-3 border-b-2 border-dotted border-fuchsia-700 text-zinc-300 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-fuchsia-700 text-yellow-50 md:mr-0">
               Email{" "}
             </span>
           </Link>
           <Link href={"https://github.com/osamakhalil98/"} target="_blank">
-            <span className="mr-3 border-b-2 border-dotted border-red-400 text-zinc-300 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-red-400 text-yellow-50 md:mr-0">
               Github{" "}
             </span>
           </Link>
           <Link href={"https://codepen.io/osadxen/"} target="_blank">
-            <span className="mr-3 border-b-2 border-dotted border-rose-800 text-zinc-300 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-rose-800 text-yellow-50 md:mr-0">
               Codepen{" "}
             </span>
           </Link>
@@ -136,12 +136,12 @@ export default function Home(): React.ReactElement {
             }
             target="_blank"
           >
-            <span className="mr-3 border-b-2 border-dotted border-amber-500 text-zinc-300 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-amber-500 text-yellow-50 md:mr-0">
               Resume{" "}
             </span>
           </Link>
           <Link href={"Timeline"}>
-            <span className="mr-3 border-b-2 border-dotted border-blue-500 text-zinc-300 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-blue-500 text-yellow-50 md:mr-0">
               Timeline{" "}
             </span>
           </Link>
@@ -150,14 +150,14 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="mx-auto mt-4 flex w-5/6 max-w-[675px] px-1 pb-4 pt-4 text-zinc-300 sm:w-2/4 md:justify-start md:px-2"
+          className="mx-auto mt-4 flex w-5/6 max-w-[675px] px-1 pb-4 pt-4 text-yellow-50 sm:w-2/4 md:justify-start md:px-2"
         >
           <div className="leading-6">
-            <span className="text-md font-bold text-zinc-300 sm:text-lg">
+            <span className="text-md font-bold text-yellow-50 sm:text-lg">
               I'm a front-end engineer, born and raised in Cairo - Egypt{" "}
             </span>{" "}
             <span className="bg-none text-inherit">🇪🇬</span>
-            <div className="text-md font-bold leading-6 text-zinc-300 sm:text-lg">
+            <div className="text-md font-bold leading-6 text-yellow-50 sm:text-lg">
               I'm very Interested in building interactive UIs. I have a
               bachelor's degree in computer science, Class of 2020. I have +2
               years of professional experience in Front-end development and the
@@ -168,19 +168,17 @@ export default function Home(): React.ReactElement {
               usually using in my work:{" "}
               <Link href={"/Tech"} className="h-fit w-fit ">
                 {" "}
-                <span className="border-b-2 border-dotted border-pink-700 text-zinc-300">
+                <span className="border-b-2 border-dotted border-pink-700 text-yellow-50">
                   Tech + Tools{" "}
                 </span>
-              </Link>
-            </div>
-            <p className="text-md font-bold leading-6 text-zinc-300 sm:text-lg">
-              My Top hobbies include : listening to music, watching movies,
+              </Link>{" "}
+              . My Top hobbies include: listening to music, watching movies,
               gaming, and avoid writing regex. A wannabe Javascript ninja
               engineer. <span>{hobbies[currentIndex]?.logo}</span>
-            </p>
+            </div>
           </div>
         </motion.div>
-        <div className="mx-auto flex w-5/6 max-w-[675px] flex-col px-1 pb-4 pt-4 text-zinc-300 md:w-2/4 md:justify-start md:px-2">
+        <div className="mx-auto flex w-5/6 max-w-[675px] flex-col px-1 pb-4 pt-4 text-yellow-50 md:w-2/4 md:justify-start md:px-2">
           <p className="mb-2 flex-grow text-center text-2xl font-extrabold md:text-4xl">
             <span className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent">
               Wanna check out projects i've worked on{" "}
@@ -196,7 +194,7 @@ export default function Home(): React.ReactElement {
                 scale: 0.5,
               }}
               animate={{ opacity: 1, scale: 1 }}
-              className="mb-4 rounded-md border border-stone-800 p-4 text-center text-2xl font-bold shadow-md hover:bg-stone-800  md:mx-0 md:mb-0"
+              className="rounded-md border border-zinc-800 p-4 text-center text-2xl font-bold shadow-md hover:bg-zinc-800  md:mx-0 md:mb-0"
             >
               <span className="bg-none text-inherit">✨ </span>
               <span className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text  text-transparent">

@@ -51,10 +51,10 @@ export default function TimeLine({}: Props) {
               <h3 className="ml-2 w-full bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Synapse Analytics{" "}
               </h3>
-              <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-zinc-300">
+              <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-yellow-50">
                 July 2022 - Present
               </time>
-              <p className="text-md mb-4 ml-2  flex-wrap font-bold  text-zinc-300">
+              <p className="text-md mb-4 ml-2  flex-wrap font-bold  text-yellow-50">
                 Started as an intern in summer of 2022 and then got hired as a
                 full-time Front-end engineer at Synapse analytics. Already
                 learned a lot. worked on large features, that went live and used
@@ -104,10 +104,10 @@ export default function TimeLine({}: Props) {
               <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Digitopia Studio{" "}
               </h3>
-              <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-zinc-300">
+              <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-yellow-50">
                 March 2022 - July 2022
               </time>
-              <p className="text-md mb-4 ml-2  flex-wrap font-bold  text-zinc-300">
+              <p className="text-md mb-4 ml-2  flex-wrap font-bold  text-yellow-50">
                 My first full-time job after finishing military service, worked
                 on maintaining and developing new features to Moroccan platform
                 called Aly, this was my first experience to work with a large
@@ -126,10 +126,10 @@ export default function TimeLine({}: Props) {
               <h3 className=" ml-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-2xl font-bold text-transparent">
                 Majal Tech{" "}
               </h3>
-              <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-zinc-300">
+              <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-yellow-50">
                 November 2020 - February 2021
               </time>
-              <p className="text-md mb-4 ml-2  flex-wrap font-bold  text-zinc-300">
+              <p className="text-md mb-4 ml-2  flex-wrap font-bold  text-yellow-50">
                 My first ever full-time job, was really a good start for me,
                 learned how to work with tools like Redux, different
                 React-hooks, i18n localization and more. unfortunately, it got
