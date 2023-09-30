@@ -23,7 +23,7 @@ export default function Projects(): React.ReactElement {
       description: (
         <div className="flex flex-col justify-center">
           <p className="text-small mt-2 font-bold text-yellow-50">
-            InnerNote is a web app that let you share your confessions/ dreams/
+            InnerNote is a web app that lets you share your confessions/ dreams/
             thoughts/ ideas publicly or privately as well as see other notes and
             interact with them. (under developing).
           </p>
