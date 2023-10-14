@@ -2,11 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import me from "../../public/me.jpg";
 import { motion } from "framer-motion";
-import {
-  EmailSVGIcon,
-  GithubSVGIcon,
-  LinkedinSVGIcon,
-} from "~/assets/SvgIcons";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -94,10 +89,11 @@ export default function Home(): React.ReactElement {
             <Image
               src={me}
               alt="A picture of myself :)"
-              className="w-50 h-40 rounded-xl object-cover shadow-md"
-              width="150"
+              className="w-30 h-30 rounded-lg shadow-md"
+              width="100"
               height="100"
               placeholder="blur"
+              quality={100}
             />
           </motion.div>
         </motion.div>
@@ -154,13 +150,13 @@ export default function Home(): React.ReactElement {
         >
           <div className="text-md text-start font-bold leading-6 text-yellow-50 sm:text-lg">
             I'm a front-end engineer, born and raised in Cairo - Egypt{" "}
-            <span className="bg-none text-inherit">🇪🇬</span>. Very Interested in
+            <span className="bg-none text-inherit">🇪🇬</span>. Very interested in
             building interactive UIs. I have a bachelor's degree in computer
-            science, Class of 2020. I have +2 years of professional experience
-            in Front-end development and the cycle of software (web) development
+            science, class of 2020. I have +2 years of professional experience
+            in front-end development and the cycle of software (web) development
             in general. constantly trying out new tech in the very rapid
             javascript world we're living in. currently on a mission to learn
-            Vue.js, if you're interested you can see my Tech and Tools i'm
+            Vue.js, if you're interested you can see my tech and tools i'm
             usually using in my work:{" "}
             <Link href={"/Tech"} className="h-fit w-fit ">
               {" "}
@@ -168,7 +164,7 @@ export default function Home(): React.ReactElement {
                 Tech + Tools{" "}
               </span>
             </Link>{" "}
-            . My Top hobbies include: listening to music, watching movies,
+            . My top hobbies include: listening to music, watching movies,
             gaming, and avoid writing regex. A wannabe Javascript ninja
             engineer. <span>{hobbies[currentIndex]?.logo}</span>
           </div>
