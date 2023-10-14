@@ -193,19 +193,19 @@ export default function Projects(): React.ReactElement {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main
-        className={`flex flex-col flex-wrap items-center justify-center`}
-      >
+      <main className={`flex flex-col flex-wrap items-center justify-center`}>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="mx-auto mb-4 mt-8 flex h-fit items-center bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent"
         >
-          <div className="relative cursor-pointer break-all text-3xl font-bold md:mr-4  md:text-6xl">
-          <h1 className="cursor-pointer break-all text-3xl font-bold md:text-6xl h-fit bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent">  {tab.active}</h1>
-                      <p className="absolute h-1 w-1/4 rounded-xl bg-cyan-500 left-1/3 mt-2"></p>
-
+          <div className="relative cursor-pointer break-all text-3xl font-bold mr-2 md:mr-1  md:text-6xl">
+            <h1 className="h-fit cursor-pointer break-all bg-gradient-to-r from-cyan-100  to-slate-200 bg-clip-text text-center text-3xl font-bold text-transparent md:mr-4 md:text-6xl">
+              {" "}
+              {tab.active}
+            </h1>
+            <p className="absolute left-1/3 md:mt-2 mt-1 h-1 w-1/4 rounded-xl bg-cyan-500"></p>
           </div>
           <h1
             className="text-md cursor-pointer break-all font-bold text-yellow-50  md:text-2xl "
