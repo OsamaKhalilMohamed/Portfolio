@@ -23,9 +23,10 @@ export default function Projects(): React.ReactElement {
       description: (
         <div className="flex flex-col justify-center">
           <p className="text-small mt-2 font-bold text-yellow-50">
-            InnerNote is a web app that lets you share your confessions/ dreams/
-            thoughts/ ideas publicly or privately as well as see other notes and
-            interact with them. (under developing).
+            InnerNote is a note sharing web app that lets you share your
+            (confessions - dreams - thoughts - ideas) publicly or privately as
+            well as read and interact with other notes and share them. (under
+            developing).
           </p>
           <br />
           <span className="mx-auto self-center border-b-2 border-dotted border-violet-500 text-center">
@@ -193,19 +194,21 @@ export default function Projects(): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`min flex-wrap-h-screen flex flex-col items-center justify-center`}
+        className={`flex flex-col flex-wrap items-center justify-center`}
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="mx-auto mt-8 flex h-fit items-center  bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent"
+          className="mx-auto mb-4 mt-8 flex h-fit items-center bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent"
         >
-          <h1 className="mr-2 cursor-pointer break-all text-3xl font-bold md:mr-4  md:text-6xl">
-            {tab.active}
-          </h1>
+          <div className="relative cursor-pointer break-all text-3xl font-bold md:mr-4  md:text-6xl">
+          <h1 className="cursor-pointer break-all text-3xl font-bold md:text-6xl h-fit bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent">  {tab.active}</h1>
+                      <p className="absolute h-1 w-1/4 rounded-xl bg-cyan-500 left-1/3 mt-2"></p>
+
+          </div>
           <h1
-            className="text-md mr-4 cursor-pointer break-all font-bold text-yellow-50  md:text-2xl "
+            className="text-md cursor-pointer break-all font-bold text-yellow-50  md:text-2xl "
             onClick={() => setTab({ hidden: tab.active, active: tab.hidden })}
           >
             {tab.hidden}
