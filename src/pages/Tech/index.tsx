@@ -131,10 +131,10 @@ export default function TechAndTools(): React.ReactElement {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="mt-10 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-4xl font-bold text-transparent md:text-7xl ">
+          <h1 className="mt-10 bg-gradient-to-r from-cyan-400 to-slate-500 bg-clip-text text-4xl font-bold text-transparent dark:from-cyan-100 dark:to-slate-200 md:text-7xl ">
             Tech
           </h1>
-          <p className="text-md mt-1 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent md:text-lg">
+          <p className="text-md mt-1 bg-gradient-to-r from-cyan-400 to-slate-500 bg-clip-text font-bold text-transparent dark:from-cyan-100 dark:to-slate-200 md:text-lg">
             My main tech drivers that i use when building apps.
           </p>
         </motion.div>
@@ -156,10 +156,10 @@ export default function TechAndTools(): React.ReactElement {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="mt-10 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-4xl font-bold text-transparent md:text-7xl ">
+          <h1 className="mt-10 bg-gradient-to-r from-cyan-400 to-slate-500 bg-clip-text text-4xl font-bold text-transparent dark:from-cyan-100 dark:to-slate-200 md:text-7xl ">
             Tools
           </h1>
-          <p className="text-md mt-1 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text font-bold text-transparent md:text-lg">
+          <p className="text-md mt-1 bg-gradient-to-r from-cyan-400 to-slate-500 bg-clip-text font-bold text-transparent dark:from-cyan-100 dark:to-slate-200 md:text-lg">
             My most used software tools for development and personal use.
           </p>
         </motion.div>
@@ -178,7 +178,7 @@ export default function TechAndTools(): React.ReactElement {
         </motion.div>
         <motion.div className="mb-2 flex w-full justify-center ">
           <Link href={"/"}>
-            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
+            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-400 to-slate-500 bg-clip-text text-lg text-transparent dark:from-cyan-100 dark:to-slate-200">
               Home {"->"}
             </p>
           </Link>

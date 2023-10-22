@@ -20,7 +20,7 @@ export default function Card({
   className,
 }: Props): React.ReactElement {
   return (
-    <div className="mx-auto flex h-full w-full max-w-[600px] flex-grow flex-col items-center rounded-xl bg-zinc-900/90 p-4 shadow-md hover:bg-zinc-800">
+    <div className="mx-auto flex h-full w-full max-w-[600px] flex-grow flex-col items-center rounded-xl bg-stone-700 p-4 shadow-md hover:bg-stone-600 dark:bg-zinc-900/90 dark:hover:bg-zinc-800">
       <div>
         <motion.div
           className={`${className} mx-auto flex min-h-[100px] justify-center`}
@@ -34,7 +34,7 @@ export default function Card({
             quality={100}
           />
         </motion.div>
-        <h1 className="my-2 bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl font-bold text-transparent">
+        <h1 className="my-2 bg-gradient-to-r from-cyan-400 to-slate-500 bg-clip-text text-center text-2xl font-bold text-transparent dark:from-cyan-100 dark:to-slate-200">
           {title}
         </h1>
       </div>

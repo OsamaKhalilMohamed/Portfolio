@@ -4,7 +4,6 @@ import me from "../../public/me.jpg";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import ToggleButton from "~/components/ToggleButton";
 
 export default function Home(): React.ReactElement {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -196,7 +195,6 @@ export default function Home(): React.ReactElement {
             </motion.div>
           </Link>
         </div>
-        <ToggleButton />
       </main>
     </>
   );
