@@ -4,6 +4,7 @@ import me from "../../public/me.jpg";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import ToggleButton from "~/components/ToggleButton";
 
 export default function Home(): React.ReactElement {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -45,13 +46,13 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex w-5/6 max-w-[680px] flex-col bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-2xl text-transparent md:w-2/4 md:flex-row md:justify-between"
+          className="flex w-5/6 max-w-[680px] flex-col bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-2xl text-transparent dark:from-cyan-100 dark:to-slate-200 md:w-2/4 md:flex-row md:justify-between"
         >
           <div className="flex w-full flex-col md:w-3/6">
             <div className="w-full">
               <div className="flex w-full flex-col justify-start md:w-full md:px-2">
                 <div className=" flex flex-grow flex-col flex-nowrap">
-                  <p className="flex text-start text-sm text-cyan-100">
+                  <p className="flex text-start text-sm text-cyan-800 dark:text-cyan-100">
                     Hi <span className="animate-waving-hand">👋🏻</span>,
                   </p>{" "}
                   <h1 className="flex-grow text-start text-3xl font-extrabold md:text-4xl">
@@ -62,8 +63,8 @@ export default function Home(): React.ReactElement {
               </div>
             </div>
 
-            <div className="w-full text-start leading-3 text-yellow-50 md:w-3/4 md:pl-2">
-              <span className="text-sm font-semibold text-yellow-50">
+            <div className="w-full text-start leading-3 text-orange-950 dark:text-yellow-50 md:w-3/4 md:pl-2">
+              <span className="text-sm font-semibold text-orange-950 dark:text-yellow-50">
                 Software engineer, Obsessed with building interactive UIs,
                 currently working at{" "}
                 <Link
@@ -71,7 +72,7 @@ export default function Home(): React.ReactElement {
                   target="_blank"
                 >
                   {" "}
-                  <span className="w-full border-b-2 border-dotted border-violet-500 text-yellow-50">
+                  <span className="w-full border-b-2 border-dotted border-violet-950 text-orange-950 dark:border-violet-500 dark:text-yellow-50">
                     Synapse Analytics{" "}
                   </span>
                 </Link>
@@ -107,22 +108,22 @@ export default function Home(): React.ReactElement {
             href={"https://www.linkedin.com/in/osama-khalil98/"}
             target="_blank"
           >
-            <span className="mr-3 border-b-2 border-dotted border-lime-400 text-yellow-50 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-lime-800 text-orange-950 dark:border-lime-400 dark:text-yellow-50 md:mr-0">
               Linkedin{" "}
             </span>
           </Link>
           <Link href={"mailto:osadx35@gmail.com"}>
-            <span className="mr-3 border-b-2 border-dotted border-fuchsia-700 text-yellow-50 md:mr-0">
+            <span className="text-orange-450 mr-3 border-b-2 border-dotted border-fuchsia-700 dark:border-fuchsia-700 dark:text-yellow-50 md:mr-0">
               Email{" "}
             </span>
           </Link>
           <Link href={"https://github.com/osamakhalil98/"} target="_blank">
-            <span className="mr-3 border-b-2 border-dotted border-red-400 text-yellow-50 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-red-800 text-orange-950 dark:border-red-400 dark:text-yellow-50 md:mr-0">
               Github{" "}
             </span>
           </Link>
           <Link href={"https://codepen.io/osadxen/"} target="_blank">
-            <span className="mr-3 border-b-2 border-dotted border-rose-800 text-yellow-50 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-rose-400 text-orange-950 dark:border-rose-800 dark:text-yellow-50 md:mr-0">
               Codepen{" "}
             </span>
           </Link>
@@ -132,12 +133,12 @@ export default function Home(): React.ReactElement {
             }
             target="_blank"
           >
-            <span className="mr-3 border-b-2 border-dotted border-amber-500 text-yellow-50 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-amber-500 text-orange-950 dark:text-yellow-50 md:mr-0">
               Resume{" "}
             </span>
           </Link>
           <Link href={"Timeline"}>
-            <span className="mr-3 border-b-2 border-dotted border-blue-500 text-yellow-50 md:mr-0">
+            <span className="mr-3 border-b-2 border-dotted border-blue-500 text-orange-950 dark:text-yellow-50 md:mr-0">
               Timeline{" "}
             </span>
           </Link>
@@ -146,9 +147,9 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="mx-auto mt-4 flex w-5/6 max-w-[680px] px-1 pb-4 pt-4 text-yellow-50 sm:w-2/4 md:justify-start md:px-2"
+          className="mx-auto mt-4 flex w-5/6 max-w-[680px] px-1 pb-4 pt-4 text-orange-950 dark:text-yellow-50 sm:w-2/4 md:justify-start md:px-2"
         >
-          <div className="text-md text-start font-bold leading-6 text-yellow-50 sm:text-lg">
+          <div className="text-md text-start font-bold leading-6 text-orange-950 dark:text-yellow-50 sm:text-lg">
             I'm a front-end engineer, born and raised in Cairo - Egypt{" "}
             <span className="bg-none text-inherit">🇪🇬</span>. Very interested in
             building interactive UIs. I have a bachelor's degree in computer
@@ -160,7 +161,7 @@ export default function Home(): React.ReactElement {
             usually using in my work:{" "}
             <Link href={"/Tech"} className="h-fit w-fit ">
               {" "}
-              <span className="border-b-2 border-dotted border-pink-700 text-yellow-50">
+              <span className="border-b-2 border-dotted border-pink-400 text-orange-950 dark:border-pink-700 dark:text-yellow-50">
                 Tech + Tools{" "}
               </span>
             </Link>{" "}
@@ -169,9 +170,9 @@ export default function Home(): React.ReactElement {
             engineer. <span>{hobbies[currentIndex]?.logo}</span>
           </div>
         </motion.div>
-        <div className="mx-auto flex w-5/6 max-w-[680px] flex-col px-1 pb-4 pt-4 text-yellow-50 md:w-2/4 md:justify-start md:px-2">
+        <div className="mx-auto flex w-5/6 max-w-[680px] flex-col px-1 pb-4 pt-4 text-orange-950 dark:text-yellow-50 md:w-2/4 md:justify-start md:px-2">
           <p className="mb-2 flex-grow text-center text-2xl font-extrabold md:text-4xl">
-            <span className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent">
+            <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
               Wanna check out projects i've worked on{" "}
             </span>
             <span className="bg-none text-inherit">👀</span>?
@@ -185,16 +186,17 @@ export default function Home(): React.ReactElement {
                 scale: 0.5,
               }}
               animate={{ opacity: 1, scale: 1 }}
-              className="rounded-md border border-zinc-800 p-4 text-center text-2xl font-bold shadow-md hover:bg-zinc-800  md:mx-0 md:mb-0"
+              className="rounded-md border border-zinc-400 p-4 text-center text-2xl font-bold shadow-md hover:bg-zinc-400 dark:border-zinc-800 dark:hover:bg-zinc-800  md:mx-0 md:mb-0"
             >
               <span className="bg-none text-inherit">✨ </span>
-              <span className="bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text  text-transparent">
+              <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-transparent dark:from-cyan-100  dark:to-slate-200">
                 Projects{" "}
               </span>
               <span className="bg-none text-inherit"> ✨</span>
             </motion.div>
           </Link>
         </div>
+        <ToggleButton />
       </main>
     </>
   );
