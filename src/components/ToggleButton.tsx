@@ -1,15 +1,21 @@
 import React from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import sunIcon from "../../public/sun.svg";
+import moonIcon from "../../public/moon.svg";
 
 export default function ToggleButton(): React.ReactElement {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   return (
-    <button
+    <Image
+      priority
+      src={theme === "light" ? moonIcon : sunIcon}
+      height={25}
+      width={25}
+      className="fixed right-4 top-3 cursor-pointer"
       onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-      className="fixed right-4 top-5 rounded-lg p-2  text-2xl text-white transition-all duration-100 hover:bg-gray-600 dark:bg-gray-50 dark:text-gray-800 dark:hover:bg-gray-300"
-    >
-      {theme === "light" ? "Dark" : "Light"}
-    </button>
+      alt="theme switch icon"
+    />
   );
 }
