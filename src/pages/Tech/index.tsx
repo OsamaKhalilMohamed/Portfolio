@@ -178,7 +178,7 @@ export default function TechAndTools(): React.ReactElement {
         </motion.div>
         <motion.div className="mb-2 flex w-full justify-center ">
           <Link href={"/"}>
-            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-400 to-slate-500 bg-clip-text text-lg text-transparent dark:from-cyan-100 dark:to-slate-200">
+            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-lg text-transparent dark:from-cyan-100  dark:to-slate-200">
               Home {"->"}
             </p>
           </Link>

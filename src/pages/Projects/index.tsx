@@ -198,17 +198,17 @@ export default function Projects(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="mx-auto mb-4 mt-8 flex h-fit items-center bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-center text-transparent"
+          className="mx-auto mb-4 mt-8 flex h-fit items-center bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200"
         >
-          <div className="relative cursor-pointer break-all text-3xl font-bold mr-2 md:mr-1  md:text-6xl">
-            <h1 className="h-fit cursor-pointer break-all bg-gradient-to-r from-cyan-100  to-slate-200 bg-clip-text text-center text-3xl font-bold text-transparent md:mr-4 md:text-6xl">
+          <div className="relative mr-2 cursor-pointer break-all text-3xl font-bold md:mr-1  md:text-6xl">
+            <h1 className="h-fit cursor-pointer break-all bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text  text-center text-3xl font-bold text-transparent dark:from-cyan-100 dark:to-slate-200 md:mr-4 md:text-6xl">
               {" "}
               {tab.active}
             </h1>
-            <p className="absolute left-1/3 md:mt-2 mt-1 h-1 w-1/4 rounded-xl bg-cyan-500"></p>
+            <p className="absolute left-1/3 mt-1 h-1 w-1/4 rounded-xl bg-cyan-500 md:mt-2"></p>
           </div>
           <h1
-            className="text-md cursor-pointer break-all font-bold text-yellow-50  md:text-2xl "
+            className="text-md cursor-pointer break-all font-bold text-black dark:text-yellow-50  md:text-2xl "
             onClick={() => setTab({ hidden: tab.active, active: tab.hidden })}
           >
             {tab.hidden}
@@ -252,7 +252,7 @@ export default function Projects(): React.ReactElement {
         </div>
         <motion.div className="mb-2 mt-10 flex w-full justify-center">
           <Link href={"/"}>
-            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-100 to-slate-200 bg-clip-text text-lg text-transparent">
+            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-lg text-transparent dark:from-cyan-100 dark:to-slate-200">
               Home {"->"}
             </p>
           </Link>
