@@ -10,7 +10,6 @@ export default function Home(): React.ReactElement {
 
   const hobbies = [
     { name: "coding", logo: "👨‍💻" },
-    { name: "movies", logo: "🎞" },
     { name: "photography", logo: "📸" },
     { name: "football", logo: "⚽" },
     { name: "sleep", logo: "💤" },
@@ -28,6 +27,7 @@ export default function Home(): React.ReactElement {
       );
     }, 1000);
   }, [currentIndex]);
+
   return (
     <>
       <Head>
@@ -45,32 +45,35 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex w-5/6 max-w-[680px] flex-col bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-2xl text-transparent dark:from-cyan-100 dark:to-slate-200 md:w-2/4 md:flex-row md:justify-between"
+          className="flex w-4/6 max-w-[980px] flex-col bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-2xl text-transparent dark:from-cyan-100 dark:to-slate-200  md:flex-row md:justify-between"
         >
-          <div className="flex w-full flex-col md:w-3/6">
-            <div className="w-full">
-              <div className="flex w-full flex-col justify-start md:w-full md:px-2">
-                <div className=" flex flex-grow flex-col flex-nowrap">
-                  <p className="flex text-start text-sm text-cyan-800 dark:text-cyan-100">
-                    Hi <span className="animate-waving-hand">👋🏻</span>,
-                  </p>{" "}
-                  <h1 className="flex-grow text-start text-3xl font-extrabold md:text-4xl">
-                    {" "}
-                    I'm Osama Khalil
-                  </h1>
-                </div>
+          <div className="flex w-full flex-col">
+            <div className="flex w-full flex-col justify-start">
+              <div className="flex md:px-0 md:mx-0 flex-grow flex-col flex-nowrap items-start justify-start">
+                <p className="flex text-start text-sm text-cyan-800 dark:text-cyan-100">
+                  Hello <span className="animate-waving-hand">👋🏻</span>, I'm
+                </p>
+                <h1 className="text-start px-0 text-3xl font-extrabold md:text-9xl">
+                  Osama
+                </h1>
+                <h1 className="text-start text-3xl font-extrabold md:text-9xl">
+                  Khalil
+                </h1>
               </div>
             </div>
 
-            <div className="w-full text-start leading-3 text-orange-950 dark:text-yellow-50 md:w-3/4 md:pl-2">
-              <span className="text-sm font-semibold text-orange-950 dark:text-yellow-50">
-                Software engineer, Obsessed with building interactive UIs,
+            <div className="w-full text-start leading-3 text-orange-950 dark:text-yellow-50">
+              <span className="text-sm font-semibold italic text-orange-950 dark:text-yellow-50">
+                Software engineer, Obsessed with building interactive UIs.
+
+              </span>
+              <br />
+              <span className="text-sm font-semibold italic text-orange-950 dark:text-yellow-50">
                 currently working at{" "}
                 <Link
                   href={"https://www.synapse-analytics.io/"}
                   target="_blank"
                 >
-                  {" "}
                   <span className="w-full border-b-2 border-dotted border-violet-950 text-orange-950 dark:border-violet-500 dark:text-yellow-50">
                     Synapse Analytics{" "}
                   </span>
@@ -80,7 +83,7 @@ export default function Home(): React.ReactElement {
           </div>
 
           <motion.div
-            className="mx-auto mt-4 flex flex-col justify-end sm:mt-0 md:mx-0"
+            className="mx-auto mt-4 flex flex-col justify-center"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 50 }}
@@ -90,15 +93,16 @@ export default function Home(): React.ReactElement {
               src={me}
               alt="A picture of myself :)"
               className="w-30 h-30 rounded-lg shadow-md"
-              width="100"
-              height="100"
+              width="250"
+              height="250"
               placeholder="blur"
               quality={100}
             />
           </motion.div>
         </motion.div>
+
         <motion.div
-          className="mx-auto mt-4 flex w-5/6 max-w-[680px] flex-wrap px-1 pt-4 font-bold sm:w-2/4 md:justify-between md:px-2"
+          className="mx-auto mt-4 flex max-w-[980px] flex-wrap px-1 pt-4 font-bold sm:w-2/4 md:w-4/6 md:justify-between"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -146,7 +150,7 @@ export default function Home(): React.ReactElement {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="mx-auto mt-4 flex w-5/6 max-w-[680px] px-1 pb-4 pt-4 text-orange-950 dark:text-yellow-50 sm:w-2/4 md:justify-start md:px-2"
+          className="mx-auto mt-4 flex w-5/6 w-4/6 max-w-[980px] px-1 pb-4 pt-4 text-orange-950 dark:text-yellow-50 sm:w-2/4 md:justify-start md:px-2"
         >
           <div className="text-md text-start font-bold leading-6 text-orange-950 dark:text-yellow-50 sm:text-lg">
             I'm a front-end engineer, born and raised in Cairo - Egypt{" "}
@@ -169,7 +173,7 @@ export default function Home(): React.ReactElement {
             engineer. <span>{hobbies[currentIndex]?.logo}</span>
           </div>
         </motion.div>
-        <div className="mx-auto flex w-5/6 max-w-[680px] flex-col px-1 pb-4 pt-4 text-orange-950 dark:text-yellow-50 md:w-2/4 md:justify-start md:px-2">
+        <div className="mx-auto flex w-5/6 w-4/6 max-w-[980px] flex-col px-1 pb-4 pt-4 text-orange-950 dark:text-yellow-50 md:w-2/4 md:justify-start md:px-2">
           <p className="mb-2 flex-grow text-center text-2xl font-extrabold md:text-4xl">
             <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
               Wanna check out projects i've worked on{" "}

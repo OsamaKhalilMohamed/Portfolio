@@ -7,7 +7,8 @@ import ToggleButton from "~/components/ToggleButton";
 const inter = Inter({
   weight: ["100", "200", "300", "400", "600", "700"],
   variable: "--font-inter",
-  subsets: ["latin"],
+  subsets: ["latin", "greek"],
+  display:"swap"
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {

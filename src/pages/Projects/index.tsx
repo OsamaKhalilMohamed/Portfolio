@@ -225,8 +225,8 @@ export default function Projects(): React.ReactElement {
                     key={project.title}
                     title={project.title}
                     description={project.description}
-                    logo={project.logo}
-                    logoSize={project.logoSize}
+                     logo={project.logo}
+                     logoSize={project.logoSize}
                     animate={false}
                   />
                 </div>

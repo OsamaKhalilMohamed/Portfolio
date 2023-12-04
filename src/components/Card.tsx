@@ -16,7 +16,6 @@ export default function Card({
   description,
   logo,
   logoSize,
-  animate = true,
   className,
 }: Props): React.ReactElement {
   return (
@@ -32,6 +31,7 @@ export default function Card({
             style={{ objectFit: "contain" }}
             height={logoSize ?? 150}
             quality={100}
+            placeholder="blur"
           />
         </motion.div>
         <h1 className="my-2 bg-gradient-to-r from-cyan-400 to-slate-500 bg-clip-text text-center text-2xl font-bold text-transparent dark:from-cyan-100 dark:to-slate-200">
