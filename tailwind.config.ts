@@ -19,9 +19,13 @@ export default {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        shine: {
+          "100%": { left: "125%" },
+        },
       },
       animation: {
         "waving-hand": "wave 2s linear infinite",
+        shine: "shine 1s",
       },
     },
   },
