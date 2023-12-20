@@ -171,7 +171,7 @@ export default function Home(): React.ReactElement {
           transition={{ type: "spring", stiffness: 50 }}
           className="mt-4 flex w-4/6  max-w-[980px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
         >
-          <p className="mx-auto mb-4 flex font-bold md:text-3xl">
+          <p className="mx-auto mb-4 flex text-3xl font-bold md:text-3xl">
             <span className="animate-waving-hand">👋🏻</span> About me{" "}
             <span className="animate-waving-hand">👋🏻</span>
           </p>
