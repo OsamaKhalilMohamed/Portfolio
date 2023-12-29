@@ -125,7 +125,7 @@ export default function TechAndTools(): React.ReactElement {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-start justify-start overflow-x-hidden px-10 md:px-20">
+      <main className="flex h-full min-h-screen flex-col items-center justify-start pb-8 pt-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
