@@ -3,31 +3,9 @@ import Link from "next/link";
 import me from "../../public/me.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Projects from "~/components/Projects";
 
 export default function Home(): React.ReactElement {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-  const hobbies = [
-    { name: "coding", logo: "👨‍💻" },
-    { name: "photography", logo: "📸" },
-    { name: "football", logo: "⚽" },
-    { name: "sleep", logo: "💤" },
-    { name: "think", logo: "🧠" },
-    { name: "tweet", logo: "🐥" },
-    { name: "music", logo: "🎧" },
-    { name: "sunflower", logo: "🌻" },
-  ];
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCurrentIndex((prev: number) =>
-        prev === hobbies.length - 1 ? 0 : prev + 1
-      );
-    }, 1000);
-  }, [currentIndex]);
-
   return (
     <>
       <Head>
@@ -172,7 +150,7 @@ export default function Home(): React.ReactElement {
           transition={{ type: "spring", stiffness: 50 }}
           className="mt-4 flex w-4/6  max-w-[980px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
         >
-          <p className="mx-auto mb-4 flex text-3xl font-bold md:text-3xl">
+          <p className="mx-auto mb-4 mt-2 flex text-3xl font-bold md:text-3xl">
             <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
               About me{" "}
             </span>
@@ -195,36 +173,36 @@ export default function Home(): React.ReactElement {
             </Link>{" "}
             . My top hobbies include: listening to music, watching movies,
             gaming, and avoid writing regex. A wannabe Javascript ninja
-            engineer. <span>{hobbies[currentIndex]?.logo}</span>
+            engineer.
           </div>
           <div className="mb-4 mt-4 flex w-full flex-col flex-wrap items-center justify-start md:flex-row">
             <h1 className="font-semibold">Main Skills: </h1>{" "}
-            <div className="text-md relative mb-2 w-[120px] rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-bold hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-blue-300 dark:focus:ring-blue-800 md:mb-0 md:me-4 md:ml-2">
+            <div className="text-md relative mb-2 w-full rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-bold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300  dark:focus:ring-blue-800 md:mb-0 md:me-4 md:ml-2 md:w-[120px]">
               <p className="absolute -right-2 -top-2">☑️</p>
               <p className="absolute -bottom-2 -left-2">☑️</p>
               Typescript
             </div>
-            <div className="text-md relative mb-2 me-2 w-[120px] rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-5 py-2.5 text-center text-sm font-bold hover:bg-gradient-to-bl focus:outline-none  focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800 md:mb-0 md:me-4">
+            <div className="text-md relative mb-2 me-2 w-full rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-5 py-2.5 text-center text-sm font-bold hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-cyan-300 dark:focus:ring-cyan-800 md:mb-0 md:me-4 md:w-[120px]">
               <p className="absolute -right-2 -top-2">🔥</p>
               <p className="absolute -bottom-2 -left-2">🔥</p>
               React
             </div>
-            <div className="text-md relative mb-2 me-2 w-[120px] rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 text-center text-sm font-bold hover:bg-gradient-to-bl focus:outline-none  focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 md:mb-0 md:me-4">
+            <div className="text-md relative mb-2 me-2 w-full rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 text-center text-sm font-bold hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-red-100 dark:focus:ring-red-400 md:mb-0 md:me-4 md:w-[120px]">
               <p className="absolute -right-2 -top-2">🎱</p>
               <p className="absolute -bottom-2 -left-2">🎱</p>
               Next.js
             </div>
-            <div className="text-md relative w-[120px] rounded-lg  bg-gradient-to-r from-teal-500 to-lime-500 px-5 py-2.5 text-center text-sm font-bold hover:bg-gradient-to-l  hover:from-teal-500 hover:to-lime-500 focus:outline-none focus:ring-4 focus:ring-lime-500 dark:focus:ring-teal-700 md:me-4 ">
+            <div className="text-md relative w-full rounded-lg bg-gradient-to-r  from-teal-500 to-lime-500 px-5 py-2.5 text-center text-sm font-bold hover:bg-gradient-to-l hover:from-teal-500  hover:to-lime-500 focus:outline-none focus:ring-4 focus:ring-lime-500 dark:focus:ring-teal-700 md:me-4 md:w-[120px] ">
               <p className="absolute -right-2 -top-2">🚀</p>
               <p className="absolute -bottom-2 -left-2">🚀</p>
               CSS
             </div>
           </div>
         </motion.div>
-        <hr className="border-1  w-full cursor-pointer border-orange-400 duration-500 hover:border-red-500" />
+        <hr className="border-1 mt-4 w-full cursor-pointer border-orange-400 duration-500 hover:border-red-500" />
 
         <div className="mx-auto flex  w-4/6 max-w-[980px] flex-col px-1 pb-4 pt-4 text-neutral-950 dark:text-yellow-50 md:w-full md:justify-start md:px-2">
-          <p className="mb-2 flex-grow text-center text-2xl font-extrabold md:text-4xl">
+          <p className="mb-2 mt-2 flex-grow text-center text-2xl font-extrabold md:text-4xl">
             <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
               Projects i've worked on{" "}
             </span>

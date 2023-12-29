@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const hobbies = [
+    { name: "coding", logo: "👨‍💻" },
+    { name: "photography", logo: "📸" },
+    { name: "football", logo: "⚽" },
+    { name: "sleep", logo: "💤" },
+    { name: "think", logo: "🧠" },
+    { name: "tweet", logo: "🐥" },
+    { name: "music", logo: "🎧" },
+    { name: "eye-stare", logo: "👀" },
+  ];
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCurrentIndex((prev: number) =>
+        prev === hobbies.length - 1 ? 0 : prev + 1
+      );
+    }, 1000);
+  }, [currentIndex]);
+
   return (
-    <div className="mx-auto mt-2 flex w-full justify-center pb-2 text-sm">
-      Osama Khalil - © {currentYear} - All rights reserved.
+    <div className="mt-2 flex w-full justify-center pb-2 text-sm">
+      <span>Osama Khalil - © {currentYear} - All rights reserved.</span>
+      <span className="pl-1">{hobbies[currentIndex]?.logo}</span>
     </div>
   );
 }
