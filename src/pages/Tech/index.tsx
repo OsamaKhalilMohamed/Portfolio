@@ -151,6 +151,7 @@ export default function TechAndTools(): React.ReactElement {
             </motion.div>
           ))}
         </motion.div>
+        <hr className="border-1 mt-4 w-full cursor-pointer border-orange-400 duration-500 hover:border-red-500" />
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
