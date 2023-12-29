@@ -1,19 +1,28 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Card from "~/components/Card";
-import innerNote from "../../../public/innerNote.png";
-import blonded from "../../../public/endless.webp";
-import sadaqati from "../../../public/sadaqati.png";
-import aly from "../../../public/aly.png";
-import Konan from "../../../public/Vector.png";
+import Card from "./Card";
+import innerNote from "../../public/innerNote.png";
+import sadaqati from "../../public/sadaqati.png";
+import aly from "../../public/aly.png";
+import Konan from "../../public/Vector.png";
 import Link from "next/link";
+import SlidingTabs from "./SlidingTabs";
 
 export default function Projects(): React.ReactElement {
-  const [tab, setTab] = useState<{ active: string; hidden: string }>({
-    active: "Personal",
-    hidden: "Professional",
-  });
+  let allTabs = [
+    {
+      id: "Personal",
+      name: "Personal",
+    },
+
+    {
+      id: "Professional",
+      name: "Professional",
+    },
+  ];
+
+  const [activeTabIndex, setActiveTabIndex] = useState<number>(0);
 
   const personalProjects = [
     {
@@ -200,22 +209,14 @@ export default function Projects(): React.ReactElement {
           transition={{ duration: 0.5 }}
           className="mx-auto mb-4 mt-8 flex h-fit items-center bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200"
         >
-          <div className="relative mr-2 cursor-pointer break-all text-3xl font-bold md:mr-1  md:text-6xl">
-            <h1 className="h-fit cursor-pointer break-all bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text  text-center text-3xl font-bold text-transparent dark:from-cyan-100 dark:to-slate-200 md:mr-4 md:text-6xl">
-              {" "}
-              {tab.active}
-            </h1>
-            <p className="absolute left-1/3 mt-1 h-1 w-1/4 rounded-xl bg-cyan-500 md:mt-2"></p>
-          </div>
-          <h1
-            className="text-md cursor-pointer break-all font-bold text-black dark:text-yellow-50  md:text-2xl "
-            onClick={() => setTab({ hidden: tab.active, active: tab.hidden })}
-          >
-            {tab.hidden}
-          </h1>
+          <SlidingTabs
+            tabs={allTabs}
+            activeTabIndex={activeTabIndex}
+            setActiveTabIndex={setActiveTabIndex}
+          />
         </motion.div>
-        <div className="mt-8 flex min-h-full w-5/6 max-w-[1100px] flex-col  md:flex-row">
-          {tab.active === "Personal"
+        <div className="mt-8 flex min-h-full w-full max-w-[1100px] flex-col  md:flex-row">
+          {activeTabIndex === 0
             ? personalProjects.map((project) => (
                 <div
                   className="mx-auto mb-6 w-full md:w-1/2"
@@ -225,8 +226,8 @@ export default function Projects(): React.ReactElement {
                     key={project.title}
                     title={project.title}
                     description={project.description}
-                     logo={project.logo}
-                     logoSize={project.logoSize}
+                    logo={project.logo}
+                    logoSize={project.logoSize}
                     animate={false}
                   />
                 </div>
@@ -250,13 +251,6 @@ export default function Projects(): React.ReactElement {
                 </div>
               ))}
         </div>
-        <motion.div className="mb-2 mt-10 flex w-full justify-center">
-          <Link href={"/"}>
-            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-lg text-transparent dark:from-cyan-100 dark:to-slate-200">
-              Home {"->"}
-            </p>
-          </Link>
-        </motion.div>
       </main>
     </>
   );

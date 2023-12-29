@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import ToggleButton from "~/components/ToggleButton";
+import Footer from "~/components/Footer";
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "600", "700"],
@@ -19,6 +20,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       >
         <Component {...pageProps} />
         <ToggleButton />
+        <Footer />
       </main>
     </ThemeProvider>
   );

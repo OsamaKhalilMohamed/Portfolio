@@ -4,6 +4,7 @@ import me from "../../public/me.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Projects from "~/components/Projects";
 
 export default function Home(): React.ReactElement {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -15,7 +16,6 @@ export default function Home(): React.ReactElement {
     { name: "sleep", logo: "💤" },
     { name: "think", logo: "🧠" },
     { name: "tweet", logo: "🐥" },
-    { name: "kiss", logo: "💋" },
     { name: "music", logo: "🎧" },
     { name: "sunflower", logo: "🌻" },
   ];
@@ -173,8 +173,10 @@ export default function Home(): React.ReactElement {
           className="mt-4 flex w-4/6  max-w-[980px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
         >
           <p className="mx-auto mb-4 flex text-3xl font-bold md:text-3xl">
-            <span className="animate-waving-hand">👋🏻</span> About me{" "}
-            <span className="animate-waving-hand">👋🏻</span>
+            <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
+              About me{" "}
+            </span>
+            <span className="animate-waving-hand md:mt-1 md:text-lg">👋🏻</span>
           </p>
           <div className="text-start text-lg font-extrabold leading-6 text-neutral-950 dark:text-yellow-50 sm:text-lg">
             Hi, I'm a front-end engineer, born and raised in Cairo - Egypt. Very
@@ -221,32 +223,17 @@ export default function Home(): React.ReactElement {
         </motion.div>
         <hr className="border-1  w-full cursor-pointer border-orange-400 duration-500 hover:border-red-500" />
 
-        <div className="mx-auto flex  w-4/6 max-w-[980px] flex-col px-1 pb-4 pt-4 text-neutral-950 dark:text-yellow-50 md:w-2/4 md:justify-start md:px-2">
+        <div className="mx-auto flex  w-4/6 max-w-[980px] flex-col px-1 pb-4 pt-4 text-neutral-950 dark:text-yellow-50 md:w-full md:justify-start md:px-2">
           <p className="mb-2 flex-grow text-center text-2xl font-extrabold md:text-4xl">
             <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
-              Wanna check out projects i've worked on{" "}
+              Projects i've worked on{" "}
             </span>
             <span className="bg-none text-inherit">👀</span>?
           </p>
 
-          <Link href="/Projects">
-            <motion.div
-              whileTap={{ scale: 0.9 }}
-              initial={{
-                opacity: 0,
-                scale: 0.5,
-              }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="rounded-md border border-zinc-400 p-4 text-center text-2xl font-bold shadow-md hover:bg-zinc-400 dark:border-zinc-800 dark:hover:bg-zinc-800  md:mx-0 md:mb-0"
-            >
-              <span className="bg-none text-inherit">✨ </span>
-              <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-transparent dark:from-cyan-100  dark:to-slate-200">
-                Projects{" "}
-              </span>
-              <span className="bg-none text-inherit"> ✨</span>
-            </motion.div>
-          </Link>
+          <Projects />
         </div>
+        <hr className="border-1 w-full cursor-pointer border-orange-400 duration-500 hover:border-red-500" />
       </main>
     </>
   );
