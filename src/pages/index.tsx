@@ -17,7 +17,7 @@ export default function Home(): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`flex h-full min-h-screen flex-col items-center justify-start pb-8 pt-8`}
+        className={`flex h-full min-h-screen flex-col items-center justify-start scroll-smooth pb-8 pt-8`}
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
