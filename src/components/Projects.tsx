@@ -12,13 +12,12 @@ import SlidingTabs from "./SlidingTabs";
 export default function Projects(): React.ReactElement {
   let allTabs = [
     {
-      id: "Personal",
-      name: "Personal",
-    },
-
-    {
       id: "Professional",
       name: "Professional",
+    },
+    {
+      id: "Personal",
+      name: "Personal",
     },
   ];
 
@@ -216,7 +215,7 @@ export default function Projects(): React.ReactElement {
           />
         </motion.div>
         <div className="mt-8 flex min-h-full w-full max-w-[1100px] flex-col  md:flex-row">
-          {activeTabIndex === 0
+          {activeTabIndex === 1
             ? personalProjects.map((project) => (
                 <div
                   className="mx-auto mb-6 w-full md:w-1/2"
