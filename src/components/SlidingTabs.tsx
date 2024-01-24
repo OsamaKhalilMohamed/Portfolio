@@ -36,9 +36,9 @@ export default function SlidingTabs({
   }, [activeTabIndex]);
 
   return (
-    <div className="flew-row relative mx-auto flex h-12 rounded-3xl border border-black/40 bg-neutral-800 px-2 backdrop-blur-sm">
+    <div className="flew-row relative mx-auto flex h-12 w-full justify-between rounded-3xl border border-white/30 bg-gradient-to-r from-cyan-800 to-slate-600 px-2 backdrop-blur-sm dark:border-black/40 dark:bg-zinc-900/90 md:w-[400px]">
       <span
-        className="absolute bottom-0 top-0 -z-10 flex overflow-hidden rounded-3xl py-2 transition-all duration-300"
+        className="absolute bottom-0  top-0 -z-10 mx-auto flex w-full overflow-hidden rounded-3xl py-2 text-center transition-all duration-300"
         style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
       >
         <span className="h-full w-full rounded-3xl bg-gray-200/30" />
@@ -51,8 +51,10 @@ export default function SlidingTabs({
             key={index}
             ref={(el) => (tabsRef.current[index] = el)}
             className={`${
-              isActive ? `` : `hover:text-neutral-300`
-            } my-auto cursor-pointer select-none rounded-full px-4 text-center font-light text-white`}
+              isActive
+                ? `w-full md:w-[200px]`
+                : `w-full hover:text-neutral-300 md:w-[200px]`
+            } my-auto cursor-pointer select-none rounded-full px-4 text-center text-lg font-bold text-white`}
             onClick={() => setActiveTabIndex(index)}
           >
             {tab.name}

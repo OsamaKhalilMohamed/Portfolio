@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import me from "../../public/me.png";
+import me2 from "../../public/me.jpg";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Projects from "~/components/Projects";
@@ -63,13 +65,13 @@ export default function Home(): React.ReactElement {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
               layout
-              className="my-2 -ml-1.5 w-full text-start leading-7 text-neutral-950 dark:text-yellow-50 md:ml-0"
+              className="my-2 -ml-1.5 w-full text-start leading-8 text-neutral-950 dark:text-yellow-50 md:ml-0"
             >
-              <span className="text-md font-medium  text-neutral-950 dark:text-yellow-50">
+              <span className="text-md font-light  text-neutral-950 dark:text-yellow-50">
                 Software engineer, Obsessed with building interactive UIs.
               </span>
               <br />
-              <span className="text-md font-medium text-neutral-950 dark:text-yellow-50">
+              <span className="text-md font-light text-neutral-950 dark:text-yellow-50">
                 currently working at{" "}
                 <Link
                   href={"https://www.synapse-analytics.io/"}
@@ -82,7 +84,7 @@ export default function Home(): React.ReactElement {
               </span>
             </motion.div>
             <motion.div
-              className="-ml-1.5 mt-4 flex max-w-[980px] flex-wrap pb-4 text-sm font-semibold sm:w-2/4 md:ml-0 md:w-5/6 md:justify-between"
+              className="-ml-1.5 mt-5 flex max-w-[980px] flex-wrap pb-4 text-sm font-semibold sm:w-2/4 md:ml-0 md:mt-10 md:w-5/6 md:justify-between"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 2 }}
@@ -145,12 +147,11 @@ export default function Home(): React.ReactElement {
         <hr className="border-1 w-full cursor-pointer border-orange-400 duration-500 hover:border-red-500" />
 
         {/* Projects section */}
-        <div className="mx-auto flex  w-4/6 max-w-[980px] flex-col px-1 pb-4 pt-4 text-neutral-950 dark:text-yellow-50 md:w-full md:justify-start md:px-2">
-          <p className="mb-2 mt-2 flex-grow text-center text-2xl font-extrabold md:text-4xl">
+        <div className="mx-auto flex w-4/6 max-w-[980px] flex-col pb-4 pt-4 text-neutral-950 dark:text-yellow-50 md:mt-14 md:justify-start">
+          <p className="mb-2 mt-2 flex-grow text-center text-2xl font-extrabold md:text-5xl">
             <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
-              Projects i've worked on{" "}
+              1. Projects i've worked on!
             </span>
-            <span className="bg-none text-inherit">👀</span>?
           </p>
 
           <Projects />
@@ -165,33 +166,49 @@ export default function Home(): React.ReactElement {
           transition={{ type: "spring", stiffness: 50 }}
           className="mt-4 flex w-4/6  max-w-[980px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
         >
-          <p className="mx-auto mb-4 mt-2 flex text-3xl font-bold md:text-4xl">
+          <p className="mx-auto mb-8 mt-5 flex flex-grow text-center text-2xl font-extrabold md:mt-14 md:text-5xl">
             <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
-              About me{" "}
+              2. About me{" "}
             </span>
-            <span className="animate-waving-hand md:mt-1 md:text-2xl">👋🏻</span>
           </p>
-          <div className="text-start text-lg font-extrabold leading-6 text-neutral-950 dark:text-yellow-50 sm:text-lg">
-            Hi, I'm a front-end engineer, born and raised in Cairo - Egypt. Very
-            interested in building interactive UIs. I have a bachelor's degree
-            in computer science, class of 2020. I have +2 years of professional
-            experience in front-end development and the cycle of software (web)
-            development in general. on a mission to survive the very rapid
-            javascript world we're living in by activating "student for life"
-            mode. currently trying to learn Vue.js, if you're interested you can
-            see my tech and tools i'm usually using in my work:{" "}
-            <Link href={"/Tech"} className="h-fit w-fit ">
-              {" "}
-              <span className="border-b-2 border-dotted border-pink-400 text-neutral-950 dark:border-pink-700 dark:text-yellow-50">
-                Tech + Tools{" "}
-              </span>
-            </Link>{" "}
-            . My top hobbies include: listening to music, watching movies,
-            gaming, and avoid writing regex. A wannabe Javascript ninja
-            engineer.
+
+          <div className="text-md flex justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 ">
+            <div className="mr-2 w-full md:w-4/6">
+              Hi, I'm a front-end engineer, born and raised in Cairo - Egypt.
+              Very interested in building interactive UIs. I have a bachelor's
+              degree in computer science, class of 2020. I have +2 years of
+              professional experience in front-end development and the cycle of
+              software (web) development in general. on a mission to survive the
+              very rapid javascript world we're living in by activating "student
+              for life" mode. currently trying to learn Vue.js, if you're
+              interested you can see my tech and tools i'm usually using in my
+              work:{" "}
+              <Link href={"/Tech"} className="h-fit w-fit ">
+                {" "}
+                <span className="border-b-2 border-dotted border-pink-400 text-neutral-950 dark:border-pink-700 dark:text-yellow-50">
+                  Tech + Tools{" "}
+                </span>
+              </Link>{" "}
+              . My top hobbies include: listening to music, watching movies,
+              gaming, and avoid writing regex. A wannabe Javascript ninja
+              engineer.
+            </div>
+            <div className="mb-4 hidden self-end md:flex">
+              {/* IMAGES */}
+              <Image
+                src={me2}
+                alt="A picture of myself :)"
+                width="200"
+                height="200"
+                placeholder="blur"
+                className="rounded-lg shadow-lg"
+                quality={100}
+                priority={true}
+              />
+            </div>
           </div>
-          <div className="mb-4 mt-4 flex w-full flex-col flex-wrap items-center justify-start md:flex-row">
-            <h1 className="mt-4 font-bold md:text-2xl">Main Skills: </h1>{" "}
+          <div className="mb-8 mt-4 flex w-full flex-col flex-wrap items-center justify-between md:mt-8 md:flex-row">
+            <h1 className="mt-4 font-medium md:text-xl">Main Skills: </h1>{" "}
             <div className="text-md relative mb-2 w-full rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-bold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300  dark:focus:ring-blue-800 md:mb-0 md:me-4 md:ml-2 md:w-[150px]">
               <p className="absolute -right-2 -top-2">☑️</p>
               <p className="absolute -bottom-2 -left-2">☑️</p>

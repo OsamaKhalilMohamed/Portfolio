@@ -6,4 +6,8 @@
   body {
     @apply bg-white dark:bg-zinc-950;
   }
+
+  *{
+    transition: background-color 0.2s ease-in;
+  }
 }

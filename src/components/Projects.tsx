@@ -6,8 +6,16 @@ import innerNote from "../../public/innerNote.png";
 import sadaqati from "../../public/sadaqati.png";
 import aly from "../../public/aly.png";
 import Konan from "../../public/Vector.png";
+import konan1 from "../../public/konan1.png";
+import canvas from "../../public/canvas.png";
+
+import konan2 from "../../public/konan2.png";
+import konan3 from "../../public/konan3.png";
+import konan4 from "../../public/konan4.png";
+
 import Link from "next/link";
 import SlidingTabs from "./SlidingTabs";
+import ProjectShowCase from "./ProjectShowCase";
 
 export default function Projects(): React.ReactElement {
   let allTabs = [
@@ -201,7 +209,9 @@ export default function Projects(): React.ReactElement {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`flex flex-col flex-wrap items-center justify-center`}>
+      <main
+        className={`flex w-full flex-col flex-wrap items-center justify-center`}
+      >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -214,41 +224,34 @@ export default function Projects(): React.ReactElement {
             setActiveTabIndex={setActiveTabIndex}
           />
         </motion.div>
-        <div className="mt-8 flex min-h-full w-full max-w-[1100px] flex-col  md:flex-row">
-          {activeTabIndex === 1
-            ? personalProjects.map((project) => (
-                <div
-                  className="mx-auto mb-6 w-full md:w-1/2"
+        <div className="mt-8 flex min-h-full w-full max-w-[980] flex-col  md:flex-row">
+          {activeTabIndex === 1 ? (
+            personalProjects.map((project) => (
+              <div className="mx-auto mb-6 w-full md:w-1/2" key={project.title}>
+                <Card
                   key={project.title}
-                >
-                  <Card
-                    key={project.title}
-                    title={project.title}
-                    description={project.description}
-                    logo={project.logo}
-                    logoSize={project.logoSize}
-                    animate={false}
-                  />
-                </div>
-              ))
-            : professionalProjects.map((project) => (
-                <div
-                  className="mb-6 w-full md:mr-8 md:w-1/2"
-                  key={project.title}
-                >
-                  <Card
-                    key={project.title}
-                    title={project.title}
-                    description={project.description}
-                    logo={project.logo}
-                    logoSize={project.logoSize}
-                    animate={false}
-                    className={
-                      project.title === "KONAN" ? "brightness-0 invert" : ""
-                    }
-                  />
-                </div>
-              ))}
+                  title={project.title}
+                  description={project.description}
+                  logo={project.logo}
+                  logoSize={project.logoSize}
+                  animate={false}
+                />
+              </div>
+            ))
+          ) : (
+            <div
+              className="mb-6 flex w-full items-center justify-center"
+              //key={project.title}
+            >
+              <ProjectShowCase
+                description="The decisioning platform that enables financial institutions to fully automate their credit risk policy workflows, give out instantaneous decisions and lower non-performing loans."
+                imageAlt="ss"
+                stack={["s"]}
+                title="KONAN"
+                imageSrc={[konan1, konan2]}
+              />
+            </div>
+          )}
         </div>
       </main>
     </>

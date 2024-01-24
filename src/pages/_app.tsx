@@ -16,7 +16,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider attribute="class">
       <main
-        className={`${inter.className} min-h-screen bg-zinc-50 dark:bg-zinc-950`}
+        className={`${inter.className} h-full min-h-screen scroll-smooth bg-zinc-50 pb-8 pt-8 dark:bg-zinc-950`}
       >
         <Component {...pageProps} />
         <ToggleButton />
