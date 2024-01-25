@@ -224,7 +224,7 @@ export default function Projects(): React.ReactElement {
             setActiveTabIndex={setActiveTabIndex}
           />
         </motion.div>
-        <div className="mt-8 flex min-h-full w-full max-w-[980] flex-col  md:flex-row">
+        <div className="mt-8 flex min-h-full w-full max-w-[1000] flex-col md:flex-row">
           {activeTabIndex === 1 ? (
             personalProjects.map((project) => (
               <div className="mx-auto mb-6 w-full md:w-1/2" key={project.title}>

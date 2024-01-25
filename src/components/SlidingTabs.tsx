@@ -5,6 +5,7 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   tabs: Array<{ id: string; name: string }>;
@@ -36,13 +37,19 @@ export default function SlidingTabs({
   }, [activeTabIndex]);
 
   return (
-    <div className="flew-row relative mx-auto flex h-12 w-full justify-between rounded-3xl border border-white/30 bg-gradient-to-r from-cyan-800 to-slate-600 px-2 backdrop-blur-sm dark:border-black/40 dark:bg-zinc-900/90 md:w-[400px]">
-      <span
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ type: "spring", stiffness: 50 }}
+      className="flew-row relative mx-auto flex h-12 w-full justify-between rounded-3xl border border-white/30 bg-gradient-to-r from-cyan-800 to-slate-600 px-2 backdrop-blur-sm dark:border-black/40 dark:bg-zinc-900/90 md:w-[400px]"
+    >
+      <motion.span
+        layout
         className="absolute bottom-0  top-0 -z-10 mx-auto flex w-full overflow-hidden rounded-3xl py-2 text-center transition-all duration-300"
         style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
       >
         <span className="h-full w-full rounded-3xl bg-gray-200/30" />
-      </span>
+      </motion.span>
       {tabs.map((tab, index) => {
         const isActive = activeTabIndex === index;
 
@@ -61,6 +68,6 @@ export default function SlidingTabs({
           </button>
         );
       })}
-    </div>
+    </motion.div>
   );
 }
