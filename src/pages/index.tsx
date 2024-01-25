@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import me from "../../public/me.png";
-import me2 from "../../public/me.jpg";
+import osama from "../../public/osama.JPG";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -196,11 +196,11 @@ export default function Home(): React.ReactElement {
             <div className="mb-4 hidden self-end md:flex">
               {/* IMAGES */}
               <Image
-                src={me2}
+                src={osama}
                 alt="A picture of myself :)"
                 width="200"
                 height="200"
-                placeholder="blur"
+                //placeholder="blur"
                 className="rounded-lg shadow-lg"
                 quality={100}
                 priority={true}
