@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import me from "../../public/me.png";
 import { motion } from "framer-motion";
-import osama2 from "../../public/osama2.jpg";
+import osama2 from "../../public/osama2.jpeg";
 import Image from "next/image";
 import Projects from "~/components/Projects";
 
