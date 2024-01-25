@@ -84,7 +84,7 @@ export default function Home(): React.ReactElement {
                 </span>
               </motion.div>
               <motion.div
-                className=" mt-5 flex grow flex-wrap pb-4 text-sm font-semibold sm:w-1/4 md:ml-0 md:mt-14 md:w-5/6 md:max-w-[1000px] md:items-end md:justify-between"
+                className="-ml-1.5 mt-5 flex grow flex-wrap pb-4 text-sm font-semibold sm:w-1/4 md:ml-0 md:mt-14 md:w-5/6 md:max-w-[1000px] md:items-end md:justify-between"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 2 }}
