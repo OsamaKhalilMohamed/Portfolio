@@ -44,7 +44,7 @@ export default function Home(): React.ReactElement {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     layout
-                    className="-ml-1.5 flex px-0 text-start text-7xl font-extrabold text-cyan-800 dark:text-cyan-100 md:text-9xl"
+                    className="-ml-0.5 flex px-0 text-start text-7xl font-extrabold text-cyan-800 dark:text-cyan-100 md:-ml-1.5 md:text-9xl"
                   >
                     Osama
                   </motion.h1>
@@ -53,7 +53,7 @@ export default function Home(): React.ReactElement {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
                     layout
-                    className="-ml-1.5 text-start text-7xl font-extrabold text-cyan-800 dark:text-cyan-100 md:text-9xl"
+                    className="-ml-0.5 text-start text-7xl font-extrabold text-cyan-800 dark:text-cyan-100 md:-ml-1.5 md:text-9xl"
                   >
                     Khalil
                   </motion.h1>
@@ -65,7 +65,7 @@ export default function Home(): React.ReactElement {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
                 layout
-                className="-ml-1.5 w-full text-start leading-6 text-neutral-950 dark:text-yellow-50 md:ml-0 md:leading-8"
+                className="w-full text-start leading-6 text-neutral-950 dark:text-yellow-50 md:ml-0 md:leading-8"
               >
                 <span className="text-lg font-light text-neutral-950  dark:text-yellow-50 md:text-xl">
                   Software engineer, Obsessed with building interactive UIs.
@@ -84,7 +84,7 @@ export default function Home(): React.ReactElement {
                 </span>
               </motion.div>
               <motion.div
-                className="-ml-1.5 mt-5 flex grow flex-wrap pb-4 text-sm font-semibold sm:w-1/4 md:ml-0 md:mt-14 md:w-5/6 md:max-w-[1000px] md:items-end md:justify-between"
+                className=" mt-5 flex grow flex-wrap pb-4 text-sm font-semibold sm:w-1/4 md:ml-0 md:mt-14 md:w-5/6 md:max-w-[1000px] md:items-end md:justify-between"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 2 }}
