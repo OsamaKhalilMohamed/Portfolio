@@ -44,7 +44,7 @@ export default function Home(): React.ReactElement {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     layout
-                    className="-ml-1.5 flex px-0 text-start text-6xl font-extrabold text-cyan-800 dark:text-cyan-100 md:text-9xl"
+                    className="-ml-1.5 flex px-0 text-start text-7xl font-extrabold text-cyan-800 dark:text-cyan-100 md:text-9xl"
                   >
                     Osama
                   </motion.h1>
@@ -53,7 +53,7 @@ export default function Home(): React.ReactElement {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
                     layout
-                    className="-ml-1.5 text-start text-6xl font-extrabold text-cyan-800 dark:text-cyan-100 md:text-9xl"
+                    className="-ml-1.5 text-start text-7xl font-extrabold text-cyan-800 dark:text-cyan-100 md:text-9xl"
                   >
                     Khalil
                   </motion.h1>
@@ -65,13 +65,13 @@ export default function Home(): React.ReactElement {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
                 layout
-                className="-ml-1.5 w-full text-start leading-8 text-neutral-950 dark:text-yellow-50 md:ml-0"
+                className="-ml-1.5 w-full text-start leading-6 text-neutral-950 dark:text-yellow-50 md:ml-0 md:leading-8"
               >
-                <span className="text-md font-light  text-neutral-950 dark:text-yellow-50">
+                <span className="text-lg font-light text-neutral-950  dark:text-yellow-50 md:text-xl">
                   Software engineer, Obsessed with building interactive UIs.
                 </span>
                 <br />
-                <span className="text-md font-light text-neutral-950 dark:text-yellow-50">
+                <span className=" text-lg font-light text-neutral-950 dark:text-yellow-50 md:text-xl">
                   currently working at{" "}
                   <Link
                     href={"https://www.synapse-analytics.io/"}
