@@ -84,7 +84,7 @@ export default function Home(): React.ReactElement {
                 </span>
               </motion.div>
               <motion.div
-                className="-ml-1.5 mt-5 flex max-w-[1000px] grow flex-wrap pb-4 text-sm font-semibold sm:w-2/4 md:ml-0 md:mt-14 md:w-5/6 md:items-end md:justify-between"
+                className=" mt-5 flex grow flex-wrap pb-4 text-sm font-semibold sm:w-1/4 md:ml-0 md:mt-14 md:w-5/6 md:max-w-[1000px] md:items-end md:justify-between"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 2 }}
@@ -158,7 +158,7 @@ export default function Home(): React.ReactElement {
             className="mb-2 mt-2 flex-grow text-center text-2xl font-extrabold md:text-5xl"
           >
             <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
-              <span className="font-mono text-5xl text-amber-600 dark:text-amber-100">
+              <span className="font-mono text-xl text-amber-600 dark:text-amber-100 md:text-5xl">
                 1.{""}
               </span>{" "}
               Projects i've worked on!
