@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import me from "../../public/me.png";
-import osama from "../../public/osama.JPG";
+import osama from "../../public/osama.jpg";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
