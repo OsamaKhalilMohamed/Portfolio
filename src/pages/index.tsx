@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import me from "../../public/me.png";
-
 import { motion } from "framer-motion";
+import osama from "../../public/osama.jpg";
 import Image from "next/image";
 import Projects from "~/components/Projects";
 
@@ -195,7 +195,7 @@ export default function Home(): React.ReactElement {
             <div className="mb-4 hidden self-end md:flex">
               {/* IMAGES */}
               <Image
-                src={"/osama.jpg"}
+                src={osama}
                 alt="A picture of myself :)"
                 width="200"
                 height="200"
