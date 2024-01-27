@@ -19,7 +19,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
         setCurrentImgIdx((prev: number) =>
           prev === imageSrc.length - 1 ? 0 : prev + 1
         );
-      }, 3000);
+      }, 10000);
     }
   }, [currentImgIdx, imageSrc]);
 
@@ -33,15 +33,15 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           <Image
             src={imageSrc[currentImgIdx]}
             width={600}
-            className="h-[450px] w-[550px] rounded-md shadow-md"
+            className="rounded-md shadow-md"
             height={600}
             quality={100}
             //placeholder="blur"
             alt={imageAlt}
           />
-          <div className="hidden md:flex">
+          {/* <div className="hidden md:flex">
             <p className="ml-4 self-end  text-xl font-bold">{description}</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

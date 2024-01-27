@@ -7,14 +7,10 @@ import sadaqati from "../../public/sadaqati.png";
 import aly from "../../public/aly.png";
 import Konan from "../../public/Vector.png";
 import konan1 from "../../public/konan1.png";
-import canvas from "../../public/canvas.png";
-
+import konanhero from "../../public/konanhero.jpg";
 import konan2 from "../../public/konan2.png";
-import konan3 from "../../public/konan3.png";
-import konan4 from "../../public/konan4.png";
 
 import Link from "next/link";
-import SlidingTabs from "./SlidingTabs";
 import ProjectShowCase from "./ProjectShowCase";
 
 export default function Projects(): React.ReactElement {
@@ -212,18 +208,6 @@ export default function Projects(): React.ReactElement {
       <main
         className={`flex w-full flex-col flex-wrap items-center justify-center`}
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto mb-4 mt-8 flex h-fit items-center bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200"
-        >
-          <SlidingTabs
-            tabs={allTabs}
-            activeTabIndex={activeTabIndex}
-            setActiveTabIndex={setActiveTabIndex}
-          />
-        </motion.div>
         <div className="mt-8 flex min-h-full w-full max-w-[1000] flex-col md:flex-row">
           {activeTabIndex === 1 ? (
             personalProjects.map((project) => (
@@ -248,7 +232,7 @@ export default function Projects(): React.ReactElement {
                 imageAlt="ss"
                 stack={["s"]}
                 title="KONAN"
-                imageSrc={[konan1, konan2]}
+                imageSrc={[konanhero]}
               />
             </div>
           )}

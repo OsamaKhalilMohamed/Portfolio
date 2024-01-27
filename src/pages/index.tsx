@@ -25,7 +25,7 @@ export default function Home(): React.ReactElement {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex h-full w-5/6 max-w-[1000px] flex-col items-start bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-2xl text-transparent dark:from-cyan-100 dark:to-slate-200   lg:flex-row lg:justify-between"
+            className="flex h-full w-5/6 max-w-[1000px] flex-col items-start bg-gradient-to-r bg-clip-text text-center text-2xl text-cyan-800 text-transparent dark:text-cyan-100   lg:flex-row lg:justify-between"
           >
             <div className="flex h-full w-full grow flex-col lg:h-[550px]">
               <div className="flex w-full flex-col justify-start">
@@ -146,7 +146,7 @@ export default function Home(): React.ReactElement {
               />
             </div>
           </motion.div>
-          <hr className="border-1 w-full cursor-pointer border-orange-400 duration-500 hover:border-red-500" />
+          <hr className="border-1 w-full border-amber-600 duration-500 hover:border-red-500 dark:border-amber-100" />
         </div>
 
         {/* Projects section */}
@@ -157,7 +157,7 @@ export default function Home(): React.ReactElement {
             viewport={{ once: true }}
             className="mb-2 mt-2 flex-grow text-center text-2xl font-extrabold md:text-5xl"
           >
-            <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
+            <span className="text-center text-cyan-800 dark:text-cyan-100">
               <span className="font-mono text-xl text-amber-600 dark:text-amber-100 md:text-5xl">
                 1.{""}
               </span>{" "}
@@ -168,7 +168,7 @@ export default function Home(): React.ReactElement {
           <Projects />
         </div>
 
-        <hr className="border-1 w-full cursor-pointer border-orange-400 duration-500 hover:border-red-500" />
+        <hr className="border-1 w-full border-amber-600 duration-500 hover:border-red-500 dark:border-amber-100" />
 
         {/* About me section*/}
         <motion.div
@@ -178,7 +178,7 @@ export default function Home(): React.ReactElement {
           className="mt-4 flex w-5/6  max-w-[1000px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
         >
           <p className="mx-auto mb-8 mt-5 flex flex-grow text-center text-2xl font-extrabold md:mt-14 md:text-5xl">
-            <span className="bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
+            <span className="text-center text-cyan-800 dark:text-cyan-100">
               <span className="font-mono text-5xl text-amber-600 dark:text-amber-100">
                 2.
               </span>{" "}
@@ -247,7 +247,7 @@ export default function Home(): React.ReactElement {
             </div>
           </div>
         </motion.div>
-        <hr className="border-1 w-full cursor-pointer border-orange-400 duration-500 hover:border-red-500" />
+        <hr className="border-1 w-full border-amber-600 duration-500 hover:border-red-500 dark:border-amber-100" />
       </main>
     </>
   );
