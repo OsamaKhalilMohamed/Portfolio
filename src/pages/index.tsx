@@ -17,15 +17,16 @@ export default function Home(): React.ReactElement {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main
-        className={`flex h-full min-h-screen flex-col items-center justify-start scroll-smooth pb-8`}
-      >
-        <div className="mt-8 flex w-full flex-col items-center justify-center md:mt-14 md:min-h-[20dvh]">
+      <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8">
+        <div
+          id="home"
+          className="mt-8 flex max-w-[1000px] flex-col items-center justify-center  md:mt-14 md:min-h-[20dvh]"
+        >
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex h-full w-5/6 max-w-[1000px] flex-col items-start bg-gradient-to-r bg-clip-text text-center text-2xl text-cyan-800 text-transparent dark:text-cyan-100   lg:flex-row lg:justify-between"
+            className="flex h-full w-full flex-col items-start bg-gradient-to-r bg-clip-text text-center text-2xl text-cyan-800 text-transparent dark:text-cyan-100   lg:flex-row lg:justify-between"
           >
             <div className="flex h-full w-full grow flex-col lg:h-[550px]">
               <div className="flex w-full flex-col justify-start">
@@ -146,7 +147,7 @@ export default function Home(): React.ReactElement {
               />
             </div>
           </motion.div>
-          <hr className="border-1 w-full border-amber-600 duration-500 hover:border-red-500 dark:border-amber-100" />
+          <hr className="border-1 w-[100vw] border-amber-600 duration-500 hover:border-red-500 dark:border-amber-100" />
         </div>
 
         {/* Projects section */}
@@ -174,6 +175,7 @@ export default function Home(): React.ReactElement {
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
+          id="about"
           transition={{ type: "spring", stiffness: 50 }}
           className="mt-4 flex w-5/6  max-w-[1000px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
         >

@@ -28,7 +28,7 @@ export default function ToggleButton(): React.ReactElement {
           src={imageSrc}
           height={25}
           width={25}
-          className="fixed right-4 top-3 cursor-pointer"
+          className="cursor-pointer"
           onClick={() =>
             theme == "dark" ? setTheme("light") : setTheme("dark")
           }
