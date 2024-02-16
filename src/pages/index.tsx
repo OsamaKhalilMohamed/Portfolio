@@ -195,8 +195,7 @@ export default function Home(): React.ReactElement {
               About me
             </span>
           </motion.p>
-
-          <div className="text-md flex flex-col items-start justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 md:flex-row ">
+          <div className="text-md mb-8 flex flex-col items-start justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 md:flex-row ">
             <div className="mr-2 w-full md:w-4/6">
               Hi, I'm a front-end engineer, born and raised in Cairo - Egypt.
               Very interested in building interactive UIs. I have a bachelor's
@@ -229,28 +228,6 @@ export default function Home(): React.ReactElement {
                 quality={100}
                 priority={true}
               />
-            </div>
-          </div>
-          <div className="mb-8 mt-4 flex w-full flex-col flex-wrap items-center justify-between md:mb-14 md:mt-14 md:flex-row">
-            <div className="text-md relative mb-3 me-2 w-full rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300  dark:focus:ring-blue-800 md:mb-0 md:w-[150px]">
-              <p className="absolute -right-2 -top-2">☑️</p>
-              <p className="absolute -bottom-2 -left-2">☑️</p>
-              Typescript
-            </div>
-            <div className="text-md relative mb-3 me-2 w-full rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-cyan-300 dark:focus:ring-cyan-800 md:mb-0 md:w-[150px]">
-              <p className="absolute -right-2 -top-2">🔥</p>
-              <p className="absolute -bottom-2 -left-2">🔥</p>
-              React
-            </div>
-            <div className="text-md relative mb-3 me-2 w-full rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-red-100 dark:focus:ring-red-400 md:mb-0 md:w-[150px]">
-              <p className="absolute -right-2 -top-2">🎱</p>
-              <p className="absolute -bottom-2 -left-2">🎱</p>
-              Next.js
-            </div>
-            <div className="text-md relative w-full rounded-lg bg-gradient-to-r from-teal-500  to-lime-500 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-l hover:from-teal-500  hover:to-lime-500 focus:outline-none focus:ring-4 focus:ring-lime-500 dark:focus:ring-teal-700 md:w-[150px] ">
-              <p className="absolute -right-2 -top-2">🚀</p>
-              <p className="absolute -bottom-2 -left-2">🚀</p>
-              CSS
             </div>
           </div>
         </motion.div>
