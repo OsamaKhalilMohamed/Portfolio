@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Footer from "~/components/Footer";
 import Navbar from "~/components/Navbar";
+import { useState } from "react";
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "600", "700"],

@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 import osama2 from "../../public/osama2.jpeg";
 import Image from "next/image";
 import Projects from "~/components/Projects";
+import { useRef } from "react";
 
 export default function Home(): React.ReactElement {
+  const homeRef = useRef(null);
   return (
     <>
       <Head>
@@ -20,7 +22,8 @@ export default function Home(): React.ReactElement {
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8">
         <div
           id="home"
-          className="mt-8 flex max-w-[1000px] flex-col items-center justify-center  md:mt-14 md:min-h-[20dvh]"
+          ref={homeRef}
+          className="mt-8 flex w-5/6 max-w-[1000px] flex-col items-center justify-center  md:mt-14 md:min-h-[20dvh]"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -159,7 +162,7 @@ export default function Home(): React.ReactElement {
             className="mb-2 mt-2 flex-grow text-center text-2xl font-extrabold md:text-5xl"
           >
             <span className="text-center text-cyan-800 dark:text-cyan-100">
-              <span className="font-mono text-xl text-amber-600 dark:text-amber-100 md:text-5xl">
+              <span className="font-mono text-2xl text-amber-600 dark:text-amber-100 md:text-5xl">
                 1.{""}
               </span>{" "}
               Projects i've worked on!
@@ -177,19 +180,24 @@ export default function Home(): React.ReactElement {
           animate={{ opacity: 1, scale: 1 }}
           id="about"
           transition={{ type: "spring", stiffness: 50 }}
-          className="mt-4 flex w-5/6  max-w-[1000px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
+          className="mt-8 flex w-5/6  max-w-[1000px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
         >
-          <p className="mx-auto mb-8 mt-5 flex flex-grow text-center text-2xl font-extrabold md:mt-14 md:text-5xl">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="my-8 mt-2 flex-grow text-center text-2xl font-extrabold md:text-5xl"
+          >
             <span className="text-center text-cyan-800 dark:text-cyan-100">
-              <span className="font-mono text-5xl text-amber-600 dark:text-amber-100">
-                2.
+              <span className="font-mono text-2xl text-amber-600 dark:text-amber-100 md:text-5xl">
+                2.{""}
               </span>{" "}
               About me
             </span>
-          </p>
+          </motion.p>
 
-          <div className="text-md flex items-start justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 ">
-            <div className="mr-2 w-full md:w-5/6">
+          <div className="text-md flex-col items-start justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 md:flex-row ">
+            <div className="mr-2 w-full md:w-4/6">
               Hi, I'm a front-end engineer, born and raised in Cairo - Egypt.
               Very interested in building interactive UIs. I have a bachelor's
               degree in computer science, class of 2020. I have +2 years of
@@ -209,7 +217,7 @@ export default function Home(): React.ReactElement {
               gaming, and avoid writing regex. A wannabe Javascript ninja
               engineer.
             </div>
-            <div className="my-4 ml-4 hidden flex-col justify-start md:flex">
+            <div className="my-4 flex-col justify-start md:ml-4">
               {/* IMAGES */}
               <Image
                 src={osama2}
