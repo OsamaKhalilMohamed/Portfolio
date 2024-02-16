@@ -162,7 +162,7 @@ export default function Home(): React.ReactElement {
             className="mb-2 mt-2 flex-grow text-center text-2xl font-extrabold md:text-5xl"
           >
             <span className="text-center text-cyan-800 dark:text-cyan-100">
-              <span className="font-mono text-2xl text-amber-600 dark:text-amber-100 md:text-5xl">
+              <span className="font-mono text-3xl text-amber-600 dark:text-amber-100 md:text-5xl">
                 1.{""}
               </span>{" "}
               Projects i've worked on!
@@ -189,14 +189,14 @@ export default function Home(): React.ReactElement {
             className="my-8 mt-2 flex-grow text-center text-2xl font-extrabold md:text-5xl"
           >
             <span className="text-center text-cyan-800 dark:text-cyan-100">
-              <span className="font-mono text-2xl text-amber-600 dark:text-amber-100 md:text-5xl">
+              <span className="font-mono text-3xl text-amber-600 dark:text-amber-100 md:text-5xl">
                 2.{""}
               </span>{" "}
               About me
             </span>
           </motion.p>
 
-          <div className="text-md flex-col items-start justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 md:flex-row ">
+          <div className="text-md flex flex-col items-start justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 md:flex-row ">
             <div className="mr-2 w-full md:w-4/6">
               Hi, I'm a front-end engineer, born and raised in Cairo - Egypt.
               Very interested in building interactive UIs. I have a bachelor's
@@ -232,20 +232,17 @@ export default function Home(): React.ReactElement {
             </div>
           </div>
           <div className="mb-8 mt-4 flex w-full flex-col flex-wrap items-center justify-between md:mb-14 md:mt-14 md:flex-row">
-            <h1 className="mt-4 font-extrabold md:text-2xl">
-              Main Skills -{">"}{" "}
-            </h1>{" "}
-            <div className="text-md relative mb-2 me-2 w-full rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300  dark:focus:ring-blue-800 md:mb-0 md:w-[150px]">
+            <div className="text-md relative mb-3 me-2 w-full rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300  dark:focus:ring-blue-800 md:mb-0 md:w-[150px]">
               <p className="absolute -right-2 -top-2">☑️</p>
               <p className="absolute -bottom-2 -left-2">☑️</p>
               Typescript
             </div>
-            <div className="text-md relative mb-2 me-2 w-full rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-cyan-300 dark:focus:ring-cyan-800 md:mb-0 md:w-[150px]">
+            <div className="text-md relative mb-3 me-2 w-full rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-cyan-300 dark:focus:ring-cyan-800 md:mb-0 md:w-[150px]">
               <p className="absolute -right-2 -top-2">🔥</p>
               <p className="absolute -bottom-2 -left-2">🔥</p>
               React
             </div>
-            <div className="text-md relative mb-2 me-2 w-full rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-red-100 dark:focus:ring-red-400 md:mb-0 md:w-[150px]">
+            <div className="text-md relative mb-3 me-2 w-full rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 text-center text-sm font-bold shadow-md hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-red-100 dark:focus:ring-red-400 md:mb-0 md:w-[150px]">
               <p className="absolute -right-2 -top-2">🎱</p>
               <p className="absolute -bottom-2 -left-2">🎱</p>
               Next.js
