@@ -7,7 +7,7 @@ import sadaqati from "../../public/sadaqati.png";
 import aly from "../../public/aly.png";
 import Konan from "../../public/Vector.png";
 import konan1 from "../../public/konan1.png";
-import konanhero from "../../public/konanhero.jpg";
+import konanhero from "../../public/konanhero.png";
 import konan2 from "../../public/konan2.png";
 
 import Link from "next/link";

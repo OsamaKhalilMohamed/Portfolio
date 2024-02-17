@@ -199,7 +199,7 @@ export default function Home(): React.ReactElement {
             </span>
           </motion.p>
           <div className="text-md mb-8 flex flex-col items-start justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 md:flex-row ">
-            <div className="mr-2 w-full md:w-4/6">
+            <div className="mr-2 w-full md:w-4/6 md:max-w-[500px]">
               Hi, I'm a front-end engineer, born and raised in Cairo - Egypt.
               Very interested in building interactive UIs. I have a bachelor's
               degree in computer science, class of 2020. I have +2 years of
