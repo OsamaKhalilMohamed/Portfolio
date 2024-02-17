@@ -2,14 +2,13 @@ import Head from "next/head";
 import React from "react";
 
 import innerNote from "../../public/innerNote.png";
-import sadaqatihero from "../../public/sadaqatihero.png";
+import sadaqatihero from "../../public/sHero.png";
 
 import aly from "../../public/aly.png";
 
 import konanhero from "../../public/konanhero.png";
 import autoSkip from "../../public/Auto-Skip.png";
 
-import Link from "next/link";
 import ProjectShowCase from "./ProjectShowCase";
 
 export default function Projects(): React.ReactElement {
