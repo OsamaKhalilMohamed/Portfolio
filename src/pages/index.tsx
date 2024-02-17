@@ -168,7 +168,7 @@ export default function Home(): React.ReactElement {
               <span className="font-mono text-3xl text-amber-600 dark:text-amber-100 md:text-5xl">
                 1.{""}
               </span>{" "}
-              Projects i've worked on!
+              Projects
             </span>
           </motion.p>
 
