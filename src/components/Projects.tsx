@@ -12,26 +12,16 @@ import Link from "next/link";
 import ProjectShowCase from "./ProjectShowCase";
 
 export default function Projects(): React.ReactElement {
-  let allTabs = [
-    {
-      id: "Professional",
-      name: "Professional",
-    },
-    {
-      id: "Personal",
-      name: "Personal",
-    },
-  ];
-
   const projects = [
     {
       title: "KONAN",
       logo: konanhero,
-      stack: ["Typescript", "React", "React-query", "Django"],
+      stack: ["Typescript", "React", "Django", "SCSS", "REST"],
       type: "professional",
+      description:
+        "Working on developing all new features and maintaing the frontend for this MLOps platform, it has a lot of features that enable faster decision making for risk officers, automated workflows, visual dashboards and analytics, and many more.",
       date: "2022 - present",
     },
-
     {
       title: "Aly",
       logo: aly,
@@ -88,6 +78,7 @@ export default function Projects(): React.ReactElement {
                   imageSrc={project.logo}
                   date={project.date}
                   type={project.type}
+                  description={project.description}
                 />
               </div>
             </div>
