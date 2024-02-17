@@ -1,14 +1,12 @@
 import Head from "next/head";
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import Card from "./Card";
+import React from "react";
+
 import innerNote from "../../public/innerNote.png";
 import sadaqati from "../../public/sadaqati.png";
 import aly from "../../public/aly.png";
-import Konan from "../../public/Vector.png";
-import konan1 from "../../public/konan1.png";
+
 import konanhero from "../../public/konanhero.png";
-import konan2 from "../../public/konan2.png";
+import autoSkip from "../../public/Auto-Skip.png";
 
 import Link from "next/link";
 import ProjectShowCase from "./ProjectShowCase";
@@ -25,173 +23,42 @@ export default function Projects(): React.ReactElement {
     },
   ];
 
-  const [activeTabIndex, setActiveTabIndex] = useState<number>(0);
-
-  const personalProjects = [
-    {
-      title: "InnerNote",
-      logo: innerNote,
-      logoSize: 800,
-      description: (
-        <div className="flex flex-col justify-center">
-          <p className="text-small mt-2 font-bold text-yellow-50">
-            InnerNote is a note sharing web app that lets you share your
-            (confessions - dreams - thoughts - ideas) publicly or privately as
-            well as read and interact with other notes and share them. (under
-            developing).
-          </p>
-          <br />
-          <span className="mx-auto self-center border-b-2 border-dotted border-violet-500 text-center">
-            <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
-              <Link href={"https://inner-note.vercel.app/"} target="_blank">
-                Live{" "}
-              </Link>
-            </span>
-
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="white"
-                className="h-4 w-4 cursor-pointer"
-                style={{ display: "inline", verticalAlign: "middle" }}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </span>
-          </span>
-        </div>
-      ),
-    },
-  ];
-
-  const professionalProjects = [
+  const projects = [
     {
       title: "KONAN",
-      logo: Konan,
-      logoSize: 900,
-      description: (
-        <div className="flex grow flex-col justify-between">
-          <p className="text-small mt-2 font-bold text-yellow-50">
-            The AI decisioning platform that enables financial institutions to
-            fully automate their credit risk policy workflows, give out
-            instantaneous decisions and lower non-performing loans.
-          </p>
-          <br />
-          <span className="mx-auto self-center  border-b-2 border-dotted border-violet-500 text-center">
-            <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
-              <Link href={"https://app.konan.ai/login"} target="_blank">
-                Live{" "}
-              </Link>
-            </span>
-
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="white"
-                className="h-4 w-4 cursor-pointer"
-                style={{ display: "inline", verticalAlign: "middle" }}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </span>
-          </span>
-        </div>
-      ),
+      logo: konanhero,
+      stack: ["Typescript", "React", "React-query", "Django"],
+      type: "professional",
+      date: "2022 - present",
     },
 
     {
       title: "Aly",
       logo: aly,
-      logoSize: 130,
-      description: (
-        <div className="flex grow flex-col justify-between">
-          <p className="text-small mt-2 font-bold text-yellow-50">
-            Aly allows Moroccans to help each other and share their opinions and
-            experiences Connect with the community and find the best Businesses
-            in your area
-          </p>
-          <br />
-          <span className="mx-auto self-center  border-b-2 border-dotted border-violet-500 text-center">
-            <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
-              <Link href={"https://www.aly.ma/"} target="_blank">
-                Live{" "}
-              </Link>
-            </span>
-
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="white"
-                className="h-4 w-4 cursor-pointer"
-                style={{ display: "inline", verticalAlign: "middle" }}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </span>
-          </span>
-        </div>
-      ),
+      stack: ["Typescript", "React", "React-query", "Django"],
+      type: "professional",
+      date: "Apr 2022 - Aug 2022",
     },
     {
       title: "Sadaqhati",
       logo: sadaqati,
-      logoSize: 100,
-      description: (
-        <div className="flex grow flex-col justify-between">
-          <p className="text-small mt-2 font-bold text-yellow-50">
-            (Sadaqati Africa) is a charitable organization that works to improve
-            the lives of individuals and communities most in need of Muslims and
-            others in African countries.
-          </p>
-          <br />
-          <span className="mx-auto self-center border-b-2 border-dotted border-violet-500 text-center">
-            <span className="text-small mr-1 mt-2 font-bold text-yellow-50">
-              <Link href={"https://sadaqahti.com/en/"} target="_blank">
-                Live{" "}
-              </Link>
-            </span>
-
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="white"
-                className="h-4 w-4 cursor-pointer"
-                style={{ display: "inline", verticalAlign: "middle" }}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </span>
-          </span>
-        </div>
-      ),
+      stack: ["Typescript", "React", "React-query", "Django"],
+      type: "professional",
+      date: "Nov 2020 - Feb 2021",
+    },
+    {
+      title: "InnerNote",
+      logo: innerNote,
+      stack: ["Typescript", "React", "React-query", "Django"],
+      type: "personal",
+      date: "2022",
+    },
+    {
+      title: "Auto skip YT ads extenstion",
+      logo: autoSkip,
+      stack: ["Typescript", "React", "React-query", "Django"],
+      type: "personal",
+      date: "2024",
     },
   ];
 
@@ -208,35 +75,24 @@ export default function Projects(): React.ReactElement {
       <main
         className={`flex w-full flex-col flex-wrap items-center justify-center`}
       >
-        <div className="mt-8 flex min-h-full w-full max-w-[1000] flex-col md:flex-row">
-          {activeTabIndex === 1 ? (
-            personalProjects.map((project) => (
-              <div className="mx-auto mb-6 w-full md:w-1/2" key={project.title}>
-                <Card
-                  key={project.title}
+        {projects.map((project) => {
+          return (
+            <div className="mt-8 flex min-h-full w-full max-w-[1000] flex-col md:flex-row">
+              <div
+                className="mb-6 flex w-full items-center justify-center"
+                key={project.title}
+              >
+                <ProjectShowCase
+                  stack={project.stack}
                   title={project.title}
-                  description={project.description}
-                  logo={project.logo}
-                  logoSize={project.logoSize}
-                  animate={false}
+                  imageSrc={project.logo}
+                  date={project.date}
+                  type={project.type}
                 />
               </div>
-            ))
-          ) : (
-            <div
-              className="mb-6 flex w-full items-center justify-center"
-              //key={project.title}
-            >
-              <ProjectShowCase
-                description="The decisioning platform that enables financial institutions to fully automate their credit risk policy workflows, give out instantaneous decisions and lower non-performing loans."
-                imageAlt="ss"
-                stack={["s"]}
-                title="KONAN"
-                imageSrc={[konanhero]}
-              />
             </div>
-          )}
-        </div>
+          );
+        })}
       </main>
     </>
   );
