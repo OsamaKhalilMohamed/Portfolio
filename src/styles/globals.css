@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth !important;
+  }
   body {
     @apply bg-white dark:bg-zinc-950;
   }

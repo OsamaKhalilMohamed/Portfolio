@@ -154,7 +154,10 @@ export default function Home(): React.ReactElement {
         </div>
 
         {/* Projects section */}
-        <div className="mx-auto mt-8 flex w-5/6 max-w-[1000px] flex-col pb-4 text-neutral-950 dark:text-yellow-50 md:mt-16 md:justify-start">
+        <div
+          id="projects"
+          className="mx-auto mt-8 flex w-5/6 max-w-[1000px] flex-col pb-4 text-neutral-950 dark:text-yellow-50 md:mt-16 md:justify-start"
+        >
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
