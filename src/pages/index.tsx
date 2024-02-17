@@ -162,7 +162,7 @@ export default function Home(): React.ReactElement {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="mb-2 mt-2 flex-grow text-center text-2xl font-extrabold md:text-5xl"
+            className="mb-2 mt-2 flex-grow text-center text-3xl font-extrabold md:text-5xl"
           >
             <span className="text-center text-cyan-800 dark:text-cyan-100">
               <span className="font-mono text-3xl text-amber-600 dark:text-amber-100 md:text-5xl">
@@ -189,7 +189,7 @@ export default function Home(): React.ReactElement {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="my-8 mt-2 flex-grow text-center text-2xl font-extrabold md:text-5xl"
+            className="my-8 mt-2 flex-grow text-center text-3xl font-extrabold md:text-5xl"
           >
             <span className="text-center text-cyan-800 dark:text-cyan-100">
               <span className="font-mono text-3xl text-amber-600 dark:text-amber-100 md:text-5xl">
