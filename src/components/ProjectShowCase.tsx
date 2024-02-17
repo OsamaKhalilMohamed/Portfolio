@@ -19,7 +19,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
   const isInView = useInView(imageRef);
 
   return (
-    <div className="relative flex w-full flex-col">
+    <div className="relative mb-6 flex w-full flex-col">
       <h2 className="mb-2 flex items-center justify-start pb-1 text-3xl font-bold text-neutral-950 dark:text-yellow-50">
         {title}{" "}
         <span className="ml-2 text-3xl font-bold">

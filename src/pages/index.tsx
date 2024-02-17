@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import osama2 from "../../public/osama2.jpeg";
 import Image from "next/image";
 import Projects from "~/components/Projects";
+import synapse2 from "../../public/synapse2.png";
 import { useRef } from "react";
 
 export default function Home(): React.ReactElement {
@@ -75,14 +76,23 @@ export default function Home(): React.ReactElement {
                   Software engineer, Obsessed with building interactive UIs.
                 </span>
                 <br />
-                <span className=" text-lg font-light text-neutral-950 dark:text-yellow-50 md:text-xl">
+                <span className="flex items-start  text-lg font-light text-neutral-950 dark:text-yellow-50 md:text-xl">
                   currently working at{" "}
                   <Link
                     href={"https://www.synapse-analytics.io/"}
                     target="_blank"
+                    className="-mt-4 inline h-16 w-16"
                   >
-                    <span className="w-full border-b-2 border-dotted border-violet-700 text-neutral-950 hover:border-red-500 dark:border-violet-800 dark:text-yellow-50 dark:hover:border-orange-500">
-                      Synapse Analytics{" "}
+                    <span className="inline ">
+                      <Image
+                        src={synapse2}
+                        alt="synapse logo"
+                        width="80"
+                        height="80"
+                        placeholder="blur"
+                        quality={100}
+                        priority={true}
+                      />
                     </span>
                   </Link>
                 </span>
