@@ -38,18 +38,36 @@ export default function Navbar(): React.ReactElement {
       <div className="flex w-5/6 max-w-[1000px] items-center justify-between ">
         <button className={`cursor-pointer font-bold hover:opacity-70 `}>
           <Link href="/" scroll>
-            Home
+            <span>
+              {" "}
+              <span className="text-amber-600 dark:text-amber-100">
+                0.{" "}
+              </span>{" "}
+              Home
+            </span>
           </Link>
         </button>
         <button className={`cursor-pointer font-bold hover:opacity-70 `}>
           <Link href="/#projects" scroll>
-            Projects
+            <span>
+              {" "}
+              <span className="text-amber-600 dark:text-amber-100">
+                1.{" "}
+              </span>{" "}
+              Projects
+            </span>
           </Link>
         </button>
 
         <button className={`cursor-pointer font-bold hover:opacity-70 `}>
           <Link href="/#about" scroll>
-            About me
+            <span>
+              {" "}
+              <span className="text-amber-600 dark:text-amber-100">
+                2.{" "}
+              </span>{" "}
+              About me
+            </span>
           </Link>
         </button>
         <div>
