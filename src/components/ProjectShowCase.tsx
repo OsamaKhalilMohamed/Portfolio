@@ -49,7 +49,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
         style={{
           transform: isInView ? "none" : "translateX(-200px)",
           opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
         }}
         className="flex w-full justify-between"
         ref={imageRef}
@@ -65,7 +65,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           alt={title}
         />
       </motion.div>
-      <div className="mt-4 rounded-md border-2 border-amber-600 p-6  dark:border-amber-100">
+      <div className="mt-4 rounded-md border border-amber-600 p-6  dark:border-amber-100">
         <div className="flex flex-col justify-between md:flex-row">
           <p className="mb-2 md:mb-0">
             <span className="font-bold">Stack: </span>{" "}

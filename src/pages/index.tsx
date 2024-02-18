@@ -32,51 +32,36 @@ export default function Home(): React.ReactElement {
             transition={{ duration: 0.5 }}
             className="flex h-full w-full flex-col items-start bg-gradient-to-r bg-clip-text text-center text-2xl text-cyan-800 text-transparent dark:text-cyan-100   lg:flex-row lg:justify-between"
           >
-            <div className="flex h-full w-full grow flex-col lg:h-[550px]">
+            <div className="flex h-full w-full grow flex-col lg:h-[450px]">
               <div className="flex w-full flex-col justify-start">
                 <div className="flex flex-grow flex-col flex-nowrap items-start justify-start md:mx-0 md:px-0">
-                  <motion.p
-                    initial={{ opacity: 0, x: "-100%" }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    layout
-                    className="flex text-start font-mono text-xl text-amber-600 dark:text-amber-100"
-                  >
+                  <p className="flex text-start font-mono text-xl text-amber-600 dark:text-amber-100">
                     Hello, I'm
-                  </motion.p>
+                  </p>
                   <motion.h1
-                    initial={{ opacity: 0, x: "-100%" }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
                     layout
                     className="-ml-0.5 flex px-0 text-start text-7xl font-extrabold text-cyan-800 dark:text-cyan-100 md:-ml-1.5 md:text-9xl"
                   >
-                    Osama
-                  </motion.h1>
-                  <motion.h1
-                    initial={{ opacity: 0, x: "-100%" }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    layout
-                    className="-ml-0.5 text-start text-7xl font-extrabold text-cyan-800 dark:text-cyan-100 md:-ml-1.5 md:text-9xl"
-                  >
-                    Khalil
+                    Osama Khalil
                   </motion.h1>
                 </div>
               </div>
 
               <motion.div
-                initial={{ opacity: 0, x: "-100%" }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 1.2 }}
                 layout
                 className="w-full text-start leading-6 text-neutral-950 dark:text-yellow-50 md:ml-0 md:leading-8"
               >
-                <span className="text-lg font-light text-neutral-950  dark:text-yellow-50 md:text-xl">
+                <span className="text-xl font-semibold text-neutral-950  dark:text-yellow-50 md:text-2xl">
                   Software engineer, Obsessed with building interactive UIs.
                 </span>
                 <br />
-                <span className="flex items-start  text-lg font-light text-neutral-950 dark:text-yellow-50 md:text-xl">
+                <span className="flex items-start  text-xl font-semibold text-neutral-950 dark:text-yellow-50 md:text-2xl">
                   currently working at{" "}
                   <Link
                     href={"https://www.synapse-analytics.io/"}
@@ -98,10 +83,10 @@ export default function Home(): React.ReactElement {
                 </span>
               </motion.div>
               <motion.div
-                className=" mt-5 flex grow flex-wrap pb-4 text-sm font-semibold sm:w-1/4 md:ml-0 md:mt-14 md:w-5/6 md:max-w-[1000px] md:items-end md:justify-between"
+                className="flex grow flex-wrap pb-4 text-lg font-semibold md:ml-0 md:mt-14 md:max-w-[1000px] md:items-end md:justify-between"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 2 }}
+                transition={{ duration: 0.5, delay: 2.2 }}
               >
                 <Link
                   href={"https://www.linkedin.com/in/osama-khalil98/"}
@@ -145,19 +130,6 @@ export default function Home(): React.ReactElement {
                   </span>
                 </Link>
               </motion.div>
-            </div>
-
-            <div className="mx-auto mt-4 flex h-full w-full justify-center lg:items-end lg:justify-end lg:self-end">
-              {/* IMAGES */}
-              <Image
-                src={me}
-                alt="A picture of myself :)"
-                width="400"
-                height="400"
-                placeholder="blur"
-                quality={100}
-                priority={true}
-              />
             </div>
           </motion.div>
           <hr className="border-1 w-[100vw] border-amber-600 duration-500 hover:border-red-500 dark:border-amber-100" />

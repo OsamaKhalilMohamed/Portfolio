@@ -33,12 +33,12 @@ export default function Navbar(): React.ReactElement {
   return (
     <nav
       ref={ref}
-      className="z-[999] box-border flex w-full justify-center bg-zinc-50 bg-opacity-60 pb-8 pt-4 shadow-sm dark:bg-zinc-950"
+      className="z-[999] box-border flex w-full justify-center border-b border-b-amber-600 bg-zinc-50 pb-8 pt-4 shadow-sm dark:border-b-amber-100 dark:bg-zinc-950"
     >
       <div className="flex w-5/6 max-w-[1000px] items-center justify-between ">
         <button className={`cursor-pointer font-bold hover:opacity-70 `}>
           <Link href="/" scroll>
-            <span>
+            <span className="text-cyan-800 dark:text-cyan-100">
               {" "}
               <span className="text-amber-600 dark:text-amber-100">
                 0.{" "}
@@ -49,7 +49,7 @@ export default function Navbar(): React.ReactElement {
         </button>
         <button className={`cursor-pointer font-bold hover:opacity-70 `}>
           <Link href="/#projects" scroll>
-            <span>
+            <span className="text-cyan-800 dark:text-cyan-100">
               {" "}
               <span className="text-amber-600 dark:text-amber-100">
                 1.{" "}
@@ -61,7 +61,7 @@ export default function Navbar(): React.ReactElement {
 
         <button className={`cursor-pointer font-bold hover:opacity-70 `}>
           <Link href="/#about" scroll>
-            <span>
+            <span className="text-cyan-800 dark:text-cyan-100">
               {" "}
               <span className="text-amber-600 dark:text-amber-100">
                 2.{" "}
