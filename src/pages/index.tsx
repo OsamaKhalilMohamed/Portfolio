@@ -35,7 +35,7 @@ export default function Home(): React.ReactElement {
             <div className="flex h-full w-full grow flex-col lg:h-[450px]">
               <div className="flex w-full flex-col justify-start">
                 <div className="flex flex-grow flex-col flex-nowrap items-start justify-start md:mx-0 md:px-0">
-                  <p className="flex text-start font-mono text-xl text-amber-600 dark:text-amber-100">
+                  <p className="flex text-start text-xl text-amber-600 dark:text-amber-100">
                     Hello, I'm
                   </p>
                   <motion.h1
@@ -147,7 +147,7 @@ export default function Home(): React.ReactElement {
             className="mb-2 mt-2 flex-grow text-center text-3xl font-extrabold md:text-5xl"
           >
             <span className="text-center text-cyan-800 dark:text-cyan-100">
-              <span className="font-mono text-3xl text-amber-600 dark:text-amber-100 md:text-5xl">
+              <span className="text-3xl text-amber-600 dark:text-amber-100 md:text-5xl">
                 1.{""}
               </span>{" "}
               Projects
@@ -174,7 +174,7 @@ export default function Home(): React.ReactElement {
             className="my-8 mt-2 flex-grow text-center text-3xl font-extrabold md:text-5xl"
           >
             <span className="text-center text-cyan-800 dark:text-cyan-100">
-              <span className="font-mono text-3xl text-amber-600 dark:text-amber-100 md:text-5xl">
+              <span className="text-3xl text-amber-600 dark:text-amber-100 md:text-5xl">
                 2.{""}
               </span>{" "}
               About me
