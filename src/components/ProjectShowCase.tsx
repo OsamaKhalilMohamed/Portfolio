@@ -68,15 +68,15 @@ export default function ProjectShowCase(props: Readonly<Props>) {
       <div className="mt-4 rounded-md border border-amber-600 p-6  dark:border-amber-100">
         <div className="flex flex-col justify-between md:flex-row">
           <p className="mb-2 md:mb-0">
-            <span className="font-bold">Stack: </span>{" "}
+            <span className="font-bold">Stack {"->"} </span>{" "}
             <span className="font-medium italic"> {stack.join(", ")}</span>
           </p>
           <p className="mb-2 md:mb-0">
-            <span className="font-bold">Date: </span>{" "}
+            <span className="font-bold">Date {"->"} </span>{" "}
             <span className="font-medium italic"> {date}</span>
           </p>
           <p>
-            <span className="font-bold">Type: </span>{" "}
+            <span className="font-bold">Type {"->"} </span>{" "}
             <span className="font-medium italic"> {type}</span>
           </p>
         </div>

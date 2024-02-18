@@ -17,9 +17,9 @@ export default function Projects(): React.ReactElement {
       title: "KONAN",
       logo: konanhero,
       stack: ["Typescript", "React", "Django", "SCSS", "REST"],
-      type: "professional",
+      type: "Professional",
       description:
-        "Working on developing all new features and maintain the frontend for this MLOps platform, it has a lot of features that enable faster decision making for risk officers, automated workflows, visual dashboards and analytics, and many more.",
+        "Working on developing all new features and maintain the frontend for the MLOps platform, it got a lot of features that enable faster decision making for risk officers, automated workflows, visual dashboards and analytics, and many more.",
       date: "2022 - present",
       link: "https://app.konan.ai/",
     },
@@ -27,7 +27,7 @@ export default function Projects(): React.ReactElement {
       title: "Aly",
       logo: aly,
       stack: ["Next.js", "Redux", "React-query", "graphQL"],
-      type: "professional",
+      type: "Professional",
       description:
         "Aly aims to enrich moroccan lifestyle by providing several utilities and information about a lot of business all over Morocco.",
       date: "Apr 2022 - Aug 2022",
@@ -37,7 +37,7 @@ export default function Projects(): React.ReactElement {
       title: "Sadaqhati",
       logo: sadaqatihero,
       stack: ["React", "styled-components"],
-      type: "professional",
+      type: "Professional",
       date: "Nov 2020 - Feb 2021",
       link: "https://sadaqahti.com/en/",
       description:
@@ -47,21 +47,21 @@ export default function Projects(): React.ReactElement {
       title: "InnerNote",
       logo: innerNote,
       stack: ["Next.js", "tailwind", "mongoDB", "Nodejs", "Redux"],
-      type: "personal",
+      type: "Personal",
       date: "2022",
       link: "https://inner-note.vercel.app/",
       description:
         "InnerNote is a note sharing web app that lets you share your (confessions - dreams - thoughts - ideas) publicly or privately as well as read and interact with other notes and share them. (under developing).",
     },
     {
-      title: "Auto skip YT ads extension",
+      title: "Auto skip YT ads",
       logo: autoSkip,
       stack: ["Javascript", "css", "HTML"],
-      type: "personal",
+      type: "Personal",
       date: "2024",
       link: "https://chromewebstore.google.com/detail/auto-skip-yt-ads/gdjacpddhealmljhbangakjkenohfbgf",
       description:
-        "This extension aims to automatically skip the skip-able Youtube ads, so it makes the youtube experience more focused and content-driven!",
+        "This chrome extension aims to automatically skip the skip-able Youtube ads, so it makes the youtube experience more focused and content-driven!",
     },
   ];
 
