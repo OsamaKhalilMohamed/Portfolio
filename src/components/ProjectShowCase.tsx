@@ -15,11 +15,22 @@ type Props = {
 
 export default function ProjectShowCase(props: Readonly<Props>) {
   const { imageSrc, stack, title, date, type, description, link } = props;
-  const imageRef = useRef(null);
-  const isInView = useInView(imageRef);
+  const containerRef = useRef(null);
+  const isContainerInView = useInView(containerRef);
+  const variants = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0.65 },
+  };
 
   return (
-    <div className="relative mb-6 flex w-full flex-col">
+    <motion.div
+      className="relative mb-6 flex w-full flex-col"
+      animate={isContainerInView ? "visible" : "hidden"}
+      variants={variants}
+      exit="hidden"
+      transition={{ duration: 1 }}
+      ref={containerRef}
+    >
       <h2 className="mb-2 flex items-center justify-start pb-1 text-3xl font-bold text-neutral-950 dark:text-yellow-50">
         {title}{" "}
         <span className="ml-2 text-3xl font-bold">
@@ -45,19 +56,11 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           <hr className="border-1 w-[100%] border-amber-600 duration-500 hover:border-red-500 dark:border-amber-100" />
         </span>
       </h2>
-      <motion.div
-        style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
-        }}
-        className="flex w-full justify-between"
-        ref={imageRef}
-      >
+      <motion.div className=" w-full ">
         <Image
           src={imageSrc}
           width={900}
-          className="w-full rounded-md shadow-md"
+          className="w-full rounded-md shadow-md  "
           height={900}
           quality={100}
           placeholder="blur"
@@ -115,6 +118,6 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

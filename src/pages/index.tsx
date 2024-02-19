@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import me from "../../public/me.png";
 import { motion } from "framer-motion";
 import osama2 from "../../public/osama2.jpeg";
 import Image from "next/image";
@@ -26,15 +25,10 @@ export default function Home(): React.ReactElement {
           ref={homeRef}
           className="mt-8 flex w-5/6 max-w-[1000px] flex-col items-center justify-center  md:mt-14 md:min-h-[20dvh]"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="flex h-full w-full flex-col items-start bg-gradient-to-r bg-clip-text text-center text-2xl text-cyan-800 text-transparent dark:text-cyan-100   lg:flex-row lg:justify-between"
-          >
-            <div className="flex h-full w-full grow flex-col lg:h-[450px]">
-              <div className="flex w-full flex-col justify-start">
-                <div className="flex flex-grow flex-col flex-nowrap items-start justify-start md:mx-0 md:px-0">
+          <motion.div className="flex h-full w-full flex-col items-start bg-gradient-to-r bg-clip-text text-center text-2xl text-cyan-800 text-transparent dark:text-cyan-100 md:h-full   lg:flex-row lg:justify-between">
+            <div className="flex h-full  w-full grow flex-col ">
+              <div className="flex h-full w-full flex-col justify-center">
+                <div className="flex flex-grow flex-col flex-nowrap items-start justify-center md:mx-0 md:justify-start md:px-0">
                   <p className="flex text-start text-xl text-amber-600 dark:text-amber-100">
                     Hello, I'm
                   </p>
@@ -83,7 +77,7 @@ export default function Home(): React.ReactElement {
                 </span>
               </motion.div>
               <motion.div
-                className="flex grow flex-wrap pb-4 text-lg font-semibold md:ml-0 md:mt-14 md:max-w-[1000px] md:items-end md:justify-between"
+                className="mt-8 flex grow flex-wrap pb-4  text-lg font-semibold md:ml-0 md:mt-14 md:max-w-[1000px] md:items-end md:justify-between"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 2.2 }}
