@@ -6,12 +6,8 @@
   html {
     scroll-behavior: smooth !important;
   }
-  body {
-    @apply [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)];
-  }
 
   * {
-    transition: background-color 0.2s ease-in;
     box-sizing: border-box;
   }
 }
