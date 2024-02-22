@@ -16,10 +16,8 @@ const inter = Inter({
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider attribute="class">
-      <main
-        className={`${inter.className} h-full min-h-screen w-full scroll-smooth bg-zinc-50 pb-8 pt-4 dark:bg-zinc-950`}
-      >
-        <div className="flex h-full flex-col items-center justify-center ">
+      <main className={`${inter.className} relative min-h-screen`}>
+        <div className="relative flex h-full flex-col items-center justify-center ">
           <Navbar />
           <Component {...pageProps} />
           <Footer />
