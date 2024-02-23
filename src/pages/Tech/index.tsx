@@ -53,12 +53,12 @@ export default function TechAndTools(): React.ReactElement {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen w-5/6 max-w-[1000px] flex-col items-start justify-start overflow-x-hidden lg:w-full ">
+      <main className="mx-auto flex min-h-screen w-5/6 flex-col items-start justify-center overflow-x-hidden lg:max-w-[1000px]">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="mb-8 w-full "
+          className="mb-8 w-full"
         >
           <h1 className="mt-10 bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-4xl font-bold text-transparent dark:from-cyan-100  dark:to-slate-200 md:text-7xl ">
             Tech
