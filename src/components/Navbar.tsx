@@ -15,7 +15,6 @@ export default function Navbar(): React.ReactElement {
         if (currentScrollPos < prevScrollPos) {
           ref.current.style.position = "sticky";
           ref.current.style.top = "0px";
-          ref.current.style.transition = "all 0.5s";
         } else {
           ref.current.style.position = "";
           ref.current.style.top = "";
