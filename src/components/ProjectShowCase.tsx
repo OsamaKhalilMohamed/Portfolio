@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import Tag from "./Tag";
 
 type Props = {
   title: string;
@@ -72,15 +73,23 @@ export default function ProjectShowCase(props: Readonly<Props>) {
         <div className="flex flex-col justify-between md:flex-row">
           <p className="mb-2 md:mb-0">
             <span className="font-bold">Stack {"->"} </span>{" "}
-            <span className="font-medium italic"> {stack.join(", ")}</span>
+            {stack.map((skill, index) => (
+              <span className="mr-1 font-medium" key={`${index}-${skill}`}>
+                <Tag title={skill} variant="stack" />
+              </span>
+            ))}
           </p>
           <p className="mb-2 md:mb-0">
             <span className="font-bold">Date {"->"} </span>{" "}
-            <span className="font-medium italic"> {date}</span>
+            <span className="font-medium">
+              <Tag title={date} variant="date" />
+            </span>
           </p>
           <p>
             <span className="font-bold">Type {"->"} </span>{" "}
-            <span className="font-medium italic"> {type}</span>
+            <span className="font-medium ">
+              <Tag title={type} variant={type.toLocaleLowerCase()} />
+            </span>
           </p>
         </div>
         {description && (
