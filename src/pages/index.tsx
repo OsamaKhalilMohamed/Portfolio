@@ -40,8 +40,8 @@ export default function Home(): React.ReactElement {
           ref={homeRef}
           className="mt-8 flex w-5/6 max-w-[1000px] flex-col items-center justify-center  md:mt-14 md:min-h-[20dvh]"
         >
-          <motion.div className="flex h-full w-full flex-col items-start bg-gradient-to-r bg-clip-text text-center text-2xl text-cyan-800 text-transparent dark:text-cyan-100 md:h-full   lg:flex-row lg:justify-between">
-            <div className="flex h-full  w-full grow flex-col ">
+          <motion.div className="flex h-full min-h-[75vh] w-full flex-col items-start  bg-gradient-to-r bg-clip-text text-center text-2xl text-cyan-800 text-transparent dark:text-cyan-100 md:h-full   ">
+            <div className="flex h-full w-full grow flex-col justify-between ">
               <div className="flex h-full w-full flex-col justify-center">
                 <div className="flex flex-grow flex-col flex-nowrap items-start justify-center md:mx-0 md:justify-start md:px-0">
                   <p className="flex text-start text-xl text-amber-600 dark:text-amber-100">
@@ -64,25 +64,25 @@ export default function Home(): React.ReactElement {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7, delay: 1.2 }}
                 layout
-                className="w-full text-start leading-6 text-neutral-950 dark:text-yellow-50 md:ml-0 md:leading-8"
+                className="w-full text-start leading-8 text-neutral-950 dark:text-yellow-50 md:ml-0 md:leading-8"
               >
                 <span className="text-xl font-semibold text-neutral-950  dark:text-yellow-50 md:text-2xl">
                   Software engineer, Obsessed with building interactive UIs.
                 </span>
                 <br />
-                <span className="flex items-start  text-xl font-semibold text-neutral-950 dark:text-yellow-50 md:text-2xl">
+                <span className="flex items-center  text-xl font-semibold text-neutral-950 dark:text-yellow-50 md:text-2xl">
                   currently working at{" "}
                   <Link
                     href={"https://www.synapse-analytics.io/"}
                     target="_blank"
-                    className="-mt-4 inline h-16 w-16"
+                    className=" ml-2 flex h-12 items-center  rounded-xl bg-stone-200 shadow-md  dark:bg-white md:ml-4"
                   >
-                    <span className="inline ">
+                    <span className=" inline">
                       <Image
                         src={synapse2}
                         alt="synapse logo"
-                        width="80"
-                        height="80"
+                        width="50"
+                        height="50"
                         placeholder="blur"
                         quality={100}
                         priority={true}
@@ -92,7 +92,7 @@ export default function Home(): React.ReactElement {
                 </span>
               </motion.div>
               <motion.div
-                className="mt-8 flex grow flex-wrap pb-4  text-lg font-semibold md:ml-0 md:mt-14 md:max-w-[1000px] md:items-end md:justify-between"
+                className="mt-8 flex h-full grow flex-wrap items-end justify-between   pb-4  text-lg font-semibold md:ml-0 md:mt-14 md:max-w-[1000px] md:items-end md:justify-between"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 2.2 }}
@@ -101,38 +101,21 @@ export default function Home(): React.ReactElement {
                   href={"https://www.linkedin.com/in/osama-khalil98/"}
                   target="_blank"
                 >
-                  <span className=" mr-3 border-b-2 border-dotted border-lime-800 text-neutral-950 dark:border-lime-400 dark:text-yellow-50 md:mr-0">
-                    Linkedin{" "}
-                  </span>
+                  <img src="https://skillicons.dev/icons?i=linkedin" />
                 </Link>
                 <Link href={"mailto:osadx35@gmail.com"}>
-                  <span className="mr-3 border-b-2 border-dotted border-fuchsia-700 text-neutral-950 dark:border-fuchsia-700 dark:text-yellow-50 md:mr-0">
-                    Email{" "}
-                  </span>
+                  <img src="https://skillicons.dev/icons?i=gmail" />
                 </Link>
                 <Link
                   href={"https://github.com/osamakhalil98/"}
                   target="_blank"
                 >
-                  <span className="mr-3 border-b-2 border-dotted border-red-800 text-neutral-950 dark:border-red-400 dark:text-yellow-50 md:mr-0">
-                    Github{" "}
-                  </span>
+                  <img src="https://skillicons.dev/icons?i=github" />
                 </Link>
                 <Link href={"https://codepen.io/osadxen/"} target="_blank">
-                  <span className="mr-3 border-b-2 border-dotted border-rose-400 text-neutral-950 dark:border-rose-800 dark:text-yellow-50 md:mr-0">
-                    Codepen{" "}
-                  </span>
+                  <img src="https://skillicons.dev/icons?i=codepen" />
                 </Link>
-                <Link
-                  href={
-                    "https://drive.google.com/file/d/1NL1xID4YAZxaIZHtwyiRzyfSRb_QhI_Y/view?usp=sharing"
-                  }
-                  target="_blank"
-                >
-                  <span className="mr-3 border-b-2 border-dotted border-amber-500 text-neutral-950 dark:text-yellow-50 md:mr-0">
-                    Resume{" "}
-                  </span>
-                </Link>
+
                 <Link href={"Timeline"}>
                   <span className="mr-3 border-b-2 border-dotted border-orange-400 text-neutral-950 dark:text-yellow-50 md:mr-0">
                     Timeline{" "}
