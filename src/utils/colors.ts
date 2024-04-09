@@ -1,19 +1,19 @@
 const twColors = [
   "red",
-  //   "violet",
-  //   "blue",
-  //   "orange",
-  //   "amber",
-  //   "yellow",
-  //   "lime",
-  //   "green",
-  //   "emerald",
-  //   "teal",
-  //   "cyan",
-  //   "sky",
-  //   "indigo",
-  //"purple",
-  //"fuchsia",
+  "violet",
+  "blue",
+  "orange",
+  "amber",
+  "yellow",
+  "lime",
+  "green",
+  "emerald",
+  "teal",
+  "cyan",
+  "sky",
+  "indigo",
+  "purple",
+  "fuchsia",
   "pink",
   "rose",
 ];
@@ -30,7 +30,8 @@ export const getRandomTagColor = (variant: string): string => {
   if (["professional", "personal", "date"].includes(variant)) {
     return defaultColors[variant];
   } else {
-    const selectedColor = twColors[Math.floor(Math.random() * twColors.length)];
+    const index = Math.floor(Math.random() * twColors.length);
+    const selectedColor = twColors[index];
 
     return `bg-${selectedColor}-800 text-${selectedColor}-300`;
   }
