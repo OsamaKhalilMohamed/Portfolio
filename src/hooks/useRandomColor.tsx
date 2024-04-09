@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getRandomTagColor } from "~/utils/colors";
 
-export const useRandomColor = (variant) => {
+export const useRandomColor = (variant: string) => {
   const [colorClass, setColorClass] = useState("");
 
   useEffect(() => {
