@@ -76,7 +76,7 @@ export default function Home(): React.ReactElement {
                 <span className="text-neutral-950 dark:text-yellow-50 md:mr-0">
                   Github{" "}
                   <Link
-                    href={"https://skillicons.dev/icons?i=github"}
+                    href={"https://github.com/osamakhalil98/"}
                     target="_blank"
                   >
                     <svg
@@ -121,7 +121,7 @@ export default function Home(): React.ReactElement {
                 </span>
                 <span className="text-neutral-950 dark:text-yellow-50 md:mr-0">
                   Timeline{" "}
-                  <Link href={"/timeline"} target="_blank">
+                  <Link href={"Timeline"} target="_blank">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

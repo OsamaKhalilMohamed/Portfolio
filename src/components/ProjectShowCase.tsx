@@ -18,9 +18,9 @@ export default function ProjectShowCase(props: Readonly<Props>) {
 
   return (
     <div className="relative mb-6 flex w-full flex-col" ref={containerRef}>
-      <h2 className="mb-2 flex items-center justify-start pb-1 text-3xl font-bold text-neutral-950 dark:text-yellow-50">
+      <h2 className="mb-2 flex items-center justify-start pb-1 font-inter text-3xl text-neutral-950 dark:text-yellow-50">
         {title}{" "}
-        <span className="ml-2 text-3xl font-bold">
+        <span className="ml-2 font-inter text-3xl">
           <Link href={link} target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="h-4 w-4 cursor-pointer text-3xl font-bold"
+              className="h-4 w-4 cursor-pointer font-inter text-3xl"
               style={{ display: "inline", verticalAlign: "middle" }}
             >
               <path
@@ -58,23 +58,23 @@ export default function ProjectShowCase(props: Readonly<Props>) {
       <div className="mt-4 rounded-md border border-[#d58322] p-6  dark:border-[#d2a258]">
         <div className="flex flex-col justify-between md:flex-row">
           <p className="mb-2 md:mb-0">
-            <span className="font-bold">Stack {"->"} </span>{" "}
+            <span className="font-inter">Stack {"->"} </span>{" "}
             <span className="font-medium italic"> {stack.join(", ")}</span>
           </p>
           <p className="mb-2 md:mb-0">
-            <span className="font-bold">Date {"->"} </span>{" "}
+            <span className="font-inter">Date {"->"} </span>{" "}
             <span className="font-medium italic"> {date}</span>
           </p>
           <p>
-            <span className="font-bold">Type {"->"} </span>{" "}
+            <span className="font-inter">Type {"->"} </span>{" "}
             <span className="font-medium italic"> {type}</span>
           </p>
         </div>
         {description && (
-          <p className="mt-4 text-xl font-bold md:text-2xl">{description}</p>
+          <p className="mt-4 font-inter text-xl md:text-2xl">{description}</p>
         )}
         {title === "KONAN" && (
-          <p className="mx-auto mt-4 text-sm font-semibold">
+          <p className="font-semiinter mx-auto mt-4 text-sm">
             Learn more about KONAN{" "}
             <span>
               <span>
