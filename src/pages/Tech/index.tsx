@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function TechAndTools(): React.ReactElement {
@@ -54,55 +53,45 @@ export default function TechAndTools(): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="mx-auto flex min-h-screen w-5/6 flex-col items-start justify-center overflow-x-hidden lg:max-w-[1000px]">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8 w-full"
-        >
-          <h1 className="mt-10 bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-4xl font-bold text-transparent dark:from-cyan-100  dark:to-slate-200 md:text-7xl ">
+        <div className="mb-8 w-full">
+          <h1 className="mt-10 bg-gradient-to-r text-4xl font-bold text-[#103090] dark:to-slate-200   dark:text-[#7b8afe] md:text-7xl ">
             Tech
           </h1>
-          <p className="text-md mt-1 bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text font-bold text-transparent dark:from-cyan-100 dark:to-slate-200 md:text-lg">
+          <p className="text-md mt-1 bg-gradient-to-r font-bold text-[#103090] dark:to-slate-200  dark:text-[#7b8afe] md:text-lg">
             My main tech drivers that i use when building apps.
           </p>
-        </motion.div>
-        <motion.ul className="flow-col mb-8 mt-4 h-fit w-full list-disc px-6">
+        </div>
+        <ul className="flow-col mb-8 mt-4 h-fit w-full list-disc px-6">
           {techs?.map((tech) => (
-            <motion.div className="mb-2 w-full" key={tech}>
-              <li className="text-lg font-bold">{tech}</li>
-            </motion.div>
+            <div className="mb-2 w-full" key={tech}>
+              <li className="font-inter text-lg">{tech}</li>
+            </div>
           ))}
-        </motion.ul>
-        <hr className="border-1 w-full border-amber-600 duration-500 hover:border-red-500 dark:border-amber-100" />
+        </ul>
+        <hr className="border-1 w-full border-[#d58322] duration-500  dark:border-[#d2a258]" />
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8 "
-        >
-          <h1 className="mt-10 bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-4xl font-bold text-transparent dark:from-cyan-100  dark:to-slate-200 md:text-7xl">
+        <div className="mb-8 ">
+          <h1 className="mt-10 bg-gradient-to-r text-4xl font-bold text-[#103090] dark:to-slate-200   dark:text-[#7b8afe] md:text-7xl">
             Tools
           </h1>
-          <p className="text-md mt-1 bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text font-bold text-transparent dark:from-cyan-100 dark:to-slate-200 md:text-lg">
+          <p className="text-md mt-1 bg-gradient-to-r font-bold text-[#103090] dark:to-slate-200  dark:text-[#7b8afe] md:text-lg">
             My most used software tools for development and personal use.
           </p>
-        </motion.div>
-        <motion.ul className="mb-8 mt-4  h-fit w-full list-disc flex-col px-6">
+        </div>
+        <ul className="mb-8 mt-4  h-fit w-full list-disc flex-col px-6">
           {tools?.map((tech) => (
-            <motion.div className="mb-2 w-full" key={tech}>
-              <li className="text-lg font-bold">{tech}</li>
-            </motion.div>
+            <div className="mb-2 w-full" key={tech}>
+              <li className="font-inter text-lg">{tech}</li>
+            </div>
           ))}
-        </motion.ul>
-        <motion.div className="mb-2 flex w-full justify-center ">
+        </ul>
+        <div className="mb-2 flex w-full justify-center ">
           <Link href={"/"}>
-            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-lg text-transparent dark:from-cyan-100  dark:to-slate-200">
+            <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r text-lg text-[#103090] dark:to-slate-200   dark:text-[#7b8afe]">
               Home {"->"}
             </p>
           </Link>
-        </motion.div>
+        </div>
       </main>
     </>
   );

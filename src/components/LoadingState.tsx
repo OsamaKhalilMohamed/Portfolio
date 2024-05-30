@@ -3,8 +3,9 @@ import React from "react";
 
 export default function LoadingState() {
   const { theme } = useTheme();
+
   return (
-    <div className="fixed flex h-full w-full items-center justify-center overflow-hidden bg-red-200 dark:bg-yellow-900">
+    <div className="flex h-full min-h-[90dvh] w-full flex-col items-center justify-center">
       <div className="fixed left-0 top-0 -z-10 h-full w-full">
         {theme === "dark" || theme !== "light" ? (
           <div className="relative h-full w-full bg-black">
@@ -17,10 +18,13 @@ export default function LoadingState() {
           </div>
         )}
       </div>
-      <div className="border-1 flex items-center rounded-md border border-amber-600 p-2  dark:border-amber-100">
-        <div className="loader"></div>
-        <p className="ml-4 mr-4 font-bold">Loading..</p>
-        <div className="loader"></div>
+      <div className="flex h-36  w-56 items-center justify-center rounded-lg border-2 border-[#d58322] bg-transparent text-start text-7xl font-extrabold text-[#103090] transition-all dark:border-[#d2a258] ">
+        OS
+      </div>
+      <div className="mt-2 flex gap-2">
+        <div className="h-4 w-4 rounded-md bg-gray-300 motion-safe:animate-bounce dark:bg-white"></div>
+        <div className="h-4 w-4 rounded-md bg-gray-300 motion-safe:animate-bounce dark:bg-white"></div>
+        <div className="h-4 w-4 rounded-md bg-gray-300 motion-safe:animate-bounce dark:bg-white"></div>
       </div>
     </div>
   );

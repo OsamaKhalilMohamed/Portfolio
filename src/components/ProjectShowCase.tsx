@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
 type Props = {
@@ -16,21 +15,9 @@ type Props = {
 export default function ProjectShowCase(props: Readonly<Props>) {
   const { imageSrc, stack, title, date, type, description, link } = props;
   const containerRef = useRef(null);
-  const isContainerInView = useInView(containerRef);
-  const variants = {
-    visible: { opacity: 1, scale: 1 },
-    hidden: { opacity: 0, scale: 0.65 },
-  };
 
   return (
-    <motion.div
-      className="relative mb-6 flex w-full flex-col"
-      animate={isContainerInView ? "visible" : "hidden"}
-      variants={variants}
-      exit="hidden"
-      transition={{ duration: 1 }}
-      ref={containerRef}
-    >
+    <div className="relative mb-6 flex w-full flex-col" ref={containerRef}>
       <h2 className="mb-2 flex items-center justify-start pb-1 text-3xl font-bold text-neutral-950 dark:text-yellow-50">
         {title}{" "}
         <span className="ml-2 text-3xl font-bold">
@@ -53,10 +40,10 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </Link>
         </span>
         <span className="ml-2 mt-4 flex flex-1 flex-grow">
-          <hr className="border-1 w-[100%] border-amber-600 duration-500 hover:border-red-500 dark:border-amber-100" />
+          <hr className="border-1 w-[100%] border-[#d58322] duration-500  dark:border-[#d2a258]" />
         </span>
       </h2>
-      <motion.div className=" w-full ">
+      <div className=" w-full ">
         <Image
           src={imageSrc}
           width={900}
@@ -67,8 +54,8 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           priority
           alt={title}
         />
-      </motion.div>
-      <div className="mt-4 rounded-md border border-amber-600 p-6  dark:border-amber-100">
+      </div>
+      <div className="mt-4 rounded-md border border-[#d58322] p-6  dark:border-[#d2a258]">
         <div className="flex flex-col justify-between md:flex-row">
           <p className="mb-2 md:mb-0">
             <span className="font-bold">Stack {"->"} </span>{" "}
@@ -118,6 +105,6 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 }

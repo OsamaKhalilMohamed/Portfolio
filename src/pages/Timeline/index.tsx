@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import synapse from "../../../public/synapse.jpeg";
 import majal from "../../../public/majal.png";
 import digitopia from "../../../public/digitopia.jpeg";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
@@ -19,23 +18,13 @@ export default function TimeLine() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-start overflow-x-hidden px-10 md:px-20">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto mt-8 h-fit  bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200"
-        >
+        <div className="mx-auto mt-8 h-fit  bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
           {" "}
           <h1 className="break-all text-3xl font-bold md:text-6xl">Timeline</h1>
-        </motion.div>
+        </div>
         <div className="w-5/6 max-w-[700px] sm:ml-12 sm:w-1/2">
-          <motion.ol
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="relative mt-8 border-l border-gray-700"
-          >
-            <motion.li className="mb-10 ml-6">
+          <ol className="relative mt-8 border-l border-gray-700">
+            <li className="mb-10 ml-6">
               <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-400  ring-8 ring-gray-400  dark:bg-blue-900 dark:ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
@@ -86,9 +75,9 @@ export default function TimeLine() {
                   </span>
                 </span>
               </p>
-            </motion.li>
+            </li>
 
-            <motion.li className="mb-10 ml-6">
+            <li className="mb-10 ml-6">
               <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-400  ring-8 ring-gray-400  dark:bg-blue-900 dark:ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
@@ -109,8 +98,8 @@ export default function TimeLine() {
                 called Aly, this was my first experience to work with a large
                 codebase with a good amount of users.
               </p>
-            </motion.li>
-            <motion.li className=" mb-10 ml-6">
+            </li>
+            <li className=" mb-10 ml-6">
               <span className="absolute -left-3 mt-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-400  ring-8 ring-gray-400  dark:bg-blue-900 dark:ring-gray-900">
                 <Image
                   className="h-50 w-50 rounded-xl object-cover shadow-md"
@@ -131,15 +120,15 @@ export default function TimeLine() {
                 React-hooks, i18n localization and more. unfortunately, it got
                 cut short because of my military service was in FEB 2021.
               </p>
-            </motion.li>
-          </motion.ol>
-          <motion.div className="mb-2 flex w-full justify-center">
+            </li>
+          </ol>
+          <div className="mb-2 flex w-full justify-center">
             <Link href={"/"}>
               <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-lg text-transparent dark:from-cyan-100  dark:to-slate-200">
                 Home {"->"}
               </p>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </main>
     </Fragment>

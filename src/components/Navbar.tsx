@@ -47,25 +47,25 @@ export default function Navbar(): React.ReactElement {
       </div>
       <nav
         ref={ref}
-        className="z-[999] box-border flex w-full items-center justify-center border-b border-b-amber-600 bg-zinc-50 pb-8 pt-4 shadow-sm transition-all dark:border-b-amber-100 dark:bg-zinc-950"
+        className="z-[999] box-border flex w-full items-center justify-center border-b border-b-amber-600 bg-zinc-50 pb-8 pt-4 shadow-sm  dark:border-b-[#b48948] dark:bg-zinc-950"
       >
         <div className="mt-2 flex w-5/6 max-w-[1000px] items-center justify-between">
-          <button className={`cursor-pointer font-bold hover:opacity-70 `}>
+          <button className={`cursor-pointer font-inter hover:opacity-70 `}>
             <Link href="/" scroll>
-              <span className="text-cyan-800 dark:text-cyan-100">
+              <span className="text-[#103090] dark:text-[#7b8afe]">
                 {" "}
-                <span className="text-amber-600 dark:text-amber-100">
+                <span className="text-[#423411] dark:text-[#b48948]">
                   0.{" "}
                 </span>{" "}
                 Home
               </span>
             </Link>
           </button>
-          <button className={`cursor-pointer font-bold hover:opacity-70 `}>
+          <button className={`cursor-pointer font-inter hover:opacity-70 `}>
             <Link href="/#projects" scroll>
-              <span className="text-cyan-800 dark:text-cyan-100">
+              <span className="text-[#103090] dark:text-[#7b8afe]">
                 {" "}
-                <span className="text-amber-600 dark:text-amber-100">
+                <span className="text-[#423411] dark:text-[#b48948]">
                   1.{" "}
                 </span>{" "}
                 Projects
@@ -73,11 +73,11 @@ export default function Navbar(): React.ReactElement {
             </Link>
           </button>
 
-          <button className={`cursor-pointer font-bold hover:opacity-70 `}>
+          <button className={`cursor-pointer font-inter hover:opacity-70 `}>
             <Link href="/#about" scroll>
-              <span className="text-cyan-800 dark:text-cyan-100">
+              <span className="text-[#103090] dark:text-[#7b8afe]">
                 {" "}
-                <span className="text-amber-600 dark:text-amber-100">
+                <span className="text-[#423411] dark:text-[#b48948]">
                   2.{" "}
                 </span>{" "}
                 About me
