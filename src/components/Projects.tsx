@@ -6,7 +6,7 @@ import sadaqatihero from "../../public/sHero.png";
 
 import aly from "../../public/aly.png";
 
-import konanhero from "../../public/konanhero.png";
+import konanhero3 from "../../public/konanhero3.png";
 import autoSkip from "../../public/Auto-Skip.png";
 
 import ProjectShowCase from "./ProjectShowCase";
@@ -15,7 +15,7 @@ export default function Projects(): React.ReactElement {
   const projects = [
     {
       title: "KONAN",
-      logo: konanhero,
+      logo: konanhero3,
       stack: ["Typescript", "React", "Django", "SCSS", "REST"],
       type: "Professional",
       description:

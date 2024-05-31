@@ -18,10 +18,10 @@ export default function LoadingState() {
           </div>
         )}
       </div>
-      <div className="flex h-36  w-56 items-center justify-center rounded-lg border-2 border-[#d58322] bg-transparent text-start text-7xl font-extrabold text-[#103090] transition-all dark:border-[#d2a258] ">
+      <div className="flex	h-36 w-56  items-center justify-center rounded-lg border-2 border-[#d58322] bg-transparent text-start text-7xl font-extrabold text-[#103090]  transition-opacity dark:border-[#d2a258] ">
         OS
       </div>
-      <div className="mt-2 flex gap-2">
+      <div className="mt-2 flex gap-2 transition-opacity	">
         <div className="h-4 w-4 rounded-md bg-gray-300 motion-safe:animate-bounce dark:bg-white"></div>
         <div className="h-4 w-4 rounded-md bg-gray-300 motion-safe:animate-bounce dark:bg-white"></div>
         <div className="h-4 w-4 rounded-md bg-gray-300 motion-safe:animate-bounce dark:bg-white"></div>

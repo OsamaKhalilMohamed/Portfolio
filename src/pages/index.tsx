@@ -26,7 +26,7 @@ export default function Home(): React.ReactElement {
           ref={homeRef}
           className="mt-8 flex w-5/6 max-w-[1000px] flex-col items-center justify-center  md:mt-14"
         >
-          <div className="flex h-full w-full  flex-col items-start bg-gradient-to-r bg-clip-text text-center text-2xl text-[#103090] text-transparent dark:text-[#7b8afe] md:min-h-[45dvh]">
+          <div className="flex	 h-full w-full flex-col  items-start bg-gradient-to-r bg-clip-text text-center text-2xl text-[#103090] text-transparent dark:text-[#7b8afe] md:min-h-[45dvh]">
             <div className="flex h-full w-full grow flex-col justify-between ">
               <div className="flex h-full w-full flex-col justify-center">
                 <div className="flex flex-grow flex-col flex-nowrap items-start justify-center md:mx-0 md:justify-start md:px-0">
