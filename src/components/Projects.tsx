@@ -10,7 +10,7 @@ import autoSkip from "../../public/Auto-Skip.png";
 import konan1 from "../../public/konan1.png";
 import konan2 from "../../public/konan2.png";
 import konan3 from "../../public/konan3.png";
-import konan4 from "../../public/konan4.png";
+//import konan4 from "../../public/konan4.png";
 import konan5 from "../../public/konan5.png";
 import konan6 from "../../public/konan6.png";
 import konan7 from "../../public/konan7.png";
@@ -21,7 +21,7 @@ export default function Projects(): React.ReactElement {
   const projects = [
     {
       title: "KONAN",
-      archives: [konan1, konan2, konan3, konan4, konan5, konan6, konan7],
+      archives: [konan1, konan2, konan3, konan5, konan6, konan7],
       stack: ["Typescript", "React", "Django", "REST API", "and more.."],
       type: "Professional",
       description:
