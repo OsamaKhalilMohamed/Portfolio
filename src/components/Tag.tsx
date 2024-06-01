@@ -1,5 +1,4 @@
 import React from "react";
-import { getRandomTagColor } from "~/utils/colors";
 
 type Props = {
   title: string;
