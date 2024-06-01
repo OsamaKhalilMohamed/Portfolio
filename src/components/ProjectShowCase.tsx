@@ -33,7 +33,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
 
   return (
     <div className="relative mb-6 flex w-full flex-col" ref={containerRef}>
-      <h2 className="mb-2 flex items-center justify-start pb-1 font-inter text-3xl text-neutral-950 dark:text-yellow-50">
+      <h2 className="mb-2 flex items-center justify-start pb-1 text-3xl font-bold text-neutral-950 dark:text-yellow-50">
         {title}{" "}
         <span className="ml-2 font-inter text-3xl">
           <Link href={link} target="_blank">
@@ -110,7 +110,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
         </div>
         {description && (
-          <p className="mt-4 font-inter text-xl md:text-2xl">{description}</p>
+          <p className="mt-4 text-xl font-bold md:text-2xl">{description}</p>
         )}
         {title === "KONAN" && (
           <p className="font-semiinter mx-auto mt-4 text-sm">
