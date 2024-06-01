@@ -6,7 +6,6 @@ import sadaqatihero from "../../public/sHero.png";
 
 import aly from "../../public/aly.png";
 
-import konanhero3 from "../../public/konanhero3.png";
 import autoSkip from "../../public/Auto-Skip.png";
 import konan1 from "../../public/konan1.png";
 import konan2 from "../../public/konan2.png";
