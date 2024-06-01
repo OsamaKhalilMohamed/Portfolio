@@ -7,7 +7,7 @@ import sadaqatihero from "../../public/sHero.png";
 import aly from "../../public/aly.png";
 
 import autoSkip from "../../public/Auto-Skip.png";
-import konan1 from "../../public/konan1.png";
+import konanhero3 from "../../public/konanhero3.png";
 import konan2 from "../../public/konan2.png";
 import konan3 from "../../public/konan3.png";
 //import konan4 from "../../public/konan4.png";
@@ -21,7 +21,7 @@ export default function Projects(): React.ReactElement {
   const projects = [
     {
       title: "KONAN",
-      archives: [konan1, konan2, konan3, konan5, konan6, konan7],
+      archives: [konanhero3, konan2, konan3, konan5, konan6, konan7],
       stack: ["Typescript", "React", "Django", "REST API", "and more.."],
       type: "Professional",
       description:

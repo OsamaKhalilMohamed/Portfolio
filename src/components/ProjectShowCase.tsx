@@ -61,8 +61,6 @@ export default function ProjectShowCase(props: Readonly<Props>) {
       <div className="w-full">
         <Swiper
           pagination={{ clickable: true }}
-          spaceBetween={50}
-          slidesPerView={3}
           modules={[EffectFade, Navigation, A11y, Autoplay, FreeMode]}
           effect="fade"
           autoplay={{
@@ -81,6 +79,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
                   height={800}
                   quality={100}
                   placeholder="blur"
+                  className="rounded-md"
                   priority
                   alt={title}
                 />
@@ -91,21 +90,21 @@ export default function ProjectShowCase(props: Readonly<Props>) {
       </div>
       <div className="mt-6">
         <div className="flex flex-col justify-between md:flex-row">
-          <p className="mb-2 flex items-center gap-1 md:mb-0">
+          <p className="mb-2 flex flex-col items-start justify-start gap-1 md:mb-0">
             <Tag variant="stack" title="Stack" />
-            <span className="font-thin text-gray-700 dark:text-gray-300">
+            <span className="font-inter text-gray-700 dark:text-gray-300">
               {stack.join(", ")}
             </span>
           </p>
-          <p className="mb-2 flex items-center gap-1 md:mb-0">
+          <p className="mb-2 flex flex-col items-start justify-start gap-1 md:mb-0">
             <Tag variant="date" title="Date" />
-            <span className="font-thin text-gray-700 dark:text-gray-300">
+            <span className="font-inter text-gray-700 dark:text-gray-300">
               {date}
             </span>
           </p>
-          <p className="mb-2 flex items-center gap-1 md:mb-0">
+          <p className="mb-2 flex flex-col items-start justify-start gap-1 md:mb-0">
             <Tag variant="professional" title="Type" />
-            <span className="font-thin text-gray-700 dark:text-gray-300">
+            <span className="font-inter text-gray-700 dark:text-gray-300">
               {type}
             </span>
           </p>

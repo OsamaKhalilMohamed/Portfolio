@@ -18,7 +18,7 @@ export default function TimeLine() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-start overflow-x-hidden px-10 md:px-20">
-        <div className="mx-auto mt-8 h-fit  bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-center text-transparent dark:from-cyan-100 dark:to-slate-200">
+        <div className="mx-auto mt-8 h-fit   text-center text-[#103090] dark:text-[#7b8afe]">
           {" "}
           <h1 className="break-all text-3xl font-bold md:text-6xl">Timeline</h1>
         </div>
@@ -33,13 +33,13 @@ export default function TimeLine() {
                   alt={"Synapse-analytics logo"}
                 />
               </span>
-              <h3 className="ml-2 w-full bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-2xl font-bold text-transparent dark:from-cyan-100 dark:to-slate-200">
+              <h3 className="ml-2 w-full  text-2xl font-bold text-[#103090]  dark:text-[#7b8afe]">
                 Synapse Analytics{" "}
               </h3>
               <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-gray-950 dark:text-yellow-50">
                 July 2022 - Present
               </time>
-              <p className="md:text-md mb-4 ml-2 flex-wrap text-sm  font-semibold text-gray-950 dark:text-yellow-50  md:font-bold">
+              <p className="md:text-md mb-4 ml-2 flex-wrap font-inter  text-sm text-gray-950 dark:text-yellow-50  md:font-inter">
                 Started as an intern in summer of 2022 and then got hired as a
                 full-time Front-end engineer at Synapse analytics. Already
                 learned a lot. worked on large features, that went live and used
@@ -86,13 +86,13 @@ export default function TimeLine() {
                   alt={"digitopia logo"}
                 />
               </span>
-              <h3 className=" ml-2 bg-gradient-to-r from-cyan-800 to-slate-600  bg-clip-text text-2xl font-bold text-transparent dark:from-cyan-100 dark:to-slate-200">
+              <h3 className=" ml-2 bg-gradient-to-r from-cyan-800 to-slate-600  bg-clip-text text-2xl font-bold text-[#103090] dark:text-[#7b8afe]">
                 Digitopia Studio{" "}
               </h3>
               <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-gray-950 dark:text-yellow-50">
                 March 2022 - July 2022
               </time>
-              <p className="md:text-md mb-4 ml-2 flex-wrap text-sm  font-semibold text-gray-950 dark:text-yellow-50  md:font-bold">
+              <p className="md:text-md mb-4 ml-2 flex-wrap font-inter  text-sm text-gray-950 dark:text-yellow-50  md:font-inter">
                 My first full-time job after finishing military service, worked
                 on maintaining and developing new features to Moroccan platform
                 called Aly, this was my first experience to work with a large
@@ -108,13 +108,13 @@ export default function TimeLine() {
                   alt={"majal logo"}
                 />
               </span>
-              <h3 className=" ml-2 bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-2xl font-bold text-transparent dark:from-cyan-100 dark:to-slate-200">
+              <h3 className=" ml-2  text-2xl font-bold text-[#103090] dark:text-[#7b8afe]">
                 Majal Tech{" "}
               </h3>
               <time className="mb-2 ml-2 mt-1 block text-sm font-normal leading-none  text-gray-950 dark:text-yellow-50">
                 November 2020 - February 2021
               </time>
-              <p className="md:text-md mb-4 ml-2 flex-wrap text-sm  font-semibold text-gray-950 dark:text-yellow-50  md:font-bold">
+              <p className="md:text-md mb-4 ml-2 flex-wrap font-inter  text-sm text-gray-950 dark:text-yellow-50  md:font-inter">
                 My first ever full-time job, was really a good start for me,
                 learned how to work with tools like Redux, different
                 React-hooks, i18n localization and more. unfortunately, it got
@@ -124,7 +124,7 @@ export default function TimeLine() {
           </ol>
           <div className="mb-2 flex w-full justify-center">
             <Link href={"/"}>
-              <p className="mx-auto my-2 cursor-pointer bg-gradient-to-r from-cyan-800 to-slate-600 bg-clip-text text-lg text-transparent dark:from-cyan-100  dark:to-slate-200">
+              <p className="mx-auto my-2 cursor-pointer  text-lg  dark:from-cyan-100  dark:to-slate-200">
                 Home {"->"}
               </p>
             </Link>
