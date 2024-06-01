@@ -7,6 +7,8 @@ import Navbar from "~/components/Navbar";
 import LoadingState from "~/components/LoadingState";
 import { useEffect, useState } from "react";
 
+import "tailwindcss/tailwind.css";
+
 const inter = Inter({
   weight: ["100", "200", "300", "400", "600", "700"],
   variable: "--font-inter",

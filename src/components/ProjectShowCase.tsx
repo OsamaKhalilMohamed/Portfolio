@@ -1,10 +1,25 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useRef } from "react";
 import Link from "next/link";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+
+import { EffectFade } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+import "swiper/css/effect-fade";
+import { FreeMode } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import Tag from "./Tag";
 
 type Props = {
   title: string;
-  imageSrc: any;
+  archives: Array<StaticImageData>;
   stack: string[];
   date: string;
   type: string;
@@ -13,7 +28,7 @@ type Props = {
 };
 
 export default function ProjectShowCase(props: Readonly<Props>) {
-  const { imageSrc, stack, title, date, type, description, link } = props;
+  const { archives, stack, title, date, type, description, link } = props;
   const containerRef = useRef(null);
 
   return (
@@ -43,31 +58,56 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           <hr className="border-1 w-[100%] border-[#d58322] duration-500  dark:border-[#d2a258]" />
         </span>
       </h2>
-      <div className=" w-full ">
-        <Image
-          src={imageSrc}
-          width={900}
-          className="w-full rounded-md shadow-md  "
-          height={900}
-          quality={100}
-          placeholder="blur"
-          priority
-          alt={title}
-        />
+      <div className="w-full">
+        <Swiper
+          pagination={{ clickable: true }}
+          spaceBetween={50}
+          slidesPerView={3}
+          modules={[EffectFade, Navigation, A11y, Autoplay, FreeMode]}
+          effect="fade"
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          grabCursor
+        >
+          {archives.map((imageUrl, index) => (
+            <SwiperSlide key={index} virtualIndex={index}>
+              <div className="w-full">
+                <Image
+                  src={imageUrl}
+                  width={1000}
+                  height={800}
+                  quality={100}
+                  placeholder="blur"
+                  priority
+                  alt={title}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-      <div className="mt-4 rounded-md border border-[#d58322] p-6  dark:border-[#d2a258]">
+      <div className="mt-6">
         <div className="flex flex-col justify-between md:flex-row">
-          <p className="mb-2 md:mb-0">
-            <span className="font-inter">Stack {"->"} </span>{" "}
-            <span className="font-medium italic"> {stack.join(", ")}</span>
+          <p className="mb-2 flex items-center gap-1 md:mb-0">
+            <Tag variant="stack" title="Stack" />
+            <span className="font-thin text-gray-700 dark:text-gray-300">
+              {stack.join(", ")}
+            </span>
           </p>
-          <p className="mb-2 md:mb-0">
-            <span className="font-inter">Date {"->"} </span>{" "}
-            <span className="font-medium italic"> {date}</span>
+          <p className="mb-2 flex items-center gap-1 md:mb-0">
+            <Tag variant="date" title="Date" />
+            <span className="font-thin text-gray-700 dark:text-gray-300">
+              {date}
+            </span>
           </p>
-          <p>
-            <span className="font-inter">Type {"->"} </span>{" "}
-            <span className="font-medium italic"> {type}</span>
+          <p className="mb-2 flex items-center gap-1 md:mb-0">
+            <Tag variant="professional" title="Type" />
+            <span className="font-thin text-gray-700 dark:text-gray-300">
+              {type}
+            </span>
           </p>
         </div>
         {description && (

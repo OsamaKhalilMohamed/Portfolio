@@ -8,15 +8,22 @@ import aly from "../../public/aly.png";
 
 import konanhero3 from "../../public/konanhero3.png";
 import autoSkip from "../../public/Auto-Skip.png";
-
+import konan1 from "../../public/konan1.png";
+import konan2 from "../../public/konan2.png";
+import konan3 from "../../public/konan3.png";
+import konan4 from "../../public/konan4.png";
+import konan5 from "../../public/konan5.png";
+import konan6 from "../../public/konan6.png";
+import konan7 from "../../public/konan7.png";
 import ProjectShowCase from "./ProjectShowCase";
+import Tag from "./Tag";
 
 export default function Projects(): React.ReactElement {
   const projects = [
     {
       title: "KONAN",
-      logo: konanhero3,
-      stack: ["Typescript", "React", "Django", "SCSS", "REST"],
+      archives: [konan1, konan2, konan3, konan4, konan5, konan6, konan7],
+      stack: ["Typescript", "React", "Django", "REST API", "and more.."],
       type: "Professional",
       description:
         "Working on developing all new features and maintain the frontend for the MLOps platform, it got a lot of features that enable faster decision making for risk officers, automated workflows, visual dashboards and analytics, and many more.",
@@ -25,7 +32,7 @@ export default function Projects(): React.ReactElement {
     },
     {
       title: "Aly",
-      logo: aly,
+      archives: [aly],
       stack: ["Next.js", "Redux", "React-query", "graphQL"],
       type: "Professional",
       description:
@@ -35,7 +42,7 @@ export default function Projects(): React.ReactElement {
     },
     {
       title: "Sadaqhati",
-      logo: sadaqatihero,
+      archives: [sadaqatihero],
       stack: ["React", "styled-components"],
       type: "Professional",
       date: "Nov 2020 - Feb 2021",
@@ -45,7 +52,7 @@ export default function Projects(): React.ReactElement {
     },
     {
       title: "InnerNote",
-      logo: innerNote,
+      archives: [innerNote],
       stack: ["Next.js", "tailwind", "mongoDB", "Nodejs", "Redux"],
       type: "Personal",
       date: "2022",
@@ -55,7 +62,7 @@ export default function Projects(): React.ReactElement {
     },
     {
       title: "Auto skip YT ads",
-      logo: autoSkip,
+      archives: [autoSkip],
       stack: ["Javascript", "css", "HTML"],
       type: "Personal",
       date: "2024",
@@ -91,7 +98,7 @@ export default function Projects(): React.ReactElement {
                 <ProjectShowCase
                   stack={project.stack}
                   title={project.title}
-                  imageSrc={project.logo}
+                  archives={project.archives}
                   date={project.date}
                   type={project.type}
                   description={project.description}
