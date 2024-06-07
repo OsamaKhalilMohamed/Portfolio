@@ -6,7 +6,7 @@ export default function LoadingState() {
 
   return (
     <div className="flex h-full min-h-[90dvh] w-full flex-col items-center justify-center">
-      <div className="fixed left-0 top-0 -z-10 h-full w-full">
+      {/* <div className="fixed left-0 top-0 -z-10 h-full w-full">
         {theme === "dark" || theme !== "light" ? (
           <div className="relative h-full w-full bg-black">
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
@@ -17,7 +17,7 @@ export default function LoadingState() {
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div>
           </div>
         )}
-      </div>
+      </div> */}
       <div className="flex	h-36 w-56  items-center justify-center rounded-lg border-2 border-[#d58322] bg-transparent text-start text-7xl font-extrabold text-[#103090]  transition-opacity dark:border-[#d2a258] ">
         OS
       </div>

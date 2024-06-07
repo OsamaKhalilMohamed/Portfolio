@@ -102,12 +102,6 @@ export default function ProjectShowCase(props: Readonly<Props>) {
               {date}
             </span>
           </p>
-          <p className="mb-2 flex flex-col items-start justify-start gap-1 md:mb-0">
-            <Tag variant="professional" title="Type" />
-            <span className="font-inter text-gray-700 dark:text-gray-300">
-              {type}
-            </span>
-          </p>
         </div>
         {description && (
           <p className="mt-4 text-xl font-bold md:text-2xl">{description}</p>
