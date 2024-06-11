@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,6 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Tag from "./Tag";
+import { motion } from "framer-motion";
 
 type Props = {
   title: string;
@@ -31,8 +32,38 @@ export default function ProjectShowCase(props: Readonly<Props>) {
   const { archives, stack, title, date, type, description, link } = props;
   const containerRef = useRef(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="relative mb-6 flex w-full flex-col" ref={containerRef}>
+    <motion.div
+      className="relative mb-6 flex w-full flex-col"
+      ref={containerRef}
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 50 }}
+      viewport={{ once: true, margin: "0px 0px -170px 0px" }}
+      transition={{ bounce: 0.4, type: "spring", duration: 1.5 }}
+    >
       <h2 className="mb-2 flex items-center justify-start pb-1 text-3xl font-bold text-neutral-950 dark:text-yellow-50">
         {title}{" "}
         <span className="ml-2 font-inter text-3xl">
@@ -138,6 +169,6 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

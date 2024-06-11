@@ -1,6 +1,5 @@
 import React from "react";
 import ToggleButton from "./ToggleButton";
-import Link from "next/link";
 
 export default function Navbar(): React.ReactElement {
   return (
@@ -17,8 +16,8 @@ export default function Navbar(): React.ReactElement {
           </div>
         )}
       </div> */}
-      <div className="z-[999] flex w-full items-center justify-center shadow-sm   dark:bg-zinc-950">
-        <div className="mt-2 flex w-5/6 max-w-[1000px] flex-row-reverse items-center justify-between">
+      <div className=" flex w-full items-center justify-center   dark:bg-zinc-950">
+        <div className="flex w-5/6 max-w-[1000px] flex-row-reverse items-center justify-between pt-2">
           <ToggleButton />
         </div>
       </div>

@@ -25,7 +25,7 @@ export default function Footer() {
   }, [currentIndex]);
 
   return (
-    <div className="mt-2 flex w-full justify-center pb-2 text-sm">
+    <div className="flex w-full justify-center pb-2 pt-2 text-sm dark:bg-zinc-950">
       <span>Osama Khalil - © {currentYear} - All rights reserved.</span>
       <span className="pl-1">{hobbies[currentIndex]?.logo}</span>
     </div>
