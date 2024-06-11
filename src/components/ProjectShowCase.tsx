@@ -61,7 +61,10 @@ export default function ProjectShowCase(props: Readonly<Props>) {
       ref={containerRef}
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 50 }}
-      viewport={{ once: true, margin: "0px 0px -170px 0px" }}
+      viewport={{
+        once: true,
+        margin: `0px 0px ${title === "KONAN" ? "-20px" : "-170px"} 0px`,
+      }}
       transition={{ bounce: 0.4, type: "spring", duration: 1.5 }}
     >
       <h2 className="mb-2 flex items-center justify-start pb-1 text-3xl font-bold text-neutral-950 dark:text-yellow-50">
@@ -135,7 +138,9 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
         </div>
         {description && (
-          <p className="mt-4 text-xl font-bold md:text-2xl">{description}</p>
+          <p className="mb-4 mt-4 rounded-md border-2 border-pink-100 p-4 text-xl font-bold shadow-sm dark:border-slate-900 md:text-2xl">
+            {description}
+          </p>
         )}
         {title === "KONAN" && (
           <p className="font-semiinter mx-auto mt-4 text-sm">
