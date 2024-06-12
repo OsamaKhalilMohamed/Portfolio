@@ -124,13 +124,13 @@ export default function ProjectShowCase(props: Readonly<Props>) {
       </div>
       <div className="mt-6">
         <div className="flex flex-col justify-between md:flex-row">
-          <p className="mb-2 flex flex-col items-start justify-start gap-1 md:mb-0">
+          <p className="mb-4 flex flex-col items-start justify-start gap-1 md:mb-0">
             <Tag variant="stack" title="Stack" />
             <span className="font-inter text-gray-700 dark:text-gray-300">
               {stack.join(", ")}
             </span>
           </p>
-          <p className="mb-2 flex flex-col items-start justify-start gap-1 md:mb-0">
+          <p className="mb-4 flex flex-col items-start justify-start gap-1 md:mb-0">
             <Tag variant="date" title="Date" />
             <span className="font-inter text-gray-700 dark:text-gray-300">
               {date}
