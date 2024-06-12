@@ -57,7 +57,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
 
   return (
     <motion.div
-      className="relative mb-6 flex w-full flex-col"
+      className="relative mb-8 flex w-full flex-col"
       ref={containerRef}
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 50 }}
@@ -89,7 +89,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </Link>
         </span>
         <span className="ml-2 mt-4 flex flex-1 flex-grow">
-          <hr className="border-1 w-[100%] border-[#d58322] duration-500  dark:border-[#d2a258]" />
+          <hr className="w-[100%] border-2 border-pink-100 dark:border-slate-900 " />
         </span>
       </h2>
       <div className="w-full">
@@ -138,7 +138,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
         </div>
         {description && (
-          <p className="mb-4 mt-4 rounded-md border-2 border-pink-100 p-4 text-xl font-bold shadow-sm dark:border-slate-900 md:text-2xl">
+          <p className="mb-6 mt-6 rounded-md border-2 border-pink-100 p-4 text-xl font-bold shadow-sm dark:border-slate-900 md:text-2xl">
             {description}
           </p>
         )}

@@ -40,14 +40,14 @@ export default function Home(): React.ReactElement {
               </div>
 
               <div className="mt-4 w-full text-start leading-8  md:ml-0 md:leading-8">
-                <span className="font-inter text-lg text-gray-700 dark:text-gray-500 md:text-xl">
-                  <span className="font-inter text-lg text-gray-700 dark:text-gray-300 md:text-xl">
+                <span className="font-inter text-lg text-gray-500 dark:text-gray-500 md:text-xl">
+                  <span className="font-inter text-lg text-gray-900 dark:text-gray-300 md:text-xl">
                     Software engineer,{" "}
                   </span>{" "}
                   Passionate about web development and building frontends.
                 </span>
                 <br />
-                <span className="font-inter text-lg text-gray-700 dark:text-gray-500 md:text-xl">
+                <span className="font-inter text-lg text-gray-500 dark:text-gray-500 md:text-xl">
                   More than +3 years of exeperience. Currently working at{"   "}
                   <span className="text-neutral-950 dark:text-gray-200">
                     {" "}
@@ -145,7 +145,7 @@ export default function Home(): React.ReactElement {
               </div>
             </div>
           </div>
-          <hr className="border-1 w-[100vw] border-[#d58322] duration-500  dark:border-[#e9ecc2]" />
+          <hr className="w-[100vw] border-2 border-pink-100 dark:border-slate-900" />
         </div>
 
         {/* Projects section */}
@@ -156,7 +156,7 @@ export default function Home(): React.ReactElement {
           <Projects />
         </div>
 
-        <hr className="border-1 w-full border-[#d58322] duration-500  dark:border-[#e9ecc2]" />
+        <hr className="w-full border-2 border-pink-100 dark:border-slate-900" />
 
         {/* About me section*/}
         <div
@@ -175,7 +175,7 @@ export default function Home(): React.ReactElement {
               life" mindset to stay current with the latest technologies.
               <Link href={"/Tech"} className="h-fit w-fit ">
                 {" "}
-                <span className="border-b-2 text-neutral-950 dark:border-pink-700 dark:text-yellow-50">
+                <span className="border-2 border-pink-100 text-neutral-950 dark:border-slate-900  dark:text-yellow-50">
                   Tech + Tools{" "}
                 </span>
               </Link>{" "}
@@ -199,7 +199,7 @@ export default function Home(): React.ReactElement {
             />
           </div>
         </div>
-        <hr className="border-1 w-full border-[#d58322] duration-500  dark:border-[#e9ecc2]" />
+        <hr className="w-full border-2 border-pink-100 dark:border-slate-900" />
       </main>
     </>
   );
