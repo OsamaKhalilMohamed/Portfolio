@@ -40,15 +40,14 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
       <main className={`${inter.className}`}>
-        {isLoading ? (
+        {/* {isLoading ? (
           <LoadingState />
-        ) : (
-          <>
-            <Navbar />
-            <Component {...pageProps} />
-            <Footer />
-          </>
-        )}
+        ) : ( */}
+        <>
+          <Navbar />
+          <Component {...pageProps} />
+          <Footer />
+        </>
       </main>
     </ThemeProvider>
   );

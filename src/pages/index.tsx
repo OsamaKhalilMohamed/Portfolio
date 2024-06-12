@@ -145,7 +145,7 @@ export default function Home(): React.ReactElement {
               </div>
             </div>
           </div>
-          <hr className="w-[100vw] border-2 border-pink-100 dark:border-slate-900" />
+          <hr className="w-[100vw] border border-pink-100 dark:border-slate-900" />
         </div>
 
         {/* Projects section */}
@@ -156,7 +156,7 @@ export default function Home(): React.ReactElement {
           <Projects />
         </div>
 
-        <hr className="w-full border-2 border-pink-100 dark:border-slate-900" />
+        <hr className="w-full border border-pink-100 dark:border-slate-900" />
 
         {/* About me section*/}
         <div
@@ -175,7 +175,7 @@ export default function Home(): React.ReactElement {
               life" mindset to stay current with the latest technologies.
               <Link href={"/Tech"} className="h-fit w-fit ">
                 {" "}
-                <span className="border-2 border-pink-100 text-neutral-950 dark:border-slate-900  dark:text-yellow-50">
+                <span className="border border-pink-100 text-neutral-950 dark:border-slate-900  dark:text-yellow-50">
                   Tech + Tools{" "}
                 </span>
               </Link>{" "}
@@ -199,7 +199,7 @@ export default function Home(): React.ReactElement {
             />
           </div>
         </div>
-        <hr className="w-full border-2 border-pink-100 dark:border-slate-900" />
+        <hr className="w-full border border-pink-100 dark:border-slate-900" />
       </main>
     </>
   );

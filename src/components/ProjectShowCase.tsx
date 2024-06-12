@@ -89,7 +89,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </Link>
         </span>
         <span className="ml-2 mt-4 flex flex-1 flex-grow">
-          <hr className="w-[100%] border-2 border-pink-100 dark:border-slate-900 " />
+          <hr className="border-1 w-[100%] border-pink-100 dark:border-slate-900 " />
         </span>
       </h2>
       <div className="w-full">
