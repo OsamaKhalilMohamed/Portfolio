@@ -138,7 +138,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
         </div>
         {description && (
-          <p className="mb-6 mt-6 rounded-md border-2 border-pink-100 p-4 text-xl font-bold shadow-sm dark:border-slate-900 md:text-2xl">
+          <p className="mb-6 mt-6 rounded-md border-2 border-pink-100 p-4 text-lg font-bold shadow-sm dark:border-slate-900 md:text-xl">
             {description}
           </p>
         )}
