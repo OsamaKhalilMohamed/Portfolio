@@ -138,10 +138,12 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
         </div>
         {description && (
-          <p className="mb-6 mt-6 rounded-md border-2 border-pink-100 p-4 text-lg font-bold shadow-sm dark:border-slate-900 md:text-xl">
-            {description}
-          </p>
+          <div className="relative mb-6 mt-6 rounded-lg  bg-gradient-to-r from-pink-300 to-pink-500 p-6 text-lg font-bold text-white shadow-md dark:from-blue-500 dark:to-blue-600 md:text-xl">
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-pink-300 to-pink-500 opacity-60 blur-xl dark:from-blue-500 dark:to-blue-600"></div>
+            <p className="relative z-10">{description}</p>
+          </div>
         )}
+
         {title === "KONAN" && (
           <p className="font-semiinter mx-auto mt-4 text-sm">
             Learn more about KONAN{" "}
