@@ -138,8 +138,8 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
         </div>
         {description && (
-          <div className="relative mb-6 mt-6 rounded-lg  bg-gradient-to-r from-pink-400 to-pink-500 p-6 text-lg font-bold text-white shadow-md dark:from-blue-500 dark:to-blue-600 md:text-xl">
-            <div className="absolute inset-1 rounded-lg bg-gradient-to-r from-pink-400 to-pink-500 opacity-60 blur-xl dark:from-blue-500 dark:to-blue-600"></div>
+          <div className="relative mb-6 mt-6 rounded-lg  bg-gradient-to-r  from-blue-500 to-blue-600 p-6 text-lg font-bold text-white shadow-md md:text-xl">
+            <div className="absolute inset-1 rounded-lg bg-gradient-to-r  from-blue-500 to-blue-600 opacity-60 blur-xl"></div>
             <p className="relative z-10">{description}</p>
           </div>
         )}
