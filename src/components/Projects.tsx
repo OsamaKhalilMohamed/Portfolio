@@ -10,7 +10,6 @@ import autoSkip from "../../public/Auto-Skip.png";
 import konanhero3 from "../../public/konanhero3.png";
 import konan2 from "../../public/konan2.png";
 import konan3 from "../../public/konan3.png";
-//import konan4 from "../../public/konan4.png";
 import konan5 from "../../public/konan5.png";
 import konan6 from "../../public/konan6.png";
 import konan7 from "../../public/konan7.png";
