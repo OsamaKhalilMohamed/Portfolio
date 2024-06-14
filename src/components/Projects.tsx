@@ -5,6 +5,7 @@ import innerNote from "../../public/innerNote.png";
 import sadaqatihero from "../../public/sHero.png";
 
 import aly from "../../public/aly.png";
+import aly2 from "../../public/aly2.png";
 
 import autoSkip from "../../public/Auto-Skip.png";
 import konanhero3 from "../../public/konanhero3.png";
@@ -30,7 +31,7 @@ export default function Projects(): React.ReactElement {
     },
     {
       title: "Aly",
-      archives: [aly],
+      archives: [aly, aly2],
       stack: ["Next.js", "Redux", "React-query", "graphQL"],
       type: "Professional",
       description:
