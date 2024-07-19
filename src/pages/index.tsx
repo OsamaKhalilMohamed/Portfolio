@@ -9,6 +9,28 @@ import { useRef } from "react";
 export default function Home(): React.ReactElement {
   const homeRef = useRef(null);
 
+  const text = `Hi, I'm a passionate front-end engineer from Cairo, Egypt,
+  dedicated to crafting interactive and engaging user interfaces.
+  With a bachelor's degree in Computer Science (Class of 2020) and
+  over three years of experience, including leading front-end
+  projects, I have a solid understanding of the complete software
+  development lifecycle, particularly in web development. Embracing
+  the ever-evolving JavaScript ecosystem, I adopt a "student for
+  life" mindset to stay current with the latest technologies. You can check out my
+  most used tech and tools,
+  When I'm not coding, you can find me listening to music,
+  watching movies, gaming, or creatively avoiding writing regex. I
+  aspire to become a JavaScript ninja.`;
+
+  const words = text.split(" ");
+
+  const getRandomClassName = () => {
+    const random = Math.random();
+    return random < 0.7
+      ? "text-gray-500 dark:text-gray-500"
+      : "text-gray-900 dark:text-gray-300";
+  };
+
   return (
     <>
       <Head>
@@ -48,7 +70,7 @@ export default function Home(): React.ReactElement {
                 </span>
                 <br />
                 <span className="font-inter text-lg text-gray-500 dark:text-gray-500 md:text-xl">
-                  More than +3 years of exeperience. Currently working at{"   "}
+                  More than +3 years of experience. Currently working at{"   "}
                   <span className="text-neutral-950 dark:text-gray-200">
                     {" "}
                     Synapse Analytics{" "}
@@ -165,24 +187,11 @@ export default function Home(): React.ReactElement {
         >
           <div className="text-md mb-8 flex flex-col items-start justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 md:flex-row ">
             <div className="mr-2 w-full text-justify ">
-              Hi, I'm a passionate front-end engineer from Cairo, Egypt,
-              dedicated to crafting interactive and engaging user interfaces.
-              With a bachelor's degree in Computer Science (Class of 2020) and
-              over three years of experience, including leading front-end
-              projects, I have a solid understanding of the complete software
-              development lifecycle, particularly in web development. Embracing
-              the ever-evolving JavaScript ecosystem, I adopt a "student for
-              life" mindset to stay current with the latest technologies.
-              <Link href={"/Tech"} className="h-fit w-fit ">
-                {" "}
-                <span className="border border-pink-100 text-neutral-950 dark:border-slate-900  dark:text-yellow-50">
-                  Tech + Tools{" "}
+              {words.map((word, index) => (
+                <span key={index} className={getRandomClassName()}>
+                  {word}{" "}
                 </span>
-              </Link>{" "}
-              Hobbies When I'm not coding, you can find me listening to music,
-              watching movies, gaming, or creatively avoiding writing regex. I
-              aspire to become a JavaScript ninja, mastering the art of
-              front-end development.
+              ))}
             </div>
           </div>
           <div className="my-4 flex-col justify-start ">
