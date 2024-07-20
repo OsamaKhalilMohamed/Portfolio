@@ -9,26 +9,33 @@ import { useRef } from "react";
 export default function Home(): React.ReactElement {
   const homeRef = useRef(null);
 
-  const text = `Hi, I'm a passionate front-end engineer from Cairo, Egypt,
+  const textBeforeLink = `Hi, I'm a passionate front-end engineer from Cairo, Egypt,
   dedicated to crafting interactive and engaging user interfaces.
   With a bachelor's degree in Computer Science (Class of 2020) and
   over three years of experience, including leading front-end
   projects, I have a solid understanding of the complete software
   development lifecycle, particularly in web development. Embracing
   the ever-evolving JavaScript ecosystem, I adopt a "student for
-  life" mindset to stay current with the latest technologies. You can check out my
-  most used tech and tools,
-  When I'm not coding, you can find me listening to music,
+  life" mindset to stay current with the latest technologies. You can check out my`;
+
+  const textAfterLink = `When I'm not coding, you can find me listening to music,
   watching movies, gaming, or creatively avoiding writing regex. I
   aspire to become a JavaScript ninja.`;
-
-  const words = text.split(" ");
 
   const getRandomClassName = () => {
     const random = Math.random();
     return random < 0.7
       ? "text-gray-500 dark:text-gray-500"
       : "text-gray-900 dark:text-gray-300";
+  };
+
+  const renderTextWithRandomClasses = (text:string) => {
+    const words = text.split(" ");
+    return words.map((word, index) => (
+      <span key={index} className={getRandomClassName()}>
+        {word}{" "}
+      </span>
+    ));
   };
 
   return (
@@ -187,11 +194,14 @@ export default function Home(): React.ReactElement {
         >
           <div className="text-md mb-8 flex flex-col items-start justify-between text-start font-inter leading-9 text-neutral-950 dark:text-yellow-50 md:flex-row ">
             <div className="mr-2 w-full text-justify ">
-              {words.map((word, index) => (
-                <span key={index} className={getRandomClassName()}>
-                  {word}{" "}
+              {renderTextWithRandomClasses(textBeforeLink)}
+              <Link href="/Tech" className="h-fit w-fit">
+                <span className="border-b border-pink-100 text-neutral-950 dark:border-slate-900 dark:text-yellow-50">
+                  most used tech and tools
                 </span>
-              ))}
+              </Link>
+              {", "}
+              {renderTextWithRandomClasses(textAfterLink)}
             </div>
           </div>
           <div className="my-4 flex-col justify-start ">
