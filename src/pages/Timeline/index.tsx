@@ -61,11 +61,11 @@ export default function TimeLine() {
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-zinc-950">
         <div className="mx-auto mt-8 h-fit   text-center text-[#103090] dark:text-[#7b8afe]">
           {" "}
-          <h1 className="break-all text-3xl font-bold text-[#103090] dark:text-white md:-ml-1.5 md:text-8xl">
+          <h1 className="break-all text-6xl font-bold text-[#103090] dark:text-white md:-ml-1.5 md:text-8xl">
             Timeline
           </h1>
         </div>
-        <div className="w-5/6 max-w-[700px] sm:ml-12 sm:w-1/2">
+        <div className="mx-4 w-5/6 max-w-[700px] ">
           <ol className="relative mt-8 border-l border-gray-700">
             {timeline.map((journey, index) => (
               <Fragment key={index}>
@@ -88,7 +88,7 @@ export default function TimeLine() {
                   <time className="my-4 ml-4 mt-1 block text-sm font-normal leading-none  text-gray-950 dark:text-yellow-50">
                     {journey.date}
                   </time>
-                  <p className="mb-4 ml-4 flex-wrap text-lg font-normal leading-10 tracking-wide text-gray-900 dark:text-gray-300 md:font-inter  md:text-xl">
+                  <p className="mb-4 ml-4 flex-wrap text-lg font-normal leading-8 tracking-wide text-gray-900 dark:text-gray-300 md:font-inter md:text-xl  md:leading-10">
                     {renderTextWithRandomClasses(journey.description)}
                   </p>
                 </li>
