@@ -15,7 +15,7 @@ export default function TimeLine() {
       date: "AUG 2024 - present",
       logo: sami,
       description:
-        "As i'm starting a new chapter in my journey, with SAMI advanced electronics as a senior frontend developer. very excited and grateful for this one!",
+        "As i'm starting a new chapter in my journey, with SAMI advanced electronics as a senior frontend developer. very excited for this one!",
       logoAlt: "sami-logo",
       link: "https://www.sami.com.sa/advanced-electronics",
     },
