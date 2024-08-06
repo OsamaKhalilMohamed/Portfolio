@@ -15,6 +15,7 @@ export default function TechAndTools(): React.ReactElement {
     "REST API",
     "GraphQL",
     "MongoDB",
+    "Firebase",
     "Docker",
     "Cypress",
     "TailwindCSS",
@@ -23,23 +24,21 @@ export default function TechAndTools(): React.ReactElement {
 
   const tools = [
     "Visual studio code",
-    "Vercel",
-    "Git",
+    "Vercel Hosting",
     "Github",
     "Gitlab",
+    "Git",
     "Storybook",
     "npm",
-    "yarn",
     "YouTrack",
     "Jira",
-    "T3-stack to bootstrap my side-projects",
-    "figma",
-    "metabase",
-    "sentry",
-    "framer",
-    "framer motion",
-    "Grammarly",
+    "T3-stack",
+    "Figma",
+    "Metabase",
+    "Sentry",
+    "Framer/Framer motion",
     "Authy",
+    "chatGPT",
   ];
 
   return (
@@ -57,7 +56,7 @@ export default function TechAndTools(): React.ReactElement {
           <h1 className="mt-10 px-0 text-start text-5xl font-bold text-[#103090] dark:text-white md:-ml-1.5 md:text-8xl ">
             Tech
           </h1>
-          <p className="text-md mt-1 font-bold text-[#103090] dark:text-white md:text-lg">
+          <p className="text-md mt-1 font-bold text-gray-500 dark:text-gray-500 md:text-lg">
             My main tech drivers that i use when building apps.
           </p>
         </div>
@@ -80,7 +79,7 @@ export default function TechAndTools(): React.ReactElement {
           <h1 className="mt-10 px-0 text-start text-5xl font-bold text-[#103090] dark:text-white md:-ml-1.5 md:text-8xl ">
             Tools
           </h1>
-          <p className="text-md mt-1 font-bold text-[#103090] dark:text-white md:text-lg">
+          <p className="text-md mt-1 font-bold text-gray-500 dark:text-gray-500 md:text-lg">
             My most used software tools for development and personal use.
           </p>
         </div>

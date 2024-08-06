@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -107,16 +108,18 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           {archives.map((imageUrl, index) => (
             <SwiperSlide key={index} virtualIndex={index}>
               <div className="w-full">
-                <Image
-                  src={imageUrl}
-                  width={1000}
-                  height={800}
-                  quality={100}
-                  placeholder="blur"
-                  className="rounded-md"
-                  priority
-                  alt={title}
-                />
+                <Link href={link} target="_blank">
+                  <Image
+                    src={imageUrl}
+                    width={1000}
+                    height={800}
+                    quality={100}
+                    placeholder="blur"
+                    className="cursor-pointer rounded-md"
+                    priority
+                    alt={title}
+                  />
+                </Link>
               </div>
             </SwiperSlide>
           ))}

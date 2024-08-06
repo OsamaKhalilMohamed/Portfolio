@@ -5,6 +5,7 @@ import Image from "next/image";
 import Projects from "~/components/Projects";
 import synapse2 from "../../public/synapse2.png";
 import { useRef } from "react";
+import { renderTextWithRandomClasses } from "~/utils/helpers";
 
 export default function Home(): React.ReactElement {
   const homeRef = useRef(null);
@@ -21,22 +22,6 @@ export default function Home(): React.ReactElement {
   const textAfterLink = `When I'm not coding, you can find me listening to music,
   watching movies, gaming, or creatively avoiding writing regex. I
   aspire to become a JavaScript ninja.`;
-
-  const getRandomClassName = () => {
-    const random = Math.random();
-    return random < 0.7
-      ? "text-gray-500 dark:text-gray-500"
-      : "text-gray-900 dark:text-gray-300";
-  };
-
-  const renderTextWithRandomClasses = (text:string) => {
-    const words = text.split(" ");
-    return words.map((word, index) => (
-      <span key={index} className={getRandomClassName()}>
-        {word}{" "}
-      </span>
-    ));
-  };
 
   return (
     <>
@@ -80,11 +65,8 @@ export default function Home(): React.ReactElement {
                   More than +3 years of experience. Currently working at{"   "}
                   <span className="text-neutral-950 dark:text-gray-200">
                     {" "}
-                    Synapse Analytics{" "}
-                    <Link
-                      href={"https://www.synapse-analytics.io"}
-                      target="_blank"
-                    >
+                    SAMI{" "}
+                    <Link href={"https://www.sami.com.sa/"} target="_blank">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
