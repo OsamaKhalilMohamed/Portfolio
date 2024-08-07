@@ -6,6 +6,7 @@ import Projects from "~/components/Projects";
 import synapse2 from "../../public/synapse2.png";
 import { useRef } from "react";
 import { renderTextWithRandomClasses } from "~/utils/helpers";
+import ExternalIcon from "~/components/ExternalIcon";
 
 export default function Home(): React.ReactElement {
   const homeRef = useRef(null);
@@ -63,96 +64,40 @@ export default function Home(): React.ReactElement {
                 <br />
                 <span className="font-inter text-lg text-gray-500 dark:text-gray-500 md:text-xl">
                   More than +3 years of experience. Currently working at{"   "}
-                  <span className="text-neutral-950 dark:text-gray-200">
-                    {" "}
-                    SAMI{" "}
-                    <Link href={"https://www.sami.com.sa/"} target="_blank">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="h-4 w-4 cursor-pointer font-inter text-3xl"
-                        style={{ display: "inline", verticalAlign: "middle" }}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                        />
-                      </svg>
-                    </Link>
-                  </span>
+                  <Link href={"https://www.sami.com.sa/"} target="_blank">
+                    <span className="text-neutral-700 hover:text-neutral-500 dark:text-yellow-50 dark:hover:text-yellow-100">
+                      {" "}
+                      SAMI <ExternalIcon link="https://www.sami.com.sa/" />
+                    </span>
+                  </Link>
                 </span>
               </div>
               <div className="mt-8 flex h-full grow flex-wrap items-end justify-start gap-3 pb-4  font-inter text-lg md:ml-0 md:mt-14 md:max-w-[1000px] md:items-end">
-                <span className="text-neutral-950 dark:text-yellow-50 md:mr-0">
-                  Github{" "}
-                  <Link
-                    href={"https://github.com/osamakhalil98/"}
-                    target="_blank"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="h-4 w-4 cursor-pointer font-inter text-3xl"
-                      style={{ display: "inline", verticalAlign: "middle" }}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                      />
-                    </svg>
-                  </Link>
-                </span>
-                <span className="text-neutral-950 dark:text-yellow-50 md:mr-0">
-                  Linkedin{" "}
-                  <Link
-                    href={"https://www.linkedin.com/in/osama-khalil98"}
-                    target="_blank"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="h-4 w-4 cursor-pointer font-inter text-3xl"
-                      style={{ display: "inline", verticalAlign: "middle" }}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                      />
-                    </svg>
-                  </Link>
-                </span>
-                <span className="text-neutral-950 dark:text-yellow-50 md:mr-0">
-                  Timeline{" "}
-                  <Link href={"Timeline"} target="_blank">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="h-4 w-4 cursor-pointer font-inter text-3xl"
-                      style={{ display: "inline", verticalAlign: "middle" }}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                      />
-                    </svg>
-                  </Link>
-                </span>
+                <Link
+                  href={"https://github.com/osamakhalil98/"}
+                  target="_blank"
+                >
+                  <span className="text-neutral-700 hover:text-neutral-500 dark:text-yellow-50 dark:hover:text-yellow-100 md:mr-0">
+                    Github{" "}
+                    <ExternalIcon link="https://github.com/osamakhalil98/" />
+                  </span>
+                </Link>
+
+                <Link
+                  href={"https://www.linkedin.com/in/osama-khalil98/"}
+                  target="_blank"
+                >
+                  <span className="text-neutral-700 hover:text-neutral-500 dark:text-yellow-50 dark:hover:text-yellow-100 md:mr-0">
+                    Linkedin{" "}
+                    <ExternalIcon link="https://www.linkedin.com/in/osama-khalil98" />
+                  </span>
+                </Link>
+
+                <Link href={"Timeline"} target="_blank">
+                  <span className="text-neutral-700 hover:text-neutral-500 dark:text-yellow-50 dark:hover:text-yellow-100 md:mr-0">
+                    Timeline <ExternalIcon link="Timeline" />
+                  </span>
+                </Link>
               </div>
             </div>
           </div>

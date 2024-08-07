@@ -15,9 +15,15 @@ import konan5 from "../../public/konan5.png";
 import konan6 from "../../public/konan6.png";
 import konan7 from "../../public/konan7.png";
 import ProjectShowCase from "./ProjectShowCase";
-import Tag from "./Tag";
+import konanlogo from "../../public/konanlogo.svg";
+import konanlogodark from "../../public/konanlogodark.svg";
+import alylogo from "../../public/alylogo.webp";
+import sadaqatilogo from "../../public/sadaqatilogo.png";
+import { useTheme } from "next-themes";
 
 export default function Projects(): React.ReactElement {
+  const { theme } = useTheme();
+
   const projects = [
     {
       title: "KONAN",
@@ -28,6 +34,7 @@ export default function Projects(): React.ReactElement {
         "Working on developing all new features and maintain the frontend for the MLOps platform, it got a lot of features that enable faster decision making for risk officers, automated workflows, visual dashboards and analytics, and many more.",
       date: "2022 - present",
       link: "https://app.konan.ai/",
+      logo: { size: 120, src: theme === "light" ? konanlogo : konanlogodark },
     },
     {
       title: "Aly",
@@ -38,6 +45,7 @@ export default function Projects(): React.ReactElement {
         "Aly aims to enrich moroccan lifestyle by providing several utilities and information about a lot of business all over Morocco.",
       date: "Apr 2022 - Aug 2022",
       link: "https://www.aly.ma/",
+      logo: { src: alylogo, size: 80 },
     },
     {
       title: "Sadaqhati",
@@ -46,6 +54,7 @@ export default function Projects(): React.ReactElement {
       type: "Professional",
       date: "Nov 2020 - Feb 2021",
       link: "https://sadaqahti.com/en/",
+      logo: { src: sadaqatilogo, size: 150 },
       description:
         "Sadaqati Foundation is a voluntary charitable organization to support the poor and Muslims and provide humanitarian aid in African countries and poor and afflicted countries. It was established in 2015 in the state of Malawi",
     },
@@ -102,6 +111,7 @@ export default function Projects(): React.ReactElement {
                   type={project.type}
                   description={project.description}
                   link={project.link}
+                  logo={project.logo}
                 />
               </div>
             </div>

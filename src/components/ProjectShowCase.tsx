@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Tag from "./Tag";
 import { motion } from "framer-motion";
+import ExternalIcon from "./ExternalIcon";
 
 type Props = {
   title: string;
@@ -27,10 +28,11 @@ type Props = {
   type: string;
   link: string;
   description?: string;
+  logo?: { src: string; size: number };
 };
 
 export default function ProjectShowCase(props: Readonly<Props>) {
-  const { archives, stack, title, date, type, description, link } = props;
+  const { archives, stack, title, date, logo, description, link } = props;
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -68,31 +70,27 @@ export default function ProjectShowCase(props: Readonly<Props>) {
       }}
       transition={{ bounce: 0.4, type: "spring", duration: 1.5 }}
     >
-      <h2 className="mb-2 flex items-center justify-start pb-1 text-3xl font-bold text-neutral-950 dark:text-yellow-50">
-        {title}{" "}
+      <div className="mb-2 flex items-center justify-start pb-1 text-3xl font-bold text-neutral-950 dark:text-yellow-50">
+        <Link href={link} target="_blank">
+          {logo ? (
+            <Image
+              src={logo.src}
+              alt="logo"
+              width={logo.size}
+              height={logo.size}
+            />
+          ) : (
+            title
+          )}{" "}
+        </Link>
+
         <span className="ml-2 font-inter text-3xl">
-          <Link href={link} target="_blank">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="h-4 w-4 cursor-pointer font-inter text-3xl"
-              style={{ display: "inline", verticalAlign: "middle" }}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-              />
-            </svg>
-          </Link>
+          <ExternalIcon link={link} />
         </span>
         <span className="ml-2 mt-4 flex flex-1 flex-grow">
           <hr className="border-1 w-[100%] border-pink-100 dark:border-slate-900 " />
         </span>
-      </h2>
+      </div>
       <div className="w-full">
         <Swiper
           pagination={{ clickable: true }}
