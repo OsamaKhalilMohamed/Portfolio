@@ -31,7 +31,7 @@ export default function Projects(): React.ReactElement {
       stack: ["Typescript", "React", "Django", "REST API", "and more.."],
       type: "Professional",
       description:
-        "Working on developing all new features and maintain the frontend for the MLOps platform, it got a lot of features that enable faster decision making for risk officers, automated workflows, visual dashboards and analytics, and many more.",
+        "KONAN is MLOps platform, provides key features to analyze and track your deployed models, as well as providing use cases such as credit scoring.",
       date: "2022 - present",
       link: "https://app.konan.ai/",
       logo: { size: 120, src: theme === "light" ? konanlogo : konanlogodark },
