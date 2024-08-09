@@ -134,7 +134,7 @@ export default function Home(): React.ReactElement {
           <h3 className="md:text-md my-4 text-sm">
             Feel free to email me at{" "}
             <span className="border-b border-pink-100 text-neutral-950 dark:border-slate-900 dark:text-yellow-50">
-              <a href="mailto:someone@example.com">osadx35@gmail.com</a>
+              <a href="mailto:osadx35@gmail.com">osadx35@gmail.com</a>
             </span>
           </h3>
           <div className="my-2 mb-4 flex w-full flex-col justify-start gap-2 md:flex-row md:justify-center">
