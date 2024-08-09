@@ -3,7 +3,7 @@ import Link from "next/link";
 import osama2 from "../../public/osama2.jpeg";
 import Image from "next/image";
 import Projects from "~/components/Projects";
-import synapse2 from "../../public/synapse2.png";
+import aime from "../../public/aime.png";
 import { useRef } from "react";
 import { renderTextWithRandomClasses } from "~/utils/helpers";
 import ExternalIcon from "~/components/ExternalIcon";
@@ -131,20 +131,27 @@ export default function Home(): React.ReactElement {
               {renderTextWithRandomClasses(textAfterLink)}
             </div>
           </div>
-          <div className="my-4 flex-col justify-start ">
+          <h3 className="md:text-md my-4 text-sm">
+            Feel free to email me at{" "}
+            <span className="border-b border-pink-100 text-neutral-950 dark:border-slate-900 dark:text-yellow-50">
+              <a href="mailto:someone@example.com">osadx35@gmail.com</a>
+            </span>
+          </h3>
+          <div className="my-2 mb-4 flex w-full flex-col justify-start gap-2 md:flex-row md:justify-center">
             {/* IMAGES */}
             <Image
               src={osama2}
               alt="A picture of myself :)"
-              width="510"
+              width="800"
               height="510"
               placeholder="blur"
-              className="rounded-lg shadow-lg"
+              className="w-5/6 rounded-lg shadow-lg"
               quality={100}
               priority={true}
             />
           </div>
         </div>
+
         <hr className="w-full border border-pink-100 dark:border-slate-900" />
       </main>
     </>
