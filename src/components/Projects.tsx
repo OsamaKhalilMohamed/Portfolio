@@ -32,7 +32,7 @@ export default function Projects(): React.ReactElement {
       type: "Professional",
       description:
         "KONAN is MLOps platform, provides key features to analyze and track your deployed models, as well as providing use cases such as credit scoring.",
-      date: "2022 - present",
+      date: "AUG 2022 -> AUG 2024",
       link: "https://app.konan.ai/",
       logo: { size: 120, src: theme === "light" ? konanlogo : konanlogodark },
     },
@@ -43,7 +43,7 @@ export default function Projects(): React.ReactElement {
       type: "Professional",
       description:
         "Aly aims to enrich moroccan lifestyle by providing several utilities and information about a lot of business all over Morocco.",
-      date: "Apr 2022 - Aug 2022",
+      date: "APR 2022 -> AUG 2022",
       link: "https://www.aly.ma/",
       logo: { src: alylogo, size: 80 },
     },
@@ -52,7 +52,7 @@ export default function Projects(): React.ReactElement {
       archives: [sadaqatihero],
       stack: ["React", "styled-components"],
       type: "Professional",
-      date: "Nov 2020 - Feb 2021",
+      date: "NOV 2020 - FEB 2021",
       link: "https://sadaqahti.com/en/",
       logo: { src: sadaqatilogo, size: 150 },
       description:

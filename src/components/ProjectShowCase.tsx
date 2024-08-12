@@ -124,26 +124,14 @@ export default function ProjectShowCase(props: Readonly<Props>) {
         </Swiper>
       </div>
       <div className="mt-6">
-        <div className="flex flex-col justify-between md:flex-row">
-          <p className="mb-4 flex flex-col items-start justify-start gap-1 md:mb-0">
-            <Tag variant="stack" title="Stack" />
-            <span className="font-inter text-gray-700 dark:text-gray-300">
-              {stack.join(", ")}
-            </span>
-          </p>
-          <p className="mb-4 flex flex-col items-start justify-start gap-1 md:mb-0">
-            <Tag variant="date" title="Date" />
-            <span className="font-inter text-gray-700 dark:text-gray-300">
-              {date}
-            </span>
-          </p>
+        <div className="relative mb-6 mt-6 rounded-lg  bg-gradient-to-r  from-blue-500 to-blue-600 p-6 text-lg font-bold text-white shadow-md md:text-xl">
+          <div className="absolute inset-1 rounded-lg bg-gradient-to-r  from-blue-500 to-blue-600 opacity-60 blur-xl"></div>
+          <p className="relative z-10 text-lg">Stack: {stack.join(", ")}</p>
+          <hr className="my-4 border-spacing-2 border-2 border-dashed border-pink-100 dark:border-slate-900" />
+          <p className="relative z-10 text-lg">Date: {date}</p>
+          <hr className="my-4 border-spacing-2 border-2 border-dashed border-pink-100 dark:border-slate-900" />
+          <p className="relative z-10">{description}</p>
         </div>
-        {description && (
-          <div className="relative mb-6 mt-6 rounded-lg  bg-gradient-to-r  from-blue-500 to-blue-600 p-6 text-lg font-bold text-white shadow-md md:text-xl">
-            <div className="absolute inset-1 rounded-lg bg-gradient-to-r  from-blue-500 to-blue-600 opacity-60 blur-xl"></div>
-            <p className="relative z-10">{description}</p>
-          </div>
-        )}
 
         {title === "KONAN" && (
           <p className="font-semiinter mx-auto mt-4 text-sm">
