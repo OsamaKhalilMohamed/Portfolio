@@ -96,7 +96,7 @@ export default function Projects(): React.ReactElement {
         {projects.map((project, index) => {
           return (
             <div
-              className="mt-8 flex min-h-full w-full max-w-[1000] flex-col md:flex-row"
+              className=" flex min-h-full w-full max-w-[1000] flex-col md:flex-row"
               key={`${project.title}-${index}`}
             >
               <div

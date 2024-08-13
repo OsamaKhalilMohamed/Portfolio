@@ -16,7 +16,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import Tag from "./Tag";
 import { motion } from "framer-motion";
 import ExternalIcon from "./ExternalIcon";
 
