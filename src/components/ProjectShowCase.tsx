@@ -65,7 +65,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
       whileInView={{ opacity: 1, y: 50 }}
       viewport={{
         once: true,
-        margin: `0px 0px ${title === "KONAN" ? "-100px" : "-200px"} 0px`,
+        margin: `0px 0px ${title === "KONAN" ? "-100px" : "-500px"} 0px`,
       }}
       transition={{ bounce: 0.4, type: "spring", duration: 1.5 }}
     >
@@ -139,7 +139,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
 
           <hr className="border-1 my-4 border-spacing-2 border-dotted border-inherit" />
-          <p className="relative z-10">{description}</p>
+          <p className="relative z-10 font-bold leading-9">{description}</p>
         </div>
 
         {title === "KONAN" && (
