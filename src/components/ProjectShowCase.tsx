@@ -59,13 +59,13 @@ export default function ProjectShowCase(props: Readonly<Props>) {
 
   return (
     <motion.div
-      className="relative mb-8 flex w-full flex-col"
+      className="relative mb-12 flex w-full flex-col md:mb-28"
       ref={containerRef}
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 50 }}
       viewport={{
         once: true,
-        margin: `0px 0px ${title === "KONAN" ? "-20px" : "-170px"} 0px`,
+        margin: `0px 0px ${title === "KONAN" ? "-100px" : "-200px"} 0px`,
       }}
       transition={{ bounce: 0.4, type: "spring", duration: 1.5 }}
     >
@@ -108,7 +108,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
                 <Link href={link} target="_blank">
                   <Image
                     src={imageUrl}
-                    width={1000}
+                    width={1500}
                     height={800}
                     quality={100}
                     placeholder="blur"
@@ -122,13 +122,23 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           ))}
         </Swiper>
       </div>
-      <div className="mt-6">
-        <div className="relative mb-6 mt-6 rounded-lg  bg-gradient-to-r  from-blue-500 to-blue-600 p-6 text-lg font-bold text-white shadow-md md:text-xl">
+      <div>
+        <div className="relative mb-6 mt-6 rounded-lg  bg-gradient-to-r  from-blue-500 to-blue-600 p-6 text-lg font-semibold text-white md:text-xl">
           <div className="absolute inset-1 rounded-lg bg-gradient-to-r  from-blue-500 to-blue-600 opacity-60 blur-xl"></div>
-          <p className="relative z-10 text-lg">Stack: {stack.join(", ")}</p>
-          <hr className="my-4 border-spacing-2 border-2 border-dashed border-pink-100 dark:border-slate-900" />
-          <p className="relative z-10 text-lg">Date: {date}</p>
-          <hr className="my-4 border-spacing-2 border-2 border-dashed border-pink-100 dark:border-slate-900" />
+          <p className="relative z-10 text-xl font-thin md:text-2xl">
+            Stack:{" "}
+            <span className="text-lg text-gray-200 md:text-xl">
+              {stack.join(", ")}
+            </span>
+          </p>
+          <hr className="border-1 my-4 border-spacing-2 border-dotted border-inherit" />
+
+          <p className="relative z-10 text-xl font-thin md:text-2xl">
+            Date:{" "}
+            <span className="text-lg text-gray-200 md:text-xl">{date}</span>
+          </p>
+
+          <hr className="border-1 my-4 border-spacing-2 border-dotted border-inherit" />
           <p className="relative z-10">{description}</p>
         </div>
 

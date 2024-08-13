@@ -26,7 +26,10 @@ export default function AboutMe() {
   const updatedTextClassNames = useCallback((text: string) => {
     const words = text.split(" ");
     return words.map((word, index) => (
-      <span key={index} className={`${getRandomClassName()} leading-9`}>
+      <span
+        key={index}
+        className={`${getRandomClassName()} leading-9 md:leading-10`}
+      >
         {word}{" "}
       </span>
     ));

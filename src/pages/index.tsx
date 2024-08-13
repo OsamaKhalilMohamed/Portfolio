@@ -3,14 +3,38 @@ import Link from "next/link";
 import osama2 from "../../public/osama2.jpeg";
 import Image from "next/image";
 import Projects from "~/components/Projects";
-import aime from "../../public/aime.png";
-import { useRef } from "react";
-import { renderTextWithRandomClasses } from "~/utils/helpers";
+import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import ExternalIcon from "~/components/ExternalIcon";
 import AboutMe from "~/components/AboutMe";
 
 export default function Home(): React.ReactElement {
   const homeRef = useRef(null);
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -93,7 +117,15 @@ export default function Home(): React.ReactElement {
         </div>
 
         {/* Projects section */}
-        <div
+        <motion.div
+          ref={containerRef}
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 50 }}
+          viewport={{
+            once: true,
+            margin: `0px 0px  -200px 0px`,
+          }}
+          transition={{ bounce: 0.4, type: "spring", duration: 1.5 }}
           id="projects"
           className="mx-auto mt-8 flex w-5/6 max-w-[1000px] flex-col pb-4 text-neutral-950 dark:text-yellow-50 md:mt-16 md:justify-start"
         >
@@ -102,14 +134,14 @@ export default function Home(): React.ReactElement {
             Projects.
           </h1>
           <Projects />
-        </div>
+        </motion.div>
 
         <hr className="w-full border border-pink-100 dark:border-slate-900" />
 
         {/* About me section*/}
         <div
           id="about"
-          className="mt-8 flex w-5/6  max-w-[1000px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
+          className="mb-12 mt-8 flex w-5/6 max-w-[1000px] flex-col  text-neutral-950 dark:text-yellow-50 md:justify-start"
         >
           <AboutMe />
           <div className="my-2 mb-4 flex w-full flex-col justify-start gap-2 md:flex-row md:justify-center">
