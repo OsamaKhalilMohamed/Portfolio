@@ -112,7 +112,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
                     height={800}
                     quality={100}
                     placeholder="blur"
-                    className="cursor-pointer rounded-md"
+                    className="cursor-pointer rounded-xl"
                     priority
                     alt={title}
                   />
@@ -123,9 +123,9 @@ export default function ProjectShowCase(props: Readonly<Props>) {
         </Swiper>
       </div>
       <div>
-        <div className="relative mb-6 mt-6 rounded-lg  bg-gradient-to-r  from-blue-500 to-blue-600 p-6 text-lg font-semibold text-white md:text-xl">
-          <div className="absolute inset-1 rounded-lg bg-gradient-to-r  from-blue-500 to-blue-600 opacity-60 blur-xl"></div>
-          <p className="relative z-10 text-xl font-light md:text-2xl">
+        <div className="relative mb-6 mt-6 rounded-xl  bg-gradient-to-r  from-blue-500 to-blue-600 p-6 text-lg font-semibold text-white md:text-xl">
+          <div className="absolute inset-1 rounded-xl bg-gradient-to-r  from-blue-500 to-blue-600 opacity-60 blur-xl"></div>
+          <p className="relative z-10 text-xl md:text-2xl">
             Stack:{" "}
             <span className="text-lg font-thin text-gray-200 md:text-xl">
               {stack.join(", ")}
@@ -133,7 +133,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
           <hr className="border-1 my-4 border-spacing-2 border-dotted border-inherit" />
 
-          <p className="relative z-10 text-xl font-light md:text-2xl">
+          <p className="relative z-10 text-xl md:text-2xl">
             Date:{" "}
             <span className="text-lg font-thin text-gray-200 md:text-xl">
               {date}
