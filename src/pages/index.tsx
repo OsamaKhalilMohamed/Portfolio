@@ -152,7 +152,7 @@ export default function Home(): React.ReactElement {
               width="800"
               height="510"
               placeholder="blur"
-              className="w-full rounded-lg  md:w-3/6"
+              className="w-full rounded-3xl  md:w-3/6"
               quality={100}
               priority={true}
             />
