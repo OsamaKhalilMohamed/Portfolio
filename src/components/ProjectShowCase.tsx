@@ -125,7 +125,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
       <div>
         <div className="relative mb-6 mt-6 rounded-3xl  bg-[#F7F8F9] p-6 text-xl font-semibold text-black md:text-xl">
           <div className="absolute inset-1 rounded-3xl bg-[#F7F8F9] opacity-60 blur-xl"></div>
-          <p className="relative z-10 text-xl md:text-3xl   ">
+          <p className="relative z-10 text-xl md:text-2xl  md:font-extrabold ">
             Stack:{" "}
             <span className="text-lg text-gray-500 dark:text-gray-500 md:text-xl">
               {stack.join(", ")}
@@ -133,7 +133,7 @@ export default function ProjectShowCase(props: Readonly<Props>) {
           </p>
           <hr className="border-1 my-4 border-spacing-2 border-dotted border-inherit" />
 
-          <p className="relative z-10 text-xl md:text-3xl   ">
+          <p className="relative z-10 text-xl md:text-2xl  md:font-extrabold  ">
             Date:{" "}
             <span className="text-lg text-gray-500 dark:text-gray-500 md:text-xl">
               {date}
