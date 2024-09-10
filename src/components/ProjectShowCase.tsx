@@ -112,7 +112,9 @@ export default function ProjectShowCase(props: Readonly<Props>) {
                     height={800}
                     quality={100}
                     placeholder="blur"
-                    className="cursor-pointer rounded-3xl"
+                    className={`cursor-pointer rounded-${
+                      title === "KONAN" ? "lg" : "3xl"
+                    }`}
                     priority
                     alt={title}
                   />
@@ -123,25 +125,27 @@ export default function ProjectShowCase(props: Readonly<Props>) {
         </Swiper>
       </div>
       <div>
-        <div className="relative mb-6 mt-6 rounded-3xl  bg-[#F7F8F9] p-6 text-xl font-semibold text-black md:text-xl">
+        <div className="relative mb-6 mt-6  rounded-3xl bg-[#F7F8F9] p-6 text-xl font-semibold text-black dark:bg-[#172436] md:text-xl">
           <div className=" rounded-3xl bg-[#F7F8F9] opacity-60 blur-xl"></div>
-          <p className="relative z-10 text-xl md:text-2xl  md:font-extrabold ">
+          <p className="relative z-10 text-xl dark:text-white  md:text-2xl md:font-extrabold ">
             Stack:{" "}
             <span className="text-lg text-gray-500 dark:text-gray-500 md:text-xl">
               {stack.join(", ")}
             </span>
           </p>
-          <hr className="border-1 my-4 border-spacing-2 border-dotted border-gray-300 border-inherit" />
+          <hr className="border-1 my-4 border-spacing-2 border-dotted border-gray-300 border-inherit dark:border-gray-700" />
 
-          <p className="relative z-10 text-xl md:text-2xl  md:font-extrabold  ">
+          <p className="relative z-10 text-xl dark:text-white  md:text-2xl md:font-extrabold  ">
             Date:{" "}
             <span className="text-lg text-gray-500 dark:text-gray-500 md:text-xl">
               {date}
             </span>
           </p>
 
-          <hr className="border-1 my-4 border-spacing-2 border-dotted border-gray-300 border-inherit" />
-          <p className="relative z-10 font-bold leading-9">{description}</p>
+          <hr className="border-1 my-4 border-spacing-2 border-dotted border-gray-300 border-inherit dark:border-gray-700" />
+          <p className="relative z-10 font-bold leading-9 dark:text-gray-300">
+            {description}
+          </p>
         </div>
 
         {title === "KONAN" && (
