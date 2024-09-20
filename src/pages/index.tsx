@@ -55,6 +55,8 @@ export default function Home(): React.ReactElement {
         />
         <meta property="og:url" content="https://www.osamakhalil.me/" />
         <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="541859888331124" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
