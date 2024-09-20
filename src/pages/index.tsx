@@ -49,7 +49,10 @@ export default function Home(): React.ReactElement {
           property="og:description"
           content="Passionate software developer"
         />
-        <meta property="og:image" content={"/osama2.jpeg"} />
+        <meta
+          property="og:image"
+          content="https://www.osamakhalil.me/osama2.jpeg"
+        />
         <meta property="og:url" content="https://www.osamakhalil.me/" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
