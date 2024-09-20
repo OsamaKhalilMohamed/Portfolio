@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import osama2 from "../../public/osama2.jpeg";
+import osama2 from "../../public/osama2.jpg";
 import Image from "next/image";
 import Projects from "~/components/Projects";
 import { useEffect, useRef } from "react";
@@ -51,7 +51,7 @@ export default function Home(): React.ReactElement {
         />
         <meta
           property="og:image"
-          content="https://www.osamakhalil.me/osama2.jpeg"
+          content="https://www.osamakhalil.me/osama2.jpg"
         />
         <meta property="og:url" content="https://www.osamakhalil.me/" />
         <meta property="og:type" content="website" />
