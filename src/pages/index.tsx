@@ -39,11 +39,19 @@ export default function Home(): React.ReactElement {
   return (
     <>
       <Head>
-        <title>Osama Khalil</title>
+        <title>Osama Khalil - Software engineer</title>
         <meta
           name="description"
           content="Osama Khalil - Software engineer - Home"
         />
+        <meta property="og:title" content="Osama Khalil" />
+        <meta
+          property="og:description"
+          content="Passionate software developer"
+        />
+        <meta property="og:image" content={"../../public/osama2.jpeg"} />
+        <meta property="og:url" content="https://www.osamakhalil.me/" />
+        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
