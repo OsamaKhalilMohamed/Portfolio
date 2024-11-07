@@ -4,8 +4,6 @@ import { Inter, Aref_Ruqaa } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Footer from "~/components/Footer";
 import Navbar from "~/components/Navbar";
-import LoadingState from "~/components/LoadingState";
-import { useEffect, useState } from "react";
 
 import "tailwindcss/tailwind.css";
 
@@ -26,12 +24,12 @@ const arefRuqaa = Aref_Ruqaa({
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
-      <main className={`${inter.className} ${arefRuqaa.className}`}>
-        <>
-          <Navbar />
+      <main className={arefRuqaa.className}>
+        <Navbar />
+        <div className={inter.className}>
           <Component {...pageProps} />
-          <Footer />
-        </>
+        </div>
+        <Footer />
       </main>
     </ThemeProvider>
   );

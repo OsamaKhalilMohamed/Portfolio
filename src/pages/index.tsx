@@ -35,7 +35,12 @@ export default function Home(): React.ReactElement {
 
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
         <div className="mt-8 flex w-5/6 max-w-[800px] font-inter md:mt-14">
-          <h3 className="font-inter">Hi, I'm Osama Khalil</h3>
+          <div className="flex flex-col">
+            <h3 className="text-lg font-extrabold md:text-xl">
+              Hi, I'm Osama Khalil
+            </h3>
+            <p className="text-[#7A7B77]">Software engineer</p>
+          </div>
         </div>
       </main>
     </>
