@@ -33,7 +33,11 @@ export default function Home(): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]"></main>
+      <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
+        <div className="mt-8 flex w-5/6 max-w-[800px] font-inter md:mt-14">
+          <h3 className="font-inter">Hi, I'm Osama Khalil</h3>
+        </div>
+      </main>
     </>
   );
 }
