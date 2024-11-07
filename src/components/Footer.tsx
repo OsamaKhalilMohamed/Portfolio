@@ -26,7 +26,13 @@ export default function Footer() {
 
   return (
     <div className="flex w-full justify-center pb-2 pt-2 text-sm dark:bg-[#111110]">
-      <span>Osama Khalil - © {currentYear} - All rights reserved.</span>
+      <span className="pb-2 font-arefRuqaa text-lg font-extrabold">
+        أسامة خليل{" "}
+      </span>{" "}
+      <span className="mt-1 pl-1 font-mono">
+        {" "}
+        - {currentYear} - All rights reserved.
+      </span>
       <span className="pl-1">{hobbies[currentIndex]?.logo}</span>
     </div>
   );
