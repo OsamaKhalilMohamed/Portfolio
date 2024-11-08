@@ -86,7 +86,7 @@ const ImageWithAmbientBackground = (props: SwiperProps) => {
       <div
         className={`w-full rounded-lg bg-gradient-to-b from-[rgb(248,248,248)] to-[rgb(248,248,248)] p-4 dark:bg-gradient-to-b ${
           number === 1 ? "dark:from-white/20" : "dark:bg-gray-50"
-        }  dark:to-[#535350]`}
+        } ${number === 1 ? "dark:to-[#1C1C1A]" : "dark:to-[#535350]"} `}
       >
         <Swiper
           ref={swiperRef}
