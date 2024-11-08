@@ -63,7 +63,7 @@ export default function Home(): React.ReactElement {
                 <MiniCard
                   src={sami}
                   description="sami"
-                  title="Senior SWE"
+                  title="Sr. Software engineer"
                   subTitle="Defense technology"
                   size={70}
                 />{" "}
