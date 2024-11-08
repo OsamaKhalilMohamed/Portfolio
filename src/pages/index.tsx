@@ -1,12 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
-import osama2 from "../../public/osama2.jpg";
+import memoji from "../../public/memoji.png";
 import Image from "next/image";
-import Projects from "~/components/Projects";
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import ExternalIcon from "~/components/ExternalIcon";
-import AboutMe from "~/components/AboutMe";
 
 export default function Home(): React.ReactElement {
   return (
@@ -36,10 +30,19 @@ export default function Home(): React.ReactElement {
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
         <div className="mt-8 flex w-5/6 max-w-[800px] font-inter md:mt-14">
           <div className="flex flex-col">
-            <h3 className="text-lg font-extrabold md:text-xl">
-              Hi, I'm Osama Khalil
-            </h3>
-            <p className="text-[#7A7B77]">Software engineer</p>
+            <div className="inline-flex">
+              <h3 className="mr-1 text-lg font-extrabold md:text-xl">
+                Hi, I'm Osama Khalil
+              </h3>{" "}
+              <Image
+                src={memoji}
+                alt="memoji"
+                width={30}
+                height={30}
+                className="rounded-full object-cover"
+              />
+            </div>
+            <p className="-mt-1 text-[#7A7B77]">Software engineer</p>{" "}
           </div>
         </div>
       </main>
