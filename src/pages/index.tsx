@@ -5,10 +5,35 @@ import digitopia from "../../public/digitopia.jpeg";
 import sami from "../../public/sami.jpg";
 import memoji from "../../public/memoji.png";
 import Konan from "../../public/konanhero3.png";
-
 import MiniCard from "~/components/MiniCard";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+
+const ImageWithAmbientBackground = () => {
+  const { theme } = useTheme();
+
+  // Define the ambient gradient with the provided dominant color for dark mode.
+  const ambientBgGradient =
+    "linear-gradient(180deg, rgba(248, 250, 251, 0.2), #1C1C1A)";
+
+  return (
+    <div className="mt-8 md:mt-12">
+      <h2 className="mb-2 text-lg font-extrabold md:text-xl">Selected Work.</h2>
+      <div
+        className="flex w-full flex-col gap-y-1 rounded-lg p-4 shadow-sm"
+        style={{
+          background: theme !== "light" ? ambientBgGradient : "#F8F8F8",
+        }}
+      >
+        <Image
+          src={Konan}
+          alt="konan"
+          className="transition-transform duration-500 hover:-rotate-1 hover:scale-105"
+        />
+      </div>
+    </div>
+  );
+};
 
 export default function Home(): React.ReactElement {
   const { theme } = useTheme();
@@ -120,16 +145,7 @@ export default function Home(): React.ReactElement {
             </div>
             {/** Selected work */}
             <div className="mt-8 md:mt-12">
-              <h2 className="mb-2 text-lg font-extrabold md:text-xl">
-                Selected Work.
-              </h2>
-              <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                <Image
-                  src={Konan}
-                  alt="konan"
-                  className="transition-transform duration-500 hover:-rotate-1 hover:scale-105"
-                />
-              </div>
+              <ImageWithAmbientBackground />
 
               <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
                 <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
