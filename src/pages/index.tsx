@@ -29,6 +29,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 type SwiperProps = {
   archives: Array<StaticImageData>;
@@ -54,24 +55,27 @@ type SwiperProps = {
 `}</style>;
 
 const ImageWithAmbientBackground = (props: SwiperProps) => {
-  const { theme } = useTheme();
   const { archives, link, title, imgClassName } = props;
+  const swiperRef = useRef(null);
+  const [ready, setReady] = useState(false);
 
-  const ambientBgGradient =
-    "linear-gradient(180deg, rgba(255, 255, 255, 0.2), #1C1C1A)";
+  useEffect(() => {
+    // Ensure that Swiper reinitializes properly on first load
+    setTimeout(() => {
+      if (swiperRef.current) {
+        setReady(true);
+      }
+    }, 10);
+  }, []);
 
   return (
     <div className="relative mt-8 max-w-[100%] overflow-visible md:mt-12 md:w-full">
       <h2 className="mb-2 text-lg font-extrabold md:text-xl">Selected Work.</h2>
-      <div
-        className="w-full rounded-lg p-4"
-        style={{
-          background: theme !== "light" ? ambientBgGradient : "#F8F8F8",
-        }}
-      >
+      <div className="w-full rounded-lg bg-gradient-to-b from-[rgb(248,248,248)] to-[rgb(248,248,248)] p-4 dark:bg-gradient-to-b dark:from-white/20 dark:to-[#1C1C1A]">
         <Swiper
-          // Optional configurations
+          ref={swiperRef}
           pagination={{ clickable: true }}
+          slidesPerView={1}
           modules={[EffectFade, Navigation, A11y, Autoplay, FreeMode]}
           effect="fade"
           autoplay={{
@@ -80,29 +84,25 @@ const ImageWithAmbientBackground = (props: SwiperProps) => {
             pauseOnMouseEnter: true,
           }}
           grabCursor
-          className="w-full" // Ensure the Swiper is responsive
         >
-          {archives.map((image, index) => (
-            <SwiperSlide
-              key={index}
-              className="flex w-full justify-center" // Ensure each slide takes the full width of the parent
-              style={{ maxWidth: "100%" }} // Optionally override the default inline style
-            >
-              <Link href={link} target="_blank">
-                <Image
-                  src={image.src}
-                  width={image.width}
-                  height={image.height}
-                  className={`h-auto w-full ${imgClassName}`} // Make the image responsive
-                  quality={100}
-                  placeholder="blur"
-                  blurDataURL={image.blurDataURL}
-                  priority
-                  alt={title}
-                />
-              </Link>
-            </SwiperSlide>
-          ))}
+          {ready &&
+            archives.map((image, index) => (
+              <SwiperSlide key={index} className="flex w-full justify-center">
+                <Link href={link} target="_blank">
+                  <Image
+                    src={image.src}
+                    width={image.width}
+                    height={image.height}
+                    className={`h-auto w-full ${imgClassName}`}
+                    quality={100}
+                    placeholder="blur"
+                    blurDataURL={image.blurDataURL}
+                    priority
+                    alt={title}
+                  />
+                </Link>
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </div>
@@ -161,7 +161,7 @@ export default function Home(): React.ReactElement {
                   Software engineer
                 </p>{" "}
                 <div className="mb-4 mt-2 flex flex-col justify-end md:hidden md:content-end md:align-bottom">
-                  <button className="h-8 w-32 rounded-full bg-blue-700 px-6 font-bold text-white ">
+                  <button className="h-8 w-32 rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
                     <a
                       className=" font-bold text-white "
                       href="mailto:osadx35@gmail.com"
@@ -173,7 +173,7 @@ export default function Home(): React.ReactElement {
               </div>
 
               <div className="mb-4 hidden flex-col justify-end md:flex md:content-end md:align-bottom">
-                <button className="h-8 w-full rounded-full bg-blue-700 px-6 font-bold text-white shadow-lg ">
+                <button className="h-8 w-full rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
                   <a
                     className=" font-bold text-white "
                     href="mailto:osadx35@gmail.com"
