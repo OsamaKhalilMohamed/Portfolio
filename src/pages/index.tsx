@@ -145,7 +145,7 @@ export default function Home(): React.ReactElement {
               </h2>
               <p className="-mt-1 font-inter text-base text-[#7A7B77]">
                 If you have anything to tell me, whether it's a Question, Job
-                offer or just wanna get in touch. you can hit my email {"->"}{" "}
+                offer or just wanna get in touch. you can hit my {"->"}{" "}
                 <a
                   className="border-b border-dotted font-extrabold text-[#7A7B77] "
                   href="mailto:osadx35@gmail.com"
