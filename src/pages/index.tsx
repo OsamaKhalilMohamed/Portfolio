@@ -227,7 +227,7 @@ export default function Home(): React.ReactElement {
               <ImageWithAmbientBackground
                 title="KONAN"
                 link="https://www.synapse-analytics.io/konan"
-                imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-120 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
+                imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
                 archives={[Konan, Konan2, Konan4, Konan5, Konan6]}
               />
 
