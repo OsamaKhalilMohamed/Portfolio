@@ -7,7 +7,7 @@ import memoji from "../../public/memoji.png";
 import Konan from "../../public/konan2.png";
 import Konan2 from "../../public/konan3.png";
 import Konan3 from "../../public/konan4.png";
-import Konan4 from "../../public/konan5.png";
+// import Konan4 from "../../public/konan5.png";
 import Konan5 from "../../public/konan6.png";
 import Konan6 from "../../public/konan7.png";
 
@@ -228,7 +228,7 @@ export default function Home(): React.ReactElement {
                 title="KONAN"
                 link="https://www.synapse-analytics.io/konan"
                 imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-120 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
-                archives={[Konan, Konan2, Konan3, Konan4, Konan5, Konan6]}
+                archives={[Konan, Konan2, Konan3, Konan5, Konan6]}
               />
 
               <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
