@@ -4,32 +4,106 @@ import lightSynapse from "../../public/synapse.jpeg";
 import digitopia from "../../public/digitopia.jpeg";
 import sami from "../../public/sami.jpg";
 import memoji from "../../public/memoji.png";
-import Konan from "../../public/konanhero3.png";
+import Konan from "../../public/konan2.png";
+import Konan2 from "../../public/konan3.png";
+import Konan3 from "../../public/konan4.png";
+import Konan4 from "../../public/konan5.png";
+import Konan5 from "../../public/konan6.png";
+import Konan6 from "../../public/konan7.png";
+
 import MiniCard from "~/components/MiniCard";
 import { useTheme } from "next-themes";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, A11y } from "swiper/modules";
 
-const ImageWithAmbientBackground = () => {
+import { EffectFade } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+import "swiper/css/effect-fade";
+import { FreeMode } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import Link from "next/link";
+
+type SwiperProps = {
+  archives: Array<StaticImageData>;
+  link: string;
+  title: string;
+  imgClassName: string;
+};
+
+// Add a custom CSS file or <style> block
+<style jsx>{`
+  .swiper-container,
+  .swiper-slide,
+  .swiper {
+    overflow: visible !important;
+    width: 100% !important; /* Override any default width */
+    max-width: 100%; /* Ensure the slide does not exceed the parent width */
+  }
+
+  .swiper-slide {
+    width: 100% !important; /* Override any default width */
+    max-width: 100%; /* Ensure the slide does not exceed the parent width */
+  }
+`}</style>;
+
+const ImageWithAmbientBackground = (props: SwiperProps) => {
   const { theme } = useTheme();
+  const { archives, link, title, imgClassName } = props;
 
-  // Define the ambient gradient with the provided dominant color for dark mode.
   const ambientBgGradient =
-    "linear-gradient(180deg, rgba(248, 250, 251, 0.2), #1C1C1A)";
+    "linear-gradient(180deg, rgba(255, 255, 255, 0.2), #1C1C1A)";
 
   return (
-    <div className="mt-8 md:mt-12">
+    <div className="relative mt-8 max-w-[100%] overflow-visible md:mt-12 md:w-full">
       <h2 className="mb-2 text-lg font-extrabold md:text-xl">Selected Work.</h2>
       <div
-        className="flex w-full flex-col gap-y-1 rounded-lg p-4 shadow-sm"
+        className="w-full rounded-lg p-4"
         style={{
           background: theme !== "light" ? ambientBgGradient : "#F8F8F8",
         }}
       >
-        <Image
-          src={Konan}
-          alt="konan"
-          className="transition-transform duration-500 hover:-rotate-1 hover:scale-105"
-        />
+        <Swiper
+          // Optional configurations
+          pagination={{ clickable: true }}
+          modules={[EffectFade, Navigation, A11y, Autoplay, FreeMode]}
+          effect="fade"
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          grabCursor
+          className="w-full" // Ensure the Swiper is responsive
+        >
+          {archives.map((image, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex w-full justify-center" // Ensure each slide takes the full width of the parent
+              style={{ maxWidth: "100%" }} // Optionally override the default inline style
+            >
+              <Link href={link} target="_blank">
+                <Image
+                  src={image.src}
+                  width={image.width}
+                  height={image.height}
+                  className={`h-auto w-full ${imgClassName}`} // Make the image responsive
+                  quality={100}
+                  placeholder="blur"
+                  blurDataURL={image.blurDataURL}
+                  priority
+                  alt={title}
+                />
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
@@ -75,7 +149,10 @@ export default function Home(): React.ReactElement {
                   <Image
                     width={40}
                     height={40}
-                    style={{ objectFit: "contain" }}
+                    style={{
+                      objectFit: "contain",
+                      imageRendering: "crisp-edges",
+                    }}
                     src={memoji}
                     alt="memoji"
                   />
@@ -143,9 +220,16 @@ export default function Home(): React.ReactElement {
                 development.
               </p>{" "}
             </div>
+
             {/** Selected work */}
             <div className="mt-8 md:mt-12">
-              <ImageWithAmbientBackground />
+              {/**KONAN */}
+              <ImageWithAmbientBackground
+                title="KONAN"
+                link="https://www.synapse-analytics.io/konan"
+                imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-120 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
+                archives={[Konan, Konan2, Konan3, Konan4, Konan5, Konan6]}
+              />
 
               <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
                 <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">

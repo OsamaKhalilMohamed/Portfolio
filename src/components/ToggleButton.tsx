@@ -23,7 +23,7 @@ export default function ToggleButton(): React.ReactElement {
 
   return (
     <>
-      {imageSrc && (
+      {imageSrc ? (
         <Image
           src={imageSrc}
           height={22}
@@ -34,6 +34,8 @@ export default function ToggleButton(): React.ReactElement {
           }
           alt="theme switch icon"
         />
+      ) : (
+        <div></div>
       )}
     </>
   );

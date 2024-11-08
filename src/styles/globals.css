@@ -26,4 +26,17 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .swiper-container,
+  .swiper-slide,
+  .swiper {
+    overflow: visible !important;
+    width: 100% !important; /* Override any default width */
+    max-width: 100%; /* Ensure the slide does not exceed the parent width */
+  }
+
+  .swiper-slide {
+    width: 100% !important; /* Override any default width */
+    max-width: 100%; /* Ensure the slide does not exceed the parent width */
+  }
+
 }
