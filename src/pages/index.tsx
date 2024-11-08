@@ -1,8 +1,15 @@
 import Head from "next/head";
-import memoji from "../../public/memoji.png";
-import Image from "next/image";
+import synapse from "../../public/synapse.png";
+import lightSynapse from "../../public/synapse.jpeg";
+import digitopia from "../../public/digitopia.jpeg";
+import sami from "../../public/sami.jpg";
+
+import MiniCard from "~/components/MiniCard";
+import { useTheme } from "next-themes";
 
 export default function Home(): React.ReactElement {
+  const { theme } = useTheme();
+
   return (
     <>
       <Head>
@@ -30,19 +37,44 @@ export default function Home(): React.ReactElement {
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
         <div className="mt-8 flex w-5/6 max-w-[800px] font-inter md:mt-14">
           <div className="flex flex-col">
-            <div className="inline-flex">
-              <h3 className="mr-1 text-lg font-extrabold md:text-xl">
-                Hi, I'm Osama Khalil
-              </h3>{" "}
-              <Image
-                src={memoji}
-                alt="memoji"
-                width={30}
-                height={30}
-                className="rounded-full object-cover"
-              />
-            </div>
+            <h3 className="mr-1 text-lg font-extrabold md:text-xl">
+              Hi, I'm Osama Khalil
+            </h3>{" "}
             <p className="-mt-1 text-[#7A7B77]">Software engineer</p>{" "}
+            <div className="mt-8 md:mt-12">
+              <h2 className="mb-2 text-xl font-extrabold md:text-2xl">
+                4+ years of experience in Web development
+              </h2>
+              <div className="flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+                <MiniCard
+                  src={sami}
+                  description="sami"
+                  title="Senior SWE"
+                  subTitle="Defense technology"
+                  size={70}
+                />{" "}
+                <MiniCard
+                  src={theme === "dark" ? lightSynapse : synapse}
+                  description="synapse"
+                  title="Frontend engineer ||"
+                  subTitle="SME & Consumer Lending"
+                  size={theme === "dark" ? 40 : 100}
+                />{" "}
+                <MiniCard
+                  src={digitopia}
+                  description="digitopia"
+                  title="Jr. Frontend engineer"
+                  subTitle="Services discovery & Sharing"
+                  size={40}
+                />{" "}
+              </div>
+              <p className="-mt-1 text-lg text-[#7A7B77]">
+                I'm passionate about web development, espically the frontend
+                development. I have more than +4 years of experience in this
+                field. I really feel good when i can deliver meaningful,
+                helpeful and pretty UIs
+              </p>{" "}
+            </div>
           </div>
         </div>
       </main>
