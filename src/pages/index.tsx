@@ -228,7 +228,7 @@ export default function Home(): React.ReactElement {
                 title="KONAN"
                 link="https://www.synapse-analytics.io/konan"
                 imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-120 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
-                archives={[Konan, Konan2, Konan3, Konan4, Konan5, Konan6]}
+                archives={[Konan, Konan2, Konan4, Konan5, Konan6]}
               />
 
               <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
