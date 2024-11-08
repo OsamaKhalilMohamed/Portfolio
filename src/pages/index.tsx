@@ -4,6 +4,7 @@ import lightSynapse from "../../public/synapse.jpeg";
 import digitopia from "../../public/digitopia.jpeg";
 import sami from "../../public/sami.jpg";
 import memoji from "../../public/memoji.png";
+import Konan from "../../public/konanhero3.png";
 
 import MiniCard from "~/components/MiniCard";
 import { useTheme } from "next-themes";
@@ -43,7 +44,7 @@ export default function Home(): React.ReactElement {
               <div>
                 <div className="inline-flex">
                   {" "}
-                  <h3 className="mr-1 text-2xl font-extrabold md:text-3xl">
+                  <h3 className="mr-1 text-2xl font-extrabold md:text-4xl">
                     Hello, I'm Osama Khalil
                   </h3>{" "}
                   <Image
@@ -117,6 +118,38 @@ export default function Home(): React.ReactElement {
                 development.
               </p>{" "}
             </div>
+            {/** Selected work */}
+            <div className="mt-8 md:mt-12">
+              <h2 className="mb-2 text-lg font-extrabold md:text-xl">
+                Selected Work.
+              </h2>
+              <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                <Image
+                  src={Konan}
+                  alt="konan"
+                  className="transition-transform duration-500 hover:-rotate-1 hover:scale-105"
+                />
+              </div>
+
+              <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+                <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">Konan AI</h2>
+                  <p className="text-[#7A7B77]">
+                    AI credit decisioning for risk officers
+                  </p>
+                </div>
+
+                <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">
+                    Tech I've used
+                  </h2>
+                  <p className="text-[#7A7B77]">
+                    TS - React + Vite - Zustand + ReduxTK + React-Query -
+                    Storybook - Django
+                  </p>
+                </div>
+              </div>
+            </div>
             {/** more about me */}
             <div className="mt-8 md:mt-12">
               <h2 className="mb-2 text-lg font-extrabold md:text-xl">
@@ -124,17 +157,17 @@ export default function Home(): React.ReactElement {
               </h2>
               <ul className="list-inside rounded-lg bg-[#F8F8F8] p-4 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]">
                 <li className="mb-4">
-                  - I believe that you'll never know your actual capabilities
+                  I believe that you'll never know your actual capabilities
                   until you work with a great team in a great environment.
                 </li>
                 <li className="mb-4">
-                  - My hobbies are: Photography, Watching movies, Watching
+                  My hobbies are: Photography, Watching movies, Watching
                   football and Chill nights with friends.
                 </li>
                 <li>
-                  - I've never seriously learned regex, and it's likely that
-                  i'll never do due to ai, does that make me a lazy developer or
-                  a normal person?
+                  I've never seriously learned regex, and it's likely that i'll
+                  never do due to ai, does that make me a lazy developer or a
+                  normal person?
                 </li>
               </ul>
             </div>
