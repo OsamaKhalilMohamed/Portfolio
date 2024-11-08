@@ -93,7 +93,7 @@ export default function Home(): React.ReactElement {
             </div>
             {/** more about me */}
             <div className="mt-8 md:mt-12">
-              <h2 className="text-md mb-2 font-extrabold md:text-lg">
+              <h2 className="mb-2 text-lg font-extrabold md:text-xl">
                 More About me..
               </h2>
               <ul className="list-inside rounded-lg bg-[#F8F8F8] p-4 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]">
