@@ -10,6 +10,9 @@ import Konan2 from "../../public/konan3.png";
 import Konan4 from "../../public/konan5.png";
 import Konan5 from "../../public/konan6.png";
 import Konan6 from "../../public/konan7.png";
+import aly from "../../public/aly.png";
+
+import aly2 from "../../public/aly2.png";
 
 import MiniCard from "~/components/MiniCard";
 import { useTheme } from "next-themes";
@@ -36,6 +39,7 @@ type SwiperProps = {
   link: string;
   title: string;
   imgClassName: string;
+  number: number;
 };
 
 // Add a custom CSS file or <style> block
@@ -55,7 +59,7 @@ type SwiperProps = {
 `}</style>;
 
 const ImageWithAmbientBackground = (props: SwiperProps) => {
-  const { archives, link, title, imgClassName } = props;
+  const { archives, link, title, imgClassName, number } = props;
   const swiperRef = useRef(null);
   const [ready, setReady] = useState(false);
 
@@ -70,8 +74,20 @@ const ImageWithAmbientBackground = (props: SwiperProps) => {
 
   return (
     <div className="relative mt-8 max-w-[100%] overflow-visible md:mt-12 md:w-full">
-      <h2 className="mb-2 text-lg font-extrabold md:text-xl">Selected Work.</h2>
-      <div className="w-full rounded-lg bg-gradient-to-b from-[rgb(248,248,248)] to-[rgb(248,248,248)] p-4 dark:bg-gradient-to-b dark:from-white/20 dark:to-[#1C1C1A]">
+      {number === 1 && (
+        <h2 className="mb-2 text-lg font-extrabold md:text-xl">
+          Selected Work.
+        </h2>
+      )}
+      <h2 className="mb-2 text-lg font-extrabold text-[#7A7B77] md:text-xl">
+        {number}.
+      </h2>
+
+      <div
+        className={`w-full rounded-lg bg-gradient-to-b from-[rgb(248,248,248)] to-[rgb(248,248,248)] p-4 dark:bg-gradient-to-b ${
+          number === 1 ? "dark:from-white/20" : "dark:bg-gray-50"
+        }  dark:to-[#535350]`}
+      >
         <Swiper
           ref={swiperRef}
           pagination={{ clickable: true }}
@@ -229,9 +245,10 @@ export default function Home(): React.ReactElement {
                 link="https://www.synapse-analytics.io/konan"
                 imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
                 archives={[Konan, Konan2, Konan4, Konan5, Konan6]}
+                number={1}
               />
 
-              <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+              <div className="mb-2 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
                 <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
                   <h2 className="text-lg font-bold md:text-xl">Konan AI</h2>
                   <p className="text-[#7A7B77]">
@@ -250,8 +267,66 @@ export default function Home(): React.ReactElement {
                 </div>
               </div>
             </div>
+
+            {/* <div className="mt-8 md:mt-12">
+              <ImageWithAmbientBackground
+                title="KONAN"
+                link="https://www.synapse-analytics.io/konan"
+                imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
+                archives={[Konan, Konan2, Konan4, Konan5, Konan6]}
+              />
+
+              <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+                <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">Konan AI</h2>
+                  <p className="text-[#7A7B77]">
+                    AI credit decisioning for risk officers
+                  </p>
+                </div>
+
+                <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">
+                    Tech I've used
+                  </h2>
+                  <p className="text-[#7A7B77]">
+                    TS - React + Vite - Zustand + ReduxTK + React-Query -
+                    Storybook - Django - SCSS
+                  </p>
+                </div>
+              </div>
+            </div> */}
+
+            <div className="mb-12 mt-8 md:mt-12 ">
+              {/**ALY */}
+              <ImageWithAmbientBackground
+                title="ALY"
+                link="https://www.aly.ma/"
+                imgClassName="transition-transform overflow-visible duration-500 hover:rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
+                archives={[aly]}
+                number={2}
+              />
+
+              <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+                <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">ALY</h2>
+                  <p className="text-[#7A7B77]">
+                    Platform for discovering, sharing and rating various
+                    services in morroco
+                  </p>
+                </div>
+
+                <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">
+                    Tech I've used
+                  </h2>
+                  <p className="text-[#7A7B77]">
+                    Next.js - Redux - graphQL Apollo client - SCSS
+                  </p>
+                </div>
+              </div>
+            </div>
             {/** more about me */}
-            <div className="mt-8 md:mt-12">
+            <div className="mb-12 mt-8 md:mt-12">
               <h2 className="mb-2 text-lg font-extrabold md:text-xl">
                 More About me..
               </h2>
