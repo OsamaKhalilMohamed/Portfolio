@@ -161,7 +161,7 @@ export default function Home(): React.ReactElement {
                   Software engineer
                 </p>{" "}
                 <div className="mb-4 mt-2 flex flex-col justify-end md:hidden md:content-end md:align-bottom">
-                  <button className="h-8 w-32 rounded-full bg-blue-700 px-6 font-bold text-white shadow-lg ">
+                  <button className="h-8 w-32 rounded-full bg-blue-700 px-6 font-bold text-white ">
                     <a
                       className=" font-bold text-white "
                       href="mailto:osadx35@gmail.com"
