@@ -3,9 +3,11 @@ import synapse from "../../public/synapse.png";
 import lightSynapse from "../../public/synapse.jpeg";
 import digitopia from "../../public/digitopia.jpeg";
 import sami from "../../public/sami.jpg";
+import memoji from "../../public/memoji.png";
 
 import MiniCard from "~/components/MiniCard";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export default function Home(): React.ReactElement {
   const { theme } = useTheme();
@@ -37,15 +39,27 @@ export default function Home(): React.ReactElement {
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
         <div className="mt-8 flex w-5/6 max-w-[800px] font-inter md:mt-14">
           <div className="flex flex-col">
-            <h3 className="mr-1 text-lg font-extrabold md:text-xl">
-              Hi, I'm Osama Khalil
-            </h3>{" "}
-            <p className="-mt-1 text-[#7A7B77]">Software engineer</p>{" "}
+            <div className="inline-flex">
+              {" "}
+              <h3 className="mr-1 text-2xl font-extrabold md:text-3xl">
+                Hello, I'm Osama Khalil
+              </h3>{" "}
+              <Image
+                width={40}
+                height={40}
+                style={{ objectFit: "contain" }}
+                src={memoji}
+                alt="memoji"
+              />
+            </div>
+            <p className="-mt-1 text-lg text-[#7A7B77] md:text-xl">
+              Software engineer
+            </p>{" "}
             <div className="mt-8 md:mt-12">
               <h2 className="mb-2 text-xl font-extrabold md:text-2xl">
-                4+ years of experience in Web development
+                4+ years of experience in Web development..
               </h2>
-              <div className="flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+              <div className="mb-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
                 <MiniCard
                   src={sami}
                   description="sami"
@@ -54,11 +68,11 @@ export default function Home(): React.ReactElement {
                   size={70}
                 />{" "}
                 <MiniCard
-                  src={theme === "dark" ? lightSynapse : synapse}
+                  src={theme !== "light" ? lightSynapse : synapse}
                   description="synapse"
                   title="Frontend engineer ||"
                   subTitle="SME & Consumer Lending"
-                  size={theme === "dark" ? 40 : 100}
+                  size={theme !== "light" ? 40 : 100}
                 />{" "}
                 <MiniCard
                   src={digitopia}
