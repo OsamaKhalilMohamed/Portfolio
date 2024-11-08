@@ -57,15 +57,16 @@ export default function Home(): React.ReactElement {
             </p>{" "}
             <div className="mt-8 md:mt-12">
               <h2 className="mb-2 text-xl font-extrabold md:text-2xl">
-                4+ years of experience in Web development..
+                3+ years of experience in Web development.
               </h2>
               <div className="mb-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
                 <MiniCard
                   src={sami}
                   description="sami"
                   title="Sr. Software engineer"
-                  subTitle="Defense technology"
-                  size={70}
+                  subTitle="Government platforms"
+                  size={60}
+                  workYear="2024 - Present"
                 />{" "}
                 <MiniCard
                   src={theme !== "light" ? lightSynapse : synapse}
@@ -73,6 +74,7 @@ export default function Home(): React.ReactElement {
                   title="Frontend engineer ||"
                   subTitle="SME & Consumer Lending"
                   size={theme !== "light" ? 40 : 100}
+                  workYear="2022 - 2024"
                 />{" "}
                 <MiniCard
                   src={digitopia}
@@ -80,14 +82,35 @@ export default function Home(): React.ReactElement {
                   title="Jr. Frontend engineer"
                   subTitle="Services discovery & Sharing"
                   size={40}
+                  workYear="2022"
                 />{" "}
               </div>
-              <p className="-mt-1 text-lg text-[#7A7B77]">
-                I'm passionate about web development, espically the frontend
-                development. I have more than +4 years of experience in this
-                field. I really feel good when i can deliver meaningful,
-                helpeful and pretty UIs
+              <p className="-mt-1 text-base text-[#7A7B77]">
+                These are some of the companies & clients i've worked with. Most
+                of my work up until now is web development, espically frontend
+                development.
               </p>{" "}
+            </div>
+            {/** more about me */}
+            <div className="mt-8 md:mt-12">
+              <h2 className="text-md mb-2 font-extrabold md:text-lg">
+                More About me..
+              </h2>
+              <ul className="list-inside rounded-lg bg-[#F8F8F8] p-4 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]">
+                <li className="mb-4">
+                  - I believe that you'll never know your actual capabilities
+                  until you work with a great team in a great environment.
+                </li>
+                <li className="mb-4">
+                  - My hobbies are: Photography, Watching movies, Watching
+                  football and Chill nights with friends.
+                </li>
+                <li>
+                  - I've never seriously learned regex, and it's likely that
+                  i'll never do due to ai, does that make me a lazy developer or
+                  a normal person?
+                </li>
+              </ul>
             </div>
           </div>
         </div>
