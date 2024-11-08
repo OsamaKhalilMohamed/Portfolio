@@ -39,22 +39,48 @@ export default function Home(): React.ReactElement {
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
         <div className="mt-8 flex w-5/6 max-w-[800px] font-inter md:mt-14">
           <div className="flex flex-col">
-            <div className="inline-flex">
-              {" "}
-              <h3 className="mr-1 text-2xl font-extrabold md:text-3xl">
-                Hello, I'm Osama Khalil
-              </h3>{" "}
-              <Image
-                width={40}
-                height={40}
-                style={{ objectFit: "contain" }}
-                src={memoji}
-                alt="memoji"
-              />
+            <div className="flex justify-between">
+              <div>
+                <div className="inline-flex">
+                  {" "}
+                  <h3 className="mr-1 text-2xl font-extrabold md:text-3xl">
+                    Hello, I'm Osama Khalil
+                  </h3>{" "}
+                  <Image
+                    width={40}
+                    height={40}
+                    style={{ objectFit: "contain" }}
+                    src={memoji}
+                    alt="memoji"
+                  />
+                </div>
+                <p className="-mt-1 text-lg text-[#7A7B77] md:text-xl">
+                  Software engineer
+                </p>{" "}
+                <div className="mb-4 mt-2 flex flex-col justify-end md:hidden md:content-end md:align-bottom">
+                  <button className="h-8 w-32 rounded-full bg-blue-700 px-6 font-bold text-white shadow-lg ">
+                    <a
+                      className=" font-bold text-white "
+                      href="mailto:osadx35@gmail.com"
+                    >
+                      Email
+                    </a>{" "}
+                  </button>
+                </div>
+              </div>
+
+              <div className="mb-4 hidden flex-col justify-end md:flex md:content-end md:align-bottom">
+                <button className="h-8 w-full rounded-full bg-blue-700 px-6 font-bold text-white shadow-lg ">
+                  <a
+                    className=" font-bold text-white "
+                    href="mailto:osadx35@gmail.com"
+                  >
+                    Email
+                  </a>{" "}
+                </button>
+              </div>
             </div>
-            <p className="-mt-1 text-lg text-[#7A7B77] md:text-xl">
-              Software engineer
-            </p>{" "}
+
             <div className="mt-8 md:mt-12">
               <h2 className="mb-2 text-xl font-extrabold md:text-2xl">
                 3+ years of experience in Web development.
@@ -111,6 +137,29 @@ export default function Home(): React.ReactElement {
                   a normal person?
                 </li>
               </ul>
+            </div>
+            {/** Contact */}
+            <div className="mt-8 md:mt-12">
+              <h2 className="mb-2 text-lg font-extrabold md:text-xl">
+                Get in contact!
+              </h2>
+              <p className="-mt-1 font-inter text-base text-[#7A7B77]">
+                If you have anything to tell me, whether it's a Question, Job
+                offer or just wanna get in touch. you can hit my email {"->"}{" "}
+                <a
+                  className="border-b border-dotted font-extrabold text-[#7A7B77] "
+                  href="mailto:osadx35@gmail.com"
+                >
+                  Email
+                </a>{" "}
+                or my{" "}
+                <a
+                  className="border-b border-dotted font-extrabold text-[#7A7B77]"
+                  href="https://www.linkedin.com/in/osama-khalil98"
+                >
+                  Linkedin
+                </a>
+              </p>{" "}
             </div>
           </div>
         </div>
