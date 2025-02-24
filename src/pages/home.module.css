@@ -1,6 +1,6 @@
 .animateCustom {
     animation: reveal auto linear both !important;
-    animation-timeline: view() !important;
+    animation-timeline: view();
     animation-range: entry 15% contain 15% !important;
 }
 

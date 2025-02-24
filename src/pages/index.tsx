@@ -58,8 +58,6 @@ type SwiperProps = {
   }
 `}</style>;
 
-console.log(styles, "ss");
-
 const ImageWithAmbientBackground = (props: SwiperProps) => {
   const { archives, link, title, imgClassName, number } = props;
   const swiperRef = useRef(null);
