@@ -12,6 +12,7 @@
     box-sizing: border-box;
   }
 
+
   /* Dark Mode Gradient */
   .text-gradient-dark {
     background: linear-gradient(to right, #ff7e5f, #feb47b);

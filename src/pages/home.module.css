@@ -1,0 +1,17 @@
+.animateCustom {
+    animation: reveal auto linear both !important;
+    animation-timeline: view() !important;
+    animation-range: entry 15% contain 15% !important;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
