@@ -10,6 +10,7 @@ import Konan2 from "../../public/konan3.png";
 import Konan4 from "../../public/konan5.png";
 import Konan5 from "../../public/konan6.png";
 import Konan6 from "../../public/konan7.png";
+import cailogo from "../../public/cailogo.png";
 import aly from "../../public/aly.png";
 
 import styles from "./home.module.css";
@@ -151,43 +152,30 @@ export default function Home(): React.ReactElement {
       </Head>
 
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
-        <div className="mt-8 flex w-5/6 max-w-[800px] font-inter md:mt-14">
-          <div className="flex flex-col">
-            <div className="flex justify-between">
-              <div>
-                <div className="inline-flex">
-                  {" "}
-                  <h3 className="mr-1 text-2xl font-extrabold md:text-4xl">
-                    Hello, I'm Osama Khalil
-                  </h3>{" "}
-                  <Image
-                    width={40}
-                    height={40}
-                    style={{
-                      objectFit: "contain",
-                      imageRendering: "crisp-edges",
-                    }}
-                    src={memoji}
-                    alt="memoji"
-                  />
-                </div>
-                <p className="-mt-1 text-lg text-[#7A7B77] md:text-xl">
-                  Software engineer
-                </p>{" "}
-                <div className="mb-4 mt-2 flex flex-col justify-end md:hidden md:content-end md:align-bottom">
-                  <button className="h-8 w-32 rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
-                    <a
-                      className=" font-bold text-white "
-                      href="mailto:osadx35@gmail.com"
-                    >
-                      Email
-                    </a>{" "}
-                  </button>
-                </div>
+        <div className="fomt-inter mx-auto flex  w-full flex-col items-center    md:mt-14">
+          <div className="flex w-5/6 max-w-[800px] justify-between ">
+            <div>
+              <div className="inline-flex">
+                {" "}
+                <h3 className="mr-1 text-2xl font-extrabold md:text-4xl">
+                  Hello, I'm Osama Khalil
+                </h3>{" "}
+                <Image
+                  width={40}
+                  height={40}
+                  style={{
+                    objectFit: "contain",
+                    imageRendering: "crisp-edges",
+                  }}
+                  src={memoji}
+                  alt="memoji"
+                />
               </div>
-
-              <div className="mb-4 hidden flex-col justify-end md:flex md:content-end md:align-bottom">
-                <button className="h-8 w-full rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
+              <p className="-mt-1 text-lg text-[#7A7B77] md:text-xl">
+                Software engineer
+              </p>{" "}
+              <div className="mb-4 mt-2 flex flex-col justify-end md:hidden md:content-end md:align-bottom">
+                <button className="h-8 w-32 rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
                   <a
                     className=" font-bold text-white "
                     href="mailto:osadx35@gmail.com"
@@ -198,149 +186,174 @@ export default function Home(): React.ReactElement {
               </div>
             </div>
 
-            <div className="mt-8 md:mt-12">
-              <h2 className="mb-2 text-xl font-extrabold md:text-2xl">
-                3+ years of experience in Web development.
-              </h2>
-              <div className="mb-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
-                <MiniCard
-                  src={sami}
-                  description="sami"
-                  title="Sr. Software engineer"
-                  subTitle="Government platforms"
-                  size={60}
-                  workYear="2024 - Present"
-                />{" "}
-                <MiniCard
-                  src={theme !== "light" ? lightSynapse : synapse}
-                  description="synapse"
-                  title="Frontend engineer ||"
-                  subTitle="SME & Consumer Lending"
-                  size={theme !== "light" ? 40 : 100}
-                  workYear="2022 - 2024"
-                />{" "}
-                <MiniCard
-                  src={digitopia}
-                  description="digitopia"
-                  title="Jr. Frontend engineer"
-                  subTitle="Services discovery & Sharing"
-                  size={40}
-                  workYear="2022"
-                />{" "}
-              </div>
-              <p className="-mt-1 text-base text-[#7A7B77]">
-                These are some of the companies & clients i've worked with. Most
-                of my work up until now is web development, espically frontend
-                development.
-              </p>{" "}
-            </div>
-
-            {/** Selected work */}
-            <div className={`${styles.animateCustom} mt-8 md:mt-12`}>
-              {/**KONAN */}
-              <ImageWithAmbientBackground
-                title="KONAN"
-                link="https://www.synapse-analytics.io/konan"
-                imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
-                archives={[Konan, Konan2, Konan4, Konan5, Konan6]}
-                number={1}
-              />
-
-              <div className="mb-2 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
-                <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                  <h2 className="text-lg font-bold md:text-xl">Konan AI</h2>
-                  <p className="text-[#7A7B77]">
-                    AI credit decisioning for risk officers
-                  </p>
-                </div>
-
-                <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                  <h2 className="text-lg font-bold md:text-xl">
-                    Tech I've used
-                  </h2>
-                  <p className="text-[#7A7B77]">
-                    TS - React + Vite - Zustand + ReduxTK + React-Query -
-                    Storybook - Django
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className={`${styles.animateCustom} mb-12 mt-8 md:mt-12`}>
-              {/**ALY */}
-              <ImageWithAmbientBackground
-                title="ALY"
-                link="https://www.aly.ma/"
-                imgClassName="transition-transform overflow-visible duration-500 hover:rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full max-w-[800px] transform-origin: center center;"
-                archives={[aly]}
-                number={2}
-              />
-
-              <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
-                <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                  <h2 className="text-lg font-bold md:text-xl">ALY</h2>
-                  <p className="text-[#7A7B77]">
-                    Platform for discovering, sharing and rating various
-                    services in morroco
-                  </p>
-                </div>
-
-                <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                  <h2 className="text-lg font-bold md:text-xl">
-                    Tech I've used
-                  </h2>
-                  <p className="text-[#7A7B77]">
-                    Next.js - Redux - graphQL Apollo client - SCSS
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/** more about me */}
-            <div className={`${styles.animateCustom} mb-12 mt-8 md:mt-12`}>
-              <h2 className="mb-2 text-lg font-extrabold md:text-xl">
-                More About me..
-              </h2>
-              <ul className="list-inside rounded-lg bg-[#F8F8F8] p-4 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]">
-                <li className="mb-4">
-                  I believe that you'll never know your actual capabilities
-                  until you work with a great team in a great environment.
-                </li>
-                <li className="mb-4">
-                  Things i like: Photography, Watching movies, Watching football
-                  and Chill nights with friends.
-                </li>
-                <li>
-                  I've never seriously learned regex, and it's likely that i'll
-                  never do due to ai, does that make me a lazy developer or a
-                  normal person?
-                </li>
-              </ul>
-            </div>
-
-            {/** Contact */}
-            <div className="mt-8 md:mt-12">
-              <h2 className="mb-2 text-lg font-extrabold md:text-xl">
-                Get in contact!
-              </h2>
-              <p className="-mt-1 font-inter text-base text-[#7A7B77]">
-                If you have anything to tell me, whether it's a Question, Job
-                offer or just wanna get in touch. you can hit my {"->"}{" "}
+            <div className="mb-4 hidden flex-col justify-end md:flex md:content-end md:align-bottom">
+              <button className="h-8 w-full rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
                 <a
-                  className="border-b border-dotted font-extrabold text-[#7A7B77] "
+                  className=" font-bold text-white "
                   href="mailto:osadx35@gmail.com"
                 >
                   Email
                 </a>{" "}
-                or my{" "}
-                <a
-                  className="border-b border-dotted font-extrabold text-[#7A7B77]"
-                  href="https://www.linkedin.com/in/osama-khalil98"
-                >
-                  Linkedin
-                </a>
-              </p>{" "}
+              </button>
             </div>
+          </div>
+
+          <div className="mt-8 w-5/6  md:mt-12">
+            <h2 className="mb-2 text-xl font-extrabold md:text-2xl">
+              4+ years of experience in Web development.{" "}
+              <span className="text-[#7A7B77]">
+                Data Scientist in the making.
+              </span>
+            </h2>
+            <div className="mb-4 flex w-full  flex-col justify-between gap-3 md:flex-row">
+              <MiniCard
+                src={digitopia}
+                description="digitopia"
+                title="Jr. Frontend Engineer"
+                subTitle="Services discovery & Sharing"
+                size={60}
+                workYear="2022"
+              />{" "}
+              <MiniCard
+                src={theme !== "light" ? lightSynapse : synapse}
+                description="synapse"
+                title="Frontend Engineer ||"
+                subTitle="SME & Consumer Lending"
+                size={theme !== "light" ? 60 : 130}
+                workYear="2022 - 2024"
+              />{" "}
+              <MiniCard
+                src={sami}
+                description="sami"
+                title="Sr. Software Engineer"
+                subTitle="Government platforms"
+                size={80}
+                workYear="2024 - Present"
+              />{" "}
+              <MiniCard
+                src={cailogo}
+                description="digitopia"
+                title="M.Sc. Student @ Cairo University"
+                subTitle="Studying hard.. :)"
+                size={60}
+                workYear="2025 - Present"
+              />{" "}
+            </div>
+            <p className="-mt-1 text-base text-[#7A7B77]">
+              These are some of the companies & clients i've worked with. Most
+              of my work up until now is web development, espically frontend
+              development. Curently pursuing a M.Sc. in Data Science at Cairo
+              University.
+            </p>{" "}
+          </div>
+
+          {/** Selected work */}
+          <div
+            className={`${styles.animateCustom} mt-8 w-5/6 max-w-[800px]  md:mt-12`}
+          >
+            {/**KONAN */}
+            <ImageWithAmbientBackground
+              title="KONAN"
+              link="https://www.synapse-analytics.io/konan"
+              imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full  transform-origin: center center;"
+              archives={[Konan, Konan2, Konan4, Konan5, Konan6]}
+              number={1}
+            />
+
+            <div className="mb-2 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+              <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                <h2 className="text-lg font-bold md:text-xl">Konan AI</h2>
+                <p className="text-[#7A7B77]">
+                  AI credit decisioning for risk officers
+                </p>
+              </div>
+
+              <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                <h2 className="text-lg font-bold md:text-xl">Tech I've used</h2>
+                <p className="text-[#7A7B77]">
+                  TS - React + Vite - Zustand + ReduxTK + React-Query -
+                  Storybook - Django
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
+          >
+            {/**ALY */}
+            <ImageWithAmbientBackground
+              title="ALY"
+              link="https://www.aly.ma/"
+              imgClassName="transition-transform overflow-visible duration-500 hover:rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full  transform-origin: center center;"
+              archives={[aly]}
+              number={2}
+            />
+
+            <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+              <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                <h2 className="text-lg font-bold md:text-xl">ALY</h2>
+                <p className="text-[#7A7B77]">
+                  Platform for discovering, sharing and rating various services
+                  in morroco
+                </p>
+              </div>
+
+              <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                <h2 className="text-lg font-bold md:text-xl">Tech I've used</h2>
+                <p className="text-[#7A7B77]">
+                  Next.js - Redux - graphQL Apollo client - SCSS
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/** more about me */}
+          <div
+            className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
+          >
+            <h2 className="mb-2 text-lg font-extrabold md:text-xl">
+              More About me..
+            </h2>
+            <ul className="list-inside rounded-lg bg-[#F8F8F8] p-4 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]">
+              <li className="mb-4">
+                I believe that you'll never know your actual capabilities until
+                you work with a great team in a great environment.
+              </li>
+              <li className="mb-4">
+                Things i like: Photography, Watching movies, Watching football
+                and Chill nights with friends.
+              </li>
+              <li>
+                I've never seriously learned regex, and it's likely that i'll
+                never do due to ai, does that make me a lazy developer or a
+                normal person?
+              </li>
+            </ul>
+          </div>
+
+          {/** Contact */}
+          <div className="mt-8 w-5/6 max-w-[800px] md:mt-12">
+            <h2 className="mb-2 text-lg font-extrabold md:text-xl">
+              Get in contact!
+            </h2>
+            <p className="-mt-1 font-inter text-base text-[#7A7B77]">
+              If you have anything to tell me, whether it's a Question, Job
+              offer or just wanna get in touch. you can hit my {"->"}{" "}
+              <a
+                className="border-b border-dotted font-extrabold text-[#7A7B77] "
+                href="mailto:osadx35@gmail.com"
+              >
+                Email
+              </a>{" "}
+              or my{" "}
+              <a
+                className="border-b border-dotted font-extrabold text-[#7A7B77]"
+                href="https://www.linkedin.com/in/osama-khalil98"
+              >
+                Linkedin
+              </a>
+            </p>{" "}
           </div>
         </div>
       </main>
