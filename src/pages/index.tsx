@@ -125,7 +125,19 @@ const ImageWithAmbientBackground = (props: SwiperProps) => {
 };
 
 export default function Home(): React.ReactElement {
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    if (!theme) {
+      setTheme("dark");
+    }
+  }, []);
 
   return (
     <>
@@ -153,7 +165,7 @@ export default function Home(): React.ReactElement {
 
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
         <div className="fomt-inter mx-auto flex  w-full flex-col items-center    md:mt-14">
-          <div className="flex w-5/6 max-w-[800px] justify-between ">
+          <div className="mt-10 flex w-5/6 max-w-[800px] justify-between md:mt-0">
             <div>
               <div className="inline-flex">
                 {" "}
@@ -201,8 +213,14 @@ export default function Home(): React.ReactElement {
           <div className="mt-8 w-5/6  md:mt-12">
             <h2 className="mb-2 text-xl font-extrabold md:text-2xl">
               4+ years of experience in Web development.{" "}
-              <span className="text-[#7A7B77]">
-                Data Scientist in the making.
+              <span
+                className={`shine-animation relative inline-block text-[#7A7B77] ${
+                  isMounted && (theme === "light" || theme !== "dark")
+                    ? "light-mode"
+                    : ""
+                }`}
+              >
+                AI Engineer in the making.
               </span>
             </h2>
             <div className="mb-4 flex w-full  flex-col justify-between gap-3 md:flex-row">
@@ -215,11 +233,11 @@ export default function Home(): React.ReactElement {
                 workYear="2022"
               />{" "}
               <MiniCard
-                src={theme !== "light" ? lightSynapse : synapse}
+                src={isMounted && theme !== "light" ? lightSynapse : synapse}
                 description="synapse"
                 title="Frontend Engineer ||"
                 subTitle="SME & Consumer Lending"
-                size={theme !== "light" ? 60 : 130}
+                size={isMounted && theme !== "light" ? 60 : 130}
                 workYear="2022 - 2024"
               />{" "}
               <MiniCard
@@ -234,16 +252,16 @@ export default function Home(): React.ReactElement {
                 src={cailogo}
                 description="digitopia"
                 title="M.Sc. Student @ Cairo University"
-                subTitle="Studying hard.. :)"
-                size={60}
+                subTitle="Future Data/AI Engineer.. :)"
+                size={70}
                 workYear="2025 - Present"
               />{" "}
             </div>
             <p className="-mt-1 text-base text-[#7A7B77]">
               These are some of the companies & clients i've worked with. Most
               of my work up until now is web development, espically frontend
-              development. Curently pursuing a M.Sc. in Data Science at Cairo
-              University.
+              development. Curently pursuing a M.Sc. in Data Science & AI at
+              Cairo University.
             </p>{" "}
           </div>
 
@@ -357,6 +375,48 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
       </main>
+
+      <style jsx>{`
+        @keyframes shine {
+          0% {
+            background-position: 200% 0;
+          }
+          100% {
+            background-position: -200% 0;
+          }
+        }
+
+        .shine-animation {
+          position: relative;
+          display: inline-block;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0.1) 100%
+          );
+          background-size: 200%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: shine 6s linear infinite;
+        }
+
+        /* Ensure visibility in light mode */
+        .shine-animation.light-mode {
+          position: relative;
+          display: inline-block;
+          background: linear-gradient(
+            90deg,
+            rgba(50, 50, 50, 0.1) 0%,
+            rgba(50, 50, 50, 0.4) 50%,
+            rgba(50, 50, 50, 0.1) 100%
+          );
+          background-size: 200%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: shine 6s linear infinite;
+        }
+      `}</style>
     </>
   );
 }
