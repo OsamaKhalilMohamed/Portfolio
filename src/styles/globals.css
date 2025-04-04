@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   html {
     scroll-behavior: smooth !important;
@@ -11,7 +10,6 @@
   * {
     box-sizing: border-box;
   }
-
 
   /* Dark Mode Gradient */
   .text-gradient-dark {
@@ -31,13 +29,16 @@
   .swiper-slide,
   .swiper {
     overflow: visible !important;
-    width: 100% !important; /* Override any default width */
-    max-width: 100%; /* Ensure the slide does not exceed the parent width */
+    width: 100% !important;
+    /* Override any default width */
+    max-width: 100%;
+    /* Ensure the slide does not exceed the parent width */
   }
 
   .swiper-slide {
-    width: 100% !important; /* Override any default width */
-    max-width: 100%; /* Ensure the slide does not exceed the parent width */
+    width: 100% !important;
+    /* Override any default width */
+    max-width: 100%;
+    /* Ensure the slide does not exceed the parent width */
   }
-
 }
