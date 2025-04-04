@@ -210,7 +210,7 @@ export default function Home(): React.ReactElement {
             </div>
           </div>
 
-          <div className="mt-8 w-5/6  md:mt-12">
+          <div className="mt-20  w-5/6 md:mt-12">
             <h2 className="mb-2 text-xl font-extrabold md:text-2xl">
               4+ years of experience in Web development.{" "}
               <span
