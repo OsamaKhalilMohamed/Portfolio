@@ -258,7 +258,7 @@ export default function Home(): React.ReactElement {
               />{" "}
             </div>
             <p className="-mt-1 text-base text-[#7A7B77]">
-              These are some of the companies & clients i've worked with. Most
+              These are some of the companies i've worked with. Most
               of my work up until now is web development, espically frontend
               development. Curently pursuing a M.Sc. in Data Science & AI at
               Cairo University.
