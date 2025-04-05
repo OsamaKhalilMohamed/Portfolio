@@ -251,7 +251,7 @@ export default function Home(): React.ReactElement {
               <MiniCard
                 src={cailogo}
                 description="digitopia"
-                title="M.Sc. Student @ Cairo University"
+                title="M.Sc. Student"
                 subTitle="Future Data/AI Engineer.. :)"
                 size={70}
                 workYear="2025 - Present"
