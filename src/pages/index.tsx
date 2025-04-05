@@ -259,7 +259,7 @@ export default function Home(): React.ReactElement {
             </div>
             <p className="-mt-1 text-base text-[#7A7B77]">
               This is my career timeline. Most of my work up until now is web
-              development, espically frontend development. Curently pursuing a
+              development, espically frontend development. Currently pursuing a
               M.Sc. in Data Science & AI at Cairo University.
             </p>{" "}
           </div>
