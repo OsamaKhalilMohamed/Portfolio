@@ -37,7 +37,7 @@ export default function MiniCard({
 
       <div>
         {" "}
-        <h3 className=" font-inter text-lg font-bold">{title}</h3>
+        <h3 className="mt-2 font-inter text-lg font-bold">{title}</h3>
         <p className="text-sm font-light text-[#7A7B77]">{workYear}</p>
       </div>
 
