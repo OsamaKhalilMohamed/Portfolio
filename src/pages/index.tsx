@@ -229,7 +229,7 @@ export default function Home(): React.ReactElement {
                 description="digitopia"
                 title="Jr. Frontend Engineer"
                 subTitle="Services discovery & Sharing"
-                size={60}
+                size={50}
                 workYear="2022"
               />{" "}
               <MiniCard
@@ -237,7 +237,7 @@ export default function Home(): React.ReactElement {
                 description="synapse"
                 title="Frontend Engineer ||"
                 subTitle="SME & Consumer Lending"
-                size={isMounted && theme !== "light" ? 60 : 130}
+                size={isMounted && theme !== "light" ? 50 : 120}
                 workYear="2022 - 2024"
               />{" "}
               <MiniCard
@@ -245,7 +245,7 @@ export default function Home(): React.ReactElement {
                 description="sami"
                 title="Sr. Software Engineer"
                 subTitle="Government platforms"
-                size={80}
+                size={70}
                 workYear="2024 - Present"
               />{" "}
               <MiniCard
@@ -253,7 +253,7 @@ export default function Home(): React.ReactElement {
                 description="digitopia"
                 title="M.Sc. Student"
                 subTitle="Future Data/AI Engineer.. :)"
-                size={70}
+                size={60}
                 workYear="2025 - Present"
               />{" "}
             </div>
