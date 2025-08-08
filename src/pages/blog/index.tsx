@@ -14,10 +14,10 @@ export default function Blog({ allPostsData }: { allPostsData: any[] }) {
   return (
     <div className="mx-auto flex h-full min-h-screen w-full  max-w-[100%] justify-center py-10 dark:bg-[#111110]">
       <div className="w-5/6 max-w-[800px] ">
-        <h1 className="m-auto mb-6 w-3/4 px-8 text-3xl font-bold lg:w-full">
+        <h1 className="m-auto mb-6  px-8 text-3xl font-bold lg:w-full">
           All Blogs.
         </h1>
-        <ul className="m-auto flex w-3/4 justify-center gap-3 lg:w-full">
+        <ul className="m-auto flex  justify-center gap-3 lg:w-full">
           {allPostsData.map(({ id, date, title, description }) => (
             <li
               key={id}
