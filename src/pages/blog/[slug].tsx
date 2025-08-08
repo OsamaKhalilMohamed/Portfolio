@@ -30,21 +30,23 @@ export default function Post({
   };
 }) {
   return (
-    <div className="mx-auto max-w-3xl py-10">
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <h1 className="mb-2 text-3xl font-bold">{postData.title}</h1>
-      <hr className="mb-1" />
-      <div className="flex justify-between">
-        <p className="text-sm text-gray-500">{postData.date}</p>
-        <p className="text-sm text-gray-500">{postData.duration}</p>
-      </div>
+    <div className="mx-auto flex h-full min-h-screen w-full  max-w-[100%] justify-center py-10 dark:bg-[#111110]">
+      <div className="w-5/6 max-w-[800px] ">
+        <Head>
+          <title>{postData.title}</title>
+        </Head>
+        <h1 className="mb-2 text-3xl font-bold">{postData.title}</h1>
+        <hr className="mb-1" />
+        <div className="flex justify-between">
+          <p className="text-sm text-gray-500">{postData.date}</p>
+          <p className="text-sm text-gray-500">{postData.duration}</p>
+        </div>
 
-      <article
-        className="prose prose-neutral mt-6"
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
+        <article
+          className="mt-6 max-w-none leading-8 text-[#7A7B77]  prose-img:mx-auto prose-img:w-full prose-img:rounded-xl"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
+      </div>
     </div>
   );
 }
