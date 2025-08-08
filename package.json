@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.3.1",
+    "@tailwindcss/typography": "^0.5.16",
     "framer-motion": "^11.2.10",
+    "gray-matter": "^4.0.3",
     "intersection-observer": "^0.12.2",
     "next": "^13.4.2",
     "next-themes": "^0.2.1",
@@ -19,6 +21,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.8.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "sharp": "^0.33.2",
     "swiper": "^11.1.4",
     "zod": "^3.21.4"

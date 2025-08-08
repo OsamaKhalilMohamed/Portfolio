@@ -34,6 +34,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { getSortedPostsData } from "~/lib/posts";
 
 type SwiperProps = {
   archives: Array<StaticImageData>;
@@ -58,6 +59,15 @@ type SwiperProps = {
     max-width: 100%; /* Ensure the slide does not exceed the parent width */
   }
 `}</style>;
+
+export async function getStaticProps() {
+  const firstThreeBlogs = getSortedPostsData()?.slice(0, 3); // Get only the latest 3 posts
+  return {
+    props: {
+      firstThreeBlogs,
+    },
+  };
+}
 
 const ImageWithAmbientBackground = (props: SwiperProps) => {
   const { archives, link, title, imgClassName, number } = props;
@@ -124,7 +134,11 @@ const ImageWithAmbientBackground = (props: SwiperProps) => {
   );
 };
 
-export default function Home(): React.ReactElement {
+export default function Home({
+  firstThreeBlogs,
+}: {
+  firstThreeBlogs: any[];
+}): React.ReactElement {
   const { theme, setTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -324,6 +338,42 @@ export default function Home(): React.ReactElement {
               </div>
             </div>
           </div>
+
+          {/** mini-blog section */}
+          <section
+            className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
+          >
+            <h2 className="mb-2 text-lg font-extrabold md:text-xl">
+              latest blogs.
+            </h2>
+            {firstThreeBlogs?.map(({ id, title, description, date }) => {
+              return (
+                <div
+                  key={id}
+                  className="mb-5 flex w-full flex-col justify-between gap-3 rounded-lg bg-[#F8F8F8] p-4 shadow-sm transition duration-500 hover:scale-105 dark:bg-[#1C1C1A]"
+                >
+                  <Link href={`/blog/${id}`}>
+                    <h3 className="text-xl font-bold text-blue-500">{title}</h3>
+                    <div className="flex justify-between">
+                      <p className="text-md font-light text-[#7A7B77]">
+                        {date}
+                      </p>
+                    </div>
+                    <p className="text-md mt-4 font-light text-[#7A7B77]">
+                      {description}
+                    </p>
+                  </Link>
+                </div>
+              );
+            })}
+
+            <Link
+              href={`/blog/`}
+              className="text-center text-lg font-bold text-gray-500 hover:underline"
+            >
+              Explore All Blogs {"->"}
+            </Link>
+          </section>
 
           {/** more about me */}
           <div
