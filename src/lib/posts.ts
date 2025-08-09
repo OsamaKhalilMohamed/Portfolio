@@ -9,6 +9,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
+import rehypeSlug from "rehype-slug";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -45,7 +46,14 @@ const schema: Parameters<typeof rehypeSanitize>[0] = {
     ...defaultSchema.attributes,
     pre: [...(defaultSchema.attributes?.pre || []), ["className"]],
     code: [...(defaultSchema.attributes?.code || []), ["className"]],
+    a: [...(defaultSchema.attributes?.a || []), ["id", "href", "name"]],
     span: [...(defaultSchema.attributes?.span || []), ["className"]],
+    h1: [...(defaultSchema.attributes?.h1 || []), ["id"]],
+    h2: [...(defaultSchema.attributes?.h2 || []), ["id"]],
+    h3: [...(defaultSchema.attributes?.h3 || []), ["id"]],
+    h4: [...(defaultSchema.attributes?.h4 || []), ["id"]],
+    h5: [...(defaultSchema.attributes?.h5 || []), ["id"]],
+    h6: [...(defaultSchema.attributes?.h6 || []), ["id"]],
   },
 };
 
@@ -61,6 +69,7 @@ export async function getPostData(slug: string) {
     .use(remarkRehype, { allowDangerousHtml: true })
     // process inline raw HTML
     .use(rehypeRaw)
+    .use(rehypeSlug) // also auto-add ids to headings
     .use(rehypeHighlight)
     .use(rehypeSanitize, schema) // keep classes from highlight.js
     .use(rehypeStringify)

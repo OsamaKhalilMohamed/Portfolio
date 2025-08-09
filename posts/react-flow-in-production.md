@@ -17,12 +17,9 @@ In this post, I’ll walk you through exactly how we built it — from the setup
 
 ## Content
 
-1. [React Flow Overview](#react-flow-overview)
-2. [How Data is Dynamically Shared Across Nodes and Edges](#how-data-is-dynamically-shared-across-nodes-and-edges)
-3. [How the Frontend Constructs a Workflow](#how-the-frontend-constructs-a-workflow)
-4. [Persisting and Updating Data in Workflow Blocks](#persisting-and-updating-data-in-workflow-blocks)
-
----
+1. React Flow Overview
+2. How Data is Dynamically Shared Across Nodes and Edges
+3. How the Frontend Constructs a Workflow
 
 ## 1. React Flow Overview (Exploring: nodes, edges, connectivity and layouting)
 
@@ -90,8 +87,7 @@ export default Flow;
 
 
 ### Konan Custom Workflow Setup — Part 1 
-`WorkflowCanvas.tsx`  
-This Component Responsible for rendering the `<ReactFlow>` component.
+rendering the `<ReactFlow>` component.
 
 ```tsx
 /* Reactflow canvas */
@@ -122,8 +118,7 @@ return (
 
 ```
 
-and then this component -> `workflow-fixtures.ts`  
-
+Config for edge styles
 ```tsx
 export const edgeTypes = {
   custom: CustomEdgeLabel,
@@ -160,8 +155,8 @@ Holds:
 - Edge styles  
 
 ### Konan Custom Workflow Setup — Part 2
-`CustomEdgeLabel.tsx`  
-Defines the style for custom labels above edges.
+ 
+Defining the style for custom labels above edges.
 
 ```tsx
 return (
@@ -195,8 +190,8 @@ return (
 
 ```
 
-`Workflows.tsx`  
-Initializes default nodes and edges to kick-start a workflow.
+ 
+Initializing default nodes and edges to kick-start a workflow.
 
 ```tsx
 // default nodes and edges for EVERY workflow
@@ -253,11 +248,25 @@ So basically There are two ways to use React Flow - controlled or uncontrolled. 
 So We went with uncontrolled mode in React Flow.  
 
 ```tsx
-import { ReactFlowProvider } from 'react-flow-renderer';
+// React Flow v11+ (package name: 'reactflow')
 
-<ReactFlowProvider>
-  <WorkflowCanvas />
-</ReactFlowProvider>
+// in order to use uncontrolled flow, 
+// we must wrap the workflow component with <ReactFlowProvider/>
+import { ReactFlowProvider } from "reactflow";
+import { memo } from "react";
+
+const FlowWithProvider = (): React.ReactElement => {
+  return (
+    <div className="zoompanflow">
+      <ReactFlowProvider>
+        <Workflows />
+      </ReactFlowProvider>
+    </div>
+  );
+};
+
+export default memo(FlowWithProvider);
+
 ```
 
 ### React Flow Store
@@ -279,27 +288,23 @@ Basic flow of state updates:
 ### Workflow Data Flow
 
 **Part 1 — Adding Nodes**  
-`AddBlockNode.tsx`  
 When a node is selected:  
 - Pass its data to a helper function.  
 - This function sets up the node and its predefined children.  
 - Return them as an array to merge into the store.
 
 **Part 2 — Defining Routes**  
-`workflowHelpers.ts`  
-Function `preDefinedRoutesForNodes`:  
+We built a Function that:  
 - Builds the data for the selected node.  
 - Adds possible child nodes.
 
 **Part 3 — Updating the Graph**  
-`Workflow.tsx`  
-`updateGraph`:  
+We built a central function that:  
 - Attaches edges for new nodes.  
 - Updates node/edge state.  
 - Triggers layout recalculation.
 
 **Part 4 — Updating Nodes Internally**  
-`CalculatorNode.tsx`  
 We used `useEffect` to watch for changes in input fields and update the node’s state automatically.
 
 ```tsx
@@ -313,8 +318,8 @@ useEffect(() => {
 ## 3. How the Frontend Constructs a Workflow
 
 **Step 1 — Validation**  
-We run `validateWorkflow` before creating a workflow:  
-- Checks if there are incomplete nodes (e.g., `AddBlockNode` type).
+We run a validation function before creating a workflow:  
+- Checks if there are incomplete nodes.
 
 **Step 2 — Parsing for the Backend**  
 We convert the frontend node structure into the backend’s required format:  
@@ -325,23 +330,12 @@ We convert the frontend node structure into the backend’s required format:
 If any node has incomplete or invalid data, we stop and return an error.
 
 **Step 4 — Sending to Backend**  
-We call the `createWorkflow` mutation with the validated data.
+We call a mutation function with the validated data.
 
 **Step 5 — Parsing the Backend Response**  
 When fetching an existing workflow:  
-- Pass nodes and starting node to `convertNodesToFlow`.  
+- Pass nodes and starting node to convert into our react-flow format.  
 - Get an array of nodes/edges ready for React Flow to render.
-
----
-
-## 4. Persisting and Updating Data in Workflow Blocks
-
-Since the original text did not provide specific content for this section, I'll note that this section was referenced in the Table of Contents but requires additional details to complete. Typically, this section would cover:  
-- How workflow data is saved (e.g., to a database via API calls).  
-- How updates to nodes/edges are persisted in real-time or on save.  
-- Any specific backend integration details for storing workflow state.  
-
-If you have additional content for this section, please provide it for a more complete Markdown file.
 
 ---
 
