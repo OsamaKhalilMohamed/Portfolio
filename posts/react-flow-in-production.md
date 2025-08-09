@@ -6,7 +6,7 @@ duration: "8 mins read"
 ---
 
 
-# Building Workflows in Konan AI with React Flow
+## Building Workflows in Konan AI with React Flow
 
 ![Workflow](https://cdn.prod.website-files.com/67ac814b1bd2403fd14444a2/67cd749be725080850561375_HQ-p-2000.png)
 
@@ -17,7 +17,7 @@ In this post, I’ll walk you through exactly how we built it — from the setup
 
 ---
 
-## Table of Contents
+## Contents
 
 1. [React Flow Overview](#react-flow-overview)
 2. [How Data is Dynamically Shared Across Nodes and Edges](#how-data-is-dynamically-shared-across-nodes-and-edges)
@@ -40,15 +40,56 @@ Key features we used:
 ### Example: A Simple Flow
 
 ```tsx
-import ReactFlow from 'react-flow-renderer';
+import React, { useState, useEffect } from 'react';
+import ReactFlow, {
+  useNodesState,
+  useEdgesState,
+  Background,
+  Controls,
+} from 'reactflow';
+import 'reactflow/dist/style.css';
 
-<ReactFlow
-  nodes={nodes}
-  edges={edges}
-  onNodesChange={onNodesChange}
-  onEdgesChange={onEdgesChange}
-/>
+const initialNodes = [
+  {
+    id: '1',
+    position: { x: 0, y: 0 },
+    data: { label: 'Hello' },
+    type: 'input',
+  },
+  {
+    id: '2',
+    position: { x: 100, y: 100 },
+    data: { label: 'World' },
+  },
+];
+
+const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }];
+const defaultViewport = { x: 0, y: 0, zoom: 1.5 };
+
+function Flow() {
+  const [nodes, , onNodesChange] = useNodesState(initialNodes);
+  const [edges, , onEdgesChange] = useEdgesState(initialEdges);
+
+  return (
+    <div style={{ height: '100%' }}>
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        defaultViewport={defaultViewport}
+      >
+        <Background />
+        <Controls />
+      </ReactFlow>
+    </div>
+  );
+}
+
+export default Flow;
 ```
+![simple-workflow-example](/reactflowexample.png)
+
 
 **Konan Custom Workflow Setup — Part 1**  
 `WorkflowCanvas.tsx`  
