@@ -38,7 +38,7 @@ export default function Blog({ allPostsData }: { allPostsData: any[] }) {
           <h1 className="m-auto mb-6  px-8 text-3xl font-bold lg:w-full">
             All Blogs.
           </h1>
-          <ul className="m-auto flex  justify-center gap-3 lg:w-full">
+          <ul className="m-auto flex  flex-col justify-center gap-3 lg:w-full">
             {allPostsData.map(({ id, date, title, description }) => (
               <li
                 key={id}

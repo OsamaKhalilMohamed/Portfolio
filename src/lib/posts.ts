@@ -1,60 +1,79 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import remarkParse from "remark-parse";
-import remarkHtml from "remark-html";
-import remarkGfm from "remark-gfm";
 import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
+import rehypeHighlight from "rehype-highlight";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
+import rehypeStringify from "rehype-stringify";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
-
-  const allPostsData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, "");
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const matterResult = matter(fileContents);
-
-    return {
-      id,
-      ...(matterResult.data as { date: string; title: string }),
-    };
-  });
-
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
-}
-
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => ({
-    params: {
-      slug: fileName.replace(/\.md$/, ""),
-    },
-  }));
+  return fs
+    .readdirSync(postsDirectory)
+    .filter((f) => f.endsWith(".md"))
+    .map((fileName) => ({ params: { slug: fileName.replace(/\.md$/, "") } }));
 }
+
+export function getSortedPostsData() {
+  const list = fs
+    .readdirSync(postsDirectory)
+    .filter((f) => f.endsWith(".md"))
+    .map((fileName) => {
+      const id = fileName.replace(/\.md$/, "");
+      const { data } = matter(
+        fs.readFileSync(path.join(postsDirectory, fileName), "utf8")
+      );
+      return { id, ...(data as { date: string; title: string }) };
+    });
+  return list.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+function cleanMarkdown(md: string) {
+  return md
+    .replace(/^\s*(Copy|Edit)\s*$/gim, "")
+    .replace(/([^\n])\n```/g, "$1\n\n```");
+}
+
+const schema = {
+  ...defaultSchema,
+  attributes: {
+    ...defaultSchema.attributes,
+    pre: [...(defaultSchema.attributes?.pre || []), ["className"]],
+    code: [...(defaultSchema.attributes?.code || []), ["className"]],
+    span: [...(defaultSchema.attributes?.span || []), ["className"]],
+  },
+};
 
 export async function getPostData(slug: string) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
 
-  const matterResult = matter(fileContents);
-  const processedContent = await unified()
+  const file = await unified()
     .use(remarkParse)
     .use(remarkGfm)
-    .use(remarkHtml, { sanitize: false }) // ← THIS ENABLES RAW HTML
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+    // convert mdast -> hast, keep raw HTML as `raw` nodes
+    .use(remarkRehype, { allowDangerousHtml: true })
+    // process inline raw HTML
+    .use(rehypeRaw)
+    .use(rehypeHighlight)
+    .use(rehypeSanitize, schema) // keep classes from highlight.js
+    .use(rehypeStringify)
+    .process(cleanMarkdown(content));
 
   return {
     slug,
-    contentHtml,
-    ...(matterResult.data as {
+    contentHtml: String(file),
+    ...(data as {
       date: string;
       title: string;
-      description: string;
-      duration: string;
+      description?: string;
+      duration?: string;
     }),
   };
 }
