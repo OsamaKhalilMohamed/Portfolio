@@ -39,7 +39,7 @@ function cleanMarkdown(md: string) {
     .replace(/([^\n])\n```/g, "$1\n\n```");
 }
 
-const schema = {
+const schema: Parameters<typeof rehypeSanitize>[0] = {
   ...defaultSchema,
   attributes: {
     ...defaultSchema.attributes,
