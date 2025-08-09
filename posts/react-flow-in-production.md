@@ -1,7 +1,7 @@
 ---
 title: "React Flow In Production"
 date: "2025-03-20"
-description: "A behind-the-scenes look at how we built Konan AI’s workflow editor using React Flow, Dagre.js, and Zustand — from designing intuitive node-based UIs to managing data flow and integrating with the backend."
+description: "A behind-the-scenes look at how we built Konan AI’s workflow editor using React Flow, Dagre.js, and Zustand - from designing intuitive node-based UIs to managing data flow and integrating with the backend."
 duration: "8 mins read"
 ---
 
@@ -9,9 +9,9 @@ duration: "8 mins read"
 ![Workflow](https://cdn.prod.website-files.com/67ac814b1bd2403fd14444a2/67cd749be725080850561375_HQ-p-2000.png)
 
 
-# Couple of years ago, I worked on a core feature for **Konan AI** by Synapse Analytics — a platform designed to help risk officers and financial institutions create and manage workflow policies more easily.  
+# Couple of years ago, I worked on a core feature for **Konan AI** by Synapse Analytics - a platform designed to help risk officers and financial institutions create and manage workflow policies more easily.  
 We called this feature **Workflows**. The idea was to let users design complex risk assessment processes visually, in a way that feels simple and intuitive. For the UI, I relied on [`react-flow`](https://reactflow.dev/), a powerful React package for building node-based editors.  
-In this post, I’ll walk you through exactly how we built it — from the setup, to handling data flow between nodes and edges, and integrating everything with the backend.
+In this post, I’ll walk you through exactly how we built it - from the setup, to handling data flow between nodes and edges, and integrating everything with the backend.
 
 ---
 
@@ -87,7 +87,7 @@ export default Flow;
 
 Since Konan isn't an open source project, so i won't be able to share exact code snippets from but i will try to share other snippets that demonstrates the same concepts i'm tryna explain
 
-### Konan Custom Workflow Setup — Part 1 
+### Konan Custom Workflow Setup - Part 1 
 rendering the `<ReactFlow>` component.
 
 ```tsx
@@ -152,7 +152,7 @@ Holds:
 - Custom labels  
 - Edge styles  
 
-### Konan Custom Workflow Setup — Part 2
+### Konan Custom Workflow Setup - Part 2
  
 Defining the style for custom labels above edges.
 
@@ -225,7 +225,7 @@ const initNodesAndEdges = (): void => {
 
 ```
 
-### Konan Custom Workflow Setup — Part 3 
+### Konan Custom Workflow Setup - Part 3 
 We used Dagre.js for automatic layouting. This keeps the diagram clean without manual adjustment.  
 Directed Acyclic Graph (DAG) ensures:  
 - No loops  
@@ -285,24 +285,24 @@ Basic flow of state updates:
 
 ### Workflow Data Flow
 
-**Part 1 — Adding Nodes**  
+**Part 1 - Adding Nodes**  
 When a node is selected:  
 - Pass its data to a helper function.  
 - This function sets up the node and its predefined children.  
 - Return them as an array to merge into the store.
 
-**Part 2 — Defining Routes**  
+**Part 2 - Defining Routes**  
 We built a Function that:  
 - Builds the data for the selected node.  
 - Adds possible child nodes.
 
-**Part 3 — Updating the Graph**  
+**Part 3 - Updating the Graph**  
 We built a central function that:  
 - Attaches edges for new nodes.  
 - Updates node/edge state.  
 - Triggers layout recalculation.
 
-**Part 4 — Updating Nodes Internally**  
+**Part 4 - Updating Nodes Internally**  
 We used `useEffect` to watch for changes in input fields and update the node’s state automatically.
 
 ```tsx
@@ -315,22 +315,22 @@ useEffect(() => {
 
 ## 3. How the Frontend Constructs a Workflow
 
-**Step 1 — Validation**  
+**Step 1 - Validation**  
 We run a validation function before creating a workflow:  
 - Checks if there are incomplete nodes.
 
-**Step 2 — Parsing for the Backend**  
+**Step 2 - Parsing for the Backend**  
 We convert the frontend node structure into the backend’s required format:  
 - Extract `node.data`  
 - Add indexes for parent-child relationships  
 
-**Step 3 — Handling Invalid Data**  
+**Step 3 - Handling Invalid Data**  
 If any node has incomplete or invalid data, we stop and return an error.
 
-**Step 4 — Sending to Backend**  
+**Step 4 - Sending to Backend**  
 We call a mutation function with the validated data.
 
-**Step 5 — Parsing the Backend Response**  
+**Step 5 - Parsing the Backend Response**  
 When fetching an existing workflow:  
 - Pass nodes and starting node to convert into our react-flow format.  
 - Get an array of nodes/edges ready for React Flow to render.
