@@ -85,6 +85,7 @@ export default Flow;
 ```
 ![simple-workflow-example](/reactflowexample.png)
 
+Since Konan isn't an open source project, so i won't be able to share exact code snippets from but i will try to share other snippets that demonstrates the same concepts i'm tryna explain
 
 ### Konan Custom Workflow Setup — Part 1 
 rendering the `<ReactFlow>` component.
@@ -95,9 +96,8 @@ return (
   <ReactFlow
     edgeTypes={edgeTypes}
     snapToGrid={true}
-    nodes={isWorkflowLoading ? [] : nodes}
+    nodes={nodes}
     nodeTypes={nodeTypes}
-    fitView={isCreateMode}
     nodesDraggable={true}
     onEdgesChange={onEdgesChange}
     className="transition"
@@ -141,11 +141,9 @@ export const edgeStyles = {
 
 // declaring our custom nodes types/styles to react-flow
 export const nodeTypes = {
-  SelectionNode,
-  AddBlockNode,
-  LabeledNode,
-  FilterNode,
-  CalculatorNode,
+  XNode,
+  AddNewNode,
+  YNode,
 }
 ```
 Holds:  
@@ -199,16 +197,16 @@ const initNodesAndEdges = (): void => {
   const initNodes = [
     {
       id: "1",
-      data: { nodeType: "StartNode" },
+      data: { nodeType: "Xnode" },
       position: { x: 100, y: 100 },
-      type: "SelectionNode",
+      type: "Ynode",
       draggable: true,
     },
     {
       id: "2",
-      data: { updateGraph },
+      data: { HandleGraphUpdate },
       position: { x: 100, y: 250 },
-      type: "AddBlockNode",
+      type: "NewNode",
     },
   ];
 
