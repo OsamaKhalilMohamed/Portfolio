@@ -85,7 +85,7 @@ export default Flow;
 ```
 ![simple-workflow-example](/reactflowexample.png)
 
-Since Konan isn't an open source project, so i won't be able to share exact code snippets from but i will try to share other snippets that demonstrates the same concepts i'm tryna explain
+_Since Konan AI isn't an open source project, so i won't be able to share exact code snippets from it but i will share other snippets that demonstrates the same concepts i'm trying to explain_
 
 ### Konan Custom Workflow Setup - Part 1 
 rendering the `<ReactFlow>` component.
@@ -118,7 +118,7 @@ return (
 
 ```
 
-Config for edge styles
+Customizing edge styles and adding configurations
 ```tsx
 export const edgeTypes = {
   custom: CustomEdgeLabel,
