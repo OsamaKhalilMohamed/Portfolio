@@ -6,18 +6,16 @@ duration: "8 mins read"
 ---
 
 
-## Building Workflows in Konan AI with React Flow
-
 ![Workflow](https://cdn.prod.website-files.com/67ac814b1bd2403fd14444a2/67cd749be725080850561375_HQ-p-2000.png)
 
 
-# Almost two years ago, I worked on a core feature for **Konan AI** by Synapse Analytics — a platform designed to help risk officers and financial institutions create and manage workflow policies more easily.  
+# Couple of years ago, I worked on a core feature for **Konan AI** by Synapse Analytics — a platform designed to help risk officers and financial institutions create and manage workflow policies more easily.  
 We called this feature **Workflows**. The idea was to let users design complex risk assessment processes visually, in a way that feels simple and intuitive. For the UI, I relied on [`react-flow`](https://reactflow.dev/), a powerful React package for building node-based editors.  
 In this post, I’ll walk you through exactly how we built it — from the setup, to handling data flow between nodes and edges, and integrating everything with the backend.
 
 ---
 
-## Contents
+## Content
 
 1. [React Flow Overview](#react-flow-overview)
 2. [How Data is Dynamically Shared Across Nodes and Edges](#how-data-is-dynamically-shared-across-nodes-and-edges)
@@ -91,42 +89,168 @@ export default Flow;
 ![simple-workflow-example](/reactflowexample.png)
 
 
-**Konan Custom Workflow Setup — Part 1**  
+### Konan Custom Workflow Setup — Part 1 
 `WorkflowCanvas.tsx`  
-Responsible for rendering the `<ReactFlow>` component.
+This Component Responsible for rendering the `<ReactFlow>` component.
 
-`workflow-fixtures.ts`  
+```tsx
+/* Reactflow canvas */
+return (
+  <ReactFlow
+    edgeTypes={edgeTypes}
+    snapToGrid={true}
+    nodes={isWorkflowLoading ? [] : nodes}
+    nodeTypes={nodeTypes}
+    fitView={isCreateMode}
+    nodesDraggable={true}
+    onEdgesChange={onEdgesChange}
+    className="transition"
+    edges={edges}
+    connectionLineType={ConnectionLineType.Bezier}
+  >
+    <Background />
+    <Controls
+      onZoomIn={() => zoomIn({ duration: 400 })}
+      onZoomOut={() => zoomOut({ duration: 400 })}
+      onFitView={() => fitView({ duration: 500 })}
+      position="top-right"
+      showFitView={true}
+      showInteractive={false}
+    />
+  </ReactFlow>
+)
+
+```
+
+and then this component -> `workflow-fixtures.ts`  
+
+```tsx
+export const edgeTypes = {
+  custom: CustomEdgeLabel,
+}
+
+// Generic CUSTOM EDGE STYLES
+export const markerEnd: EdgeMarker = {
+  type: MarkerType.Arrow,
+  width: 40,
+  height: 20,
+  color: theme.palette.neutral.border.active,
+  orient: "auto",
+}
+
+export const edgeStyles = {
+  strokeWidth: 2,
+  stroke: theme.palette.neutral.border.active,
+  color: theme.palette.neutral.border.active,
+}
+
+// declaring our custom nodes types/styles to react-flow
+export const nodeTypes = {
+  SelectionNode,
+  AddBlockNode,
+  LabeledNode,
+  FilterNode,
+  CalculatorNode,
+}
+```
 Holds:  
 - Node types  
 - Edge types  
 - Custom labels  
 - Edge styles  
 
-**Konan Custom Workflow Setup — Part 2**  
+### Konan Custom Workflow Setup — Part 2
 `CustomEdgeLabel.tsx`  
 Defines the style for custom labels above edges.
+
+```tsx
+return (
+  <Fragment>
+    <path
+      id={id}
+      className="react-flow__edge-path"
+      d={edgePath}
+      markerEnd={markerEnd}
+      style={style}
+    />
+    <EdgeLabelRenderer>
+      <div
+        style={{
+          position: "absolute",
+          transform: `translate(-50%, -50%) translate(${labelX}px,${labelY}px)`,
+          background: theme.palette.greyScale.background[1],
+          padding: 5,
+          borderRadius: 2,
+          fontSize: 12,
+          fontWeight: 700,
+          color: theme.palette.greyScale.text[1],
+        }}
+        className="nodrag nopan"
+      >
+        <Typography variant="label">{data.text}</Typography>
+      </div>
+    </EdgeLabelRenderer>
+  </Fragment>
+);
+
+```
 
 `Workflows.tsx`  
 Initializes default nodes and edges to kick-start a workflow.
 
-**Konan Custom Workflow Setup — Part 3**  
+```tsx
+// default nodes and edges for EVERY workflow
+const initNodesAndEdges = (): void => {
+  const initNodes = [
+    {
+      id: "1",
+      data: { nodeType: "StartNode" },
+      position: { x: 100, y: 100 },
+      type: "SelectionNode",
+      draggable: true,
+    },
+    {
+      id: "2",
+      data: { updateGraph },
+      position: { x: 100, y: 250 },
+      type: "AddBlockNode",
+    },
+  ];
+
+  const initEdges = [
+    {
+      id: "e1-2",
+      source: "1",
+      target: "2",
+      type: "default",
+      animated: true,
+      markerEnd,
+      style: edgeStyles,
+    },
+  ];
+};
+
+```
+
+### Konan Custom Workflow Setup — Part 3 
 We used Dagre.js for automatic layouting. This keeps the diagram clean without manual adjustment.  
 Directed Acyclic Graph (DAG) ensures:  
 - No loops  
 - Predictable execution order  
 
+And here's how the canvas looks like after creating this workflow based on these configurations
+![Workflow-early-prototype](/workflow.png)
+
 [Wikipedia: DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
 
 ---
 
-## 2. How Data is Dynamically Shared Across Nodes and Edges
+## 2. How Data is Dynamically Shared Across Nodes and Edges (Diving deep into data flow implementation) 
 
-We went with uncontrolled mode in React Flow.  
-In controlled mode, you manage all node/edge state in your own React state.  
-In uncontrolled mode, React Flow’s internal store handles it.  
-This allows us to:  
-- Programmatically trigger updates from anywhere.  
-- Use `ReactFlowProvider` to wrap the workflow component.
+What’s the problem so far with our implementation? Simple: we don’t have a clean, reliable way to dynamically update nodes and edges from anywhere—custom nodes, side panels, edge labels—without spaghetti props and rerender storms. In a controlled setup, every node/edge lives in your React state, so you end up lifting state to the top, passing callbacks down five layers, and praying nothing desyncs. Fun for no one. The fix is going uncontrolled with React Flow and wrapping the canvas in <ReactFlowProvider>. That hands ownership of nodes/edges to React Flow’s internal Zustand store, giving us a single source of truth we can poke from any child: add a node, tweak data, attach edges—no prop-drilling, fewer re-renders, more sanity.
+
+So basically There are two ways to use React Flow - controlled or uncontrolled. Controlled means, that you are in control of the state of the nodes and edges. In an uncontrolled flow, the state of the nodes and edges is handled by React Flow internally. uncontrolled flow allows us to programmatically trigger any update action on any state from the store
+So We went with uncontrolled mode in React Flow.  
 
 ```tsx
 import { ReactFlowProvider } from 'react-flow-renderer';
