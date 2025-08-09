@@ -38,8 +38,8 @@ export default function Post({
           </div>
 
           <article
-            className="prose prose-neutral mt-6 max-w-none leading-10 md:prose-lg lg:prose-xl prose-a:border-b prose-a:border-dotted prose-a:no-underline prose-img:w-full
- prose-img:rounded-xl dark:prose-h1:text-gray-300 dark:prose-h2:text-gray-300 dark:prose-h3:text-gray-400 dark:prose-p:text-gray-400 dark:prose-a:text-gray-300 dark:prose-strong:text-gray-300 dark:prose-code:text-gray-300"
+            className="prose prose-neutral mt-6 max-w-none leading-7 md:prose-lg lg:prose-xl prose-a:border-b prose-a:border-dotted prose-a:no-underline prose-img:w-full prose-img:rounded-xl
+ dark:prose-h1:text-gray-300 dark:prose-h2:text-gray-300 dark:prose-h3:text-gray-400 dark:prose-p:text-gray-400 dark:prose-a:text-gray-300 dark:prose-strong:text-gray-300 dark:prose-code:text-gray-300 md:leading-10"
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           />
         </div>
