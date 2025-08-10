@@ -20,18 +20,40 @@ export function getAllPostIds() {
     .map((fileName) => ({ params: { slug: fileName.replace(/\.md$/, "") } }));
 }
 
-export function getSortedPostsData() {
+export type PostMeta = {
+  id: string;
+  title: string;
+  description?: string;
+  duration?: string;
+  date: string; // ISO in front-matter
+  year: number;
+};
+
+export function getSortedPostsData(): PostMeta[] {
   const list = fs
     .readdirSync(postsDirectory)
     .filter((f) => f.endsWith(".md"))
     .map((fileName) => {
       const id = fileName.replace(/\.md$/, "");
-      const { data } = matter(
-        fs.readFileSync(path.join(postsDirectory, fileName), "utf8")
-      );
-      return { id, ...(data as { date: string; title: string }) };
+      const raw = fs.readFileSync(path.join(postsDirectory, fileName), "utf8");
+      const { data } = matter(raw);
+      const date = String((data as any).date);
+      const year = new Date(date).getFullYear();
+
+      return {
+        id,
+        title: (data as any).title,
+        description: (data as any).description,
+        duration: (data as any).duration,
+        date,
+        year,
+      } as PostMeta;
     });
-  return list.sort((a, b) => (a.date < b.date ? 1 : -1));
+
+  // sort by date desc
+  return list.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
 function cleanMarkdown(md: string) {
