@@ -3,6 +3,7 @@ title: "React Flow In Production"
 date: "2025-03-20"
 description: "A behind-the-scenes look at how we built Konan AI’s workflow editor using React Flow, Dagre.js, and Zustand - from designing intuitive node-based UIs to managing data flow and integrating with the backend."
 duration: "8 mins read"
+image: "https://cdn.prod.website-files.com/67ac814b1bd2403fd14444a2/67cd749be725080850561375_HQ-p-2000.png"
 ---
 
 

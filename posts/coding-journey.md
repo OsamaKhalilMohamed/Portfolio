@@ -3,6 +3,7 @@ title: "My Programming Journey."
 date: "2021-01-19"
 description: "Started from 2016, Now we here. A brief article about how i started my journey with programming, the wrong approaches of learning, what i've learned over the years and what worked for me!"
 duration: "3 mins read"
+image: "https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
 ---
 
 <img src="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Hero-Image" class="rounded-lg" />
