@@ -55,13 +55,13 @@ export default function Blog({ allPostsData }: { allPostsData: PostMeta[] }) {
               <ul className="m-auto flex flex-col justify-center gap-3 lg:w-full">
                 {(groups[year] || []).map(
                   ({ id, date, title, description }) => (
-                    <li
-                      key={id}
-                      className="mb-4 cursor-pointer rounded-xl p-8 transition duration-200 hover:bg-[#F8F8F8] hover:dark:bg-[#1C1C1A]"
+                    <Link
+                      href={`/blog/${id}`}
+                      className="text-xl text-blue-500"
                     >
-                      <Link
-                        href={`/blog/${id}`}
-                        className="text-xl text-blue-500"
+                      <li
+                        key={id}
+                        className="mb-4 cursor-pointer rounded-xl p-8 transition duration-200 hover:bg-[#F8F8F8] hover:dark:bg-[#1C1C1A]"
                       >
                         {title}
 
@@ -71,8 +71,8 @@ export default function Blog({ allPostsData }: { allPostsData: PostMeta[] }) {
                             {description}
                           </p>
                         )}
-                      </Link>
-                    </li>
+                      </li>
+                    </Link>
                   )
                 )}
               </ul>

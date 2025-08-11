@@ -340,7 +340,7 @@ export default function Home({
           </div>
 
           {/** mini-blog section */}
-          {/* <section
+          <section
             className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
           >
             <h2 className="mb-2 text-lg font-extrabold md:text-xl">
@@ -365,7 +365,7 @@ export default function Home({
                   </Link>
                 </div>
               );
-            })} 
+            })}
 
             <Link
               href={`/blog/`}
@@ -373,7 +373,7 @@ export default function Home({
             >
               Explore All Blogs {"->"}
             </Link>
-          </section> */}
+          </section>
 
           {/** more about me */}
           <div
