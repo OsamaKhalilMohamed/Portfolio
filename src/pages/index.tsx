@@ -228,7 +228,7 @@ export default function Home({
             <h2 className="mb-4 text-2xl font-extrabold md:text-4xl">
               5+ years of experience in Software Engineering.{" "}
               <span
-                className={`shine text-base text-[#7A7B77] md:text-4xl ${
+                className={`shine text-md text-[#7A7B77] md:text-4xl ${
                   isMounted && (theme === "light" || theme !== "dark")
                     ? "light-mode"
                     : ""
