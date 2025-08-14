@@ -228,7 +228,7 @@ export default function Home({
             <h2 className="mb-4 text-2xl font-extrabold md:text-4xl">
               5+ years of experience in Software Engineering.{" "}
               <span
-                className={`shine-animation relative inline-block text-[#7A7B77] ${
+                className={`shine text-base text-[#7A7B77] md:text-4xl ${
                   isMounted && (theme === "light" || theme !== "dark")
                     ? "light-mode"
                     : ""
@@ -271,7 +271,7 @@ export default function Home({
                 workYear="2025 - Present"
               />{" "}
             </div>
-            <p className="-mt-1 text-base text-[#7A7B77]">
+            <p className="-mt-1 text-sm text-[#7A7B77]">
               This is my career timeline. Most of my work up until now is web
               development, espically frontend development. Currently pursuing a
               M.Sc. in Data Science & AI at Cairo University.
@@ -426,44 +426,68 @@ export default function Home({
       </main>
 
       <style jsx>{`
-        @keyframes shine {
+        @keyframes shineSweep {
           0% {
-            background-position: 200% 0;
+            background-position: 95% 0, 0 0;
           }
+          92% {
+            background-position: -95% 0, 0 0;
+          } /* tiny linger */
           100% {
-            background-position: -200% 0;
+            background-position: -95% 0, 0 0;
           }
         }
 
-        .shine-animation {
-          position: relative;
-          display: inline-block;
-          background: linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.1) 0%,
-            rgba(255, 255, 255, 0.4) 50%,
-            rgba(255, 255, 255, 0.1) 100%
-          );
-          background-size: 200%;
+        .shine {
+          background-size: 220% 100%, 100% 100%; /* larger travel = slower sweep */
+          animation: shineSweep 3s linear infinite; /* was ~2.75s */
+
+          display: inline-block; /* one painting box */
+          white-space: nowrap; /* avoid line fragments */
+          line-height: 1.2;
+          padding-bottom: 0.15em; /* keep descenders visible */
+
+          /* Layer 1: moving highlight; Layer 2: solid base (currentColor) */
+          background-image: linear-gradient(
+              100deg,
+              transparent 0%,
+              rgba(255, 255, 255, 0.25) 48%,
+              rgba(255, 255, 255, 0.9) 50%,
+              rgba(255, 255, 255, 0.25) 52%,
+              transparent 100%
+            ),
+            linear-gradient(0deg, currentColor, currentColor);
+
+          background-position: 200% 0, 0 0;
+          background-repeat: no-repeat;
+
           -webkit-background-clip: text;
+          background-clip: text;
           -webkit-text-fill-color: transparent;
-          animation: shine 6s linear infinite;
         }
 
-        /* Ensure visibility in light mode */
-        .shine-animation.light-mode {
-          position: relative;
-          display: inline-block;
-          background: linear-gradient(
-            90deg,
-            rgba(50, 50, 50, 0.1) 0%,
-            rgba(50, 50, 50, 0.4) 50%,
-            rgba(50, 50, 50, 0.1) 100%
-          );
-          background-size: 200%;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: shine 6s linear infinite;
+        /* Darker shimmer for light theme */
+
+        /* LIGHT THEME: brighter, thinner beam for extra "shine" */
+        .shine.light-mode {
+          background-image: linear-gradient(
+              100deg,
+              transparent 0%,
+              rgba(255, 255, 255, 0.4) 49.2%,
+              rgba(255, 255, 255, 0.98) 50%,
+              rgba(255, 255, 255, 0.4) 50.8%,
+              transparent 100%
+            ),
+            linear-gradient(0deg, currentColor, currentColor);
+        }
+
+        /* MOBILE: put sentence on its own line, allow wrapping safely */
+        @media (max-width: 640px) {
+          .shine {
+            display: block; /* its own line */
+            white-space: normal; /* can wrap within the line if needed */
+            margin-top: 0.25rem; /* tiny gap from previous text */
+          }
         }
       `}</style>
     </>
