@@ -225,7 +225,7 @@ export default function Home({
           </div>
 
           <div className="mt-16  w-5/6 md:mt-24">
-            <h2 className="mb-4 text-3xl font-extrabold md:text-4xl">
+            <h2 className="mb-4 text-2xl font-extrabold md:text-4xl">
               5+ years of experience in Software Engineering.{" "}
               <span
                 className={`shine text-base text-[#7A7B77] md:text-4xl ${
@@ -428,13 +428,13 @@ export default function Home({
       <style jsx>{`
         @keyframes shineSweep {
           0% {
-            background-position: 95% 0, 0 0;
+            background-position: 92% 0, 0 0;
           }
           92% {
-            background-position: -95% 0, 0 0;
+            background-position: -92% 0, 0 0;
           } /* tiny linger */
           100% {
-            background-position: -95% 0, 0 0;
+            background-position: -92% 0, 0 0;
           }
         }
 
