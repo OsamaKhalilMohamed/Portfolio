@@ -404,11 +404,15 @@ export default function Home({
             <h2 className="mb-2 text-lg font-extrabold md:text-xl">
               What's next?
             </h2>
-            <p className="leading-12 -mt-1  rounded-xl bg-[#F8F8F8]  p-4 font-inter text-xl text-[#7A7B77] dark:bg-[#1C1C1A] md:text-3xl">
-              If you have anything to tell me, whether it's a Question, Job
-              offer or just wanna get in touch. feel free to say hello! {"->"}{" "}
+            <p
+              style={{ lineHeight: 2 }}
+              className="-mt-1 mb-0 rounded-xl bg-[#F8F8F8] p-4 font-inter text-xl  text-[#7A7B77] dark:bg-[#1C1C1A] md:text-3xl"
+            >
+              If you have anything to tell me, Question, Job offer or just wanna
+              get in touch. feel free to say hello!
+              <br />
               <a
-                className="border-b border-dotted font-extrabold text-[#7A7B77] "
+                className="border-b border-dotted font-extrabold text-[#7A7B77]"
                 href="mailto:osadx35@gmail.com"
               >
                 Email
@@ -420,7 +424,7 @@ export default function Home({
               >
                 Linkedin
               </a>
-            </p>{" "}
+            </p>
           </div>
         </div>
       </main>
