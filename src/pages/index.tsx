@@ -225,7 +225,7 @@ export default function Home({
           </div>
 
           <div className="mt-20  w-5/6 md:mt-12">
-            <h2 className="mb-4 text-2xl font-extrabold md:text-4xl">
+            <h2 className="mb-4 text-3xl font-extrabold md:text-4xl">
               5+ years of experience in Software Engineering.{" "}
               <span
                 className={`shine text-base text-[#7A7B77] md:text-4xl ${
