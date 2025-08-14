@@ -350,7 +350,7 @@ export default function Home({
               return (
                 <div
                   key={id}
-                  className="mb-5 flex w-full flex-col justify-between gap-3 rounded-lg bg-[#F8F8F8] p-4 text-[#7A7B77] shadow-sm transition duration-500 hover:scale-105 dark:bg-[#1C1C1A]"
+                  className="mb-5 flex w-full flex-col justify-between gap-3 rounded-2xl bg-[#F8F8F8] p-4 text-[#7A7B77] shadow-sm transition duration-500 hover:scale-105 dark:bg-[#1C1C1A]"
                 >
                   <Link href={`/blog/${id}`}>
                     <h3 className="text-xl font-bold text-blue-500">{title}</h3>
@@ -376,7 +376,7 @@ export default function Home({
           </section>
 
           {/** more about me */}
-          <div
+          {/* <div
             className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
           >
             <h2 className="mb-2 text-lg font-extrabold md:text-xl">
@@ -397,7 +397,7 @@ export default function Home({
                 normal person?
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/** Contact */}
           <div className="mt-8 w-5/6 max-w-[800px] md:mt-12">
