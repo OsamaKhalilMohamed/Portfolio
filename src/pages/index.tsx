@@ -406,20 +406,20 @@ export default function Home({
             </h2>
             <p
               style={{ lineHeight: 2 }}
-              className="-mt-1 mb-0 rounded-xl bg-[#F8F8F8] p-4 font-inter text-xl  text-[#7A7B77] dark:bg-[#1C1C1A] md:text-3xl"
+              className="-mt-1 mb-0 rounded-xl bg-black p-4 font-inter text-xl font-bold text-[#d7dad2] dark:bg-[#1C1C1A] md:text-3xl"
             >
               If you have anything to tell me, Question, Job offer or just wanna
               get in touch. feel free to say hello!
               <br />
               <a
-                className="border-b border-dotted font-extrabold text-[#7A7B77]"
+                className="border-b border-dotted font-extrabold  text-[#999999]"
                 href="mailto:osadx35@gmail.com"
               >
                 Email
               </a>{" "}
               |{" "}
               <a
-                className="border-b border-dotted font-extrabold text-[#7A7B77]"
+                className="border-b border-dotted font-extrabold  text-[#999999]"
                 href="https://www.linkedin.com/in/osama-khalil98"
               >
                 Linkedin
