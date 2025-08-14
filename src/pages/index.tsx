@@ -439,7 +439,7 @@ export default function Home({
         }
 
         .shine {
-          background-size: 290% 100%, 100% 100%; /* larger travel = slower sweep */
+          background-size: 220% 100%, 100% 100%; /* larger travel = slower sweep */
           animation: shineSweep 3.5s linear infinite; /* was ~2.75s */
 
           display: inline-block; /* one painting box */
@@ -458,7 +458,7 @@ export default function Home({
             ),
             linear-gradient(0deg, currentColor, currentColor);
 
-          background-position: 200% 0, 0 0;
+          background-position: 400% 0, 0 0;
           background-repeat: no-repeat;
 
           -webkit-background-clip: text;
