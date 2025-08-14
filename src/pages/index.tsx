@@ -265,12 +265,17 @@ export default function Home({
               <MiniCard
                 src={cailogo}
                 description="digitopia"
-                title="M.Sc. Student"
+                title="M.Sc. Student - FGSSR"
                 subTitle="Future Data/AI Engineer.. :)"
                 size={60}
                 workYear="2025 - Present"
               />{" "}
             </div>
+            <p className="-mt-1 text-xs text-[#7A7B77]">
+              This is my career timeline. Most of my work up until now is web
+              development, espically frontend development. Currently pursuing a
+              M.Sc. in Data Science & AI at Cairo University.
+            </p>{" "}
           </div>
 
           {/** Selected work */}
