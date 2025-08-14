@@ -439,8 +439,8 @@ export default function Home({
         }
 
         .shine {
-          background-size: 220% 100%, 100% 100%; /* larger travel = slower sweep */
-          animation: shineSweep 3s linear infinite; /* was ~2.75s */
+          background-size: 290% 100%, 100% 100%; /* larger travel = slower sweep */
+          animation: shineSweep 3.5s linear infinite; /* was ~2.75s */
 
           display: inline-block; /* one painting box */
           white-space: nowrap; /* avoid line fragments */
