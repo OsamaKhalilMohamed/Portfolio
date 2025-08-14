@@ -17,7 +17,7 @@ export default function MiniCard({
   workYear: string;
 }) {
   return (
-    <div className=" w-3/4 max-w-[370px] gap-y-1 rounded-2xl bg-[#F8F8F8] p-5 shadow-sm dark:bg-[#1C1C1A]">
+    <div className="w-full gap-y-1 rounded-2xl bg-[#F8F8F8] p-5 shadow-sm dark:bg-[#1C1C1A] md:w-3/4 md:max-w-[370px]">
       <div className="h-[35%]">
         <Image
           className="rounded-lg shadow-sm"
