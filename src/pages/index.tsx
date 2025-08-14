@@ -271,11 +271,6 @@ export default function Home({
                 workYear="2025 - Present"
               />{" "}
             </div>
-            <p className="-mt-1 text-sm text-[#7A7B77]">
-              This is my career timeline. Most of my work up until now is web
-              development, espically frontend development. Currently pursuing a
-              M.Sc. in Data Science & AI at Cairo University.
-            </p>{" "}
           </div>
 
           {/** Selected work */}
