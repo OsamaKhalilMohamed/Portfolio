@@ -224,7 +224,7 @@ export default function Home({
             </div>
           </div>
 
-          <div className="mt-20  w-5/6 md:mt-12">
+          <div className="mt-16  w-5/6 md:mt-24">
             <h2 className="mb-4 text-3xl font-extrabold md:text-4xl">
               5+ years of experience in Software Engineering.{" "}
               <span
