@@ -400,20 +400,20 @@ export default function Home({
           </div> */}
 
           {/** Contact */}
-          <div className="mt-8 w-5/6 max-w-[800px] md:mt-12">
+          <div className="mb-20 mt-8  w-5/6 max-w-[800px] md:mt-12">
             <h2 className="mb-2 text-lg font-extrabold md:text-xl">
-              Get in contact!
+              What's next?
             </h2>
-            <p className="-mt-1 font-inter text-base text-[#7A7B77]">
+            <p className="leading-12 -mt-1  rounded-xl bg-[#F8F8F8]  p-4 font-inter text-xl text-[#7A7B77] dark:bg-[#1C1C1A] md:text-3xl">
               If you have anything to tell me, whether it's a Question, Job
-              offer or just wanna get in touch. you can hit my {"->"}{" "}
+              offer or just wanna get in touch. feel free to say hello! {"->"}{" "}
               <a
                 className="border-b border-dotted font-extrabold text-[#7A7B77] "
                 href="mailto:osadx35@gmail.com"
               >
                 Email
               </a>{" "}
-              or my{" "}
+              |{" "}
               <a
                 className="border-b border-dotted font-extrabold text-[#7A7B77]"
                 href="https://www.linkedin.com/in/osama-khalil98"
