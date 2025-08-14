@@ -103,7 +103,8 @@ export async function getPostData(slug: string) {
     ...(data as {
       date: string;
       title: string;
-      description?: string;
+      description: string;
+      image: string;
       duration?: string;
     }),
   };
