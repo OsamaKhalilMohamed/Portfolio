@@ -225,18 +225,18 @@ export default function Home({
           </div>
 
           <div className="mt-16  w-5/6 md:mt-24">
-            <h2 className="mb-4 text-2xl font-extrabold md:text-4xl">
+            <h2 className="mb-1 text-2xl font-extrabold md:text-4xl">
               5+ years of experience in Software Engineering.{" "}
-              <span
-                className={`shine text-md text-[#7A7B77] md:text-4xl ${
-                  isMounted && (theme === "light" || theme !== "dark")
-                    ? "light-mode"
-                    : ""
-                }`}
-              >
-                AI Engineer in the making.
-              </span>
             </h2>
+            <p
+              className={`shine text-md mb-4 text-2xl font-extrabold text-[#7A7B77] md:text-4xl ${
+                isMounted && (theme === "light" || theme !== "dark")
+                  ? "light-mode"
+                  : ""
+              }`}
+            >
+              AI Engineer in the making.
+            </p>
             <div className="mb-4 flex w-full  flex-col justify-between gap-5 md:flex-row">
               <MiniCard
                 src={digitopia}
