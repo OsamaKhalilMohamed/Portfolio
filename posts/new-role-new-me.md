@@ -31,7 +31,7 @@ The **SDLC** there was also new to me. Everything starting from very strict busi
 
 It was also my first time working with a dedicated QC and automation team. Speaking of sprint reviews, most of the showcase was done by the QC team, demonstrating completed features and resolved bugs, with occasional contributions from the backend team if needed.  
 
-I was also part of a team building a government application full of complex tables and large multi-step forms, which was another new experience for me. Overall, I felt like a slightly smaller contributor in terms of business development participation. The appreciation for technical practices like code reviews was there, but with little focus from the leads.
+I was also part of a team building a government application full of complex tables and large multi-step forms, which was another new experience for me. Overall, I felt like a slightly smaller contributor in terms of business development participation.
 
 ---
 
