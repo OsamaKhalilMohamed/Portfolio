@@ -406,24 +406,27 @@ export default function Home({
             </h2>
             <p
               style={{ lineHeight: 2 }}
-              className="-mt-1 mb-0 rounded-xl bg-black p-4 font-inter text-xl font-bold text-[#d7dad2] dark:bg-[#1C1C1A] md:text-3xl"
+              className="-mt-1 mb-0 rounded-xl bg-black p-4 font-inter text-xl font-medium text-[#d7dad2] dark:bg-[#1C1C1A] "
             >
-              If you have anything to tell me, Question, Job offer or just wanna
-              get in touch. feel free to say hello!
+              If you have anything to tell me, whether it's a <em>Question</em>,{" "}
+              <strong>Job offer</strong> or <em>just wanna get in touch</em>.
+              Feel free to say hello! ⬇️👋🏽
               <br />
-              <a
-                className="border-b border-dotted font-extrabold  text-[#999999]"
-                href="mailto:osadx35@gmail.com"
-              >
-                Email
-              </a>{" "}
-              |{" "}
-              <a
-                className="border-b border-dotted font-extrabold  text-[#999999]"
-                href="https://www.linkedin.com/in/osama-khalil98"
-              >
-                Linkedin
-              </a>
+              <div className="m-auto mt-2 text-center">
+                <a
+                  className="m-0 border-b border-dotted text-center font-extrabold text-green-400"
+                  href="mailto:osadx35@gmail.com"
+                >
+                  Email
+                </a>{" "}
+                |{" "}
+                <a
+                  className="space-x-3 border-b border-dotted font-extrabold  text-green-400"
+                  href="https://www.linkedin.com/in/osama-khalil98"
+                >
+                  Linkedin
+                </a>
+              </div>
             </p>
           </div>
         </div>
