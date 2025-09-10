@@ -24,7 +24,7 @@ export default function Navbar(): React.ReactElement {
       <div ref={triggerRef} className="h-px"></div>
 
       <div
-        className={`sticky top-0 z-50 flex min-h-0 w-full items-center justify-center overflow-hidden pb-4 backdrop-blur-md ${
+        className={`top-0 z-50 flex min-h-0 w-full items-center justify-center overflow-hidden pb-4 backdrop-blur-md md:sticky ${
           scrolled ? `dark:bg-[#111110]/30` : `dark:bg-[#111110]`
         }`}
       >

@@ -25,7 +25,7 @@ export default function Footer() {
   }, [currentIndex]);
 
   return (
-    <div className="flex w-full justify-center pb-2 pt-2 text-sm dark:bg-[#111110]">
+    <div className=" flex w-full justify-center pb-2 pt-6 text-sm dark:bg-[#111110]">
       <span className="pb-2 font-arefRuqaa text-lg font-extrabold">
         أسامة خليل{" "}
       </span>{" "}
