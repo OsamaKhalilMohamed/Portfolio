@@ -410,7 +410,7 @@ export default function Home({
             >
               If you have anything to tell me, whether it's a <em>Question</em>,{" "}
               <strong>Job offer</strong> or <em>just wanna get in touch</em>.
-              Feel free to say hello! ⬇️👋🏽
+              Feel free to say hello! 👋🏽
               <br />
               <div className="m-auto mt-2 text-center">
                 <a
