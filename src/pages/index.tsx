@@ -6,13 +6,12 @@ import sami from "../../public/sami.jpg";
 import memoji from "../../public/memoji.png";
 import Konan from "../../public/konan2.png";
 import Konan2 from "../../public/konan3.png";
-// import Konan3 from "../../public/konan4.png";
 import Konan4 from "../../public/konan5.png";
 import Konan5 from "../../public/konan6.png";
 import Konan6 from "../../public/konan7.png";
 import cailogo from "../../public/cailogo.png";
 import aly from "../../public/aly.png";
-
+import { motion } from "framer-motion";
 import styles from "./home.module.css";
 
 import MiniCard from "~/components/MiniCard";
@@ -178,7 +177,12 @@ export default function Home({
       </Head>
 
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
-        <div className="fomt-inter mx-auto flex  w-full flex-col items-center    md:mt-14">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="fomt-inter mx-auto flex  w-full flex-col items-center    md:mt-14"
+        >
           <div className="mt-10 flex w-5/6 max-w-[800px] justify-between md:mt-0">
             <div>
               <div className="inline-flex">
@@ -404,7 +408,10 @@ export default function Home({
             <h2 className="mb-2 text-lg font-extrabold md:text-xl">
               What's next?
             </h2>
-            <p
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               style={{ lineHeight: 2 }}
               className="-mt-1 mb-0 rounded-xl bg-black p-4 font-inter text-xl font-medium text-[#d7dad2] dark:bg-[#1C1C1A] "
             >
@@ -427,9 +434,9 @@ export default function Home({
                   Linkedin
                 </a>
               </div>
-            </p>
+            </motion.p>
           </div>
-        </div>
+        </motion.div>
       </main>
 
       <style jsx>{`
