@@ -61,7 +61,7 @@ export default function Blog({ allPostsData }: { allPostsData: PostMeta[] }) {
                     >
                       <li
                         key={id}
-                        className="mb-4 cursor-pointer rounded-xl p-8 transition duration-200 hover:bg-[#F8F8F8] hover:dark:bg-[#1C1C1A]"
+                        className="mb-4 cursor-pointer rounded-lg p-8 transition duration-200 hover:bg-[#F8F8F8] hover:dark:bg-[#1C1C1A]"
                       >
                         {title}
 

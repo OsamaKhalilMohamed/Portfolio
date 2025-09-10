@@ -354,7 +354,7 @@ export default function Home({
               return (
                 <div
                   key={id}
-                  className="mb-5 flex w-full flex-col justify-between gap-3 rounded-2xl bg-[#F8F8F8] p-6 text-[#7A7B77] shadow-sm transition duration-500 hover:scale-105 dark:bg-[#1C1C1A]"
+                  className="mb-5 flex w-full flex-col justify-between gap-3 rounded-lg bg-[#F8F8F8] p-6 text-[#7A7B77] shadow-sm transition duration-500 hover:scale-105 dark:bg-[#1C1C1A]"
                 >
                   <Link href={`/blog/${id}`}>
                     <h3 className="text-xl font-bold text-blue-500">{title}</h3>
