@@ -238,7 +238,7 @@ export default function Home({
           </div>
 
           <div className="mt-16  w-5/6 md:mt-24">
-            <h2 className="mb-1 text-2xl font-extrabold md:text-4xl">
+            <h2 className="mb-3 text-3xl font-extrabold md:mb-1 md:text-4xl">
               5+ years of experience in Software Engineering.{" "}
             </h2>
             <p
@@ -422,7 +422,7 @@ export default function Home({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               style={{ lineHeight: 2 }}
-              className="-mt-1 mb-0 rounded-lg bg-black p-4 font-inter text-xl font-medium text-[#d7dad2] dark:bg-[#1C1C1A] "
+              className="text-md -mt-1 mb-0 rounded-lg bg-black p-4 font-inter font-medium text-[#d7dad2] dark:bg-[#1C1C1A] "
             >
               If you have anything to tell me, whether it's a Question,{" "}
               <strong>Job offer</strong> or <em>just wanna get in touch</em>.
