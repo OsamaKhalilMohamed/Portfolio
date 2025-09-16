@@ -424,7 +424,7 @@ export default function Home({
               style={{ lineHeight: 2 }}
               className="-mt-1 mb-0 rounded-xl bg-black p-4 font-inter text-xl font-medium text-[#d7dad2] dark:bg-[#1C1C1A] "
             >
-              If you have anything to tell me, whether it's a <em>Question</em>,{" "}
+              If you have anything to tell me, whether it's a Question,{" "}
               <strong>Job offer</strong> or <em>just wanna get in touch</em>.
               Feel free to say{" "}
               <DropdownMenu>
