@@ -455,7 +455,7 @@ export default function Home({
 
                 <DropdownMenuContent
                   side={isDesktop ? "right" : "bottom"}
-                  sideOffset={4} // Optional: Adds a small gap
+                  sideOffset={isDesktop ? 8 : 4} // Optional: Adds a small gap
                   className="max-h-60 w-48 
             overflow-y-auto rounded-lg border-none bg-[#F8F8F8] text-neutral-200  shadow-lg dark:bg-[#404040] md:max-h-none md:overflow-y-visible"
                 >

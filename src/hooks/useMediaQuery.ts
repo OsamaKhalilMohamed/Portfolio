@@ -3,16 +3,17 @@
 import * as React from "react";
 
 export function useMediaQuery(query: string) {
-  const [value, setValue] = React.useState(false);
+  const [value, setValue] = React.useState(true);
 
   React.useEffect(() => {
     function onChange(event: MediaQueryListEvent) {
       setValue(event.matches);
+      console.log("FIRED!!!");
     }
 
     const result = window.matchMedia(query);
     result.addEventListener("change", onChange);
-    setValue(result.matches);
+    //setValue(result.matches);
 
     return () => result.removeEventListener("change", onChange);
   }, [query]);
