@@ -431,7 +431,7 @@ export default function Home({
                 <DropdownMenuTrigger asChild>
                   {/* This is the clickable trigger with the dotted border */}
                   <button className="outline-none focus:outline-none">
-                    <span className="relative inline-block cursor-pointer border-b border-dotted border-green-500 align-middle text-green-400">
+                    <span className="relative inline-block cursor-pointer border-b border-dotted align-middle text-green-400">
                       {/* Framer Motion for the animation */}
                       <AnimatePresence mode="wait">
                         <motion.span
