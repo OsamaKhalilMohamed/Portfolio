@@ -42,6 +42,7 @@ import {
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 import { DropdownMenuArrow } from "@radix-ui/react-dropdown-menu";
+import { useMediaQuery } from "~/hooks/useMediaQuery";
 
 type SwiperProps = {
   archives: Array<StaticImageData>;
@@ -149,6 +150,8 @@ export default function Home({
   const { theme, setTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
   const [greeting, setGreeting] = useState(greetings[0]);
+
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   useEffect(() => {
     setIsMounted(true);
@@ -451,9 +454,10 @@ export default function Home({
                 </DropdownMenuTrigger>
 
                 <DropdownMenuContent
-                  side="right" // 2. Set the side to "right"
-                  sideOffset={8} // Optional: Adds a small gap
-                  className="w-48 rounded-lg border-none  bg-[#F8F8F8] text-neutral-200 shadow-lg dark:bg-[#404040]"
+                  side={isDesktop ? "right" : "bottom"}
+                  sideOffset={4} // Optional: Adds a small gap
+                  className="max-h-60 w-48 
+            overflow-y-auto rounded-lg border-none bg-[#F8F8F8] text-neutral-200  shadow-lg dark:bg-[#404040] md:max-h-none md:overflow-y-visible"
                 >
                   {/* 3. Add the arrow component and style it to match the menu */}
                   <DropdownMenuArrow
