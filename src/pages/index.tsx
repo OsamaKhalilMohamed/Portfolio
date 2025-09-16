@@ -439,11 +439,11 @@ export default function Home({
                           key={greeting}
                           initial={{ opacity: 0, y: -20 }}
                           animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 10 }}
+                          exit={{ opacity: 0, y: 20 }}
                           transition={{ duration: 0.25 }}
                           className="inline-block" // Ensures transforms work correctly
                         >
-                          {greeting}
+                          {greeting}!
                         </motion.span>
                       </AnimatePresence>
                     </span>
@@ -478,7 +478,6 @@ export default function Home({
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-              !
               <br />
               <p className="mx-auto mb-6 mt-4 text-center  text-4xl md:text-6xl">
                 👋🏽
