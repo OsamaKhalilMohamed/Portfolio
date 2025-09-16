@@ -23,15 +23,20 @@ const arefRuqaa = Aref_Ruqaa({
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
-      <main className={arefRuqaa.className}>
-        <Navbar />
-        <div className={inter.className}>
-          <Component {...pageProps} />
-        </div>
-        <Footer />
-      </main>
-    </ThemeProvider>
+    // Add suppressHydrationWarning to the <html> tag
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <main className={arefRuqaa.className}>
+            <Navbar />
+            <div className={inter.className}>
+              <Component {...pageProps} />
+            </div>
+            <Footer />
+          </main>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 };
 

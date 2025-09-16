@@ -11,7 +11,7 @@ import Konan5 from "../../public/konan6.png";
 import Konan6 from "../../public/konan7.png";
 import cailogo from "../../public/cailogo.png";
 import aly from "../../public/aly.png";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import styles from "./home.module.css";
 
 import MiniCard from "~/components/MiniCard";
@@ -34,6 +34,14 @@ import "swiper/css/scrollbar";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { getSortedPostsData } from "~/lib/posts";
+import { greetings } from "~/fixtures";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "~/components/ui/dropdown-menu";
+import { DropdownMenuArrow } from "@radix-ui/react-dropdown-menu";
 
 type SwiperProps = {
   archives: Array<StaticImageData>;
@@ -140,6 +148,7 @@ export default function Home({
 }): React.ReactElement {
   const { theme, setTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
+  const [greeting, setGreeting] = useState(greetings[0]);
 
   useEffect(() => {
     setIsMounted(true);
@@ -417,8 +426,63 @@ export default function Home({
             >
               If you have anything to tell me, whether it's a <em>Question</em>,{" "}
               <strong>Job offer</strong> or <em>just wanna get in touch</em>.
-              Feel free to say hello! 👋🏽
+              Feel free to say{" "}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  {/* This is the clickable trigger with the dotted border */}
+                  <button className="outline-none focus:outline-none">
+                    <span className="relative inline-block cursor-pointer border-b border-dotted border-green-500 align-middle text-green-400">
+                      {/* Framer Motion for the animation */}
+                      <AnimatePresence mode="wait">
+                        <motion.span
+                          // The key is crucial for AnimatePresence to detect changes
+                          key={greeting}
+                          initial={{ opacity: 0, y: -20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 20 }}
+                          transition={{ duration: 0.25 }}
+                          className="inline-block" // Ensures transforms work correctly
+                        >
+                          {greeting}
+                        </motion.span>
+                      </AnimatePresence>
+                    </span>
+                  </button>
+                </DropdownMenuTrigger>
+
+                <DropdownMenuContent
+                  side="right" // 2. Set the side to "right"
+                  sideOffset={8} // Optional: Adds a small gap
+                  className="w-48 rounded-lg border-none  bg-[#F8F8F8] text-neutral-200 shadow-lg dark:bg-[#404040]"
+                >
+                  {/* 3. Add the arrow component and style it to match the menu */}
+                  <DropdownMenuArrow
+                    className="fill-neutral-900"
+                    width={10}
+                    height={5}
+                    asChild
+                  />
+                  {greetings.map((currentGreeting) => (
+                    <DropdownMenuItem
+                      key={currentGreeting}
+                      className={`cursor-pointer text-[#7A7B77] focus:bg-[#5e5f5c] focus:text-white dark:focus:text-[#7A7B77] ${
+                        currentGreeting === greeting
+                          ? "bg-[#7A7B77] text-white dark:text-[#3f3f3e]"
+                          : ""
+                      }`}
+                      // The onSelect event handler updates the state
+                      onSelect={() => setGreeting(currentGreeting)}
+                    >
+                      {currentGreeting}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+              !
               <br />
+              <p className="mx-auto mb-6 mt-4 text-center  text-4xl md:text-6xl">
+                👋🏽
+              </p>
               <div className="m-auto mt-2 text-center">
                 <a
                   className="m-0 border-b border-dotted text-center font-extrabold text-green-400"
