@@ -422,16 +422,16 @@ export default function Home({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               style={{ lineHeight: 2 }}
-              className="text-md -mt-1 mb-0 rounded-lg bg-black p-4 font-inter font-medium text-[#d7dad2] dark:bg-[#1C1C1A] "
+              className="text-md -mt-1 mb-0 rounded-lg bg-black p-4 font-inter font-medium text-[#d7dad2] dark:bg-[#1C1C1A] md:text-lg "
             >
               If you have anything to tell me, whether it's a Question,{" "}
-              <strong>Job offer</strong> or <em>just wanna get in touch</em>.
-              Feel free to say{" "}
+              <strong>Job offer</strong> or you simply{" "}
+              <em>just wanna get in touch</em>. Feel free to say{" "}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   {/* This is the clickable trigger with the dotted border */}
                   <button className="outline-none focus:outline-none">
-                    <span className="relative inline-block cursor-pointer border-b border-dotted align-middle text-green-400">
+                    <span className="relative inline-block cursor-pointer border-b border-dotted align-middle font-arefRuqaa text-green-400">
                       {/* Framer Motion for the animation */}
                       <AnimatePresence mode="wait">
                         <motion.span
