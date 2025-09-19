@@ -1,7 +1,7 @@
 ---
 title: "New Role, New me!"
 date: "2025-08-10"
-description: "A recap and reflection on my lates and ongoin experience of working in a very different environment, marking a bold new step in my career. I’ll share both the highs and the flaws, offering some food for thought on how software engineers can navigate new experiences in their career journey."
+description: "A recap and reflection on my latest and ongoing experience of working in a very different environment, marking a bold new step in my career. I’ll share both the highs and the flaws, offering some food for thought on how software engineers can navigate new experiences in their career journey."
 duration: "10 mins read"
 image: "/decision.png"
 ---
