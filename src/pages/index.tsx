@@ -364,11 +364,14 @@ export default function Home({
             </h2>
             {latestTwoBlogs?.map(({ id, title, description, date }) => {
               return (
-                <div
-                  key={id}
-                  className="mb-5 flex w-full flex-col justify-between gap-3 rounded-lg bg-[#F8F8F8] p-6 text-[#7A7B77] shadow-sm transition duration-500 hover:scale-105 dark:bg-[#1C1C1A]"
-                >
-                  <Link href={`/blog/${id}`}>
+                <Link href={`/blog/${id}`}>
+                  <motion.div
+                    initial={{ scale: 1 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="mb-5 flex w-full flex-col justify-between gap-3 rounded-lg bg-[#F8F8F8] p-6 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]"
+                  >
                     <h3 className="text-xl font-bold text-blue-500">{title}</h3>
                     <div className="flex justify-between">
                       <p className="text-md font-light text-[#7A7B77]">
@@ -378,8 +381,8 @@ export default function Home({
                     <p className="text-md mt-4 font-light text-[#7A7B77]">
                       {description}
                     </p>
-                  </Link>
-                </div>
+                  </motion.div>
+                </Link>
               );
             })}
 
@@ -434,7 +437,7 @@ export default function Home({
                 <DropdownMenuTrigger asChild>
                   {/* This is the clickable trigger with the dotted border */}
                   <button className="outline-none focus:outline-none">
-                    <span className="relative inline-block cursor-pointer border-b border-dotted align-middle font-arefRuqaa text-green-400">
+                    <span className="relative inline-block cursor-pointer border-b border-dotted  align-middle font-arefRuqaa font-extrabold text-blue-400">
                       {/* Framer Motion for the animation */}
                       <AnimatePresence mode="wait">
                         <motion.span
@@ -471,7 +474,7 @@ export default function Home({
                       key={currentGreeting}
                       className={`cursor-pointer text-[#7A7B77] focus:bg-[#5e5f5c] focus:text-white dark:focus:text-[#7A7B77] ${
                         currentGreeting === greeting
-                          ? "bg-[#7A7B77] text-white dark:text-[#3f3f3e]"
+                          ? "bg-[#9fa09b] text-white dark:text-[#3f3f3e]"
                           : ""
                       }`}
                       // The onSelect event handler updates the state
