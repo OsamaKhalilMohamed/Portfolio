@@ -366,6 +366,7 @@ export default function Home({
           </div>
 
           {/** mini-blog section */}
+
           {/* <section
             className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
           >
