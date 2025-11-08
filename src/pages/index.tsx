@@ -10,6 +10,8 @@ import Konan4 from "../../public/konan5.png";
 import Konan5 from "../../public/konan6.png";
 import Konan6 from "../../public/konan7.png";
 import cailogo from "../../public/cailogo.png";
+import seqooonlogo from "../../public/seqoon.png";
+
 import aly from "../../public/aly.png";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./home.module.css";
@@ -276,8 +278,16 @@ export default function Home({
                 title="Sr. Software Engineer"
                 subTitle="Government platforms"
                 size={70}
-                workYear="2024 - Present"
+                workYear="2024 - 2025"
               />{" "}
+              <MiniCard
+                src={seqooonlogo}
+                description="seqoon"
+                title="Sr. Software Engineer"
+                subTitle="Proptech platform for co-owned homes"
+                size={80}
+                workYear="2025 - Present"
+              />
               <MiniCard
                 src={cailogo}
                 description="digitopia"
@@ -285,13 +295,13 @@ export default function Home({
                 subTitle="Future Data/AI Engineer.. :)"
                 size={60}
                 workYear="2025 - Present"
-              />{" "}
+              />
             </div>
             <p className="-mt-1 text-xs text-[#7A7B77]">
               This is my career timeline. Most of my work up until now is web
-              development, espically frontend development. Currently pursuing a
+              development, especially frontend development. Currently pursuing a
               M.Sc. in Data Science & AI at Cairo University.
-            </p>{" "}
+            </p>
           </div>
 
           {/** Selected work */}
@@ -356,7 +366,7 @@ export default function Home({
           </div>
 
           {/** mini-blog section */}
-          <section
+          {/* <section
             className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
           >
             <h2 className="mb-2 text-lg font-extrabold md:text-xl">
@@ -392,7 +402,7 @@ export default function Home({
             >
               Explore All Blogs {"->"}
             </Link>
-          </section>
+          </section> */}
 
           {/** more about me */}
           {/* <div
