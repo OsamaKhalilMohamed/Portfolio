@@ -14,6 +14,8 @@ import seqooonlogo from "../../public/seqoon.png";
 import vois from "../../public/vois.png";
 
 import aly from "../../public/aly.png";
+import sai from "../../public/sai.png";
+
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./home.module.css";
 
@@ -381,6 +383,38 @@ export default function Home({
                 <h2 className="text-lg font-bold md:text-xl">Tech I've used</h2>
                 <p className="text-[#7A7B77]">
                   Next.js - Redux - graphQL Apollo client - SCSS
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
+          >
+            {/**ALY */}
+            <ImageWithAmbientBackground
+              title="Sai"
+              link="https://hiresai.ai/EG/en/"
+              imgClassName="transition-transform overflow-visible duration-500 hover:rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full  transform-origin: center center;"
+              archives={[sai]}
+              number={3}
+            />
+
+            <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+              <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                <h2 className="text-lg font-bold md:text-xl">Sai Console</h2>
+                <p className="text-[#7A7B77]">
+                  A full-fledged dashboard for SAI (Voice Ai agents platform)
+                  which customers can operate, manage and analyze their agents,
+                  channels, campaigns and all other features on it.
+                </p>
+              </div>
+
+              <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                <h2 className="text-lg font-bold md:text-xl">Tech I've used</h2>
+                <p className="text-[#7A7B77]">
+                  React - Internal design system (web-components) - GraphQL -
+                  Django
                 </p>
               </div>
             </div>
