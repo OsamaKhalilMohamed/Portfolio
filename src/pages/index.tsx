@@ -11,6 +11,7 @@ import Konan5 from "../../public/konan6.png";
 import Konan6 from "../../public/konan7.png";
 import cailogo from "../../public/cailogo.png";
 import seqooonlogo from "../../public/seqoon.png";
+import vois from "../../public/vois.png";
 
 import aly from "../../public/aly.png";
 import { AnimatePresence, motion } from "framer-motion";
@@ -255,48 +256,68 @@ export default function Home({
             >
               AI Engineer in the making.
             </p>
-            <div className="mb-4 flex w-full  flex-col justify-between gap-5 md:flex-row">
-              <MiniCard
-                src={digitopia}
-                description="digitopia"
-                title="Jr. Frontend Engineer"
-                subTitle="Services discovery & Sharing"
-                size={50}
-                workYear="2022"
-              />{" "}
-              <MiniCard
-                src={isMounted && theme !== "light" ? lightSynapse : synapse}
-                description="synapse"
-                title="Frontend Engineer ||"
-                subTitle="SME & Consumer Lending"
-                size={isMounted && theme !== "light" ? 50 : 120}
-                workYear="2022 - 2024"
-              />{" "}
-              <MiniCard
-                src={sami}
-                description="sami"
-                title="Sr. Software Engineer"
-                subTitle="Government platforms"
-                size={70}
-                workYear="2024 - 2025"
-              />{" "}
-              <MiniCard
-                src={seqooonlogo}
-                description="seqoon"
-                title="Sr. Software Engineer"
-                subTitle="Proptech platform for co-owned homes"
-                size={80}
-                workYear="2025 - Present"
-              />
-              <MiniCard
-                src={cailogo}
-                description="digitopia"
-                title="M.Sc. Student - FGSSR"
-                subTitle="Future Data/AI Engineer.. :)"
-                size={60}
-                workYear="2025 - Present"
-              />
+            <div className="mb-6 w-full space-y-8">
+              {/* PRESENT — featured */}
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+                <MiniCard
+                  src={vois}
+                  description="vois"
+                  title="Sr. Software Engineer"
+                  subTitle="Senior Software Engineer at VOIS, working on the Germany account and driving the migration from Angular to React in a large enterprise frontend."
+                  size={200}
+                  workYear="2025 - Present"
+                />
+
+                <MiniCard
+                  src={cailogo}
+                  description="cairo-university"
+                  title="M.Sc. Student - FGSSR"
+                  subTitle="Future Data/AI Engineer.. :)"
+                  size={200}
+                  workYear="2025 - Present"
+                />
+              </div>
+
+              {/* PAST — balanced */}
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:gap-5">
+                <MiniCard
+                  src={digitopia}
+                  description="digitopia"
+                  title="Jr. Frontend Engineer"
+                  subTitle="Services discovery & Sharing"
+                  size={200}
+                  workYear="2022"
+                />
+
+                <MiniCard
+                  src={isMounted && theme !== "light" ? lightSynapse : synapse}
+                  description="synapse"
+                  title="Frontend Engineer II"
+                  subTitle="SME & Consumer Lending"
+                  size={200}
+                  workYear="2022 - 2024"
+                />
+
+                <MiniCard
+                  src={sami}
+                  description="sami"
+                  title="Sr. Software Engineer"
+                  subTitle="Government platforms"
+                  size={200}
+                  workYear="2024 - 2025"
+                />
+
+                <MiniCard
+                  src={seqooonlogo}
+                  description="seqoon"
+                  title="Frontend Lead"
+                  subTitle="Proptech for co-owned homes"
+                  size={200}
+                  workYear="2025"
+                />
+              </div>
             </div>
+
             <p className="-mt-1 text-xs text-[#7A7B77]">
               This is my career timeline. Most of my work up until now is web
               development, especially frontend development. Currently pursuing a

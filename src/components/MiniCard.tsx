@@ -1,5 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-import React from "react";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 
 export default function MiniCard({
   src,
@@ -17,29 +17,76 @@ export default function MiniCard({
   workYear: string;
 }) {
   return (
-    <div className="w-full gap-y-1 rounded-2xl bg-[#F8F8F8] p-5 shadow-sm dark:bg-[#1C1C1A] md:w-3/4 md:max-w-[370px]">
-      <div className="h-[35%]">
-        <Image
-          className="rounded-lg shadow-sm"
-          src={src}
-          alt={description}
-          width={size}
-          height={size}
-          priority={true}
-          style={{
-            objectFit: "fill",
-            imageResolution: "from-image",
-            imageRendering: "crisp-edges",
-          }}
-        />
+    <div
+      className="
+      group
+      relative
+      w-full
+      rounded-2xl
+      bg-[#F8F8F8]
+      p-5
+      shadow-sm
+      transition-all
+      duration-300
+      ease-out
+      hover:-translate-y-[0.5]
+      hover:shadow-lg
+      dark:bg-[#1C1C1A]
+    "
+    >
+      {/* Top row: logo + year */}
+      {/* Top row */}
+      <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+        <div
+          className="
+      flex 
+      h-24
+      w-24
+      items-center
+      justify-center
+      rounded-lg
+      bg-white
+      shadow-sm
+      dark:bg-[#2A2A28]
+    "
+        >
+          <Image
+            src={src}
+            alt={description}
+            width={size}
+            height={size}
+            className="max-h-16 max-w-16 object-contain"
+            priority
+          />
+        </div>
+
+        {/* Date */}
+        <span className="text-xs text-[#7A7B77] md:mt-1 md:text-right">
+          {workYear}
+        </span>
       </div>
 
-      <div>
-        <h3 className="mt-2 font-inter text-lg font-bold">{title}</h3>
-        <p className="text-sm font-light text-[#7A7B77]">{workYear}</p>
-      </div>
+      {/* Content */}
+      <h3 className="font-inter text-lg font-semibold leading-snug">{title}</h3>
 
-      <p className="mt-4 text-sm font-light text-[#7A7B77]">{subTitle}</p>
+      <p className="mt-3 text-sm leading-relaxed text-[#7A7B77]">{subTitle}</p>
+
+      {/* Hover glow */}
+      {/* <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          rounded-2xl
+          bg-gradient-to-br
+          from-white/10
+          to-transparent
+          opacity-0
+          transition-opacity
+          duration-300
+          group-hover:opacity-100
+        "
+      /> */}
     </div>
   );
 }
