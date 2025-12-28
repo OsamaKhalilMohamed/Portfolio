@@ -493,7 +493,7 @@ export default function Home({
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex min-h-[400px] flex-col rounded-xl bg-[#0e0e0e] p-4 font-inter text-[#d7dad2]"
+              className="flex min-h-[400px] flex-col rounded-xl bg-[#0e0e0e] p-4 font-inter text-[#d7dad2] dark:bg-[#201f1f]"
             >
               {/* TOP CONTENT */}
               <div>
@@ -521,16 +521,28 @@ export default function Home({
 
                   <DropdownMenuContent
                     side={isDesktop ? "right" : "bottom"}
-                    sideOffset={8}
-                    className="max-h-60 w-48 rounded-lg bg-[#F8F8F8] shadow-lg"
+                    sideOffset={isDesktop ? 8 : 4}
+                    className="max-h-60 w-48 overflow-y-auto rounded-lg border-none bg-[#F8F8F8] text-neutral-200 shadow-lg dark:bg-[#404040] md:max-h-none md:overflow-y-visible"
                   >
+                    {/* 3. Add the arrow component and style it to match the menu */}{" "}
+                    <DropdownMenuArrow
+                      className="fill-neutral-900"
+                      width={10}
+                      height={5}
+                      asChild
+                    />
                     {greetings.map((currentGreeting) => (
                       <DropdownMenuItem
                         key={currentGreeting}
+                        className={`cursor-pointer text-[#7A7B77] focus:bg-[#5e5f5c] focus:text-white dark:focus:text-[#7A7B77] ${
+                          currentGreeting === greeting
+                            ? "bg-[#9fa09b] text-white dark:text-[#3f3f3e]"
+                            : ""
+                        }`}
                         onSelect={() => setGreeting(currentGreeting)}
-                        className="cursor-pointer"
                       >
-                        {currentGreeting}
+                        {" "}
+                        {currentGreeting}{" "}
                       </DropdownMenuItem>
                     ))}
                   </DropdownMenuContent>
