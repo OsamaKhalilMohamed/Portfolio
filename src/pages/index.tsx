@@ -485,92 +485,79 @@ export default function Home({
           </div> */}
 
           {/** Contact */}
-          <div className="mb-20 mt-8  w-5/6 max-w-[800px] md:mt-12">
+          <div className="mb-20 mt-20  w-5/6 max-w-[800px] md:mt-48">
             <h2 className="mb-2 text-lg font-extrabold md:text-xl">
               What's next?
             </h2>
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              style={{ lineHeight: 2 }}
-              className="text-md -mt-1 mb-0 rounded-lg bg-black p-4 font-inter font-medium text-[#d7dad2] dark:bg-[#1C1C1A] md:text-lg "
+              className="flex min-h-[400px] flex-col rounded-xl bg-[#0e0e0e] p-4 font-inter text-[#d7dad2]"
             >
-              If you have anything to tell me, whether it's a Question,{" "}
-              <strong>Job offer</strong> or you simply{" "}
-              <em>just wanna get in touch</em>. Feel free to say{" "}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  {/* This is the clickable trigger with the dotted border */}
-                  <button className="outline-none focus:outline-none">
-                    <span className="relative inline-block cursor-pointer border-b border-dotted  align-middle font-arefRuqaa font-extrabold text-neutral-400">
-                      {/* Framer Motion for the animation */}
-                      <AnimatePresence mode="wait">
-                        <motion.span
-                          // The key is crucial for AnimatePresence to detect changes
-                          key={greeting}
-                          initial={{ opacity: 0, y: -20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 20 }}
-                          transition={{ duration: 0.25 }}
-                          className="inline-block" // Ensures transforms work correctly
-                        >
-                          {greeting}!
-                        </motion.span>
-                      </AnimatePresence>
-                    </span>
-                  </button>
-                </DropdownMenuTrigger>
+              {/* TOP CONTENT */}
+              <div>
+                If you have anything to tell me, whether it's a Question,{" "}
+                <strong>Job offer</strong> or you simply{" "}
+                <em>just wanna get in touch</em>. Feel free to say{" "}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="outline-none">
+                      <span className="relative inline-block cursor-pointer border-b border-dotted font-arefRuqaa font-extrabold text-neutral-400">
+                        <AnimatePresence mode="wait">
+                          <motion.span
+                            key={greeting}
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 20 }}
+                            transition={{ duration: 0.25 }}
+                          >
+                            {greeting}!
+                          </motion.span>
+                        </AnimatePresence>
+                      </span>
+                    </button>
+                  </DropdownMenuTrigger>
 
-                <DropdownMenuContent
-                  side={isDesktop ? "right" : "bottom"}
-                  sideOffset={isDesktop ? 8 : 4} // Optional: Adds a small gap
-                  className="max-h-60 w-48 
-            overflow-y-auto rounded-lg border-none bg-[#F8F8F8] text-neutral-200  shadow-lg dark:bg-[#404040] md:max-h-none md:overflow-y-visible"
-                >
-                  {/* 3. Add the arrow component and style it to match the menu */}
-                  <DropdownMenuArrow
-                    className="fill-neutral-900"
-                    width={10}
-                    height={5}
-                    asChild
-                  />
-                  {greetings.map((currentGreeting) => (
-                    <DropdownMenuItem
-                      key={currentGreeting}
-                      className={`cursor-pointer text-[#7A7B77] focus:bg-[#5e5f5c] focus:text-white dark:focus:text-[#7A7B77] ${
-                        currentGreeting === greeting
-                          ? "bg-[#9fa09b] text-white dark:text-[#3f3f3e]"
-                          : ""
-                      }`}
-                      // The onSelect event handler updates the state
-                      onSelect={() => setGreeting(currentGreeting)}
-                    >
-                      {currentGreeting}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-              <br />
-              <p className="mx-auto mb-6 mt-4 text-center  text-4xl md:text-6xl">
-                👋🏽
-              </p>
-              <div className="m-auto mt-2 text-center">
-                <a
-                  className="m-0 border-b border-dotted text-center font-extrabold text-green-400"
-                  href="mailto:osadx35@gmail.com"
-                >
-                  Email
-                </a>{" "}
-                |{" "}
-                <a
-                  className="space-x-3 border-b border-dotted font-extrabold  text-green-400"
-                  href="https://www.linkedin.com/in/osama-khalil98"
-                >
-                  Linkedin
-                </a>
+                  <DropdownMenuContent
+                    side={isDesktop ? "right" : "bottom"}
+                    sideOffset={8}
+                    className="max-h-60 w-48 rounded-lg bg-[#F8F8F8] shadow-lg"
+                  >
+                    {greetings.map((currentGreeting) => (
+                      <DropdownMenuItem
+                        key={currentGreeting}
+                        onSelect={() => setGreeting(currentGreeting)}
+                        className="cursor-pointer"
+                      >
+                        {currentGreeting}
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
-            </motion.p>
+
+              {/* 👇 PUSHES CONTENT TO THE BOTTOM */}
+              <div className="mt-auto text-center">
+                <p className="mb-4 text-4xl md:text-6xl">👋🏽</p>
+
+                <div className="flex justify-center gap-3">
+                  <a
+                    href="mailto:osadx35@gmail.com"
+                    className="border-b border-dotted font-extrabold text-green-400"
+                  >
+                    Email
+                  </a>
+                  <span>|</span>
+                  <a
+                    href="https://www.linkedin.com/in/osama-khalil98"
+                    className="border-b border-dotted font-extrabold text-green-400"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </main>
