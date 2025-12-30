@@ -196,7 +196,8 @@ export default function Home({
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
           className="fomt-inter mx-auto flex  w-full flex-col items-center    md:mt-14"
         >
@@ -485,15 +486,22 @@ export default function Home({
           </div> */}
 
           {/** Contact */}
-          <div className="mb-20 mt-20  w-5/6 max-w-[800px] md:mt-48">
-            <h2 className="mb-2 text-lg font-extrabold md:text-xl">
+          <div className="mx-auto mb-20  mt-20 flex w-5/6 max-w-[800px] flex-col items-center justify-center md:mt-48">
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mb-2 text-lg font-extrabold md:text-xl"
+            >
               What's next?
-            </h2>
+            </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex min-h-[400px] flex-col rounded-xl bg-[#0e0e0e] p-4 font-inter text-[#d7dad2] dark:bg-[#201f1f]"
+              className="flex min-h-[480px] max-w-[380px] flex-col rounded-xl bg-[#0e0e0e] p-4 font-inter text-[#d7dad2] dark:bg-[#201f1f]"
             >
               {/* TOP CONTENT */}
               <div>
