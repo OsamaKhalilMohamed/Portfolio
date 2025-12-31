@@ -57,22 +57,6 @@ type SwiperProps = {
   number: number;
 };
 
-// Add a custom CSS file or <style> block
-<style jsx>{`
-  .swiper-container,
-  .swiper-slide,
-  .swiper {
-    overflow: visible !important;
-    width: 100% !important; /* Override any default width */
-    max-width: 100%; /* Ensure the slide does not exceed the parent width */
-  }
-
-  .swiper-slide {
-    width: 100% !important; /* Override any default width */
-    max-width: 100%; /* Ensure the slide does not exceed the parent width */
-  }
-`}</style>;
-
 export async function getStaticProps() {
   const latestTwoBlogs = getSortedPostsData()?.slice(0, 2); // Get only the latest 3 posts
   return {
@@ -167,7 +151,7 @@ export default function Home({
     if (!theme) {
       setTheme("dark");
     }
-  }, []);
+  }, [setTheme]);
 
   return (
     <>
@@ -194,36 +178,49 @@ export default function Home({
       </Head>
 
       <main className="flex h-full min-h-screen w-full max-w-[100%] flex-col items-center justify-start overflow-hidden scroll-smooth pb-8 dark:bg-[#111110]">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-          className="fomt-inter mx-auto flex  w-full flex-col items-center    md:mt-14"
-        >
-          <div className="mt-10 flex w-5/6 max-w-[800px] justify-between md:mt-0">
-            <div>
-              <div className="inline-flex">
-                {" "}
-                <h3 className="mr-1 text-2xl font-extrabold md:text-4xl">
-                  Hello, I'm Osama Khalil
-                </h3>{" "}
-                <Image
-                  width={40}
-                  height={40}
-                  style={{
-                    objectFit: "contain",
-                    imageRendering: "crisp-edges",
-                  }}
-                  src={memoji}
-                  alt="memoji"
-                />
+        {isMounted ? (
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.8 }}
+            className="fomt-inter mx-auto flex  w-full flex-col items-center    md:mt-14"
+          >
+            <div className="mt-10 flex w-5/6 max-w-[800px] justify-between md:mt-0">
+              <div>
+                <div className="inline-flex">
+                  {" "}
+                  <h3 className="mr-1 text-2xl font-extrabold md:text-4xl">
+                    Hello, I'm Osama Khalil
+                  </h3>{" "}
+                  <Image
+                    width={40}
+                    height={40}
+                    style={{
+                      objectFit: "contain",
+                      imageRendering: "crisp-edges",
+                    }}
+                    src={memoji}
+                    alt="memoji"
+                  />
+                </div>
+                <p className="-mt-1 text-lg text-[#7A7B77] md:text-xl">
+                  Software engineer
+                </p>{" "}
+                <div className="mb-4 mt-2 flex flex-col justify-end md:hidden md:content-end md:align-bottom">
+                  <button className="h-8 w-32 rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
+                    <a
+                      className=" font-bold text-white "
+                      href="mailto:osadx35@gmail.com"
+                    >
+                      Email
+                    </a>{" "}
+                  </button>
+                </div>
               </div>
-              <p className="-mt-1 text-lg text-[#7A7B77] md:text-xl">
-                Software engineer
-              </p>{" "}
-              <div className="mb-4 mt-2 flex flex-col justify-end md:hidden md:content-end md:align-bottom">
-                <button className="h-8 w-32 rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
+
+              <div className="mb-4 hidden flex-col justify-end md:flex md:content-end md:align-bottom">
+                <button className="h-8 w-full rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
                   <a
                     className=" font-bold text-white "
                     href="mailto:osadx35@gmail.com"
@@ -234,405 +231,429 @@ export default function Home({
               </div>
             </div>
 
-            <div className="mb-4 hidden flex-col justify-end md:flex md:content-end md:align-bottom">
-              <button className="h-8 w-full rounded-full bg-blue-700 px-6 font-bold text-white hover:bg-blue-600 ">
-                <a
-                  className=" font-bold text-white "
-                  href="mailto:osadx35@gmail.com"
-                >
-                  Email
-                </a>{" "}
-              </button>
-            </div>
-          </div>
+            <div className="mt-16  w-5/6 md:mt-24">
+              <h2 className="mb-3 text-3xl font-extrabold md:mb-1 md:text-4xl">
+                5+ years of experience in Software Engineering.{" "}
+              </h2>
+              <p
+                className={`shine text-md mb-4 text-2xl font-extrabold text-[#7A7B77] md:text-4xl ${
+                  theme === "light" ? "light-mode" : ""
+                }`}
+              >
+                AI Engineer in the making.
+              </p>
+              <div className="mb-6 w-full">
+                {/* PRESENT — featured */}
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+                  <MiniCard
+                    src={vois}
+                    description="vois"
+                    title="Sr. Software Engineer"
+                    subTitle="Senior Software Engineer at VOIS, working on the Germany account and driving the migration from Angular to React in a large enterprise frontend."
+                    size={200}
+                    workYear="2025 - Present"
+                  />
 
-          <div className="mt-16  w-5/6 md:mt-24">
-            <h2 className="mb-3 text-3xl font-extrabold md:mb-1 md:text-4xl">
-              5+ years of experience in Software Engineering.{" "}
-            </h2>
-            <p
-              className={`shine text-md mb-4 text-2xl font-extrabold text-[#7A7B77] md:text-4xl ${
-                isMounted && (theme === "light" || theme !== "dark")
-                  ? "light-mode"
-                  : ""
-              }`}
-            >
-              AI Engineer in the making.
-            </p>
-            <div className="mb-6 w-full">
-              {/* PRESENT — featured */}
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
-                <MiniCard
-                  src={vois}
-                  description="vois"
-                  title="Sr. Software Engineer"
-                  subTitle="Senior Software Engineer at VOIS, working on the Germany account and driving the migration from Angular to React in a large enterprise frontend."
-                  size={200}
-                  workYear="2025 - Present"
-                />
+                  <MiniCard
+                    src={cailogo}
+                    description="cairo-university"
+                    title="M.Sc. Student - FGSSR"
+                    subTitle="Future Data/AI Engineer.. :)"
+                    size={200}
+                    workYear="2025 - Present"
+                  />
+                </div>
 
-                <MiniCard
-                  src={cailogo}
-                  description="cairo-university"
-                  title="M.Sc. Student - FGSSR"
-                  subTitle="Future Data/AI Engineer.. :)"
-                  size={200}
-                  workYear="2025 - Present"
-                />
+                {/* PAST — balanced */}
+                <div className="mt-4 grid grid-cols-1 gap-4 md:mt-6 md:grid-cols-4 md:gap-5">
+                  <MiniCard
+                    src={digitopia}
+                    description="digitopia"
+                    title="Jr. Frontend Engineer"
+                    subTitle="Services discovery & Sharing"
+                    size={200}
+                    workYear="2022"
+                  />
+
+                  <MiniCard
+                    src={theme !== "light" ? lightSynapse : synapse}
+                    description="synapse"
+                    title="Frontend Engineer II"
+                    subTitle="SME & Consumer Lending"
+                    size={200}
+                    workYear="2022 - 2024"
+                  />
+
+                  <MiniCard
+                    src={sami}
+                    description="sami"
+                    title="Sr. Software Engineer"
+                    subTitle="Government platforms"
+                    size={200}
+                    workYear="2024 - 2025"
+                  />
+
+                  <MiniCard
+                    src={seqooonlogo}
+                    description="seqoon"
+                    title="Frontend Lead"
+                    subTitle="Proptech for co-owned homes"
+                    size={200}
+                    workYear="2025"
+                  />
+                </div>
               </div>
 
-              {/* PAST — balanced */}
-              <div className="mt-4 grid grid-cols-1 gap-4 md:mt-6 md:grid-cols-4 md:gap-5">
-                <MiniCard
-                  src={digitopia}
-                  description="digitopia"
-                  title="Jr. Frontend Engineer"
-                  subTitle="Services discovery & Sharing"
-                  size={200}
-                  workYear="2022"
-                />
-
-                <MiniCard
-                  src={isMounted && theme !== "light" ? lightSynapse : synapse}
-                  description="synapse"
-                  title="Frontend Engineer II"
-                  subTitle="SME & Consumer Lending"
-                  size={200}
-                  workYear="2022 - 2024"
-                />
-
-                <MiniCard
-                  src={sami}
-                  description="sami"
-                  title="Sr. Software Engineer"
-                  subTitle="Government platforms"
-                  size={200}
-                  workYear="2024 - 2025"
-                />
-
-                <MiniCard
-                  src={seqooonlogo}
-                  description="seqoon"
-                  title="Frontend Lead"
-                  subTitle="Proptech for co-owned homes"
-                  size={200}
-                  workYear="2025"
-                />
-              </div>
+              <p className="-mt-1 text-xs text-[#7A7B77]">
+                This is my career timeline. Most of my work up until now is web
+                development, especially frontend development. Currently pursuing
+                a M.Sc. in Data Science & AI at Cairo University.
+              </p>
             </div>
 
-            <p className="-mt-1 text-xs text-[#7A7B77]">
-              This is my career timeline. Most of my work up until now is web
-              development, especially frontend development. Currently pursuing a
-              M.Sc. in Data Science & AI at Cairo University.
-            </p>
-          </div>
-
-          {/** Selected work */}
-          <div
-            className={`${styles.animateCustom}  mt-8 w-5/6 max-w-[800px] md:mt-12`}
-          >
-            {/**Sai */}
-            <ImageWithAmbientBackground
-              title="Sai"
-              link="https://hiresai.ai/EG/en/"
-              imgClassName="transition-transform overflow-visible duration-500 hover:rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full  transform-origin: center center;"
-              archives={[sai]}
-              number={1}
-            />
-
-            <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
-              <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                <h2 className="text-lg font-bold md:text-xl">Sai Console</h2>
-                <p className="text-[#7A7B77]">
-                  A full-fledged dashboard for SAI (Voice Ai agents platform)
-                  which customers can operate, manage and analyze their agents,
-                  channels, campaigns and all other features on it.
-                </p>
-              </div>
-
-              <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                <h2 className="text-lg font-bold md:text-xl">Tech I've used</h2>
-                <p className="text-[#7A7B77]">
-                  React - Internal design system (web-components) - GraphQL -
-                  Django
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className={`${styles.animateCustom} mt-8 w-5/6 max-w-[800px]  md:mt-12`}
-          >
-            {/**KONAN */}
-            <ImageWithAmbientBackground
-              title="KONAN"
-              link="https://www.synapse-analytics.io/konan"
-              imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full  transform-origin: center center;"
-              archives={[Konan, Konan2, Konan4, Konan5, Konan6]}
-              number={2}
-            />
-
-            <div className="mb-2 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
-              <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                <h2 className="text-lg font-bold md:text-xl">Konan AI</h2>
-                <p className="text-[#7A7B77]">
-                  AI credit decisioning for risk officers
-                </p>
-              </div>
-
-              <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                <h2 className="text-lg font-bold md:text-xl">Tech I've used</h2>
-                <p className="text-[#7A7B77]">
-                  TS - React + Vite - Zustand + ReduxTK + React-Query -
-                  Storybook - Django
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
-          >
-            {/**ALY */}
-            <ImageWithAmbientBackground
-              title="ALY"
-              link="https://www.aly.ma/"
-              imgClassName="transition-transform overflow-visible duration-500 hover:rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full  transform-origin: center center;"
-              archives={[aly]}
-              number={3}
-            />
-
-            <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
-              <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                <h2 className="text-lg font-bold md:text-xl">ALY</h2>
-                <p className="text-[#7A7B77]">
-                  Platform for discovering, sharing and rating various services
-                  in morroco
-                </p>
-              </div>
-
-              <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                <h2 className="text-lg font-bold md:text-xl">Tech I've used</h2>
-                <p className="text-[#7A7B77]">
-                  Next.js - Redux - graphQL Apollo client - SCSS
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/** mini-blog section */}
-
-          {/* <section
-            className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
-          >
-            <h2 className="mb-2 text-lg font-extrabold md:text-xl">
-              latest blogs.
-            </h2>
-            {latestTwoBlogs?.map(({ id, title, description, date }) => {
-              return (
-                <Link href={`/blog/${id}`}>
-                  <motion.div
-                    initial={{ scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.97 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className="mb-5 flex w-full flex-col justify-between gap-3 rounded-lg bg-[#F8F8F8] p-6 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]"
-                  >
-                    <h3 className="text-xl font-bold text-blue-500">{title}</h3>
-                    <div className="flex justify-between">
-                      <p className="text-md font-light text-[#7A7B77]">
-                        {date}
-                      </p>
-                    </div>
-                    <p className="text-md mt-4 font-light text-[#7A7B77]">
-                      {description}
-                    </p>
-                  </motion.div>
-                </Link>
-              );
-            })}
-
-            <Link
-              href={`/blog/`}
-              className="text-center text-lg font-bold text-gray-500 hover:underline"
-            >
-              Explore All Blogs {"->"}
-            </Link>
-          </section> */}
-
-          {/** more about me */}
-          {/* <div
-            className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
-          >
-            <h2 className="mb-2 text-lg font-extrabold md:text-xl">
-              More About me..
-            </h2>
-            <ul className="list-inside rounded-lg bg-[#F8F8F8] p-4 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]">
-              <li className="mb-4">
-                I believe that you'll never know your actual capabilities until
-                you work with a great team in a great environment.
-              </li>
-              <li className="mb-4">
-                Things i like: Photography, Watching movies, Watching football
-                and Chill nights with friends.
-              </li>
-              <li>
-                I've never seriously learned regex, and it's likely that i'll
-                never do due to ai, does that make me a lazy developer or a
-                normal person?
-              </li>
-            </ul>
-          </div> */}
-
-          {/** Contact */}
-          <div className="mx-auto mb-20  mt-20 flex w-5/6 max-w-[800px] flex-col items-center justify-center md:mt-48">
-            <motion.h2
+            {/** Selected work */}
+            <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.8 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="mb-2 text-lg font-extrabold md:text-xl"
+              className={`${styles.animateCustom}  mt-8 w-5/6 max-w-[800px] md:mt-12`}
             >
-              What's next?
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex min-h-[480px] max-w-[380px] flex-col rounded-xl bg-[#0e0e0e] p-4 font-inter text-[#d7dad2] dark:bg-[#201f1f]"
-            >
-              {/* TOP CONTENT */}
-              <div>
-                If you have anything to tell me, whether it's a Question,{" "}
-                <strong>Job offer</strong> or you simply{" "}
-                <em>just wanna get in touch</em>. Feel free to say{" "}
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <button className="outline-none">
-                      <span className="relative inline-block cursor-pointer border-b border-dotted font-arefRuqaa font-extrabold text-neutral-400">
-                        <AnimatePresence mode="wait">
-                          <motion.span
-                            key={greeting}
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 20 }}
-                            transition={{ duration: 0.25 }}
-                          >
-                            {greeting}!
-                          </motion.span>
-                        </AnimatePresence>
-                      </span>
-                    </button>
-                  </DropdownMenuTrigger>
+              {/**Sai */}
+              <ImageWithAmbientBackground
+                title="Sai"
+                link="https://hiresai.ai/EG/en/"
+                imgClassName="transition-transform overflow-visible duration-500 hover:rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full  transform-origin: center center;"
+                archives={[sai]}
+                number={1}
+              />
 
-                  <DropdownMenuContent
-                    side={isDesktop ? "right" : "bottom"}
-                    sideOffset={isDesktop ? 8 : 4}
-                    className="max-h-60 w-48 overflow-y-auto rounded-lg border-none bg-[#F8F8F8] text-neutral-200 shadow-lg dark:bg-[#404040] md:max-h-none md:overflow-y-visible"
-                  >
-                    {/* 3. Add the arrow component and style it to match the menu */}{" "}
-                    <DropdownMenuArrow
-                      className="fill-neutral-900"
-                      width={10}
-                      height={5}
-                      asChild
-                    />
-                    {greetings.map((currentGreeting) => (
-                      <DropdownMenuItem
-                        key={currentGreeting}
-                        className={`cursor-pointer text-[#7A7B77] focus:bg-[#5e5f5c] focus:text-white dark:focus:text-[#7A7B77] ${
-                          currentGreeting === greeting
-                            ? "bg-[#9fa09b] text-white dark:text-[#3f3f3e]"
-                            : ""
-                        }`}
-                        onSelect={() => setGreeting(currentGreeting)}
-                      >
-                        {" "}
-                        {currentGreeting}{" "}
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
+              <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+                <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">Sai Console</h2>
+                  <p className="text-[#7A7B77]">
+                    A full-fledged dashboard for SAI (Voice Ai agents platform)
+                    which customers can operate, manage and analyze their
+                    agents, channels, campaigns and all other features on it.
+                  </p>
+                </div>
 
-              {/* 👇 PUSHES CONTENT TO THE BOTTOM */}
-              <div className="mt-auto text-center">
-                <p className="mb-4 text-4xl md:text-6xl">👋🏽</p>
-
-                <div className="flex justify-center gap-3">
-                  <a
-                    href="mailto:osadx35@gmail.com"
-                    className="border-b border-dotted font-extrabold text-green-400"
-                  >
-                    Email
-                  </a>
-                  <span>|</span>
-                  <a
-                    href="https://www.linkedin.com/in/osama-khalil98"
-                    className="border-b border-dotted font-extrabold text-green-400"
-                  >
-                    LinkedIn
-                  </a>
+                <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">
+                    Tech I've used
+                  </h2>
+                  <p className="text-[#7A7B77]">
+                    React - Internal design system (web-components) - GraphQL -
+                    Django
+                  </p>
                 </div>
               </div>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className={`${styles.animateCustom} mt-8 w-5/6 max-w-[800px]  md:mt-12`}
+            >
+              {/**KONAN */}
+              <ImageWithAmbientBackground
+                title="KONAN"
+                link="https://www.synapse-analytics.io/konan"
+                imgClassName="transition-transform overflow-visible duration-500 hover:-rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full  transform-origin: center center;"
+                archives={[Konan, Konan2, Konan4, Konan5, Konan6]}
+                number={2}
+              />
+
+              <div className="mb-2 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+                <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">Konan AI</h2>
+                  <p className="text-[#7A7B77]">
+                    AI credit decisioning for risk officers
+                  </p>
+                </div>
+
+                <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">
+                    Tech I've used
+                  </h2>
+                  <p className="text-[#7A7B77]">
+                    TS - React + Vite - Zustand + ReduxTK + React-Query -
+                    Storybook - Django
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
+            >
+              {/**ALY */}
+              <ImageWithAmbientBackground
+                title="ALY"
+                link="https://www.aly.ma/"
+                imgClassName="transition-transform overflow-visible duration-500 hover:rotate-1 hover:scale-125 md:hover:scale-105 cursor-pointer w-full  transform-origin: center center;"
+                archives={[aly]}
+                number={3}
+              />
+
+              <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
+                <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">ALY</h2>
+                  <p className="text-[#7A7B77]">
+                    Platform for discovering, sharing and rating various
+                    services in morroco
+                  </p>
+                </div>
+
+                <div className="flex w-full flex-col justify-start gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
+                  <h2 className="text-lg font-bold md:text-xl">
+                    Tech I've used
+                  </h2>
+                  <p className="text-[#7A7B77]">
+                    Next.js - Redux - graphQL Apollo client - SCSS
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/** mini-blog section */}
+
+            {/* <section
+              className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
+            >
+              <h2 className="mb-2 text-lg font-extrabold md:text-xl">
+                latest blogs.
+              </h2>
+              {latestTwoBlogs?.map(({ id, title, description, date }) => {
+                return (
+                  <Link href={`/blog/${id}`}>
+                    <motion.div
+                      initial={{ scale: 1 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                      className="mb-5 flex w-full flex-col justify-between gap-3 rounded-lg bg-[#F8F8F8] p-6 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]"
+                    >
+                      <h3 className="text-xl font-bold text-blue-500">{title}</h3>
+                      <div className="flex justify-between">
+                        <p className="text-md font-light text-[#7A7B77]">
+                          {date}
+                        </p>
+                      </div>
+                      <p className="text-md mt-4 font-light text-[#7A7B77]">
+                        {description}
+                      </p>
+                    </motion.div>
+                  </Link>
+                );
+              })}
+
+              <Link
+                href={`/blog/`}
+                className="text-center text-lg font-bold text-gray-500 hover:underline"
+              >
+                Explore All Blogs {"->"}
+              </Link>
+            </section> */}
+
+            {/** more about me */}
+            {/* <div
+              className={`${styles.animateCustom} mb-12 mt-8 w-5/6 max-w-[800px] md:mt-12`}
+            >
+              <h2 className="mb-2 text-lg font-extrabold md:text-xl">
+                More About me..
+              </h2>
+              <ul className="list-inside rounded-lg bg-[#F8F8F8] p-4 text-[#7A7B77] shadow-sm dark:bg-[#1C1C1A]">
+                <li className="mb-4">
+                  I believe that you'll never know your actual capabilities until
+                  you work with a great team in a great environment.
+                </li>
+                <li className="mb-4">
+                  Things i like: Photography, Watching movies, Watching football
+                  and Chill nights with friends.
+                </li>
+                <li>
+                  I've never seriously learned regex, and it's likely that i'll
+                  never do due to ai, does that make me a lazy developer or a
+                  normal person?
+                </li>
+              </ul>
+            </div> */}
+
+            {/** Contact */}
+            <div className="mx-auto mb-20  mt-20 flex w-5/6 max-w-[800px] flex-col items-center justify-center md:mt-48">
+              <motion.h2
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="mb-2 text-lg font-extrabold md:text-xl"
+              >
+                What's next?
+              </motion.h2>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="flex min-h-[480px] max-w-[380px] flex-col rounded-xl bg-[#0e0e0e] p-4 font-inter text-[#d7dad2] dark:bg-[#201f1f]"
+              >
+                {/* TOP CONTENT */}
+                <div>
+                  If you have anything to tell me, whether it's a Question,{" "}
+                  <strong>Job offer</strong> or you simply{" "}
+                  <em>just wanna get in touch</em>. Feel free to say{" "}
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <button className="outline-none">
+                        <span className="relative inline-block cursor-pointer border-b border-dotted font-arefRuqaa font-extrabold text-neutral-400">
+                          <AnimatePresence mode="wait">
+                            <motion.span
+                              key={greeting}
+                              initial={{ opacity: 0, y: -20 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: 20 }}
+                              transition={{ duration: 0.25 }}
+                            >
+                              {greeting}!
+                            </motion.span>
+                          </AnimatePresence>
+                        </span>
+                      </button>
+                    </DropdownMenuTrigger>
+
+                    <DropdownMenuContent
+                      side={isDesktop ? "right" : "bottom"}
+                      sideOffset={isDesktop ? 8 : 4}
+                      className="max-h-60 w-48 overflow-y-auto rounded-lg border-none bg-[#F8F8F8] text-neutral-200 shadow-lg dark:bg-[#404040] md:max-h-none md:overflow-y-visible"
+                    >
+                      {/* 3. Add the arrow component and style it to match the menu */}{" "}
+                      <DropdownMenuArrow
+                        className="fill-neutral-900"
+                        width={10}
+                        height={5}
+                        asChild
+                      />
+                      {greetings.map((currentGreeting) => (
+                        <DropdownMenuItem
+                          key={currentGreeting}
+                          className={`cursor-pointer text-[#7A7B77] focus:bg-[#5e5f5c] focus:text-white dark:focus:text-[#7A7B77] ${
+                            currentGreeting === greeting
+                              ? "bg-[#9fa09b] text-white dark:text-[#3f3f3e]"
+                              : ""
+                          }`}
+                          onSelect={() => setGreeting(currentGreeting)}
+                        >
+                          {" "}
+                          {currentGreeting}{" "}
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+
+                {/* 👇 PUSHES CONTENT TO THE BOTTOM */}
+                <div className="mt-auto text-center">
+                  <p className="mb-4 text-4xl md:text-6xl">👋🏽</p>
+
+                  <div className="flex justify-center gap-3">
+                    <a
+                      href="mailto:osadx35@gmail.com"
+                      className="border-b border-dotted font-extrabold text-green-400"
+                    >
+                      Email
+                    </a>
+                    <span>|</span>
+                    <a
+                      href="https://www.linkedin.com/in/osama-khalil98"
+                      className="border-b border-dotted font-extrabold text-green-400"
+                    >
+                      LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        ) : (
+          <div className="fomt-inter mx-auto flex  w-full flex-col items-center    md:mt-14">
+            <div className="mt-10 flex w-5/6 max-w-[800px] justify-between md:mt-0">
+              <div>
+                <div className="inline-flex">
+                  {" "}
+                  <h3 className="mr-1 text-2xl font-extrabold md:text-4xl">
+                    Hello, I'm Osama Khalil
+                  </h3>{" "}
+                  <Image
+                    width={40}
+                    height={40}
+                    style={{
+                      objectFit: "contain",
+                      imageRendering: "crisp-edges",
+                    }}
+                    src={memoji}
+                    alt="memoji"
+                  />
+                </div>
+                <p className="-mt-1 text-lg text-[#7A7B77] md:text-xl">
+                  Software engineer
+                </p>{" "}
+              </div>
+            </div>
           </div>
-        </motion.div>
+        )}
       </main>
 
       <style jsx>{`
         @keyframes shineSweep {
           0% {
-            background-position: 92% 0, 0 0;
+            background-position: 200% 0, 0 0;
           }
-          92% {
-            background-position: -92% 0, 0 0;
-          } /* tiny linger */
           100% {
-            background-position: -92% 0, 0 0;
+            background-position: -200% 0, 0 0;
           }
         }
 
         .shine {
-          background-size: 220% 100%, 100% 100%; /* larger travel = slower sweep */
-          animation: shineSweep 3.5s linear infinite; /* was ~2.75s */
+          background-size: 200% 100%, 100% 100%;
+          animation: shineSweep 4s ease-in-out infinite;
 
-          display: inline-block; /* one painting box */
-          white-space: nowrap; /* avoid line fragments */
+          display: inline-block;
+          white-space: nowrap;
           line-height: 1.2;
-          padding-bottom: 0.15em; /* keep descenders visible */
+          padding-bottom: 0.15em;
 
-          /* Layer 1: moving highlight; Layer 2: solid base (currentColor) */
+          /* Layer 1: Moving shine effect, Layer 2: Solid text base */
           background-image: linear-gradient(
-              100deg,
+              90deg,
               transparent 0%,
-              rgba(255, 255, 255, 0.25) 48%,
-              rgba(255, 255, 255, 0.9) 50%,
-              rgba(255, 255, 255, 0.25) 52%,
+              transparent 30%,
+              rgba(255, 255, 255, 0.6) 50%,
+              transparent 70%,
               transparent 100%
             ),
             linear-gradient(0deg, currentColor, currentColor);
 
-          background-position: 400% 0, 0 0;
           background-repeat: no-repeat;
-
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
         }
 
-        /* Darker shimmer for light theme */
-
-        /* LIGHT THEME: brighter, thinner beam for extra "shine" */
+        /* LIGHT THEME: More pronounced shine */
         .shine.light-mode {
           background-image: linear-gradient(
-              100deg,
+              90deg,
               transparent 0%,
-              rgba(255, 255, 255, 0.4) 49.2%,
-              rgba(255, 255, 255, 0.98) 50%,
-              rgba(255, 255, 255, 0.4) 50.8%,
+              transparent 35%,
+              rgba(255, 255, 255, 0.9) 50%,
+              transparent 65%,
               transparent 100%
             ),
             linear-gradient(0deg, currentColor, currentColor);
@@ -641,9 +662,9 @@ export default function Home({
         /* MOBILE: put sentence on its own line, allow wrapping safely */
         @media (max-width: 640px) {
           .shine {
-            display: block; /* its own line */
-            white-space: normal; /* can wrap within the line if needed */
-            margin-top: 0.25rem; /* tiny gap from previous text */
+            display: block;
+            white-space: normal;
+            margin-top: 0.25rem;
           }
         }
       `}</style>
