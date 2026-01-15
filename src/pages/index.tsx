@@ -510,13 +510,12 @@ export default function Home({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex min-h-[480px] max-w-[380px] flex-col rounded-xl bg-[#0e0e0e] p-4 font-inter text-[#d7dad2] dark:bg-[#201f1f]"
+                className="flex min-h-[480px] max-w-[380px] flex-col rounded-lg bg-[#0c0808] p-5 font-inter text-[#d7dad2] dark:bg-[#201f1f]"
               >
                 {/* TOP CONTENT */}
-                <div>
-                  If you have anything to tell me, whether it's a Question,{" "}
-                  <strong>Job offer</strong> or you simply{" "}
-                  <em>just wanna get in touch</em>. Feel free to say{" "}
+                <div className="font-inter font-bold leading-7 md:text-xl md:leading-9">
+                  If you have anything to tell me, whether it's a Question, Job
+                  offer or you simply just wanna get in touch. Feel free to say{" "}
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <button className="outline-none">
