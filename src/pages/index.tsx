@@ -12,6 +12,9 @@ import Konan6 from "../../public/konan7.png";
 import cailogo from "../../public/cailogo.png";
 import seqooonlogo from "../../public/seqoon.png";
 import vois from "../../public/vois.png";
+import meOne from "../../public/meOne.jpg";
+import meTwo from "../../public/meTwo.jpg";
+import aime from "../../public/aime.png";
 
 import aly from "../../public/aly.png";
 import sai from "../../public/sai.png";
@@ -48,6 +51,7 @@ import {
 } from "~/components/ui/dropdown-menu";
 import { DropdownMenuArrow } from "@radix-ui/react-dropdown-menu";
 import { useMediaQuery } from "~/hooks/useMediaQuery";
+import { PhotoFrames } from "~/components/PhotoFrames";
 
 type SwiperProps = {
   archives: Array<StaticImageData>;
@@ -92,10 +96,11 @@ const ImageWithAmbientBackground = (props: SwiperProps) => {
       </h2>
 
       <div
-        className={`w-full rounded-lg bg-gradient-to-b from-[rgb(248,248,248)] to-[rgb(248,248,248)] p-4 dark:bg-gradient-to-b dark:from-white/20 dark:to-[#1C1C1A]`}
+        className={`w-full overflow-visible rounded-lg bg-gradient-to-b from-[rgb(248,248,248)] to-[rgb(248,248,248)] p-4 dark:bg-gradient-to-b dark:from-white/20 dark:to-[#1C1C1A]`}
       >
         <Swiper
           ref={swiperRef}
+          className="overflow-visible" // Add this
           pagination={{ clickable: true }}
           slidesPerView={1}
           modules={[EffectFade, Navigation, A11y, Autoplay, FreeMode]}
@@ -109,7 +114,10 @@ const ImageWithAmbientBackground = (props: SwiperProps) => {
         >
           {ready &&
             archives.map((image, index) => (
-              <SwiperSlide key={index} className="flex w-full justify-center">
+              <SwiperSlide
+                key={index}
+                className="flex w-full justify-center overflow-visible"
+              >
                 <Link href={link} target="_blank">
                   <Image
                     src={image.src}
@@ -558,9 +566,21 @@ export default function Home({
                   </DropdownMenu>
                 </div>
 
+                {/* Add the PhotoFrames component here */}
+                <div className="mt-10">
+                  {" "}
+                  <PhotoFrames
+                    images={[
+                      meOne, // Pic 1 - right frame (or use your actual photos)
+                      meTwo, // Pic 2 - center frame
+                      aime, // Pic 3 - left frame
+                    ]}
+                  />
+                </div>
+
                 {/* 👇 PUSHES CONTENT TO THE BOTTOM */}
                 <div className="mt-auto text-center">
-                  <p className="mb-4 text-4xl md:text-6xl">👋🏽</p>
+                  <p className="mb-4 text-xl md:text-4xl ">👋🏽</p>
 
                   <div className="flex justify-center gap-3">
                     <a
@@ -611,6 +631,16 @@ export default function Home({
       </main>
 
       <style jsx>{`
+        /* Swiper overflow fix */
+        .swiper {
+          overflow: visible !important;
+        }
+        .swiper-wrapper {
+          overflow: visible !important;
+        }
+        .swiper-slide {
+          overflow: visible !important;
+        }
         @keyframes shineSweep {
           0% {
             background-position: 200% 0, 0 0;
