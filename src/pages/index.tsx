@@ -2,7 +2,7 @@ import Head from "next/head";
 import synapse from "../../public/synapse.png";
 import lightSynapse from "../../public/synapse.jpeg";
 import digitopia from "../../public/digitopia.jpeg";
-import sami from "../../public/sami.jpg";
+import sami from "../../public/sami.png";
 import memoji from "../../public/memoji.png";
 import Konan from "../../public/konan2.png";
 import Konan2 from "../../public/konan3.png";
@@ -297,7 +297,7 @@ export default function Home({
                     description="sami"
                     title="Sr. Software Engineer"
                     subTitle="Government platforms"
-                    size={200}
+                    size={300}
                     workYear="2024 - 2025"
                   />
 
