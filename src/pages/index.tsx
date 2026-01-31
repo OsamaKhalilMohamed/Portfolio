@@ -257,7 +257,7 @@ export default function Home({
                     src={vois}
                     description="vois"
                     title="Sr. Software Engineer"
-                    subTitle="Senior Software Engineer at VOIS, working on the Germany account and driving the migration from Angular to React in a large enterprise frontend."
+                    subTitle="Senior Software Engineer at VOIS, Working with the team driving the billing and payments system in Vodafone DE"
                     size={200}
                     workYear="2025 - Present"
                   />
