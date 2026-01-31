@@ -338,11 +338,12 @@ export default function Home({
 
               <div className="mb-4 mt-4 flex w-full max-w-[1000px] flex-col justify-between gap-3 md:flex-row">
                 <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
-                  <h2 className="text-lg font-bold md:text-xl">Sai Console</h2>
+                  <h2 className="text-lg font-bold md:text-xl">Sai</h2>
                   <p className="text-[#7A7B77]">
-                    A full-fledged dashboard for SAI (Voice Ai agents platform)
-                    which customers can operate, manage and analyze their
-                    agents, channels, campaigns and all other features on it.
+                    Full-fledged dashboard for SAI (CX with Human-like Ai voice
+                    and chat assistants.) which customers can operate, manage
+                    and analyze their agents, channels, campaigns and all other
+                    features on it.
                   </p>
                 </div>
 
@@ -414,8 +415,8 @@ export default function Home({
                 <div className="flex w-full flex-col  gap-y-1 rounded-lg bg-[#F8F8F8] p-4 shadow-sm dark:bg-[#1C1C1A]">
                   <h2 className="text-lg font-bold md:text-xl">ALY</h2>
                   <p className="text-[#7A7B77]">
-                    Platform for discovering, sharing and rating various
-                    services in morroco
+                    Moroccan platform for discovering, sharing and rating
+                    various services.
                   </p>
                 </div>
 
