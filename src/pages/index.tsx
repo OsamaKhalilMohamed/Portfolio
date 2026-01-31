@@ -10,7 +10,7 @@ import Konan4 from "../../public/konan5.png";
 import Konan5 from "../../public/konan6.png";
 import Konan6 from "../../public/konan7.png";
 import cailogo from "../../public/cailogo.png";
-import seqooonlogo from "../../public/seqoon.png";
+import seqooonlogo from "../../public/seqoonlogo.jpg";
 import vois from "../../public/vois.png";
 import meOne from "../../public/meOne.jpg";
 import meTwo from "../../public/meTwo.jpg";
@@ -306,7 +306,7 @@ export default function Home({
                     description="seqoon"
                     title="Frontend Lead"
                     subTitle="Proptech for co-owned homes"
-                    size={200}
+                    size={300}
                     workYear="2025"
                   />
                 </div>
