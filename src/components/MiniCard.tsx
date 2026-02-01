@@ -8,6 +8,7 @@ export default function MiniCard({
   subTitle,
   size,
   workYear,
+  companyName,
 }: {
   src: StaticImageData;
   description: string;
@@ -15,6 +16,7 @@ export default function MiniCard({
   subTitle: string;
   size: number;
   workYear: string;
+  companyName: string;
 }) {
   return (
     <div
@@ -29,8 +31,7 @@ export default function MiniCard({
       transition-all
       duration-300
       ease-out
-      hover:-translate-y-[0.5]
-      hover:shadow-lg
+ 
       dark:bg-[#1C1C1A]
     "
     >
@@ -69,7 +70,9 @@ export default function MiniCard({
       {/* Content */}
       <h3 className="font-inter text-lg font-semibold leading-snug">{title}</h3>
 
-      <p className="mt-3 text-sm leading-relaxed text-[#7A7B77]">{subTitle}</p>
+      <p className="mt-3 text-sm leading-relaxed text-[#7A7B77]">
+        {companyName} - {subTitle}
+      </p>
 
       {/* Hover glow */}
       {/* <div

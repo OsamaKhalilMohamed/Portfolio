@@ -255,15 +255,17 @@ export default function Home({
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
                   <MiniCard
                     src={vois}
+                    companyName="VOIS"
                     description="vois"
                     title="Sr. Software Engineer"
-                    subTitle="Senior Software Engineer at VOIS, Vodafone DE"
+                    subTitle="Vodafone DE"
                     size={200}
                     workYear="2025 - Present"
                   />
 
                   <MiniCard
                     src={cailogo}
+                    companyName="Cairo Uni"
                     description="cairo-university"
                     title="M.Sc. Student - FGSSR"
                     subTitle="Future Data/AI Engineer.. :)"
@@ -277,6 +279,7 @@ export default function Home({
                   <MiniCard
                     src={digitopia}
                     description="digitopia"
+                    companyName="Digitopia Studio"
                     title="Jr. Frontend Engineer"
                     subTitle="Services discovery & Sharing"
                     size={200}
@@ -290,6 +293,7 @@ export default function Home({
                     subTitle="SME & Consumer Lending"
                     size={200}
                     workYear="2022 - 2024"
+                    companyName="Synapse Analytics"
                   />
 
                   <MiniCard
@@ -299,6 +303,7 @@ export default function Home({
                     subTitle="Government platforms"
                     size={300}
                     workYear="2024 - 2025"
+                    companyName="SAMI AEC"
                   />
 
                   <MiniCard
@@ -308,6 +313,7 @@ export default function Home({
                     subTitle="Proptech for co-owned homes"
                     size={300}
                     workYear="2025"
+                    companyName="Seqoon"
                   />
                 </div>
               </div>
@@ -511,7 +517,7 @@ export default function Home({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex min-h-[480px] max-w-[380px] flex-col rounded-lg bg-[#0c0808] p-5 font-inter text-[#d7dad2] dark:bg-[#201f1f]"
+                className="flex min-h-[480px] max-w-[380px] flex-col rounded-xl bg-[#0c0808] p-5 font-inter text-[#d7dad2] dark:bg-[#201f1f]"
               >
                 {/* TOP CONTENT */}
                 <div className="font-inter font-bold leading-7 md:text-xl md:leading-9">
